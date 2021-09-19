@@ -1,25 +1,30 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import routes from './routes'
 
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+// Nprogress
+const Nprogress = require('nprogress')
+// Nprogress CSS
+import 'nprogress/nprogress.css';
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior() {
+    // @ts-ignore
+    document.getElementById('app').scrollIntoView();
+  }
+})
+
+// @ts-ignore
+router.beforeEach((to, from, next) => {
+  Nprogress.start()
+  next()
+})
+
+// @ts-ignore
+router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
+  Nprogress.done()
 })
 
 export default router
