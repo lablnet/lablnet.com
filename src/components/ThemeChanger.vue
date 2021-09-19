@@ -1,7 +1,7 @@
 <template>
   <a href="#" @click.prevent="toggleTheme">
     <i
-      v-if="theme === 'light'"
+      v-if="currentTheme === 'light'"
       class="
         text-liText-ternary-dark
         hover:text-gray-400
@@ -51,20 +51,30 @@
 </template>
 
 <script lang="js">
+import {themeSetup} from '../utils/index';
 export default {
-    name: "ThemeChanger",
+  name: "ThemeChanger",
 	props: {
 		theme: {
 			type: String,
 			required: true,
 		},
 	},
+  data() {
+    return {
+      currentTheme: this.theme,
+    };
+  },
 	methods: {
 		toggleTheme() {
-			const newTheme = this.theme === 'light' ? 'dark' : 'light';
+			const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
 			localStorage.setItem('theme', newTheme);
 			this.$emit('themeChanged', newTheme);
-			this.$router.go();
+      this.currentTheme = newTheme;
+      console.log("emit ", newTheme)
+
+      themeSetup();
+			//this.$router.go();
 		},
 	},
 };

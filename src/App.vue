@@ -92,7 +92,7 @@
           >
             Contact
           </router-link>
-          <ThemeChanger :theme="theme" :themeChange="updateTheme" />
+          <ThemeChanger :theme="theme" v-on:themeChanged="updateTheme" />
         </nav>
       </header>
 
@@ -164,18 +164,18 @@
                   />
                 </i>
               </a>
-              <a
-                href="https://www.linkedin.com/company/75766397"
-                target="_blank"
-                class="ml-3 text-gray-500"
-              >
-                <i class="fa">
-                  <img
-                    style="width: 0.8em; height: 0.8em"
-                    :src="require('./assets/icons/linkedin.svg')"
-                  />
-                </i>
-              </a>
+<!--              <a-->
+<!--                href="https://www.linkedin.com/company/75766397"-->
+<!--                target="_blank"-->
+<!--                class="ml-3 text-gray-500"-->
+<!--              >-->
+<!--                <i class="fa">-->
+<!--                  <img-->
+<!--                    style="width: 0.8em; height: 0.8em"-->
+<!--                    :src="require('./assets/icons/linkedin.svg')"-->
+<!--                  />-->
+<!--                </i>-->
+<!--              </a>-->
             </span>
           </div>
         </div>
@@ -252,7 +252,9 @@ export default {
   },
   methods: {
     updateTheme(theme) {
+      console.log("theme", theme)
 			this.theme = theme;
+      this.appTheme = theme;
 		},
 
     toggleDarkMode(theme, evt) {
