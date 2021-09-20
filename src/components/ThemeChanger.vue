@@ -71,7 +71,6 @@ export default {
 			localStorage.setItem('theme', newTheme);
 			this.$emit('themeChanged', newTheme);
       this.currentTheme = newTheme;
-      console.log("emit ", newTheme)
 
       themeSetup();
 			//this.$router.go();

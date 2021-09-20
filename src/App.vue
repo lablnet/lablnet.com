@@ -92,7 +92,7 @@
           >
             Contact
           </router-link>
-          <ThemeChanger :theme="theme" v-on:themeChanged="updateTheme" />
+          <ThemeChanger :theme="appTheme" v-on:themeChanged="updateTheme" />
         </nav>
       </header>
 
@@ -241,42 +241,18 @@ export default {
       atTopOfPage: true,
       isHome: false,
       hidden: false,
-      theme: "",
       appTheme: localStorage.getItem('theme'),
     }
   },
   created() {
     //AOS.init()
     window.addEventListener('scroll', this.handleScroll);
-    this.theme = localStorage.getItem('theme') || 'light'
+    this.appTheme = localStorage.getItem('theme') || 'light'
   },
   methods: {
     updateTheme(theme) {
-      console.log("theme", theme)
-			this.theme = theme;
       this.appTheme = theme;
 		},
-
-    toggleDarkMode(theme, evt) {
-      let htmlElm = document.querySelector("html");
-      const setLight = () => {
-        htmlElm.classList.remove("dark");
-        localStorage.theme = "light";
-        this.$refs.toggleDark.textContent = "☀️";
-      };
-      const setDark = () => {
-        htmlElm.classList.add("dark");
-        localStorage.theme = "dark";
-        this.$refs.toggleDark.textContent = "🌙";
-      };
-      if (typeof theme === "string") {
-        if (theme === "dark") setDark();
-        else setLight();
-      } else {
-        if (localStorage.theme === "dark") setLight();
-        else setDark();
-      }
-    },
     scrollTop() {
       window.scrollTo(0, 0);
     },
