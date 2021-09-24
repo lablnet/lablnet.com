@@ -23,7 +23,7 @@
           <span class="sr-only"></span>
           <img
             class=""
-            src="./assets/logo.png"
+            src="./assets/muf.png"
             alt="Logo"
             width="50"
             height="50"

@@ -9,8 +9,8 @@
     section .title {
         @apply text-4xl md:text-5xl lg:text-6xl font-normal mb-0;
     }
-    section h3 .title {
-        @apply text-2xl md:text-2xl lg:text-2xl;
+    section .subtitle {
+        @apply text-3xl md:text-4xl;
     }
     section p {
         @apply mt-5;
