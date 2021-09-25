@@ -6,7 +6,7 @@
       I have worked on.
     </p>
 
-    <div class="grid md:grid-cols-4 mx-auto py-5">
+    <div class="grid md:grid-cols-3 mx-auto py-5">
       <div
         class="flex flex-col px-4 py-4"
         v-for="project in projects"
@@ -69,6 +69,12 @@ export default {
           description: 'I’ve worked with oversteps as a web developer for four month. I worked in their CRM system which I can not share web addresses because of confidentiality.',
           image: require('../assets/overstep.png'),
           link: '/overstep',
+        },
+        {
+          name: 'SpendBTC.',
+          description: 'Exchange and spend your Bitcoin and Crypto easily, using SpendBTC.',
+          image: require('../assets/spendbtc.png'),
+          link: '/spendbtc',
         }
       ],
     }
