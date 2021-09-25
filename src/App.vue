@@ -16,9 +16,8 @@
           top-0
           z-50
           animated
-        "
-        :class="{ 'shadow-lg': !atTopOfPage, gradient: atTopOfPage && isHome }"
-      >
+          shadow-lg
+        ">
         <router-link class="block" :to="{ path: '/' }">
           <span class="sr-only"></span>
           <img
@@ -82,13 +81,14 @@
           </router-link>
           <router-link
             class="block py-1"
-            :to="{ path: '/projects' }"
+            :to="{ path: '/' }"
+
           >
             Projects
           </router-link>
           <router-link
             class="block py-1"
-            :to="{ path: '/contact' }"
+            :to="{ path: '/' }"
           >
             Contact
           </router-link>
@@ -181,31 +181,22 @@
         </div>
       </footer>
     </div>
-<!--    <button-->
-<!--      v-if="top"-->
-<!--      class="backtotop bg-gray-300"-->
-<!--      v-on:click="scrollTop()"-->
-<!--      title="Go to top"-->
-<!--    >-->
-<!--      <i class="text-black fa">-->
-<!--        <img-->
-<!--          style="width: 0.75em; height: 0.75em"-->
-<!--          :src="require('@/assets/icons/arrowup.svg')"-->
-<!--        />-->
-<!--      </i>-->
-<!--    </button>-->
+    <button
+      v-if="top"
+      class="backtotop bg-gray-300"
+      v-on:click="scrollTop()"
+      title="Go to top"
+    >
+      <i class="text-black fa">
+        <img
+          style="width: 0.75em; height: 0.75em"
+          :src="require('./assets/icons/arrowup.svg')"
+        />
+      </i>
+    </button>
   </div>
 </template>
 
-<style scoped>
-nav {
-  z-index: 10;
-}
-nav.scrolled {
-  @apply shadow-2xl;
-  border-bottom: 0px;
-}
-</style>
 <script lang="js">
 // import AOS from 'aos'
 // import 'aos/dist/aos.css'
@@ -226,7 +217,6 @@ export default {
       else if (typeof to.meta.title === 'function')
         title = `${to.meta.title(to)} - ${base}`
       else title = base
-      this.isHome = to.path === '/';
       document.title = title
     },
   },
@@ -238,8 +228,6 @@ export default {
       top: false,
       nav: {},
       mobileMenuOpen: false,
-      atTopOfPage: true,
-      isHome: false,
       hidden: false,
       appTheme: localStorage.getItem('theme'),
     }
@@ -261,13 +249,6 @@ export default {
         this.top = true
       } else {
         this.top = false
-      }
-      if (window.pageYOffset > 0) {
-        // user is scrolled
-        if (this.atTopOfPage) this.atTopOfPage = false
-      } else {
-        // user is at top of page
-        if (!this.atTopOfPage) this.atTopOfPage = true
       }
     },
   }
