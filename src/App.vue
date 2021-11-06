@@ -213,7 +213,7 @@ export default {
   },
   watch: {
     $route(to, from) {
-      const base = `lablnet`
+      const base = `Muhammad Umer Farooq`
       let title = ""
       if (typeof to.meta.title === 'string')
         title = `${to.meta.title} - ${base}`
