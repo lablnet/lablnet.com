@@ -6,7 +6,7 @@ module.exports = {
       ['./public/**/*.html', './src/**/*.vue'],
     options: {
       safelist: ["dark", 'secondary-light', 'primary-light', 'primary-dark',
-        'secondary-dark'
+        'secondary-dark', 'bg-secondary-light', 'bg-primary-dark'
       ],
     },
   },
