@@ -65,10 +65,11 @@
             rounded-lg
             md:rounded-none
             md:shadow-none
-            md:bg-transparent
             p-6
             pt-0
             md:p-0
+            dark:bg-primary-dark
+            bg-white
           "
           :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
           click="mobileMenuOpen = false"
@@ -124,7 +125,9 @@
             >
               <!-- <img src="./assets/Text.png" width="50" height="50" /> -->
 
-              <span class="ml-3 text-xl">MUF</span>
+              <span class="ml-3">
+                <img src="./assets/muf.png" style="width: 80px; height 80px;" />
+              </span>
             </a>
             <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
               © 2021 Made By Umer
@@ -141,7 +144,7 @@
               "
             >
               <a
-                href="https://github.com/alphasofthub"
+                href="https://github.com/lablnet/lablnet.com"
                 target="_blank"
                 class="ml-3 text-gray-500"
               >
@@ -153,7 +156,7 @@
                 </i>
               </a>
               <a
-                href="https://twitter.com/alphasofthub"
+                href="https://twitter.com/lablnet"
                 target="_blank"
                 class="ml-3 text-gray-500"
               >

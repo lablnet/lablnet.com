@@ -1,5 +1,5 @@
 <template>
-  <a href="#" @click.prevent="toggleTheme">
+  <a href="#" @click.prevent="toggleTheme" class="py-1">
     <i
       v-if="currentTheme === 'light'"
       class="
@@ -48,6 +48,7 @@
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg
     ></i>
   </a>
+
 </template>
 
 <script lang="js">

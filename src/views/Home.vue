@@ -30,7 +30,7 @@
             my-6
             py-4
             px-8
-            shadow-lg
+            shadow-2xl
             focus:outline-none
             focus:shadow-outline
             transform
