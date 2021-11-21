@@ -1,7 +1,7 @@
 <template>
   <div>
-    <section class="flex flex-col py-10 px-5">
-      <div class="max-w-2xl">
+    <section class="flex py-10 px-5">
+      <div class="sm:flex-none md:flex-1 max-w-2xl">
         <h1 class="title">
           Muhammad Umer Farooq </h1>
         <p class="opacity-50">@lablnet</p>
@@ -42,6 +42,10 @@
         >
           Contact Me
         </router-link>
+      </div>
+
+      <div class="sm:hidden md:flex">
+        <img  class="umer bg-green-400 z-2" :src="require('../assets/umer.jpg')" alt="">
       </div>
     </section>
 
