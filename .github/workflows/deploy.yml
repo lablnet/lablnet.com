@@ -15,14 +15,19 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build 🔧
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+            node-version: '14'
+
+      - name: Install and Build
         working-directory: .
         run: |
           npm install
           npm run build
           cd dist
           cp index.html 404.html
-      - name: Deploy 🚀
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GIT_CONFIG_NAME: "alphasofthub-bot"
