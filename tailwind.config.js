@@ -14,6 +14,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class', false by default
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['IBM Plex Sans', 'ui-sans-serif', 'sans-serif']
+      },
       colors: {
         'primary-light': '#F7F8FC',
         'secondary-light': '#FFFFFF',

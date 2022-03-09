@@ -1,7 +1,7 @@
 <template>
   <section class="py-5">
     <div class="mb-8">
-     <img class="py-5 px-20 rounded " :src="require('../../assets/resourcesr.png')"/>
+     <img class="py-5 px-20 rounded " :src="require('../../assets/images/resourcesr.png')"/>
     </div>
 
     <div class="mt-3 px-5">

@@ -22,7 +22,7 @@
           <span class="sr-only"></span>
           <img
             class=""
-            src="./assets/muf.png"
+            src="./assets/images/muf.png"
             alt="Logo"
             width="50"
             height="50"
@@ -126,7 +126,7 @@
               <!-- <img src="./assets/Text.png" width="50" height="50" /> -->
 
               <span class="ml-3">
-                <img src="./assets/muf.png" style="width: 80px; height 80px;" />
+                <img src="./assets/images/muf.png" style="width: 80px; height 80px;" />
               </span>
             </a>
             <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">

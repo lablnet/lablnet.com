@@ -23,7 +23,7 @@
             {{ project.description }}
           </p>
           <div class="mt-2">
-            <router-link disabled="true" to="/work/{{project.link}}"
+            <router-link disabled="true" :to="'/work/'+project.link"
             >Learn More
             </router-link
             >
@@ -43,7 +43,7 @@ export default {
         {
           name: 'Working at AlphaSoftHub (Pvt) Ltd.',
           description: 'I started my own business on 12 Feb 2021. At AlphaSoftHub (Private) Limited I am working as lead developer of the different company’s project(s).',
-          image: require('../assets/ash.png'),
+          image: require('../assets/images/ash.png'),
           link: '/alphasofthub',
         },
         {
@@ -55,25 +55,25 @@ export default {
         {
           name: 'ResourcesR.',
           description: 'An app that provides a platform to share resources for study especially for Riphah Students.',
-          image: require('../assets/resourcesr.png'),
+          image: require('../assets/images/resourcesr.png'),
           link: '/resourcesr',
         },
         {
           name: 'Zest Framework.',
           description: 'Zest is a simple yet powerful PHP MVC framework for rapid application development that is suited for small to medium scale apps and APIs.',
-          image: require('../assets/zest.png'),
+          image: require('../assets/images/zest.png'),
           link: '/zest',
         },
         {
           name: 'Overstep Services.',
           description: 'I’ve worked with oversteps as a web developer for four month. I worked in their CRM system which I can not share web addresses because of confidentiality.',
-          image: require('../assets/overstep.png'),
+          image: require('../assets/images/overstep.png'),
           link: '/overstep',
         },
         {
           name: 'SpendBTC.',
           description: 'Exchange and spend your Bitcoin and Crypto easily, using SpendBTC.',
-          image: require('../assets/spendbtc.png'),
+          image: require('../assets/images/spendbtc.png'),
           link: '/spendbtc',
         }
       ],

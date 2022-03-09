@@ -45,7 +45,7 @@
       </div>
 
       <div class="sm:hidden md:flex">
-        <img  class="umer bg-green-400 z-2" :src="require('../assets/umer.jpg')" alt="">
+        <img  class="umer bg-green-400 z-2" :src="require('../assets/images/umer.jpg')" alt="">
       </div>
     </section>
 
@@ -87,7 +87,7 @@
           <div class="w-full pt-1 pb-5">
             <div class="overflow-hidden -mt-16 mx-auto shadow-lg"
             style="width: 30px">
-              <img :src="require('../assets/u.png')" alt="">
+              <img :src="require('../assets/images/u.png')" alt="">
             </div>
           </div>
           <div class="w-full mb-10">
