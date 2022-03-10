@@ -1,5 +1,5 @@
 <template>
-  <section class="py-10 px-5">
+  <section class="py-10 px-5 container">
     <h3 class="subtitle">Projects I've worked on.</h3>
     <p>
       I like to keep working on new projects, here is a look at the project(s)
@@ -31,6 +31,7 @@
         </div>
       </div>
     </div>
+    <router-link to="/others" class="float-right ">Other Projects</router-link>
   </section>
 </template>
 
@@ -56,25 +57,13 @@ export default {
           name: 'ResourcesR.',
           description: 'An app that provides a platform to share resources for study especially for Riphah Students.',
           image: require('../assets/images/resourcesr.png'),
-          link: '/resourcesr',
+          link: 'resourcesr',
         },
         {
           name: 'Zest Framework.',
           description: 'Zest is a simple yet powerful PHP MVC framework for rapid application development that is suited for small to medium scale apps and APIs.',
           image: require('../assets/images/zest.png'),
           link: '/zest',
-        },
-        {
-          name: 'Overstep Services.',
-          description: 'I’ve worked with oversteps as a web developer for four month. I worked in their CRM system which I can not share web addresses because of confidentiality.',
-          image: require('../assets/images/overstep.png'),
-          link: '/overstep',
-        },
-        {
-          name: 'SpendBTC.',
-          description: 'Exchange and spend your Bitcoin and Crypto easily, using SpendBTC.',
-          image: require('../assets/images/spendbtc.png'),
-          link: '/spendbtc',
         }
       ],
     }

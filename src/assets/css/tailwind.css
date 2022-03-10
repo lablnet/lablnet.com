@@ -7,8 +7,11 @@
 
 
 @layer utilities {
+    .container {
+        @apply w-full mx-auto px-6 max-w-5xl;
+    }
     section .title {
-        @apply text-4xl md:text-5xl lg:text-6xl font-normal mb-0;
+        @apply text-4xl md:text-4xl lg:text-5xl font-normal mb-0;
     }
     section .subtitle, h1 {
         @apply text-3xl md:text-4xl;
@@ -37,11 +40,4 @@
     .backtotop {
         bottom: 20px;
     }
-}
-.umer {
-    width: 250px;
-    height: 300px;
-    margin-left: 57px;
-    margin-top: 107px;
-    border: 2px solid transparent;
 }

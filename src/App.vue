@@ -12,7 +12,6 @@
           py-6
           px-6
           relative
-
           top-0
           z-50
           animated

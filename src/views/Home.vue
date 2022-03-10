@@ -1,15 +1,17 @@
 <template>
   <div>
-    <section class="flex py-10 px-5">
-      <div class="sm:flex-none md:flex-1 max-w-2xl">
+    <section class="flex-none md:flex py-10 px-5 container">
+      <div class="flex-none  md:flex-1">
         <h1 class="title">
           Muhammad Umer Farooq </h1>
-        <p class="opacity-50">@lablnet</p>
+         <Collaborator text="lablent" :picture="require('../assets/images/umer-removebg.png')" />
 
         <p class="text-justify">
           Hi there, I'm a Software Developer. I love building and rebuilding
           open source products.
         </p>
+        
+
         <p class="text-justify">
           I have experience in Full Stack software development, including Web, Mobile applications, Desktop
           applications, web scraping, web crawling, and API integrations, working on many projects. Beside all these I
@@ -19,7 +21,8 @@
           I am always passionate about working on open source projects and
           calibrating with others.
         </p>
-
+        
+        <br />
         <router-link
           to="/contact"
           class="
@@ -27,10 +30,11 @@
             hover:underline
             font-bold
             rounded-full
+            border-black-500
+            border-2
             my-6
             py-4
             px-8
-            shadow-2xl
             focus:outline-none
             focus:shadow-outline
             transform
@@ -44,13 +48,15 @@
         </router-link>
       </div>
 
-      <div class="sm:hidden md:flex">
-        <img  class="umer bg-green-400 z-2" :src="require('../assets/images/umer.jpg')" alt="">
+      <div class="hidden md:flex">
+        <div class="sm:px-0 md:px-20">
+          <img  class="w-48 h-64 ml-16 mt-24" :src="require('../assets/images/umer-removebg.png')" alt="Umer">
+        </div>
       </div>
     </section>
 
     <!--   Skills -->
-    <section class="py-10 px-5">
+    <section class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container">
       <h3 class="subtitle">Skills</h3>
       <p>
         I am still a student and will remain, the knowledge is endless. Here’s the skills set I’ve.
@@ -74,29 +80,9 @@
     <!--   Education -->
     <Education />
 
-    <!--   Quotes -->
-    <section class="py-10 px-5">
-      <h3 class="subtitle">Quotes.</h3>
-      <p>
-        Some of my favorite quotes I’ve written.
-      </p>
-
-      <div class="flex items-center justify-center mt-20">
-        <div class="w-full mx-auto rounded-lg shadow-lg px-5 pt-5 pb-10 text-gray-800"
-             style="">
-          <div class="w-full pt-1 pb-5">
-            <div class="overflow-hidden -mt-16 mx-auto shadow-lg"
-            style="width: 30px">
-              <img :src="require('../assets/images/u.png')" alt="">
-            </div>
-          </div>
-          <div class="w-full mb-10">
-            <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
-            <p class="text-sm dark:text-white text-center px-5">As the time goes by, the world is making progress, but with passage of time temptations are also increasing rapidly. I wish and pray that I die before the time, when brother will be enemy of his own brother.</p>
-            <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
-          </div>
-        </div>
-      </div>
+    <!--   Contact -->
+    <section class="py-10 px-5 container">
+      <Contact />
     </section>
   </div>
 </template>
@@ -104,11 +90,13 @@
 <script lang="js">
 import Education from "../components/Education"
 import Projects from "../components/Projects"
+import Collaborator from "@/components/Collaborator";
+import Contact from "./Contact";
 export default {
   name: 'Home',
   components: {
     Education,
-    Projects
+    Projects, Collaborator,Contact
   },
   data() {
     return {

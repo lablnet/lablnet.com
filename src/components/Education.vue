@@ -1,5 +1,5 @@
 <template>
-  <section class="py-10 px-5">
+  <section class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container">
     <h3 class="subtitle">Education.</h3>
     <p>
       I love challenges that are given by my teachers. Here’s my educational background.
@@ -52,9 +52,9 @@ export default {
           institute: "Riphah International University (I-14 Islamabad)",
           from: "2020",
           to: "2024",
-          grade: "3.87 out of 4.00",
+          grade: "3.83 out of 4.00",
           major: "Bachelor of Science in Software Engineering",
-          program: "Bachelor",
+          program: "Bachelor (SEM-5)",
           step: 3,
         },
         {
