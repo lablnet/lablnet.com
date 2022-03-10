@@ -73,25 +73,16 @@
           :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
           click="mobileMenuOpen = false"
         >
-          <router-link
-            class="block py-1"
-            :to="{ path: '/' }"
-          >
-            Home
-          </router-link>
-          <router-link
-            class="block py-1"
-            :to="{ path: '/' }"
 
-          >
-            Projects
-          </router-link>
-          <router-link
-            class="block py-1"
-            :to="{ path: '/' }"
-          >
-            Contact
-          </router-link>
+          <a href="#projects" class="block py-1">Projects</a>
+          <a href="#skills" class="block py-1">SKills</a>
+          <a href="#education" class="block py-1">Education</a>
+          <!-- <a href="#certificates" class="block py-1">Certificates</a>
+          <a href="#publication" class="block py-1">Publications</a>
+          <a href="#quotes" class="block py-1">Quotes</a>
+          <a href="#education" class="block py-1">Interests</a> -->
+          <a href="#contact" class="block py-1">Contact</a>
+
           <ThemeChanger :theme="appTheme" v-on:themeChanged="updateTheme" />
         </nav>
       </header>

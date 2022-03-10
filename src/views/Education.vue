@@ -1,5 +1,5 @@
 <template>
-  <section class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container">
+  <section class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container" id="education">
     <h3 class="subtitle">Education.</h3>
     <p>
       I love challenges that are given by my teachers. Here’s my educational background.

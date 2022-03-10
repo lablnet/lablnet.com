@@ -4,7 +4,7 @@
       <section class="hero container max-w-screen-lg mx-auto pb-10" v-if="coverPic">
         <img class="rounded object-cover !m-0" :src="coverPic" />
       </section>
-      <section class="p-10">
+      <section class="">
         <div class="container" v-if="title">
           <h1 class="title">{{ title }}</h1>
 
