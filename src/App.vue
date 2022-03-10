@@ -7,8 +7,7 @@
         class="
           flex flex-wrap flex-row
           justify-between
-          md:items-center
-          md:space-x-4
+          md:items-center md:space-x-4
           py-6
           px-6
           relative
@@ -16,7 +15,8 @@
           z-50
           animated
           shadow-lg
-        ">
+        "
+      >
         <router-link class="block" :to="{ path: '/' }">
           <span class="sr-only"></span>
           <img
@@ -55,15 +55,13 @@
             z-20
             md:flex
             flex-col
-            md:flex-row
-            md:space-x-6
+            md:flex-row md:space-x-6
             font-semibold
             w-full
             md:w-auto
             shadow-md
             rounded-lg
-            md:rounded-none
-            md:shadow-none
+            md:rounded-none md:shadow-none
             p-6
             pt-0
             md:p-0
@@ -73,15 +71,28 @@
           :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
           click="mobileMenuOpen = false"
         >
-
-          <a href="#projects" class="block py-1">Projects</a>
-          <a href="#skills" class="block py-1">SKills</a>
-          <a href="#education" class="block py-1">Education</a>
+          <router-link
+            :to="{ path: path, hash: '#projects' }"
+            class="block py-1"
+            >Projects</router-link
+          >
+          <router-link 
+          :to="{ path: path, hash: '#skills' }"
+          class="block py-1"
+            >SKills</router-link
+          >
+          <router-link
+            :to="{ path: path, hash: '#education' }"
+            class="block py-1"
+            >Education</router-link
+          >
           <!-- <a href="#certificates" class="block py-1">Certificates</a>
           <a href="#publication" class="block py-1">Publications</a>
           <a href="#quotes" class="block py-1">Quotes</a>
           <a href="#education" class="block py-1">Interests</a> -->
-          <a href="#contact" class="block py-1">Contact</a>
+          <router-link :to="{ path: path, hash: '#contact' }" class="block py-1"
+            >Contact</router-link
+          >
 
           <ThemeChanger :theme="appTheme" v-on:themeChanged="updateTheme" />
         </nav>
@@ -116,18 +127,19 @@
               <!-- <img src="./assets/Text.png" width="50" height="50" /> -->
 
               <span class="ml-3">
-                <img src="./assets/images/muf.png" style="width: 80px; height 80px;" />
+                <img
+                  src="./assets/images/muf.png"
+                  style="width: 80px; height 80px;"
+                />
               </span>
             </a>
             <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
               © 2021 Made By Umer
-
             </p>
             <span
               class="
                 inline-flex
-                sm:ml-auto
-                sm:mt-0
+                sm:ml-auto sm:mt-0
                 mt-4
                 justify-center
                 sm:justify-start
@@ -157,18 +169,18 @@
                   />
                 </i>
               </a>
-<!--              <a-->
-<!--                href="https://www.linkedin.com/company/75766397"-->
-<!--                target="_blank"-->
-<!--                class="ml-3 text-gray-500"-->
-<!--              >-->
-<!--                <i class="fa">-->
-<!--                  <img-->
-<!--                    style="width: 0.8em; height: 0.8em"-->
-<!--                    :src="require('./assets/icons/linkedin.svg')"-->
-<!--                  />-->
-<!--                </i>-->
-<!--              </a>-->
+              <!--              <a-->
+              <!--                href="https://www.linkedin.com/company/75766397"-->
+              <!--                target="_blank"-->
+              <!--                class="ml-3 text-gray-500"-->
+              <!--              >-->
+              <!--                <i class="fa">-->
+              <!--                  <img-->
+              <!--                    style="width: 0.8em; height: 0.8em"-->
+              <!--                    :src="require('./assets/icons/linkedin.svg')"-->
+              <!--                  />-->
+              <!--                </i>-->
+              <!--              </a>-->
             </span>
           </div>
         </div>
@@ -205,6 +217,9 @@ export default {
     $route(to, from) {
       const base = `Muhammad Umer Farooq`
       let title = ""
+      if (to.path !== "/") this.path = '/'
+      else this.path = ""
+
       if (typeof to.meta.title === 'string')
         title = `${to.meta.title} - ${base}`
       else if (typeof to.meta.title === 'function')
@@ -213,9 +228,6 @@ export default {
       document.title = title
     },
   },
-  mounted() {
-    this.scrollTop()
-  },
   data() {
     return {
       top: false,
@@ -223,6 +235,7 @@ export default {
       mobileMenuOpen: false,
       hidden: false,
       appTheme: localStorage.getItem('theme'),
+      path: "",
     }
   },
   created() {

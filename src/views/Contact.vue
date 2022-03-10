@@ -3,7 +3,7 @@
     <div class="col-span-1">
       <h3 class="subtitle">Lets talk about everything.</h3>
       <div class="dark:text-white text-gray-700 mt-8">
-        Hate forms? Send us an
+        Hate forms? Send me an
         <a href="mailto:umer@lablnet.com" class="underline">email</a> instead.
       </div>
 

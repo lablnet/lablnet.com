@@ -9,9 +9,16 @@ import 'nprogress/nprogress.css';
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior() {
-    // @ts-ignore
-    document.getElementById('app').scrollIntoView();
+  scrollBehavior (to: any, from: any, savedPosition: any) {
+    if (to.hash) {
+      let elem = document.getElementById(to.hash.replace("#", ""))
+      console.log(elem, to.hash)
+      if (elem)
+        window.scrollTo(0, elem.offsetTop);
+    } else {
+      // @ts-ignore
+      document.getElementById('app').scrollIntoView();
+    }
   }
 })
 
