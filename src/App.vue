@@ -277,9 +277,6 @@ export default {
     // back to top button handler.
     window.addEventListener('scroll', this.handleScroll);
 
-    // if theme is already set.
-    this.appTheme = this.theme
-
     // subscribe to theme changes.
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
       if (mutation.type === 'Theme/setTheme') {
