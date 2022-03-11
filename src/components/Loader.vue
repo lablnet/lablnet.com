@@ -1,10 +1,10 @@
 <template>
   <div v-if="loading">
-    <div class=" flex justify-center items-center ">
-      <div class="loader bg-white p-5 rounded-full flex space-x-3">
-        <div class="w-5 h-5 gradient rounded-full animate-bounce"></div>
-        <div class="w-5 h-5 gradient rounded-full animate-bounce"></div>
-        <div class="w-5 h-5 gradient rounded-full animate-bounce"></div>
+    <div class="flex justify-center items-center">
+      <div class="loader bg-transparent p-5 rounded-full flex space-x-3">
+        <div class="w-5 h-5 bg-black dark:bg-white rounded-full animate-bounce"></div>
+        <div class="w-5 h-5 bg-black dark:bg-white rounded-full animate-bounce"></div>
+        <div class="w-5 h-5 bg-black dark:bg-white rounded-full animate-bounce"></div>
       </div>
     </div>
   </div>

@@ -10,19 +10,11 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
-    path: '/projects',
-    name: 'Projects',
-    component: () => import('../views/Projects.vue'),
+    path: '/quotes',
+    name: 'Quotes',
+    component: () => import('../views/Quotes.vue'),
     meta: {
-      title: "Projects"
-    }
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import('../views/Contact.vue'),
-    meta: {
-      title: "Contact"
+      title: "Quotes"
     }
   },
   {
@@ -34,11 +26,19 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
-    path: '/',
-    name: 'About',
-    component: () => import('../views/About.vue'),
+    path: '/work/alphasofthub',
+    name: 'AlphaSoftHub',
+    component: () => import('../views/work/Alphasofthub.vue'),
     meta: {
-      title: "About"
+      title: "AlphaSoftHub"
+    }
+  },
+  {
+    path: '/work/zest',
+    name: 'Zest',
+    component: () => import('../views/work/Zest.vue'),
+    meta: {
+      title: "Zest Framework"
     }
   },
   {

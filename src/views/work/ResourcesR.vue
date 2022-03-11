@@ -1,13 +1,17 @@
 <template>
-  <PostLayout :title="title" :description="description" :coverPic="coverPic" :collabrators="collabrators" >
-
-      <PostInfo
-        :stack="stack"
-        :title="title"
-        subtitle=""
-        codeURL="labljett/test"
-        siteURL="url"
-      />
+  <PostLayout
+    :title="title"
+    :description="description"
+    :coverPic="coverPic"
+    :collabrators="collabrators"
+  >
+    <PostInfo
+      :stack="stack"
+      :title="title"
+      subtitle="Feb 2020"
+      codeURL="resourcesr/app"
+      siteURL="url"
+    />
   </PostLayout>
 </template>
 

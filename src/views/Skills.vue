@@ -1,28 +1,24 @@
 <template>
-    <section
-      class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container"
-      id="skills"
-    >
-      <h3 class="subtitle">Skills</h3>
-      <p>
-        I am still a student and will remain, the knowledge is endless. Here’s
-        the skills set I’ve.
-      </p>
-      <div class="grid md:grid-cols-3 mx-auto py-5">
-        <div
-          class="flex flex-col px-4 py-4"
-          v-for="skill in skills"
-          :key="skill"
-        >
-          <div class="flex-grow flex flex-col">
-            <h4 class="mt-0">{{ skill.title }}</h4>
-            <p class="text-justify line-clamp-4 flex-grow">
-              {{ skill.description }}
-            </p>
-          </div>
+  <section
+    class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container"
+    id="skills"
+  >
+    <h3 class="subtitle">Skills</h3>
+    <p>
+      I am still a student and will remain, the knowledge is endless. Here’s the
+      skills set I’ve.
+    </p>
+    <div class="grid md:grid-cols-3 mx-auto py-5">
+      <div class="flex flex-col px-4 py-4" v-for="skill in skills" :key="skill">
+        <div class="flex-grow flex flex-col">
+          <h4 class="mt-0">{{ skill.title }}</h4>
+          <p class="text-justify line-clamp-4 flex-grow">
+            {{ skill.description }}
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <script lang="js">

@@ -6,6 +6,7 @@
         <Collaborator
           text="lablent"
           :picture="require('../assets/images/umer-removebg.png')"
+          link="https://github.com/lablnet"
         />
 
         <p class="text-justify">
@@ -18,7 +19,7 @@
           Mobile applications, Desktop applications, web scraping, web crawling,
           and API integrations, working on many projects. Beside all these I am
           also interested in deep learning, algorithm implementation, kernel,
-          compilers, computer vision etc.
+          compilers, computer vision and Cryptography.
         </p>
         <p class="text-justify mb-6">
           I am always passionate about working on open source projects and
@@ -26,27 +27,7 @@
         </p>
 
         <br />
-        <a
-          href="#contact"
-          class="
-            mt-6
-            hover:underline
-            font-bold
-            rounded-full
-            border-black-500 border-2
-            my-6
-            py-4
-            px-8
-            focus:outline-none focus:shadow-outline
-            transform
-            transition
-            hover:scale-105
-            duration-300
-            ease-in-out
-          "
-        >
-          Contact Me
-        </a>
+        <Button text="Contact Me" link="#contact" />
       </div>
 
       <div class="hidden md:flex">
@@ -55,43 +36,66 @@
             class="w-48 h-64 ml-16 mt-24"
             :src="require('../assets/images/umer-removebg.png')"
             alt="Umer"
+            data-fancybox="default"
+            data-caption="Muhammad Umer Farooq"
           />
         </div>
       </div>
     </section>
 
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Skills -->
     <Skills />
 
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Projects -->
     <Projects />
 
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Education -->
     <Education />
 
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
+    <!--   Showcases -->
+    <ShowCase />
+
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
+    <!--   Certificates -->
+    <Certificates />
+
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Contact -->
-    <section class="py-10 px-5 container" id="contact">
-      <Contact />
-    </section>
+    <Contact />
   </div>
 </template>
 
 <script lang="js">
 
+import Button from "@/components/Button"
 import Skills from "./Skills"
 import Education from "./Education"
 import Projects from "./Projects"
+import Certificates from "./Certificates"
 import Collaborator from "@/components/Collaborator"
 import Contact from "./Contact"
+import ShowCase from "./ShowCase"
 
 export default {
   name: 'Home',
   components: {
+    Button,
     Education,
     Projects,
+    Certificates,
     Collaborator,
     Contact,
-    Skills
+    Skills,
+    ShowCase
+  },
+  computed: {
+    theme() {
+        return this.$store.getters['Theme/theme']
+    },
   }
 }
 </script>

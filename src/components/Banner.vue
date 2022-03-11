@@ -34,9 +34,7 @@
               mt-2
               flex-shrink-0
               w-full
-              sm:order-2
-              sm:mt-0
-              sm:w-auto
+              sm:order-2 sm:mt-0 sm:w-auto
             "
           >
             <a
@@ -62,15 +60,14 @@
           </div>
           <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
             <button
-                @click="show=false"
+              @click="show = false"
               type="button"
               class="
                 -mr-1
                 flex
                 p-2
                 rounded-md
-                focus:outline-none
-                focus:ring-2 focus:ring-white
+                focus:outline-none focus:ring-2 focus:ring-white
                 sm:-mr-2
               "
             >

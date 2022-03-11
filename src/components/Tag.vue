@@ -1,8 +1,13 @@
 <template>
-    <div :class="'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ' + klass">
-        <span v-html="ico"></span>
-        <span>{{text}}</span>
-    </div>
+  <div
+    :class="
+      'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ' +
+      klass
+    "
+  >
+    <span v-html="ico"></span>
+    <span>{{ text }}</span>
+  </div>
 </template>
 
 <script lang="js">

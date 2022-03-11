@@ -5,8 +5,7 @@
       class="
         text-liText-ternary-dark
         hover:text-gray-400
-        dark:text-liText-ternary-light
-        dark:hover:text-liBorder-primary-light
+        dark:text-liText-ternary-light dark:hover:text-liBorder-primary-light
         w-5
       "
     >
@@ -48,11 +47,9 @@
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg
     ></i>
   </a>
-
 </template>
 
 <script lang="js">
-import {themeSetup} from '../utils/index';
 export default {
   name: "ThemeChanger",
 	props: {
@@ -70,11 +67,8 @@ export default {
 		toggleTheme() {
 			const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
 			localStorage.setItem('theme', newTheme);
-			this.$emit('themeChanged', newTheme);
+      this.$store.dispatch('Theme/changeTheme', newTheme);
       this.currentTheme = newTheme;
-
-      themeSetup();
-			//this.$router.go();
 		},
 	},
 };

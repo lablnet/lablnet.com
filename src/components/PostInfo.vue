@@ -1,11 +1,14 @@
 <template>
   <section class="mb-3 mt-5">
+    <h3 class="title">{{ title }}</h3>
+    <h3 class="text mt-2 mb-4 opacity-70">{{ subtitle }}</h3>
+
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-10">
       <div class="col-span-1" v-if="codeURL">
         <span class="text-gray-500 font-medium mb-3">Code</span>
         <div>
           <a
-            :href="codeURL"
+            :href="'https://github.com/' + codeURL"
             target="_blank"
             class="inline-flex font-medium mt-2"
           >
@@ -61,11 +64,11 @@
                 <path d="M12.5 3a17 17 0 0 1 0 18"></path>
               </svg>
             </i>
-            <u class="px-2 dark:text-white">{{linkText}}</u></a
+            <u class="px-2 dark:text-white">{{ linkText }}</u></a
           >
         </div>
       </div>
-      <div class="col-span-1">
+      <div class="col-span-1" v-if="this.contributors.length > 0">
         <span class="text-gray-500 font-medium mb-3">Collaborators</span>
         <div class="flex flex-wrap gap-5">
           <span v-for="items in contributors" :key="items">
@@ -76,21 +79,29 @@
             />
           </span>
         </div>
+        <span class="mt-3 mb-3"><Loader :loading="loading" /></span>
       </div>
     </section>
   </section>
 </template>
 
+<style scoped>
+.title {
+  font-size: 2em;
+}
+</style>
 <script lang="js">
 
 import Tag from "@/components/Tag";
 import Collaborator from "@/components/Collaborator";
+import Loader from "@/components/Loader";
 
 export default {
     name: "PostInfo",
     components: {
         Tag,
-        Collaborator
+        Collaborator,
+        Loader
     },
     props: {
         stack: {
@@ -125,6 +136,7 @@ export default {
     data() {
         return {
             contributors: [],
+            loading: false,
         }
     },
    async mounted() {
@@ -137,14 +149,17 @@ export default {
                 this.contributors = this.collabrators
                 return
             }
+            if (this.codeURL == null) return
+
             let that = this
-            fetch("https://api.github.com/repos/resourcesr/app/contributors").then((resp) => resp.json())
+            this.loading = true
+            fetch(`https://api.github.com/repos/${this.codeURL}/contributors`).then((resp) => resp.json())
                 .then(async (data) => {
                     let items = []
                     for (let index in data) {
                         const response = await fetch(`https://api.github.com/users/${data[index].login}`)
                         const user = await response.json()
-                        if (data[index].login !== 'alphasofthub-bot' && data[index].login !== 'dependabot[bot]') {
+                        if (data[index].login !== 'alphasofthub-bot' && data[index].login !== 'dependabot[bot]' && data[index].login !== 'sider[bot]') {
                             items.push(
                             {
                                 "name": user.name,

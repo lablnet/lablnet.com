@@ -1,7 +1,7 @@
 <template>
   <div :class="appTheme">
     <!-- <Banner /> -->
-    <div class="dark:text-white">
+    <div class="dark:text-white light-text-color">
       <header
         x-data="{ mobileMenuOpen : false }"
         class="
@@ -76,9 +76,7 @@
             class="block py-1"
             >Projects</router-link
           >
-          <router-link 
-          :to="{ path: path, hash: '#skills' }"
-          class="block py-1"
+          <router-link :to="{ path: path, hash: '#skills' }" class="block py-1"
             >SKills</router-link
           >
           <router-link
@@ -86,15 +84,17 @@
             class="block py-1"
             >Education</router-link
           >
-          <!-- <a href="#certificates" class="block py-1">Certificates</a>
-          <a href="#publication" class="block py-1">Publications</a>
-          <a href="#quotes" class="block py-1">Quotes</a>
-          <a href="#education" class="block py-1">Interests</a> -->
+          <router-link
+            :to="{ path: path, hash: '#certificates' }"
+            class="block py-1"
+            >Certificates</router-link
+          >
+          <router-link to="/quotes" class="block py-1">Quotes</router-link>
           <router-link :to="{ path: path, hash: '#contact' }" class="block py-1"
             >Contact</router-link
           >
 
-          <ThemeChanger :theme="appTheme" v-on:themeChanged="updateTheme" />
+          <ThemeChanger :theme="appTheme" />
         </nav>
       </header>
 
@@ -133,8 +133,10 @@
                 />
               </span>
             </a>
-            <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-              © 2021 Made By Umer
+            <p class="inline-flex text-sm text-gray- 500 sm:ml-6 sm:mt-0 mt-4">
+              © 2021 Made with &nbsp;
+              <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
+              &nbsp; By &nbsp;<strong> Umer</strong>
             </p>
             <span
               class="
@@ -146,41 +148,43 @@
               "
             >
               <a
-                href="https://github.com/lablnet/lablnet.com"
+                href="https://github.com/lablnet"
                 target="_blank"
                 class="ml-3 text-gray-500"
               >
-                <i class="fa">
-                  <img
-                    style="width: 0.8em; height: 0.8em"
-                    :src="require('./assets/icons/github.svg')"
-                  />
-                </i>
+                <img
+                  style="width: 1.6em; height: 1.6em"
+                  :src="
+                    require(this.appTheme === 'dark'
+                      ? './assets/icons/white/github.svg'
+                      : './assets/icons/github.svg')
+                  "
+                />
+              </a>
+
+              <a
+                v-for="media in medias"
+                :key="media"
+                :href="media.link"
+                target="_blank"
+                class="ml-3 text-gray-500"
+              >
+                <img style="width: 1.6em; height: 1.6em" :src="media.picture" />
               </a>
               <a
-                href="https://twitter.com/lablnet"
+                href="https://linkedin.com/in/lablnet"
                 target="_blank"
                 class="ml-3 text-gray-500"
               >
-                <i class="fa">
-                  <img
-                    style="width: 0.8em; height: 0.8em"
-                    :src="require('./assets/icons/twitter.svg')"
-                  />
-                </i>
+                <img
+                  style="width: 1.6em; height: 1.6em"
+                  :src="
+                    require(this.appTheme === 'dark'
+                      ? './assets/icons/white/linkedin.svg'
+                      : './assets/icons/linkedin.svg')
+                  "
+                />
               </a>
-              <!--              <a-->
-              <!--                href="https://www.linkedin.com/company/75766397"-->
-              <!--                target="_blank"-->
-              <!--                class="ml-3 text-gray-500"-->
-              <!--              >-->
-              <!--                <i class="fa">-->
-              <!--                  <img-->
-              <!--                    style="width: 0.8em; height: 0.8em"-->
-              <!--                    :src="require('./assets/icons/linkedin.svg')"-->
-              <!--                  />-->
-              <!--                </i>-->
-              <!--              </a>-->
             </span>
           </div>
         </div>
@@ -203,10 +207,14 @@
 </template>
 
 <script lang="js">
-// import AOS from 'aos'
-// import 'aos/dist/aos.css'
 //import Banner from "@/components/Banner";
 import ThemeChanger from "@/components/ThemeChanger";
+import { mapState } from "vuex";
+
+// fancybox.
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox.css";
+
 export default {
   name: 'app',
   components: {
@@ -236,17 +244,55 @@ export default {
       hidden: false,
       appTheme: localStorage.getItem('theme'),
       path: "",
+      medias: [
+        {
+          picture: require('./assets/icons/twitter.svg'),
+          link: "https://twitter.com/lablnet"
+        },
+        {
+          picture: require('./assets/icons/upwork.svg'),
+          link: "https://www.upwork.com/freelancers/~010c32fc720f5f9624"
+        },
+        {
+          picture: require('./assets/icons/fiverr.svg'),
+          link: "https://fiverr.com/umerlablnet01"
+        }
+      ]
     }
   },
   created() {
-    //AOS.init()
+    // Fancybox init.
+    let fancyboxELems = ["[data-fancybox='default']", "[data-fancybox='certificate']"]
+    // for in loop.
+    for (let i = 0; i < fancyboxELems.length; i++) {
+      Fancybox.bind(fancyboxELems[i], {
+        caption: function (fancybox, carousel, slide) {
+          return (
+            slide.caption || ""
+          );
+        },
+     });
+    }
+
+    // back to top button handler.
     window.addEventListener('scroll', this.handleScroll);
-    this.appTheme = localStorage.getItem('theme') || 'light'
+
+    // if theme is already set.
+    this.appTheme = this.theme
+
+    // subscribe to theme changes.
+    this.unsubscribe = this.$store.subscribe((mutation, state) => {
+      if (mutation.type === 'Theme/setTheme') {
+        this.appTheme = mutation.payload
+      }
+    })
+  },
+  computed: {
+    theme() {
+        return this.$store.getters['Theme/theme']
+    },
   },
   methods: {
-    updateTheme(theme) {
-      this.appTheme = theme;
-		},
     scrollTop() {
       window.scrollTo(0, 0);
     },
@@ -257,6 +303,9 @@ export default {
         this.top = false
       }
     },
-  }
+  },
+  beoreDestroy() {
+    this.unsubscribe()
+  },
 }
 </script>

@@ -24,6 +24,9 @@
     }
 }
 
+.light-text-color {
+    color: #374151;
+}
 .backtotop {
     position: fixed;
     bottom: 80px;
@@ -40,4 +43,8 @@
     .backtotop {
         bottom: 20px;
     }
+}
+
+img[data-fancybox="default"], img[data-fancybox="certificate"] {
+    cursor: zoom-in;
 }

@@ -2,8 +2,8 @@
   <section class="py-10 px-5 container" id="projects">
     <h3 class="subtitle">Projects I've worked on.</h3>
     <p>
-      I like to keep working on new projects, here is a look at the project(s)
-      I have worked on.
+      I like to keep working on new projects, here is a look at the project(s) I
+      have worked on.
     </p>
 
     <div class="grid md:grid-cols-3 mx-auto py-5">
@@ -14,7 +14,12 @@
       >
         <div class="w-full flex-shrink-0">
           <div class="">
-            <img class="rounded" :src="project.image"/>
+            <img
+              class="rounded"
+              :src="project.image"
+              data-fancybox="default"
+              :data-caption="project.name"
+            />
           </div>
         </div>
         <div class="flex-grow flex flex-col">
@@ -23,15 +28,14 @@
             {{ project.description }}
           </p>
           <div class="mt-2">
-            <router-link disabled="true" :to="'/work/'+project.link"
-            >Learn More
-            </router-link
-            >
+            <router-link disabled="true" :to="'/work/' + project.link"
+              >Learn More
+            </router-link>
           </div>
         </div>
       </div>
     </div>
-    <router-link to="/others" class="float-right ">Other Projects</router-link>
+    <router-link to="/others" class="float-right">Other Projects</router-link>
   </section>
 </template>
 
@@ -47,12 +51,12 @@ export default {
           image: require('../assets/images/ash.png'),
           link: '/alphasofthub',
         },
-        {
-          name: 'Covid19 Earth.',
-          description: 'An open source platform that shows covid19 stats of Pakistan and having ability to add any other country data/scraper easily. It is hosted on GitHub Page and Actions.',
-          image: 'https://www.covid19.earth/COVID19.png',
-          link: '/covid19',
-        },
+        // {
+        //   name: 'Covid19 Earth.',
+        //   description: 'An open source platform that shows covid19 stats of Pakistan and having ability to add any other country data/scraper easily. It is hosted on GitHub Page and Actions.',
+        //   image: 'https://www.covid19.earth/COVID19.png',
+        //   link: '/covid19',
+        // },
         {
           name: 'ResourcesR.',
           description: 'An app that provides a platform to share resources for study especially for Riphah Students.',

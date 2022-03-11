@@ -1,7 +1,10 @@
 <template>
   <div class="min-h-screen container">
     <section class="py-10 px-5">
-      <section class="hero container max-w-screen-lg mx-auto pb-10" v-if="coverPic">
+      <section
+        class="hero container max-w-screen-lg mx-auto pb-10"
+        v-if="coverPic"
+      >
         <img class="rounded object-cover !m-0" :src="coverPic" />
       </section>
       <section class="">
