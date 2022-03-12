@@ -21,24 +21,29 @@
           mx-auto
           rounded-lg
           bg-white
+          dark:bg-transparent
+          dark:text-white
           shadow-lg
           px-5
           pt-5
           text-gray-800
           mt-5
+          border-transparent
+          dark:border-white
+          border-2
         "
         v-for="(quote, index) in data"
         :key="index"
       >
         <div class="w-full mb-10">
-          <div class="text-3xl text-black text-left leading-tight h-3">
+          <div class="text-3xl text-black dark:text-white text-left leading-tight h-3">
             “
           </div>
-          <p class="text-sm text-gray-600 text-center px-5">
+          <p class="text-sm text-gray-600 dark:text-white text-center px-5">
             {{ quote["title"] }}
           </p>
           <div
-            class="text-3xl text-black text-right leading-tight h-3 -mt-3"
+            class="text-3xl text-black dark:text-white text-right leading-tight h-3 -mt-3"
           >
             ”
           </div>

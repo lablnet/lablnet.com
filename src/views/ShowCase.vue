@@ -1,7 +1,7 @@
 <template>
   <section class="py-10 px-5 container" id="showcase">
     <div class="">
-      <div class="grid grid-cols-2 gap-5 md:gap-8 xl:grid-cols-3 xl:gap-5">
+      <div class="grid grid-cols-1 gap-5 md:gap-8 xl:grid-cols-3 xl:gap-5">
         <div
           class="
             flex flex-col

@@ -114,7 +114,8 @@
               flex-col
             "
           >
-            <a
+            <router-link
+              to="/"
               class="
                 flex
                 title-font
@@ -124,15 +125,14 @@
                 justify-center
               "
             >
-              <!-- <img src="./assets/Text.png" width="50" height="50" /> -->
-
               <span class="ml-3">
                 <img
                   src="./assets/images/muf.png"
                   style="width: 80px; height 80px;"
+                  alt="Muhammad Umer Farooq"
                 />
               </span>
-            </a>
+            </router-link>
             <p class="inline-flex text-sm text-gray- 500 sm:ml-6 sm:mt-0 mt-4">
               © 2021 Made with &nbsp;
               <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
