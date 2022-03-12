@@ -32,6 +32,10 @@
         subtitle="Feb 2020"
         codeURL="zestframework/com_installer"
       />
+
+      
+      <vue-markdown># this is the default slot</vue-markdown>
+
     </PostLayout>
   </div>
 </template>
@@ -40,12 +44,14 @@
 
 import PostLayout from "@/components/PostLayout";
 import PostInfo from "@/components/PostInfo";
+import CustomMarkdown from '@/components/CustomMarkdown';
 
 export default {
   name: "Zest",
   components: {
     PostLayout,
     PostInfo,
+    'vue-markdown': CustomMarkdown,
   },
   data() {
     return {     
