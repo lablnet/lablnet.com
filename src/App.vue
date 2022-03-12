@@ -74,23 +74,37 @@
           <router-link
             :to="{ path: path, hash: '#projects' }"
             class="block py-1"
+            @click="mobileMenuOpen = false"
             >Projects</router-link
           >
-          <router-link :to="{ path: path, hash: '#skills' }" class="block py-1"
+          <router-link
+            :to="{ path: path, hash: '#skills' }"
+            class="block py-1"
+            @click="mobileMenuOpen = false"
             >SKills</router-link
           >
           <router-link
             :to="{ path: path, hash: '#education' }"
             class="block py-1"
+            @click="mobileMenuOpen = false"
             >Education</router-link
           >
           <router-link
             :to="{ path: path, hash: '#certificates' }"
             class="block py-1"
+            @click="mobileMenuOpen = false"
             >Certificates</router-link
           >
-          <router-link to="/quotes" class="block py-1">Quotes</router-link>
-          <router-link :to="{ path: path, hash: '#contact' }" class="block py-1"
+          <router-link
+            to="/quotes"
+            class="block py-1"
+            @click="mobileMenuOpen = false"
+            >Quotes</router-link
+          >
+          <router-link
+            :to="{ path: path, hash: '#contact' }"
+            class="block py-1"
+            @click="mobileMenuOpen = false"
             >Contact</router-link
           >
 
