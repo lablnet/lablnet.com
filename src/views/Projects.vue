@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <router-link to="/others" class="float-right">Other Projects</router-link>
+    <router-link to="/work/others" class="float-right">Other Projects</router-link>
   </section>
 </template>
 
@@ -49,14 +49,8 @@ export default {
           name: 'Working at AlphaSoftHub (Pvt) Ltd.',
           description: 'I started my own business on 12 Feb 2021. At AlphaSoftHub (Private) Limited I am working as lead developer of the different company’s project(s).',
           image: require('../assets/images/ash.png'),
-          link: '/alphasofthub',
+          link: 'alphasofthub',
         },
-        // {
-        //   name: 'Covid19 Earth.',
-        //   description: 'An open source platform that shows covid19 stats of Pakistan and having ability to add any other country data/scraper easily. It is hosted on GitHub Page and Actions.',
-        //   image: 'https://www.covid19.earth/COVID19.png',
-        //   link: '/covid19',
-        // },
         {
           name: 'ResourcesR.',
           description: 'An app that provides a platform to share resources for study especially for Riphah Students.',
@@ -67,7 +61,7 @@ export default {
           name: 'Zest Framework.',
           description: 'Zest is a simple yet powerful PHP MVC framework for rapid application development that is suited for small to medium scale apps and APIs.',
           image: require('../assets/images/zest.png'),
-          link: '/zest',
+          link: 'zest',
         }
       ],
     }

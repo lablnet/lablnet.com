@@ -42,6 +42,14 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/work/others',
+    name: 'Others',
+    component: () => import('../views/work/Others.vue'),
+    meta: {
+      title: "More Projects"
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: "404",
     component: () => import('../views/site/404.vue'),

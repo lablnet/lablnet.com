@@ -16,7 +16,7 @@
           </p>
         </div>
 
-        <hr class="mb-2" />
+        <hr class="mt-9 mb-4" />
         <slot></slot>
       </section>
     </section>

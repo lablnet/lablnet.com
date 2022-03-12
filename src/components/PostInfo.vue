@@ -27,7 +27,7 @@
                 ></path>
               </svg>
             </i>
-            <u class="px-2 dark:text-white">resources/app</u></a
+            <u class="px-2 dark:text-white">{{codeURL}}</u></a
           >
         </div>
       </div>
