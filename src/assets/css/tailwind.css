@@ -26,6 +26,31 @@
         @apply font-semibold text-xl mb-2;
         line-height: 1.6;
     }
+    a.arrow {
+        @apply font-semibold hover:underline transform transition hover:scale-105 duration-300 ease-in-out
+    }
+    a.arrow:before {
+        content: ' '
+    }
+    a.arrow:hover:before, a.hover:hover:after {
+        width: calc(100% + 4px);
+    }
+    a.arrow:after {
+        @apply absolute pointer-events-none;
+        margin-top: 3px;
+        margin-left: 9px;
+        content: url("../icons/arrow-above.svg");
+    }
+    a.arrow:hover:after, a.arrow:focus:after {
+        content: url("../icons/arrow-right.svg");
+    }
+    /* For Dark theme */
+    .bg-primary-dark a.arrow:after {
+        content: url("../icons/white/arrow-above.svg")!important;
+    }
+    .bg-primary-dark a.arrow:hover:after, .bg-primary-dark a.arrow:focus:after {
+        content: url("../icons/white/arrow-right.svg")!important;
+    }
 }
 
 .light-text-color {

@@ -28,14 +28,14 @@
             {{ project.description }}
           </p>
           <div class="mt-2">
-            <router-link disabled="true" :to="'/work/' + project.link"
+            <router-link class="arrow" disabled="true" :to="'/work/' + project.link"
               >Learn More
             </router-link>
           </div>
         </div>
       </div>
     </div>
-    <router-link to="/work/others" class="float-right">Other Projects</router-link>
+    <router-link to="/work/others " class="float-right arrow">Other Projects</router-link>
   </section>
 </template>
 
