@@ -42,9 +42,9 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
-    path: '/work/others',
-    name: 'Others',
-    component: () => import('../views/work/Others.vue'),
+    path: '/work/projects',
+    name: 'Projects',
+    component: () => import('../views/work/Projects.vue'),
     meta: {
       title: "More Projects"
     }

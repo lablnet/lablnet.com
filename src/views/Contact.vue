@@ -1087,7 +1087,7 @@ export default {
       name: null,
       email: null,
       message: null,
-      error: "Please fix the errors above.",
+      error: "Please fill the form.",
     }
   },
   
