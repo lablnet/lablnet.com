@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <router-link to="/work/projects " class="mr-4 float-right arrow">More Projects</router-link>
+    <router-link to="/work/projects" class="mr-4 float-right arrow">More Projects</router-link>
   </section>
 </template>
 
