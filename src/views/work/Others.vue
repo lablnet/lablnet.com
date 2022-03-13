@@ -14,7 +14,7 @@
       <hr class="mt-12 mb-4" />
       <PostInfo
         :stack="['Javascript']"
-        title="Snack"
+        title="Snake"
         subtitle="November 2020"
         siteURL="https://snake.lablnet.com/index.html"
         codeURL="lablnet/snake"
@@ -33,6 +33,7 @@
         title="LumberJack Game"
         subtitle="December 2019"
         siteURL="https://lablnet.github.io/LumberJack-game/v2/index.html"
+        :collabrators="collabrators"
       />
       <hr class="mt-12 mb-4" />
       <PostInfo
@@ -80,7 +81,7 @@
         title="lablnet-flask"
         subtitle="April 2021"
         siteURL="https://lablnet-flask.herokuapp.com"
-        :collabrators="collabators"
+        :collabrators="collabrators"
       />
       <hr class="mt-12 mb-4" />
       <PostInfo
@@ -96,15 +97,15 @@
         title="AINDA"
         subtitle="February 2020"
         siteURL="https://play.google.com/store/apps/details?id=com.practicalvalue.ainda&hl=en"
-        :collabrators="collabators"
+        :collabrators="collabrators"
       />
       <hr class="mt-12 mb-4" />
       <PostInfo
         :stack="['JavaScript', 'CSS']"
-        title="Simplete Software House Site Template"
+        title="Simple Software House Site Template"
         subtitle="December 2020"
         siteURL="https://lablnet.github.io/softhubpro/index.html"
-        :collabrators="collabators"
+        :collabrators="collabrators"
       />
     </PostLayout>
   </div>

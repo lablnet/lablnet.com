@@ -27,7 +27,7 @@
                 ></path>
               </svg>
             </i>
-            <u class="px-2 dark:text-white">{{codeURL}}</u></a
+            <u class="px-2 dark:text-white">{{ codeURL }}</u></a
           >
         </div>
       </div>
@@ -156,14 +156,15 @@ export default {
             fetch(`https://api.github.com/repos/${this.codeURL}/contributors`).then((resp) => resp.json())
                 .then(async (data) => {
                     let items = []
+                    let ignores = ["alphasofthub-bot", "dependabot[bot]", 'sider[bot]']
                     for (let index in data) {
                         const response = await fetch(`https://api.github.com/users/${data[index].login}`)
                         const user = await response.json()
-                        if (data[index].login !== 'alphasofthub-bot' && data[index].login !== 'dependabot[bot]' && data[index].login !== 'sider[bot]') {
+                        if (ignores.indexOf(data[index].login) == -1) {
                             items.push(
                             {
-                                "name": user.name,
-                                "pic": data[index].avatar_url,
+                                "name": user.name || data[index].login,
+                                "pic": data[index].avatar_url || null,
                                 "link": data[index].html_url,
                                 "contributions": data[index].contributions
                             }
