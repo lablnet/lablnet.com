@@ -992,21 +992,30 @@
           </svg>
         </div>
       </div>
-      <div class="col-span-1">
+      <form
+        ref="contact"
+        action="https://formspree.io/f/xzbvkrwy"
+        method="POST"
+        class="col-span-1"
+      >
         <div class="mt-10">
           <span class="uppercase text-sm font-bold">Full Name</span>
           <input
             class="
               w-full
-              bg-gray-300
+              bg-gray-200
               text-gray-900
               mt-2
               p-3
               rounded-lg
               focus:outline-none focus:shadow-outline
+              dark:bg-white
             "
             type="text"
-            placeholder=""
+            placeholder="Write your Name."
+            required
+            v-model="name"
+            ref="contactName"
           />
         </div>
         <div class="mt-8">
@@ -1014,14 +1023,19 @@
           <input
             class="
               w-full
-              bg-gray-300
+              bg-gray-200
               text-gray-900
               mt-2
               p-3
               rounded-lg
               focus:outline-none focus:shadow-outline
+              dark:bg-white
             "
-            type="text"
+            type="email"
+            placeholder="Write your Email."
+            required
+            v-model="email"
+            ref="contactEmail"
           />
         </div>
         <div class="mt-8">
@@ -1030,19 +1044,31 @@
             class="
               w-full
               h-32
-              bg-gray-300
+              bg-gray-200
               text-gray-900
               mt-2
               p-3
               rounded-lg
               focus:outline-none focus:shadow-outline
+              dark:bg-white
             "
+            placeholder="Write your message..."
+            required
+            minlength="15"
+            maxlength="100000"
+            v-model="message"
+            ref="contactMessage"
           ></textarea>
         </div>
         <div class="mt-8">
-          <Button text="Send Message" />
+          <p class="text-red-500 text-xs italic" v-if="error">
+            {{ error }}
+          </p>
         </div>
-      </div>
+        <div class="mt-8">
+          <Button text="Send Message" @click="submitForm()" />
+        </div>
+      </form>
     </section>
   </section>
 </template>
@@ -1054,7 +1080,66 @@ import Button from "@/components/Button.vue";
 export default {
   name: "Contact",
   components: {
-    Button
+    Button,
+  },
+  data() {
+    return {
+      name: null,
+      email: null,
+      message: null,
+      error: "Please fix the errors above.",
+    }
+  },
+  
+  watch: {
+    name(val) {
+      // validate that the name is not empty
+      let elem = this.$refs.contactName;
+      this.errorTrigger(elem, val);
+    },
+    email(val) {
+      // validate that the name is not empty
+      let elem = this.$refs.contactEmail;
+      this.errorTrigger(elem, val);
+    },
+    message(val) {
+      // validate that the name is not empty
+      let elem = this.$refs.contactMessage;
+      this.errorTrigger(elem, val);
+    }
+  },
+  methods: {
+    errorTrigger(elem, val) {
+      if (val === null || val === "") {
+        this.error = "Please fix the errors above.";
+        elem.classList.add("border-red-500");
+        elem.classList.add("border-2");
+        return;
+      } else {
+        if (elem.getAttribute('type') == 'email') {
+          // validate the email.
+          if (val.length > 0) {
+            if (val.indexOf('@') === -1) {
+              this.error = "Please enter a valid email address.";
+              elem.classList.add('border-red-500');
+              elem.classList.add('border-2');
+              return;
+            }
+          }
+        }
+      }
+      elem.classList.remove("border-red-500");
+      elem.classList.remove("border-2");
+      if (this.name !== null && this.email !== null && this.message !== null && this.name !== "" && this.email !== "" && this.message !== "") {
+        this.error = null;
+      }
+    },
+    submitForm() {
+      let elem = this.$refs.contact;
+      if (this.error === null) {
+        elem.submit();
+      }
+    }
   }
 }
 </script>

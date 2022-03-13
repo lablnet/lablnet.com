@@ -19,10 +19,11 @@
     "
     :target="target"
     :class="
-      gray == 'true'
+      gray === true
         ? 'border-black bg-white dark:border-white dark:bg-transparent'
         : ''
     "
+    :disabled="disable"
   >
     {{ text }}
   </a>
@@ -47,6 +48,10 @@ export default {
         gray: {
             type: Boolean,
             default: true
+        },
+        disable: {
+          type: Boolean,
+          default: false
         }
     },
 }

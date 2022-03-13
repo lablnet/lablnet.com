@@ -77,7 +77,7 @@
                     text="View on Coursera"
                     :link="certificate.link"
                     target="_blank"
-                    gray="true"
+                    :gray="true"
                   />
                 </div>
               </div>
