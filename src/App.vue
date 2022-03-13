@@ -148,9 +148,9 @@
               </span>
             </router-link>
             <p class="inline-flex text-sm text-gray- 500 sm:ml-6 sm:mt-0 mt-4">
-              © 2021 Made with &nbsp;
+              with &nbsp;
               <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
-              &nbsp; By &nbsp;<strong> Umer</strong>
+              &nbsp; By &nbsp;<strong> Muhammad Umer Farooq</strong>
             </p>
             <span
               class="
