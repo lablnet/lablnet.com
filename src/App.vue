@@ -148,9 +148,9 @@
               </span>
             </router-link>
             <p class="inline-flex text-sm text-gray- 500 sm:ml-6 sm:mt-0 mt-4">
-              with &nbsp;
+              Made with &nbsp;
               <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
-              &nbsp; By &nbsp;<strong> Muhammad Umer Farooq</strong>
+              &nbsp; By &nbsp;<strong> <a href="https://github.com/lablnet">Muhammad Umer Farooq</a></strong>
             </p>
             <span
               class="
