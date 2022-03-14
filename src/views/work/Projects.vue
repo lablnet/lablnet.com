@@ -199,7 +199,7 @@
       <p class="text-justify">
         It was my freelancing project. It is a website backend in Flask, for user login, signup, reset password and calculation. It also has an admin panel for writing blogs and managing users.
       </p>
-      <p class="text-justify text-red-500"><strong>Note:</strong> Although this is not a client project, the agreement was to make source code confidential, no doubt the partnership was canceled but I still stand by my agreement.</p>
+      <p class="text-justify text-red-500"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p> 
       <hr class="mt-12 mb-4" />
       <PostInfo
         :stack="['Javascript']"
