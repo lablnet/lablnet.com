@@ -28,6 +28,8 @@
             title="Logo"
           />
         </router-link>
+        <span class="inline-block md:hidden"><ThemeChanger :theme="appTheme" /></span>
+
         <button
           @click="mobileMenuOpen = !mobileMenuOpen"
           class="inline-block md:hidden w-8 h-8 p-1"
@@ -108,7 +110,7 @@
             >Contact</router-link
           >
 
-          <ThemeChanger :theme="appTheme" />
+          <span class="hidden md:inline-block mt-1"><ThemeChanger :theme="appTheme" /></span>
         </nav>
       </header>
 
@@ -150,7 +152,7 @@
             <p class="inline-flex text-sm text-gray- 500 sm:ml-6 sm:mt-0 mt-4">
               Made with &nbsp;
               <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
-              &nbsp; By &nbsp;<strong> <a href="https://github.com/lablnet">Muhammad Umer Farooq</a></strong>
+              &nbsp; By &nbsp;<strong> <a href="https://github.com/lablnet" target="_blank">Muhammad Umer Farooq</a></strong>
             </p>
             <span
               class="

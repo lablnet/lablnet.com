@@ -3,7 +3,7 @@
     <PostLayout
       :title="title"
       :description="description"
-      :coverPic="coverPic"
+      :coverPic="this.theme === 'dark' ? require('../../assets/images/transparent/ash.png') : require('../../assets/images/ash.png')"
     >
       <PostInfo
         :stack="['Vue', 'TailwindCSS', 'Typescript', 'Javascript']"
@@ -150,10 +150,14 @@ export default {
         },
       ],
       stack: ["PHP"],
-      coverPic: require('../../assets/images/ash.png'),
       title: "AlphaSoftHub",
       description: "I started my own business on 12 Feb 2021. At AlphaSoftHub (Private) Limited I am working as lead developer of the different company’s project(s).",
     }
+  },
+  computed: {
+    theme() {
+        return this.$store.getters['Theme/theme']
+    },
   }
 }
 </script>

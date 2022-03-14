@@ -2,7 +2,7 @@
   <PostLayout
     :title="title"
     :description="description"
-    :coverPic="coverPic"
+      :coverPic="this.theme === 'dark' ? require('../../assets/images/transparent/resourcesr.png') : require('../../assets/images/resourcesr.png')"
   >
     <PostInfo
       :stack="['Dart', 'Flutter', 'Firebase']"
@@ -163,10 +163,14 @@ export default {
   data() {
     return {
       stack: ["Vue", "Firebase", "Flutter"],
-      coverPic: require('../../assets/images/resourcesr.png'),
       title: "ResourcesR",
       description: "An app that provides a platform to share resources for study especially for Riphah Students. Features including sharing resources, timetable, events, assignments, etc.",
     }
+  },
+  computed: {
+    theme() {
+        return this.$store.getters['Theme/theme']
+    },
   }
 }
 </script>

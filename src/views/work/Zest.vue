@@ -3,7 +3,7 @@
     <PostLayout
       :title="title"
       :description="description"
-      :coverPic="coverPic"
+      :coverPic="this.theme === 'dark' ? require('../../assets/images/transparent/zest.png') : require('../../assets/images/zest.png')"
     >
       <PostInfo
         :stack="['PHP']"
@@ -124,10 +124,14 @@ export default {
   },
   data() {
     return {     
-      coverPic: require('../../assets/images/zest.png'),
       title: "Zest Framework",
       description: "Zest is a simple yet powerful PHP MVC framework for rapid application development that is suited for small to medium scale apps and APIs.",
     }
+  },
+  computed: {
+    theme() {
+        return this.$store.getters['Theme/theme']
+    },
   }
 }
 </script>

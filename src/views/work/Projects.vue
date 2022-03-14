@@ -94,7 +94,7 @@
       </p>
       <h3 class="project-headings mt-5">Credits</h3>
       <p class="text-justify">
-        <ol class="list-disc mx-6">
+        <ol class="list-disc mx-6 break-all">
           <li>Character: <a class="text-blue-400 underline" target="_blank" href="https://giphy.com/stickers/stem-2w9gmg97uKtbi">https://giphy.com/stickers/stem-2w9gmg97uKtbi</a></li>
           <li>Tree: <a class="text-blue-400 underline" target="_blank" href="https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html">https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html</a></li>
           <li>Sack of Seeds: <a class="text-blue-400 underline" target="_blank" href="https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/">https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/</a></li>
