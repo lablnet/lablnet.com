@@ -330,17 +330,15 @@ export default {
         nav.classList.add('fixed')
         nav.classList.add('w-full')
         nav.classList.add('top-0')
-        nav.classList.add('top-0')
         nav.classList.remove('relative')
-        //main.classList.add('mt-22')
+        main.classList.add('mt-20')
         return;
       }
       nav.classList.remove('fixed')
       nav.classList.remove('w-full')
       nav.classList.remove('top-0')
-      nav.classList.remove('top-0')
       nav.classList.add('relative')
-      //main.classList.add('mt-22')
+      main.classList.remove('mt-20')
     },
     handleScroll(event) {
       let scroll = document.body.scrollTop || document.documentElement.scrollTop;
