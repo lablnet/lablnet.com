@@ -40,6 +40,7 @@
     <h3 class="project-headings mt-5">Issues Faced</h3>
     <p class="text-justify">
       <ol class="list-disc mx-6">
+        <li>The first issue was about maintaining the resources. I myself volunteered to add resources like lectures slides, textbooks, etc. But, now I wanted the CRs to do so who were quite lazy enough to do so.</li>
         <li>There was another frustrating issue related to Firebase Function as I was not able to get it because my Bank Card was not working at Google 🤔. So I add firebase rules by adding email manually.</li>
         <li>On the top of it, at that time Flutter was too young so have less support.</li>
       </ol>
@@ -91,8 +92,7 @@
     <h3 class="project-headings mt-5">Issues Faced</h3>
     <p class="text-justify">
       <ol class="list-disc mx-6">
-        <li>The first issue was about maintaining the resources. I myself volunteered to add resources like lectures slides, textbooks, etc. But, now I wanted the CRs to do so who were quite lazy enough to do so.</li>
-        <li>There was another frustrating issue related to Firebase Function as I was not able to get it because my Bank Card was not working at Google 🤔. So I add firebase rules by adding email manually.</li>
+        <li>The problem I encountered was like the project above.</li>
       </ol>
     </p>
 

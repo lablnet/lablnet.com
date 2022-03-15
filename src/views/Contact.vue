@@ -5,7 +5,7 @@
         <h3 class="subtitle">Do you need my help?</h3>
         <div class="dark:text-white text-gray-700 mt-8">
           Hate forms? Send me an
-          <a href="mailto:umer@lablnet.com" class="underline">email</a> instead.
+          <a href="mailto:umer@lablnet.com" class="underline font-bold" target="_blank">email</a> instead.
         </div>
 
         <div class="mt-8 p-5 text-center hidden md:block">

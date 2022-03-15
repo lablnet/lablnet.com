@@ -23,7 +23,7 @@
         </p>
         <p class="text-justify mb-6">
           I am always passionate about working on open source projects and
-          calibrating with others.
+          contributing with others.
         </p>
 
         <br />

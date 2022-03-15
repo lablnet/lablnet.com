@@ -5,8 +5,8 @@
   >
     <h3 class="subtitle">Skills</h3>
     <p>
-      I am still a student and will remain, the knowledge is endless. Here’s the
-      skills set I’ve.
+      I am still a student and will remain, the knowledge is endless. Here are
+      the skill sets that I have.
     </p>
     <div class="grid md:grid-cols-3 mx-auto py-5">
       <div class="flex flex-col px-4 py-4" v-for="skill in skills" :key="skill">

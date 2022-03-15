@@ -1,5 +1,5 @@
 const themeSetup = () => {
-    const appTheme = localStorage.getItem('theme');
+    const appTheme = localStorage.getItem('theme') || 'light';
 
       if (
         appTheme === 'dark' &&

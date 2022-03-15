@@ -10,13 +10,14 @@
           md:items-center md:space-x-4
           py-6
           px-6
-          relative
           top-0
           z-50
           animated
           shadow-lg
           dark:bg-secondary-dark
+          bg-white
         "
+        ref="nav"
       >
         <router-link class="block" :to="{ path: '/' }">
           <span class="sr-only"></span>
@@ -29,7 +30,9 @@
             title="Logo"
           />
         </router-link>
-        <span class="inline-block md:hidden"><ThemeChanger :theme="appTheme" /></span>
+        <span class="inline-block md:hidden"
+          ><ThemeChanger :theme="appTheme"
+        /></span>
 
         <button
           @click="mobileMenuOpen = !mobileMenuOpen"
@@ -111,11 +114,13 @@
             >Contact</router-link
           >
 
-          <span class="hidden md:inline-block mt-1"><ThemeChanger :theme="appTheme" /></span>
+          <span class="hidden md:inline-block mt-1"
+            ><ThemeChanger :theme="appTheme"
+          /></span>
         </nav>
       </header>
 
-      <router-view />
+      <div class="" ref="main"><router-view /></div>
       <hr />
       <footer class="text-gray-600 body-font">
         <div class="bg-gray-100 dark:text-white dark:bg-secondary-dark">
@@ -153,7 +158,13 @@
             <p class="inline-flex text-sm text-gray- 500 sm:ml-6 sm:mt-0 mt-4">
               Made with &nbsp;
               <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
-              &nbsp; By &nbsp;<strong> <a href="https://github.com/lablnet" target="_blank">Muhammad Umer Farooq</a></strong>
+              &nbsp; By &nbsp;
+              <a
+                class="font-bold"
+                href="https://github.com/lablnet"
+                target="_blank"
+                >Muhammad Umer Farooq</a
+              >
             </p>
             <span
               class="
@@ -259,8 +270,9 @@ export default {
       nav: {},
       mobileMenuOpen: false,
       hidden: false,
-      appTheme: localStorage.getItem('theme'),
+      appTheme: localStorage.getItem('theme') || 'light',
       path: "",
+      scroll: 0,
       medias: [
         {
           picture: require('./assets/icons/twitter.svg'),
@@ -310,12 +322,40 @@ export default {
     scrollTop() {
       window.scrollTo(0, 0);
     },
+    manageNavScroll(t) {
+      let nav = this.$refs.nav
+      let main = this.$refs.main
+      if (t === 'add') {
+        nav.classList.add('fixed')
+        nav.classList.add('w-full')
+        nav.classList.add('top-0')
+        nav.classList.add('top-0')
+        main.classList.add('mt-22')
+        return;
+      }
+      nav.classList.remove('fixed')
+      nav.classList.remove('w-full')
+      nav.classList.remove('top-0')
+      nav.classList.remove('top-0')
+      main.classList.add('mt-22')
+    },
     handleScroll(event) {
-      if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+      let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+      if (scroll > 150) {
+         if (scroll > 300) {
+           if (this.scroll < scroll) {
+             this.manageNavScroll('remove')
+           } else {
+             this.manageNavScroll('add')
+           }
+         }
+
         this.top = true
       } else {
         this.top = false
+        this.manageNavScroll('remove')
       }
+      this.scroll = scroll;
     },
   },
   beoreDestroy() {
