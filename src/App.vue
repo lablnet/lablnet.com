@@ -332,7 +332,7 @@ export default {
         nav.classList.add('top-0')
         nav.classList.add('top-0')
         nav.classList.remove('relative')
-        main.classList.add('mt-22')
+        //main.classList.add('mt-22')
         return;
       }
       nav.classList.remove('fixed')
@@ -340,7 +340,7 @@ export default {
       nav.classList.remove('top-0')
       nav.classList.remove('top-0')
       nav.classList.add('relative')
-      main.classList.add('mt-22')
+      //main.classList.add('mt-22')
     },
     handleScroll(event) {
       let scroll = document.body.scrollTop || document.documentElement.scrollTop;
