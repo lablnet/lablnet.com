@@ -33,11 +33,9 @@
       <div class="hidden md:flex">
         <div class="sm:px-0 md:px-20">
           <img
-            class="w-64 h-64 ml-16 mt-24 rounded-full object-cover"
+            class="w-64 h-64 ml-16 mt-24 rounded-full object-cover pointer-events-none	"
             :src="require('../assets/images/umer-removebg-resized.png')"
-            alt="Umer"
-            data-fancybox="default"
-            data-caption="Muhammad Umer Farooq"
+            alt="Muhammad Umer Farooq"
           />
         </div>
       </div>
