@@ -21,16 +21,13 @@
           mx-auto
           rounded-lg
           bg-white
-          dark:bg-transparent
+          dark:bg-secondary-dark
           dark:text-white
           shadow-lg
           px-5
           pt-5
           text-gray-800
           mt-5
-          border-transparent
-          dark:border-white
-          border-2
         "
         v-for="(quote, index) in data"
         :key="index"

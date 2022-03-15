@@ -15,6 +15,7 @@
           z-50
           animated
           shadow-lg
+          dark:bg-secondary-dark
         "
       >
         <router-link class="block" :to="{ path: '/' }">
@@ -67,7 +68,7 @@
             p-6
             pt-0
             md:p-0
-            dark:bg-primary-dark
+            dark:bg-secondary-dark
             bg-white
           "
           :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
@@ -117,7 +118,7 @@
       <router-view />
       <hr />
       <footer class="text-gray-600 body-font">
-        <div class="bg-gray-100 dark:bg-primary-dark">
+        <div class="bg-gray-100 dark:text-white dark:bg-secondary-dark">
           <div
             class="
               container
