@@ -28,7 +28,7 @@
             {{ project.description }}
           </p>
           <div class="mt-2">
-            <router-link class="arrow" disabled="true" :to="'/work/' + project.link"
+            <router-link class="float-left arrow" :to="'/work/' + project.link"
               >Learn More
             </router-link>
           </div>
