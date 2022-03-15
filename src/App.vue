@@ -16,6 +16,7 @@
           shadow-lg
           dark:bg-secondary-dark
           bg-white
+          relative
         "
         ref="nav"
       >
@@ -330,6 +331,7 @@ export default {
         nav.classList.add('w-full')
         nav.classList.add('top-0')
         nav.classList.add('top-0')
+        nav.classList.remove('relative')
         main.classList.add('mt-22')
         return;
       }
@@ -337,6 +339,7 @@ export default {
       nav.classList.remove('w-full')
       nav.classList.remove('top-0')
       nav.classList.remove('top-0')
+      nav.classList.add('relative')
       main.classList.add('mt-22')
     },
     handleScroll(event) {
