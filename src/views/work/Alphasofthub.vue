@@ -112,6 +112,8 @@
         library for flasks like Laravel Style.
       </p>
 
+      <hr class="mt-12 mb-4" />
+
       <PostInfo
         :stack="['PHP', 'Wordpress']"
         title="AlphaSoftHub Old Site"
