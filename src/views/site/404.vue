@@ -28,6 +28,7 @@
               hover:scale-105
               duration-300
               ease-in-out
+              arrow
             "
           >
             Home

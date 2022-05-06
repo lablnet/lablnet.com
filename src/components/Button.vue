@@ -16,13 +16,13 @@
       hover:scale-105
       duration-300
       ease-in-out
+      arrow
+      bg-white
+      dark:border-white
+      dark:bg-transparent
     "
     :target="target"
-    :class="
-      gray === true
-        ? 'border-black bg-white dark:border-white dark:bg-transparent'
-        : ''
-    "
+    :class="gray === true ? 'border-black' : ''"
     :disabled="disable"
   >
     {{ text }}
@@ -47,7 +47,7 @@ export default {
         },
         gray: {
             type: Boolean,
-            default: true
+            default: false
         },
         disable: {
           type: Boolean,
