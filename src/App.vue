@@ -31,7 +31,7 @@
             title="Logo"
           />
         </router-link>
-        <span class="inline-block md:hidden"
+        <span class="inline-block mx-auto mr-1 mt-1 md:hidden"
           ><ThemeChanger :theme="appTheme"
         /></span>
 
