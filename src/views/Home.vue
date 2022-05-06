@@ -9,6 +9,21 @@
           link="https://github.com/lablnet"
         />
 
+        <div class="flex md:hidden">
+          <div class="sm:px-0 mx-auto">
+            <img
+              class="
+                w-64
+                h-64
+                mx-auto
+                rounded-full
+                pointer-events-none
+              "
+              :src="require('../assets/images/umer-removebg-resized.png')"
+              alt="Muhammad Umer Farooq"
+            />
+          </div>
+        </div>
         <p class="text-justify">
           Hi there, I'm a Software Developer. I love building and rebuilding
           open source products.
@@ -33,7 +48,15 @@
       <div class="hidden md:flex">
         <div class="sm:px-0 md:px-20">
           <img
-            class="w-64 h-64 ml-16 mt-24 rounded-full object-cover pointer-events-none	"
+            class="
+              w-64
+              h-64
+              ml-16
+              mt-24
+              rounded-full
+              object-cover
+              pointer-events-none
+            "
             :src="require('../assets/images/umer-removebg-resized.png')"
             alt="Muhammad Umer Farooq"
           />
