@@ -34,7 +34,9 @@
         </div>
       </div>
       <div class="col-span-1">
-        <span class="text-gray-500 dark:text-white font-medium mb-3">Stack</span>
+        <span class="text-gray-500 dark:text-white font-medium mb-3"
+          >Stack</span
+        >
         <div class="flex flex-wrap gap-5">
           <span v-for="item in stack" :key="item">
             <Tag :text="item" />
@@ -70,17 +72,21 @@
           >
         </div>
       </div>
-      <div class="col-span-1" v-if="this.contributors.length > 0">
-        <span class="text-gray-500 dark:text-white font-medium mb-3">Collaborators</span>
-        <div class="flex flex-wrap gap-5">
-          <span v-for="items in contributors" :key="items">
-            <Collaborator
-              :text="items.name"
-              :picture="items.pic"
-              :link="items.link"
-            />
-          </span>
-        </div>
+      <div class="col-span-1">
+        <span v-if="this.contributors.length > 0">
+          <span class="text-gray-500 dark:text-white font-medium mb-3"
+            >Collaborators</span
+          >
+          <div class="flex flex-wrap gap-5">
+            <span v-for="items in contributors" :key="items">
+              <Collaborator
+                :text="items.name"
+                :picture="items.pic"
+                :link="items.link"
+              />
+            </span>
+          </div>
+        </span>
         <span class="mt-3 mb-3"><Loader :loading="loading" /></span>
       </div>
     </section>
