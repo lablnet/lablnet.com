@@ -43,7 +43,7 @@
         title="COVID-19"
         subtitle="Auguest 2020"
         codeURL="lablnet/covid19"
-        siteURL="https://www.covid19.earth/"
+        siteURL="https://covid19.alphasofthub.com"
       />
 
       <h3 class="project-headings mt-9">Purpose</h3>
