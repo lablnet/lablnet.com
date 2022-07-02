@@ -1,6 +1,58 @@
 <template>
   <div>
     <PostLayout :title="title" :description="description">
+    
+      <PostInfo
+        :stack="['Javascript', 'Python']"
+        title="Fontpicker"
+        subtitle="July 2022"
+        siteURL="https://lablnet.github.io/fontpicker/"
+        codeURL="lablnet/fontpicker"
+      />
+
+      <h3 class="project-headings mt-9">Purpose</h3>
+
+      <p class="text-justify">
+        A standalone font picker for the web. A package to quickly choose fonts from Google Web Fonts and preview a font from Google's large range of free fonts, and optionally select a font weight and font style (normal or italics).
+
+        <br />
+        The sole purpose of this project is to provide a simple and easy to use font picker for the CRM, ERP and other system.
+        <ol class="list-disc mx-6 mt-3">
+          <li>Admin to update site fonts.</li>
+          <li>Enable users to customize their profile as they want.</li>
+          <li>And more</li>
+        </ol>
+
+      </p>
+      <h3 class="project-headings mt-5">Features</h3>
+      <p class="text-justify">
+        <ol class="list-disc mx-6">
+          <li>Quickly preview and select any Google font family.</li>
+          <li>Optionally choose font weight and font style.</li>
+        </ol>
+      </p>
+      <h3 class="project-headings mt-5" id="fontpickertodo">Todo</h3>
+      <p class="text-justify">
+        <ol class="list-disc mx-6">
+          <li>Find fonts by name, language and category (serif, sans-serif, display, handwriting, monospace).</li>
+          <li>Update style to make it mobile responsive .</li>
+        </ol>
+      </p>
+      <h3 class="project-headings mt-5">Related Projects</h3>
+      <p class="text-justify">
+        <ol class="list-disc mx-6">
+          <li><a class="text-blue-400 underline" target="_blank" href="https://github.com/av01d/fontpicker-jquery-plugin">https://github.com/av01d/fontpicker-jquery-plugin</a> (but it's Jquery plugin and dependend on Jquery).</li>
+        </ol>
+      </p>
+
+      <h3 class="project-headings mt-5">Future Thoughts</h3>
+      <p class="text-justify">
+        I would like to continue to work on adding more features to this
+        project, which are stated in <a href="#fontpickertodo">Todo</a> and more.
+      </p>
+
+      <hr class="mt-12 mb-4" />
+  
       <PostInfo
         :stack="['Javascript']"
         title="Board"
