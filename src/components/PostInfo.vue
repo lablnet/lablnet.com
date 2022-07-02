@@ -1,6 +1,17 @@
 <template>
   <section class="mb-3 mt-5">
-    <h3 class="title">{{ title }}</h3>
+    <h3 class="title" :id="title">
+      <a class="flex mx-3" :href="'#' + title">
+        <img
+          :src="
+            theme === 'dark'
+              ? require('@/assets/icons/white/link.svg')
+              : require('@/assets/icons/link.svg')
+          "
+        />
+        <span class="mx-3">{{ title }}</span></a
+      >
+    </h3>
     <h3 class="text mt-2 mb-4 opacity-70">{{ subtitle }}</h3>
 
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -87,7 +98,7 @@
             </span>
           </div>
         </span>
-        <span class="mt-3 mb-3"><Loader :loading="loading" /></span>
+        <span class="mt-3 mb-3"> <Loader :loading="loading" /></span>
       </div>
     </section>
   </section>
@@ -98,8 +109,8 @@
   font-size: 2em;
 }
 </style>
-<script lang="js">
 
+<script lang="js">
 import Tag from "@/components/Tag";
 import Collaborator from "@/components/Collaborator";
 import Loader from "@/components/Loader";
@@ -133,8 +144,8 @@ export default {
             default: null,
         },
         linkText: {
-          type: String,
-          default: "View Site"
+            type: String,
+            default: "View Site"
         },
         collabrators: {
             type: Array,
@@ -147,7 +158,7 @@ export default {
             loading: false,
         }
     },
-   async mounted() {
+    async mounted() {
         await this.getContributors()
     },
     methods: {
@@ -169,22 +180,23 @@ export default {
                         const response = await fetch(`https://api.github.com/users/${data[index].login}`)
                         const user = await response.json()
                         if (ignores.indexOf(data[index].login) == -1) {
-                            items.push(
-                            {
+                            items.push({
                                 "name": user.name || data[index].login,
                                 "pic": data[index].avatar_url || null,
                                 "link": data[index].html_url,
                                 "contributions": data[index].contributions
-                            }
-                            )
+                            })
                         }
                     }
                     that.contributors = items
                     that.loading = false
-                }
-                ).catch(function (error) {
-            })
+                }).catch(function (error) {})
         }
+    },
+    computed: {
+        theme() {
+            return this.$store.getters['Theme/theme']
+        },
     }
 }
 </script>
