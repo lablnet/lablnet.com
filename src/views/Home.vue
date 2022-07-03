@@ -7,18 +7,13 @@
           text="lablent"
           :picture="require('../assets/images/umer-removebg.png')"
           link="https://github.com/lablnet"
+          :contributionsStatus="true"
         />
 
         <div class="flex md:hidden">
           <div class="sm:px-0 mx-auto">
             <img
-              class="
-                w-64
-                h-64
-                mx-auto
-                rounded-full
-                pointer-events-none
-              "
+              class="w-64 h-64 mx-auto rounded-full pointer-events-none"
               :src="require('../assets/images/umer-removebg-resized.png')"
               alt="Muhammad Umer Farooq"
             />

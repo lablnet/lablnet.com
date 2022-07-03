@@ -29,7 +29,20 @@
       :alt="text"
     />
     <span class="pl-5">{{ text }}</span>
-    <span class="pl-2 pr-2 mx-3 mr-0 rounded-full bg-white text-black dark:bg-black dark:text-white">{{ contributions }} </span>
+    <span
+      class="
+        pl-2
+        pr-2
+        mx-3
+        mr-0
+        rounded-full
+        bg-white
+        text-black
+        dark:bg-black dark:text-white
+      "
+      v-if="!contributionsStatus"
+      >{{ contributions }}
+    </span>
   </a>
 </template>
 
@@ -52,6 +65,10 @@ export default {
         contributions: {
           type: Number,
           default: 1,
+        },
+        contributionsStatus: {
+          type: Boolean,
+          default: false,
         }
     }   
 }
