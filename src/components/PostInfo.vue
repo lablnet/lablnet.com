@@ -94,6 +94,7 @@
                 :text="items.name"
                 :picture="items.pic"
                 :link="items.link"
+                :contributions="items.contributions"
               />
             </span>
           </div>
