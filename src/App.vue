@@ -232,6 +232,59 @@
         />
       </i>
     </button>
+
+    <Model title="Support Me" :show="showModel">
+      <div class="">
+        <h2 class="p-2 font-semibold text-2xl tracking-wide mb-2 text-gray-500 dark:text-gray-400">
+          Why you should donate?
+        </h2>
+
+        <p class="p-2 text-base leading-relaxed text-justify text-gray-500 dark:text-gray-400">
+          Every donation helps to improve me. The funds will be used to purchase
+          better equipment, software, books, and other resources that help out
+          with making new projects. They also help out with server costs and the
+          hiring of new developers for the projects.
+          
+          <spam class="mt-3"> Please sent me a donation at the following bitcoin address: </spam>
+          <pre class="mt-2">
+            <code>
+              37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV
+            </code>
+          </pre>
+        </p>
+      </div>
+
+      <div
+        class="
+          flex
+          items-center
+          rounded-b
+          border-t border-gray-200
+          dark:border-gray-600
+          p-2
+        "
+      >
+        <button
+          type="button"
+          class="
+            mt-2
+            text-gray-500
+            bg-white
+            rounded-lg
+            border border-gray-200
+            text-sm
+            font-medium
+            px-5
+            py-2.5
+            focus:z-10
+            dark:bg-secondary-dark
+          "
+          @click="this.doNotShowModel"
+        >
+          Do not show again
+        </button>
+      </div>
+    </Model>
   </div>
 </template>
 
@@ -239,6 +292,8 @@
 //import Banner from "@/components/Banner";
 import ThemeChanger from "@/components/ThemeChanger";
 import { mapState } from "vuex";
+
+import Model from "@/components/Model";
 
 // fancybox.
 import { Fancybox } from "@fancyapps/ui";
@@ -248,6 +303,7 @@ export default {
   name: 'app',
   components: {
     ThemeChanger,
+    Model,
    // Banner
   },
   watch: {
@@ -267,6 +323,7 @@ export default {
   },
   data() {
     return {
+      showModel : localStorage.getItem('showModel'),
       top: false,
       nav: {},
       mobileMenuOpen: false,
@@ -302,6 +359,12 @@ export default {
           );
         },
      });
+
+      // setup auto show model.
+      if (this.showModel === null) {
+        this.showModel = false
+        localStorage.setItem('showModel', true)
+      }
     }
 
     // back to top button handler.
@@ -320,6 +383,11 @@ export default {
     },
   },
   methods: {
+    doNotShowModel()
+    {
+      this.showModel = false
+      localStorage.setItem('showModel', false)
+    },
     scrollTop() {
       window.scrollTo(0, 0);
     },
