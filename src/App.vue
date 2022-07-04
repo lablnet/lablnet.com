@@ -146,11 +146,9 @@
                 hiring of new developers for the projects.
 
                 <spam class="mt-3"> Please sent me a donation at the following bitcoin address: </spam>
-                <pre class="mt-2">
             <code>
               37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV
             </code>
-          </pre>
             </p>
         </div>
 
