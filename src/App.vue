@@ -253,7 +253,7 @@
 
         <p
           class="
-            p-2
+            p-4
             text-base
             leading-relaxed
             text-justify text-gray-500
@@ -268,7 +268,7 @@
           <spam class="mt-3">
             Please sent me a donation at the following bitcoin address:
           </spam>
-          <code> 37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV </code>
+          <code class="mt-2 mx-2">37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV </code>
         </p>
       </div>
 
@@ -345,7 +345,7 @@ export default {
     },
     data() {
         return {
-            showModel: localStorage.getItem('showModel'),
+            showModel: false,
             top: false,
             nav: {},
             mobileMenuOpen: false,
@@ -380,12 +380,16 @@ export default {
                     );
                 },
             });
+        }
 
-            // setup auto show model.
-            if (this.showModel === null) {
-                this.showModel = false
-                localStorage.setItem('showModel', true)
-            }
+        // setup auto show model.
+        if (localStorage.getItem('showModel') === null) {
+            localStorage.setItem('showModel', true)
+        }
+        if (localStorage.getItem('showModel') === 'true') {
+            setTimeout(() => {
+                this.showModel = true
+            }, 5000)
         }
 
         // back to top button handler.
