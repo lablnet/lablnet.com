@@ -1010,6 +1010,7 @@
               rounded-lg
               focus:outline-none focus:shadow-outline
               dark:bg-gray-900
+              dark:text-gray-400
             "
             type="text"
             placeholder="Write your Name."
@@ -1030,6 +1031,7 @@
               rounded-lg
               focus:outline-none focus:shadow-outline
               dark:bg-gray-900
+              dark:text-gray-400
             "
             type="email"
             placeholder="Write your Email."
@@ -1051,6 +1053,7 @@
               rounded-lg
               focus:outline-none focus:shadow-outline
               dark:bg-gray-900
+              dark:text-gray-400
             "
             placeholder="Write your message..."
             required
