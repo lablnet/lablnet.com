@@ -345,10 +345,8 @@ export default {
         return {
             showModel: false,
             top: false,
-            nav: {},
             mobileMenuOpen: false,
             hidden: false,
-            appTheme: localStorage.getItem('theme') || 'light',
             path: "",
             scroll: 0,
             medias: [{
@@ -392,16 +390,9 @@ export default {
 
         // back to top button handler.
         window.addEventListener('scroll', this.handleScroll);
-
-        // subscribe to theme changes.
-        this.unsubscribe = this.$store.subscribe((mutation, state) => {
-            if (mutation.type === 'Theme/setTheme') {
-                this.appTheme = mutation.payload
-            }
-        })
     },
     computed: {
-        theme() {
+        appTheme() {
             return this.$store.getters['Theme/theme']
         },
     },
@@ -448,9 +439,6 @@ export default {
             }
             this.scroll = scroll;
         },
-    },
-    beoreDestroy() {
-        this.unsubscribe()
     },
 }
 </script>
