@@ -93,7 +93,8 @@
             :to="{ path: path, hash: '#education' }"
             class="block py-1"
             @click="mobileMenuOpen = false"
-            ><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</router-link
+            ><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            Education</router-link
           >
           <router-link
             :to="{ path: path, hash: '#certificates' }"
@@ -157,7 +158,15 @@
                 />
               </span>
             </router-link>
-            <p class="inline-flex text-sm text-gray-500 dark:text-gray-300 sm:ml-6 sm:mt-0 mt-4">
+            <p
+              class="
+                inline-flex
+                text-sm text-gray-500
+                dark:text-gray-300
+                sm:ml-6 sm:mt-0
+                mt-4
+              "
+            >
               Made with &nbsp;
               <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
               &nbsp; By &nbsp;
