@@ -188,7 +188,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/zest.7cd4a7c7.png"
   },
   {
-    "revision": "f717f0605f6c7f6dba80ef9d665e2a9d",
+    "revision": "4f0f34156dda614b25d78495d80a5a88",
     "url": "/index.html"
   },
   {
