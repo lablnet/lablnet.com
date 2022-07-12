@@ -73,6 +73,7 @@
             pt-0
             md:p-0
             dark:bg-gray-900
+            bg:white
           "
           :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
           click="mobileMenuOpen = false"
