@@ -23,7 +23,7 @@
             />
           </div>
           <div class="pt-5 md:pl-5 md:pt-0">
-            <h1 class="font-body text-2xl font-bold text-primary md:text-3xl">
+            <h1 class="font-body text-2xl font-bold text-primary md:text-3xl dark:text-gray-300">
               50+
             </h1>
             <h4
@@ -33,6 +33,7 @@
                 text-base
                 font-medium
                 leading-loose
+                dark:text-gray-300
               "
             >
               Finished Projects
@@ -63,7 +64,7 @@
             />
           </div>
           <div class="pt-5 md:pl-5 md:pt-0">
-            <h1 class="font-body text-2xl font-bold text-primary md:text-3xl">
+            <h1 class="font-body text-2xl font-bold text-primary md:text-3xl dark:text-gray-300">
               20+
             </h1>
             <h4
@@ -73,6 +74,7 @@
                 text-base
                 font-medium
                 leading-loose
+                dark:text-gray-300
               "
             >
               Happy Clients
@@ -103,7 +105,7 @@
             />
           </div>
           <div class="pt-5 md:pl-5 md:pt-0">
-            <h1 class="font-body text-2xl font-bold text-primary md:text-3xl">
+            <h1 class="font-body text-2xl font-bold text-primary md:text-3xl dark:text-gray-300">
               30+
             </h1>
             <h4
@@ -113,6 +115,7 @@
                 text-base
                 font-medium
                 leading-loose
+                dark:text-gray-300
               "
             >
               Bugs Fixed

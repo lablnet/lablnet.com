@@ -1,7 +1,7 @@
 <template>
   <div :class="appTheme">
     <!-- <Banner /> -->
-    <div class="dark:text-white light-text-color">
+    <div class="dark:text-white light-text-color bg-white dark:bg-gray-700">
       <header
         x-data="{ mobileMenuOpen : false }"
         class="
@@ -14,7 +14,7 @@
           z-50
           animated
           shadow-lg
-          dark:bg-secondary-dark
+          dark:bg-gray-900
           bg-white
           relative
         "
@@ -72,8 +72,6 @@
             p-6
             pt-0
             md:p-0
-            dark:bg-secondary-dark
-            bg-white
           "
           :class="{ flex: mobileMenuOpen, hidden: !mobileMenuOpen }"
           click="mobileMenuOpen = false"
@@ -126,7 +124,7 @@
       </div>
       <hr />
       <footer class="text-gray-600 body-font">
-        <div class="bg-gray-100 dark:text-white dark:bg-secondary-dark">
+        <div class="bg-gray-100 dark:text-white dark:bg-gray-900">
           <div
             class="
               container
@@ -158,7 +156,7 @@
                 />
               </span>
             </router-link>
-            <p class="inline-flex text-sm text-gray- 500 sm:ml-6 sm:mt-0 mt-4">
+            <p class="inline-flex text-sm text-gray-500 dark:text-gray-300 sm:ml-6 sm:mt-0 mt-4">
               Made with &nbsp;
               <img class="h-6 w-6" :src="require('./assets/icons/heart.gif')" />
               &nbsp; By &nbsp;

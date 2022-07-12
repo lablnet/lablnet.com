@@ -11,7 +11,7 @@
         <div class="container" v-if="title">
           <h1 class="title">{{ title }}</h1>
 
-          <p class="text-justify mb-6" v-if="description">
+          <p class="text-justify mb-6 dark:text-gray-300" v-if="description">
             {{ description }}
           </p>
         </div>

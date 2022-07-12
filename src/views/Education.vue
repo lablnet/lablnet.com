@@ -1,10 +1,10 @@
 <template>
   <section
-    class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container"
+    class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container"
     id="education"
   >
-    <h3 class="subtitle">Education.</h3>
-    <p>
+    <h3 class="subtitle dark:text-white">Education.</h3>
+    <p class="dark:text-gray-400">
       I love challenges that are given by my teachers. Here’s my educational
       background.
     </p>
@@ -48,7 +48,7 @@
               >
                 {{ education.step }}
               </div>
-              <div class="flex-grow pl-4">
+              <div class="flex-grow pl-4 dark:text-gray-400">
                 <h2 class="font-medium title-font mb-1">
                   {{ education.program }} ({{ education.major }})
                 </h2>

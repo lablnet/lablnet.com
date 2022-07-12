@@ -13,9 +13,9 @@
         siteURL="https://zestframework.github.io/"
       />
 
-      <h3 class="project-headings mt-9">Purpose</h3>
+      <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-      <p class="text-justify">
+      <p class="text-justify dark:text-gray-300">
         The purpose of Zest Framework As for PHP, there are many PHP frameworks
         available nowadays, so the question is raised as to why we/people should
         use ZestFramework. The main purpose of Zest framework is to provide a
@@ -24,17 +24,17 @@
         <br />
         <strong>Who is Zest For?</strong> Zest is for PHP developers who want to build apps instead of coding common things like validation, routing, database manipulation, etc, from scratch. Zest offers a set of well-defined toolkits that take care of those things allowing you to focus on building your app.
       </p>
-     <h3 class="project-headings mt-5">Problems Faced</h3>
+     <h3 class="project-headings mt-5 dark:text-gray-300">Problems Faced</h3>
       <p class="text-justify">
         
-        <ol class="list-disc mx-6">
+        <ol class="list-disc mx-6 dark:text-gray-300">
           <li>Since this is a very complex project, the problem I encountered was to create everything from scratch.</li>
           <li>Unit testing for each module also took time.</li>
         </ol>
       </p>
 
-      <h3 class="project-headings mt-5">Some Goodies</h3>
-       <p class="text-justify">
+      <h3 class="project-headings mt-5 dark:text-gray-300">Some Goodies</h3>
+       <p class="text-justify dark:text-gray-300">
         <ol class="list-disc mx-6">
           <li>Not to mention, I enjoyed working on the project, even during my 1st year exams of college I liked to work on it other than preparation.</li>
           <li>This framework is purly light-weight without any third party libraries.</li>
@@ -42,14 +42,14 @@
         </ol>
       </p>
 
-      <h3 class="project-headings mt-5">Lessons Learnt</h3>
-      <p class="text-justify">
+      <h3 class="project-headings mt-5 dark:text-gray-300">Lessons Learnt</h3>
+      <p class="text-justify dark:text-gray-300">
         This was probably my first developed framework with some real
         applications. I learned a lot about in-depth knowledge of PHP, including
         understanding Regex, how the framework works, and so on.
       </p>
-      <h3 class="project-headings mt-5">Future Thoughts</h3>
-      <p class="text-justify">
+      <h3 class="project-headings mt-5 dark:text-gray-300">Future Thoughts</h3>
+      <p class="text-justify dark:text-gray-300">
         I would like  to continue maintaining and improving the Framework in the future. Here are the things I would like to add soon:
         <ol class="list-disc mx-6">
           <li>Add database layer</li>
@@ -68,9 +68,9 @@
         siteURL="https://zestframework.github.io/"
       />
 
-      <h3 class="project-headings mt-9">Purpose</h3>
+      <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-      <p class="text-justify">
+      <p class="text-justify dark:text-gray-300">
         The is the Skeleton app for Zest Framework that shows the basic
         structure of the framework.
       </p>
@@ -83,15 +83,15 @@
         codeURL="zestframework/com_installer"
       />
 
-      <h3 class="project-headings mt-9">Purpose</h3>
+      <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-      <p class="text-justify">
+      <p class="text-justify dark:text-gray-300">
         The is the component for Zest Framework it's purpose is to install and
         manage the components of the framework.
       </p>
 
-      <h3 class="project-headings mt-5">Lesson Learnt</h3>
-      <p class="text-justify">
+      <h3 class="project-headings mt-5 dark:text-gray-300">Lesson Learnt</h3>
+      <p class="text-justify dark:text-gray-300">
         Working on the basics of component systems, I learned how a system that supports components / plugins and modules works.
         And I learned how to create a component for Zest Framework &#x1F601;.
       </p>
@@ -104,7 +104,7 @@
         subtitle="June 2021"
         codeURL="zestframework/Zest_Web"
       />
-      <p class="mt-9">
+      <p class="mt-9 dark:text-gray-300">
         This is the site developed with Zest Framework.
       </p>
     </PostLayout>

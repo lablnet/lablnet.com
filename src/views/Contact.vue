@@ -3,7 +3,7 @@
     <section class="grid grid-cols-1 md:grid-cols-2">
       <div class="col-span-1">
         <h3 class="subtitle">Do you need my help?</h3>
-        <div class="dark:text-white text-gray-700 mt-8">
+        <div class="dark:text-white text-gray-700 mt-8 dark:text-gray-300">
           Hate forms? Send me an
           <a href="mailto:umer@lablnet.com" class="underline font-bold" target="_blank">email</a> instead.
         </div>
@@ -999,7 +999,7 @@
         class="col-span-1"
       >
         <div class="mt-10">
-          <span class="uppercase text-sm font-bold">Full Name</span>
+          <span class="uppercase text-sm font-bold dark:text-gray-300">Full Name</span>
           <input
             class="
               w-full
@@ -1009,7 +1009,7 @@
               p-3
               rounded-lg
               focus:outline-none focus:shadow-outline
-              dark:bg-white
+              dark:bg-gray-900
             "
             type="text"
             placeholder="Write your Name."
@@ -1019,7 +1019,7 @@
           />
         </div>
         <div class="mt-8">
-          <span class="uppercase text-sm font-bold">Email</span>
+          <span class="uppercase text-sm font-bold dark:text-gray-300">Email</span>
           <input
             class="
               w-full
@@ -1029,7 +1029,7 @@
               p-3
               rounded-lg
               focus:outline-none focus:shadow-outline
-              dark:bg-white
+              dark:bg-gray-900
             "
             type="email"
             placeholder="Write your Email."
@@ -1039,7 +1039,7 @@
           />
         </div>
         <div class="mt-8">
-          <span class="uppercase text-sm font-bold">Message</span>
+          <span class="uppercase text-sm font-bold dark:text-gray-300">Message</span>
           <textarea
             class="
               w-full
@@ -1050,7 +1050,7 @@
               p-3
               rounded-lg
               focus:outline-none focus:shadow-outline
-              dark:bg-white
+              dark:bg-gray-900
             "
             placeholder="Write your message..."
             required

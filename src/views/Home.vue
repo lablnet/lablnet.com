@@ -19,19 +19,19 @@
             />
           </div>
         </div>
-        <p class="text-justify">
+        <p class="text-justify dark:text-gray-300">
           Hi there, I'm a Software Developer. I love building and rebuilding
           open source products.
         </p>
 
-        <p class="text-justify">
+        <p class="text-justify dark:text-gray-300">
           I have experience in Full Stack software development, including Web,
           Mobile applications, Desktop applications, web scraping, web crawling,
           and API integrations, working on many projects. Beside all these I am
           also interested in deep learning, algorithm implementation, kernel,
           compilers, computer vision and Cryptography.
         </p>
-        <p class="text-justify mb-6">
+        <p class="text-justify mb-6 dark:text-gray-300">
           I am always passionate about working on open source projects and
           contributing with others.
         </p>

@@ -1,9 +1,9 @@
 <template>
   <section
-    class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container"
+    class="py-10 px-5 bg-gray-200 dark:bg-gray-900 dark:text-gray-400 container"
     id="skills"
   >
-    <h3 class="subtitle">Skills</h3>
+    <h3 class="subtitle dark:text-white">Skills</h3>
     <p>
       I am still a student and will remain, the knowledge is endless. Here are
       the skill sets that I have.
@@ -11,7 +11,7 @@
     <div class="grid md:grid-cols-3 mx-auto py-5">
       <div class="flex flex-col px-4 py-4" v-for="skill in skills" :key="skill">
         <div class="flex-grow flex flex-col">
-          <h4 class="mt-0">{{ skill.title }}</h4>
+          <h4 class="mt-0 dark:text-white">{{ skill.title }}</h4>
           <p class="text-justify line-clamp-4 flex-grow">
             {{ skill.description }}
           </p>

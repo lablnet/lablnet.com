@@ -1,7 +1,7 @@
 <template>
   <section class="py-10 px-5 container" id="projects">
     <h3 class="subtitle">Projects I've worked on.</h3>
-    <p>
+    <p class="dark:text-gray-300">
       I like to keep working on new projects, here is a look at the project(s) I
       have worked on.
     </p>
@@ -24,7 +24,7 @@
         </div>
         <div class="flex-grow flex flex-col">
           <h4 class="mt-0">{{ project.name }}</h4>
-          <p class="text-justify line-clamp-4 flex-grow">
+          <p class="text-justify line-clamp-4 flex-grow dark:text-gray-300">
             {{ project.description }}
           </p>
           <div class="mt-2">

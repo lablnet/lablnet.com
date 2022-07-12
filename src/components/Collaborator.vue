@@ -11,6 +11,8 @@
       text-sm
       font-medium
       bg-gray-200
+      dark:bg-gray-900
+      dark:text-gray-400
       text-gray-800
     "
   >
@@ -38,7 +40,7 @@
         rounded-full
         bg-white
         text-black
-        dark:bg-black dark:text-white
+        dark:bg-gray-700 dark:text-gray-300
       "
       v-if="!contributionsStatus"
       >{{ contributions }}

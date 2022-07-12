@@ -1,10 +1,10 @@
 <template>
   <section
-    class="py-10 px-5 bg-gray-200 dark:bg-primary-dark container"
+    class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container"
     id="certificates"
   >
-    <h3 class="subtitle">Certificates.</h3>
-    <p>
+    <h3 class="subtitle dark:text-white">Certificates.</h3>
+    <p class="dark:text-gray-400">
       In addition to my educational background, I have taken a few courses to
       enhance my knowledge.
     </p>
@@ -67,10 +67,10 @@
                       {{ certificate.title }}
                     </h2>
 
-                    <h5 class="font-mediume title-font">
+                    <h5 class="font-mediume title-font dark:text-gray-400">
                       <i>{{ certificate.completed }}</i>
                     </h5>
-                    <p class="">{{ certificate.institute }}</p>
+                    <p class="dark:text-gray-400">{{ certificate.institute }}</p>
                   </div>
 
                   <Button

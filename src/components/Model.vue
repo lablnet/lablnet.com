@@ -25,7 +25,7 @@
           bg-white
           rounded-lg
           shadow
-          dark:bg-secondary-dark
+          dark:bg-gray-900
           shadow-lg
         "
       >
