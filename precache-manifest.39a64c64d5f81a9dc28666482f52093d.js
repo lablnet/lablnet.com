@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ed707e1574936fa7bb6",
+    "revision": "6541dd5ddde14e69d0c8",
     "url": "/css/app.3d234803.css"
   },
   {
@@ -172,6 +172,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/umer-removebg.7bc36017.png"
   },
   {
+    "revision": "741e429fe7fa4781c4f1535dbd2b04df",
+    "url": "/img/umer.jpg"
+  },
+  {
     "revision": "f46b3d2158c72096c691d9a1bedefb46",
     "url": "/img/upwork.f46b3d21.svg"
   },
@@ -184,12 +188,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/zest.7cd4a7c7.png"
   },
   {
-    "revision": "385671682b2cb206c375514d5148ec7b",
+    "revision": "f717f0605f6c7f6dba80ef9d665e2a9d",
     "url": "/index.html"
   },
   {
-    "revision": "5ed707e1574936fa7bb6",
-    "url": "/js/app.ca1b5c3a.js"
+    "revision": "6541dd5ddde14e69d0c8",
+    "url": "/js/app.64ff2133.js"
   },
   {
     "revision": "a0a21dd526ea0641dba4",
