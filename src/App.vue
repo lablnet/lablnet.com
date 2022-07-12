@@ -81,37 +81,37 @@
             :to="{ path: path, hash: '#projects' }"
             class="block py-1"
             @click="mobileMenuOpen = false"
-            >Projects</router-link
+            ><i class="fa-solid fa-bars-progress"></i> Projects</router-link
           >
           <router-link
             :to="{ path: path, hash: '#skills' }"
             class="block py-1"
             @click="mobileMenuOpen = false"
-            >SKills</router-link
+            ><i class="fa-solid fa-chalkboard"></i> SKills</router-link
           >
           <router-link
             :to="{ path: path, hash: '#education' }"
             class="block py-1"
             @click="mobileMenuOpen = false"
-            >Education</router-link
+            ><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</router-link
           >
           <router-link
             :to="{ path: path, hash: '#certificates' }"
             class="block py-1"
             @click="mobileMenuOpen = false"
-            >Certificates</router-link
+            ><i class="fa-solid fa-certificate"></i> Certificates</router-link
           >
           <router-link
             to="/quotes"
             class="block py-1"
             @click="mobileMenuOpen = false"
-            >Quotes</router-link
+            ><i class="fa-solid fa-quote-left"></i> Quotes</router-link
           >
           <router-link
             :to="{ path: path, hash: '#contact' }"
             class="block py-1"
             @click="mobileMenuOpen = false"
-            >Contact</router-link
+            ><i class="fa-solid fa-address-book"></i> Contact</router-link
           >
 
           <span class="hidden md:inline-block mt-1">
