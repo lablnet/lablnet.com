@@ -4,7 +4,7 @@ import {themeSetup} from '../../utils/index';
 export default {
     namespaced: true,
     state: {
-        theme : localStorage.getItem('theme') || 'light',
+        theme : localStorage.getItem('theme') ?? 'dark',
     },
     mutations: {
         setTheme(state : any, theme : string) {
