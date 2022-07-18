@@ -51,21 +51,16 @@
     .bg-primary-dark a.arrow:hover:after, .bg-primary-dark a.arrow:focus:after {
         content: url("../icons/white/arrow-right.svg")!important;
     }
-}
-
-.light-text-color {
-    color: #374151;
-}
-.backtotop {
-    position: fixed;
-    bottom: 80px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 18px;
+    .backtotop {
+        @apply cursor-pointer text-xl p-2 fixed;
+        bottom: 80px;
+        right: 30px;
+        z-index: 99;
+        outline: none;
+    }
+    .light-text-color {
+        @apply text-gray-800;
+    }    
 }
 
 @media only screen and (max-width: 900px) {

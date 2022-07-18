@@ -232,7 +232,7 @@
     </div>
     <button
       v-if="top"
-      class="backtotop bg-gray-300"
+      class="backtotop bg-gray-900 mb-2"
       v-on:click="scrollTop()"
       title="Go to top"
     >
