@@ -31,7 +31,7 @@
 
 <script lang="js">
 export default {
-    name: "Button",
+    name: "LablnetButton",
     props: {
         text: {
             type: String,

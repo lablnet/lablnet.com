@@ -51,7 +51,7 @@
 
 <script lang="js">
 export default {
-  name: "ThemeChanger",
+  name: "LablnetThemeChanger",
 	props: {
 		theme: {
 			type: String,

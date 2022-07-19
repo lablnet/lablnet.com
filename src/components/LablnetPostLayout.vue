@@ -25,7 +25,7 @@
 
 <script lang="js">
 export default {
-    name: "PostLayout",
+    name: "LablnetPostLayout",
     props: {
         title: {
             type: String,

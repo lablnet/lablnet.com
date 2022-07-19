@@ -1069,7 +1069,7 @@
           </p>
         </div>
         <div class="mt-8">
-          <Button text="Send Message" @click="submitForm()" />
+          <LablnetButton text="Send Message" @click="submitForm()" />
         </div>
       </form>
     </section>
@@ -1078,12 +1078,12 @@
 
 <script lang="js">
 
-import Button from "@/components/Button.vue";
+import LablnetButton from "@/components/LablnetButton.vue";
 
 export default {
   name: "Contact",
   components: {
-    Button,
+    LablnetButton,
   },
   data() {
     return {

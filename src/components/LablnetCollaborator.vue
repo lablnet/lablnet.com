@@ -51,7 +51,7 @@
 
 <script lang="js">
 export default {
-    name: "Collaborator",
+    name: "LablnetCollaborator",
     props: {
         text: {
             type: String,

@@ -1,8 +1,8 @@
 <template>
 <div>
-    <PostLayout :title="title" :description="description">
+    <LablnetPostLayout :title="title" :description="description">
 
-        <PostInfo :stack="['Javascript', 'Python']" title="Fontpicker" subtitle="July 2022" siteURL="https://lablnet.github.io/fontpicker/" codeURL="lablnet/fontpicker" />
+        <LablnetPostInfo :stack="['Javascript', 'Python']" title="Fontpicker" subtitle="July 2022" siteURL="https://lablnet.github.io/fontpicker/" codeURL="lablnet/fontpicker" />
 
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
@@ -47,7 +47,7 @@
 
         <hr class="mt-12 mb-4" />
 
-        <PostInfo :stack="['Javascript']" title="Board" subtitle="Auguest 2020" siteURL="https://board.lablnet.com/" codeURL="lablnet/board" />
+        <LablnetPostInfo :stack="['Javascript']" title="Board" subtitle="Auguest 2020" siteURL="https://board.lablnet.com/" codeURL="lablnet/board" />
 
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
@@ -79,7 +79,7 @@
         </p>
 
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript']" title="Snake" subtitle="November 2020" siteURL="https://snake.lablnet.com/index.html" codeURL="lablnet/snake" />
+        <LablnetPostInfo :stack="['Javascript']" title="Snake" subtitle="November 2020" siteURL="https://snake.lablnet.com/index.html" codeURL="lablnet/snake" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
@@ -93,7 +93,7 @@
             </ol>
         </p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript']" title="Tic Tac Toe" subtitle="May 2021" siteURL="https://tictactoe.lablnet.com/" codeURL="lablnet/TicTacToe" />
+        <LablnetPostInfo :stack="['Javascript']" title="Tic Tac Toe" subtitle="May 2021" siteURL="https://tictactoe.lablnet.com/" codeURL="lablnet/TicTacToe" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
@@ -107,7 +107,7 @@
             </ol>
         </p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript', 'Jquery', 'Firebase']" title="LumberJack Game" subtitle="December 2019" siteURL="https://lablnet.github.io/LumberJack-game/v2/index.html" :collabrators="collabrators" />
+        <LablnetPostInfo :stack="['Javascript', 'Jquery', 'Firebase']" title="LumberJack Game" subtitle="December 2019" siteURL="https://lablnet.github.io/LumberJack-game/v2/index.html" :collabrators="collabrators" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
@@ -141,14 +141,14 @@
             </ol>
         </p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Dart', 'Flutter']" title="Prayers Time" subtitle="April 2021" siteURL="https://play.google.com/store/apps/details?id=prayer_time.lablnet.app" codeURL="alphasofthub/prayer_time" />
+        <LablnetPostInfo :stack="['Dart', 'Flutter']" title="Prayers Time" subtitle="April 2021" siteURL="https://play.google.com/store/apps/details?id=prayer_time.lablnet.app" codeURL="alphasofthub/prayer_time" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
             A Dart Package to find prayers/ramazan timings for your exact location. This is the rewrite version of PHP code provided by <a class="text-blue-400 underline" href="http://praytimes.org/" target="_blank" rel="noopener noreferrer">praytimes.org</a>
         </p>
         <hr class="mt-12 mb-4 dark:text-gray-300" />
-        <PostInfo :stack="['Vue', 'Javascript']" title="Upwork Visualization" subtitle="March 2021" siteURL="https://lablnet.github.io/upwork_visualization/" codeURL="lablnet/upwork_visualization" />
+        <LablnetPostInfo :stack="['Vue', 'Javascript']" title="Upwork Visualization" subtitle="March 2021" siteURL="https://lablnet.github.io/upwork_visualization/" codeURL="lablnet/upwork_visualization" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
@@ -163,7 +163,7 @@
             </ol>
         </p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['WordPress']" title="Travel With Atif Raiz" subtitle="March 2022" siteURL="https://www.travelwithatifriaz.com" :collabrators="collabrators" />
+        <LablnetPostInfo :stack="['WordPress']" title="Travel With Atif Raiz" subtitle="March 2022" siteURL="https://www.travelwithatifriaz.com" :collabrators="collabrators" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
@@ -172,7 +172,7 @@
         <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
 
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['WordPress']" title="SpendBTC" subtitle="July 2019" siteURL="https://spendbtc.io" :collabrators="collabrators" />
+        <LablnetPostInfo :stack="['WordPress']" title="SpendBTC" subtitle="July 2019" siteURL="https://spendbtc.io" :collabrators="collabrators" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
@@ -180,46 +180,46 @@
         </p>
         <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Python', 'Flask', 'Bootstrap']" title="lablnet-flask" subtitle="April 2021" siteURL="https://lablnet-flask.herokuapp.com" :collabrators="collabrators" />
+        <LablnetPostInfo :stack="['Python', 'Flask', 'Bootstrap']" title="lablnet-flask" subtitle="April 2021" siteURL="https://lablnet-flask.herokuapp.com" :collabrators="collabrators" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
         <p class="text-justify dark:text-gray-300">
             It was my freelancing project. It is a website backend in Flask, for user login, signup, reset password and calculation. It also has an admin panel for writing blogs and managing users.
         </p>
         <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript']" title="Resume" subtitle="May 2021" siteURL="https://lablnet.github.io/resume" codeURL="alphasofthub/resume" />
+        <LablnetPostInfo :stack="['Javascript']" title="Resume" subtitle="May 2021" siteURL="https://lablnet.github.io/resume" codeURL="alphasofthub/resume" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
             The main objective of this project is to easily create a resume on the GitHub page.
         </p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['JavaScript', 'Cordova']" title="AINDA" subtitle="February 2020" siteURL="https://play.google.com/store/apps/details?id=com.practicalvalue.ainda&hl=en" :collabrators="collabrators" />
+        <LablnetPostInfo :stack="['JavaScript', 'Cordova']" title="AINDA" subtitle="February 2020" siteURL="https://play.google.com/store/apps/details?id=com.practicalvalue.ainda&hl=en" :collabrators="collabrators" />
         <p class="mt-9 text-justify dark:text-gray-300">
             It was my freelancing project [but the man from Barazil contacted me directly] and hired me. This is an Android application that lets us log in to find the best business partner.
         </p>
         <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['JavaScript', 'CSS']" title="Simple Software House Site Template" subtitle="December 2020" siteURL="https://lablnet.github.io/softhubpro/index.html" :collabrators="collabrators" />
+        <LablnetPostInfo :stack="['JavaScript', 'CSS']" title="Simple Software House Site Template" subtitle="December 2020" siteURL="https://lablnet.github.io/softhubpro/index.html" :collabrators="collabrators" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
             This is a template for a software house realty company, I started it with some partners but our deal was canceled after a few days so this project could not work.
         </p>
         <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Although this is not a client project, the agreement was to make source code confidential, no doubt the partnership was canceled but I still stand by my agreement.</p>
-    </PostLayout>
+    </LablnetPostLayout>
 </div>
 </template>
 
 <script lang="js">
-import PostLayout from "@/components/PostLayout";
-import PostInfo from "@/components/PostInfo";
+import LablnetPostLayout from "@/components/LablnetPostLayout";
+import LablnetPostInfo from "@/components/LablnetPostInfo";
 
 export default {
     name: "Alphasofthub",
     components: {
-        PostLayout,
-        PostInfo,
+        LablnetPostLayout,
+        LablnetPostInfo,
     },
     data() {
         return {

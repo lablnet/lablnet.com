@@ -1,11 +1,11 @@
 <template>
   <div>
-    <PostLayout
+    <LablnetPostLayout
       :title="title"
       :description="description"
       :coverPic="this.theme === 'dark' ? require('../../assets/images/transparent/ash.png') : require('../../assets/images/ash.png')"
     >
-      <PostInfo
+      <LablnetPostInfo
         :stack="['Vue', 'TailwindCSS', 'Typescript', 'Javascript']"
         :title="title"
         subtitle="Auguest 2021"
@@ -38,7 +38,7 @@
       </p>
       <hr class="mt-12 mb-4" />
 
-      <PostInfo
+      <LablnetPostInfo
         :stack="['python', 'typescript', 'javascript', 'vue', 'bootstrap']"
         title="COVID-19"
         subtitle="Auguest 2020"
@@ -98,7 +98,7 @@
       </p>
       <hr class="mt-12 mb-4" />
 
-      <PostInfo
+      <LablnetPostInfo
         :stack="['python']"
         title="Validity "
         subtitle="March 2022"
@@ -114,7 +114,7 @@
 
       <hr class="mt-12 mb-4" />
 
-      <PostInfo
+      <LablnetPostInfo
         :stack="['PHP', 'Wordpress']"
         title="AlphaSoftHub Old Site"
         subtitle="Feb 2021"
@@ -127,20 +127,20 @@
       <p class="text-justify dark:text-gray-300">
         This was the old site for AlphaSoftHub (Private) Limited.
       </p>
-    </PostLayout>
+    </LablnetPostLayout>
   </div>
 </template>
 
 <script lang="js">
 
-import PostLayout from "@/components/PostLayout";
-import PostInfo from "@/components/PostInfo";
+import LablnetPostLayout from "@/components/LablnetPostLayout";
+import LablnetPostInfo from "@/components/LablnetPostInfo";
 
 export default {
   name: "Alphasofthub",
   components: {
-    PostLayout,
-    PostInfo,
+    LablnetPostLayout,
+    LablnetPostInfo,
   },
   data() {
     return {     

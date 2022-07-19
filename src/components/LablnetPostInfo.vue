@@ -51,7 +51,7 @@
         >
         <div class="flex flex-wrap gap-5">
           <span v-for="item in stack" :key="item">
-            <Tag :text="item" />
+            <LablnetTag :text="item" />
           </span>
         </div>
       </div>
@@ -92,7 +92,7 @@
           >
           <div class="flex flex-wrap gap-5">
             <span v-for="items in contributors" :key="items">
-              <Collaborator
+              <LablnetCollaborator
                 :text="items.name"
                 :picture="items.pic"
                 :link="items.link"
@@ -101,7 +101,7 @@
             </span>
           </div>
         </span>
-        <span class="mt-3 mb-3"> <Loader :loading="loading" /></span>
+        <span class="mt-3 mb-3"> <LablnetLoader :loading="loading" /></span>
       </div>
     </section>
   </section>
@@ -109,16 +109,16 @@
 
 
 <script lang="js">
-import Tag from "@/components/Tag";
-import Collaborator from "@/components/Collaborator";
-import Loader from "@/components/Loader";
+import LablnetTag from "@/components/LablnetTag";
+import LablnetCollaborator from "@/components/LablnetCollaborator";
+import LablnetLoader from "@/components/LablnetLoader";
 
 export default {
-    name: "PostInfo",
+    name: "LablnetPostInfo",
     components: {
-        Tag,
-        Collaborator,
-        Loader
+        LablnetTag,
+        LablnetCollaborator,
+        LablnetLoader
     },
     props: {
         stack: {

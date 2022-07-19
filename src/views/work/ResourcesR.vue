@@ -1,10 +1,10 @@
 <template>
-  <PostLayout
+  <LablnetPostLayout
     :title="title"
     :description="description"
       :coverPic="this.theme === 'dark' ? require('../../assets/images/transparent/resourcesr.png') : require('../../assets/images/resourcesr.png')"
   >
-    <PostInfo
+    <LablnetPostInfo
       :stack="['Dart', 'Flutter', 'Firebase']"
       :title="title"
       subtitle="October 2020"
@@ -64,7 +64,7 @@
 
     <hr class="mt-12 mb-4" />
 
-    <PostInfo
+    <LablnetPostInfo
       :stack="['Vue', 'JavaScript', 'Firebase']"
       :title="title + ' Web'"
       subtitle="september 2020"
@@ -111,7 +111,7 @@
 
     <hr class="mt-12 mb-4" />
 
-    <PostInfo
+    <LablnetPostInfo
       :stack="['Python', 'Flask', 'Firebase']"
       :title="title + ' Lite'"
       subtitle="November 2020"
@@ -127,7 +127,7 @@
 
     <hr class="mt-12 mb-4" />
 
-    <PostInfo
+    <LablnetPostInfo
       :stack="['Python']"
       :title="title + ' CLI'"
       subtitle="september 2020"
@@ -146,19 +146,19 @@
     <p class="text-justify dark:text-gray-300">
       I would like  to continue maintaining it and to add the configuration base scraper so it would work for every site.
     </p>
-  </PostLayout>
+  </LablnetPostLayout>
 </template>
 
 <script lang="js">
 
-import PostLayout from "@/components/PostLayout";
-import PostInfo from "@/components/PostInfo";
+import LablnetPostLayout from "@/components/LablnetPostLayout";
+import LablnetPostInfo from "@/components/LablnetPostInfo";
 
 export default {
   name: "ResourcesR",
   components: {
-    PostLayout,
-    PostInfo
+    LablnetPostLayout,
+    LablnetPostInfo
   },
   data() {
     return {

@@ -32,7 +32,7 @@
           />
         </router-link>
         <span class="inline-block mx-auto mr-1 mt-1 md:hidden">
-          <ThemeChanger :theme="appTheme"
+          <LablnetThemeChanger :theme="appTheme"
         /></span>
 
         <button
@@ -248,7 +248,7 @@
       </i>
     </button>
 
-    <Model title="Support Me" :show="showModel">
+    <LablnetModel title="Support Me" :show="showModel">
       <div class="">
         <h2
           class="
@@ -315,18 +315,18 @@
           Do not show again
         </button>
       </div>
-    </Model>
+    </LablnetModel>
   </div>
 </template>
 
 <script lang="js">
 //import Banner from "@/components/Banner";
-import ThemeChanger from "@/components/ThemeChanger";
+import LablnetThemeChanger from "@/components/LablnetThemeChanger";
 import {
     mapState
 } from "vuex";
 
-import Model from "@/components/Model";
+import LablnetModel from "@/components/LablnetModel";
 
 // fancybox.
 import {
@@ -337,8 +337,8 @@ import "@fancyapps/ui/dist/fancybox.css";
 export default {
     name: 'app',
     components: {
-        ThemeChanger,
-        Model,
+        LablnetThemeChanger,
+        LablnetModel,
         // Banner
     },
     watch: {

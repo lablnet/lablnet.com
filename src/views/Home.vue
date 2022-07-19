@@ -3,7 +3,7 @@
     <section class="flex-none md:flex py-10 px-5 container">
       <div class="flex-none md:flex-1">
         <h1 class="title">Muhammad Umer Farooq</h1>
-        <Collaborator
+        <LablnetCollaborator
           text="lablent"
           :picture="require('../assets/images/umer-removebg.png')"
           link="https://github.com/lablnet"
@@ -37,7 +37,7 @@
         </p>
 
         <br />
-        <Button text="Contact Me" link="#contact" />
+        <LablnetButton text="Contact Me" link="#contact" />
       </div>
 
       <div class="hidden md:flex">
@@ -87,23 +87,23 @@
 
 <script lang="js">
 
-import Button from "@/components/Button"
+import LablnetButton from "@/components/LablnetButton"
 import Skills from "./Skills"
 import Education from "./Education"
 import Projects from "./Projects"
 import Certificates from "./Certificates"
-import Collaborator from "@/components/Collaborator"
+import LablnetCollaborator from "@/components/LablnetCollaborator"
 import Contact from "./Contact"
 import ShowCase from "./ShowCase"
 
 export default {
   name: 'Home',
   components: {
-    Button,
+    LablnetCollaborator,
+    LablnetButton,
     Education,
     Projects,
     Certificates,
-    Collaborator,
     Contact,
     Skills,
     ShowCase

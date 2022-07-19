@@ -12,7 +12,7 @@
 
 <script lang="js">
 export default {
-    name: "Tag",
+    name: "LablnetTag",
     props: {
         text: {
             type: String,

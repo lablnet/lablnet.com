@@ -45,7 +45,7 @@
 
 <script lang="js">
 export default {
-    name: "Input",
+    name: "LablnetInput",
     props: {
         id: {
             type: String,

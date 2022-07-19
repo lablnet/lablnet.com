@@ -1,11 +1,11 @@
 <template>
   <div>
-    <PostLayout
+    <LablnetPostLayout
       :title="title"
       :description="description"
       :coverPic="this.theme === 'dark' ? require('../../assets/images/transparent/zest.png') : require('../../assets/images/zest.png')"
     >
-      <PostInfo
+      <LablnetPostInfo
         :stack="['PHP']"
         :title="title"
         subtitle="May 2018 - Present"
@@ -60,7 +60,7 @@
       </p>
       <hr class="mt-12 mb-4" />
 
-      <PostInfo
+      <LablnetPostInfo
         :stack="['PHP']"
         title="Zest"
         subtitle="May 2018 - Present"
@@ -76,7 +76,7 @@
       </p>
       <hr class="mt-12 mb-4" />
 
-      <PostInfo
+      <LablnetPostInfo
         :stack="['PHP', 'Javascript', 'Bootstrap']"
         title="Component Installer "
         subtitle="July 2020"
@@ -98,7 +98,7 @@
 
       <hr class="mt-12 mb-4" />
 
-      <PostInfo
+      <LablnetPostInfo
         :stack="['PHP', 'MySql', 'Javascript', 'Bootstrap']"
         title="Zest_Web"
         subtitle="June 2021"
@@ -107,20 +107,20 @@
       <p class="mt-9 dark:text-gray-300">
         This is the site developed with Zest Framework.
       </p>
-    </PostLayout>
+    </LablnetPostLayout>
   </div>
 </template>
 
 <script lang="js">
 
-import PostLayout from "@/components/PostLayout";
-import PostInfo from "@/components/PostInfo";
+import LablnetPostLayout from "@/components/LablnetPostLayout";
+import LablnetPostInfo from "@/components/LablnetPostInfo";
 
 export default {
   name: "Zest",
   components: {
-    PostLayout,
-    PostInfo,
+    LablnetPostLayout,
+    LablnetPostInfo,
   },
   data() {
     return {     
