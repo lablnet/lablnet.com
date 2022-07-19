@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import routes from './routes'
 
 // Nprogress
-const Nprogress = require('nprogress')
+import Nprogress from 'nprogress'
 // Nprogress CSS
 import 'nprogress/nprogress.css';
 
