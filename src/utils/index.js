@@ -1,3 +1,8 @@
+/**
+ * Function to set the theme.
+ * @since v1.0.0
+ * @returns null
+ */
 const themeSetup = () => {
     const appTheme = localStorage.getItem('theme') || 'light';
 
