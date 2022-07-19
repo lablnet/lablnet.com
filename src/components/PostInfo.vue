@@ -107,11 +107,6 @@
   </section>
 </template>
 
-<style scoped>
-.title {
-  font-size: 2em;
-}
-</style>
 
 <script lang="js">
 import Tag from "@/components/Tag";
@@ -203,3 +198,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.title {
+  font-size: 2em;
+}
+</style>
