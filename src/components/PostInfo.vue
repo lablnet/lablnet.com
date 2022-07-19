@@ -169,7 +169,7 @@ export default {
                 this.contributors = this.collabrators
                 return
             }
-            if (this.codeURL == null) return
+            if (this.codeURL === null) return
 
             let that = this
             this.loading = true
