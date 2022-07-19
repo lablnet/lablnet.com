@@ -11,7 +11,7 @@ const router = createRouter({
   routes,
   scrollBehavior (to: any, from: any, savedPosition: any) {
     if (to.hash) {
-      let elem = document.getElementById(to.hash.replace("#", ""))
+      const elem = document.getElementById(to.hash.replace("#", ""))
       if (elem)
         window.scrollTo(0, elem.offsetTop);
     } else {
