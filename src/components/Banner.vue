@@ -40,6 +40,7 @@
             <a
               href="https://www.covid19.earth/"
               target="_blank"
+              rel="noopener noreferrer"
               class="
                 flex
                 items-center

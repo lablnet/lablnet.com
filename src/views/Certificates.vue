@@ -77,6 +77,7 @@
                     text="View on Coursera"
                     :link="certificate.link"
                     target="_blank"
+                    rel="noopener noreferrer"
                     :gray="true"
                   />
                 </div>

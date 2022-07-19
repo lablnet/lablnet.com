@@ -21,6 +21,7 @@
           <a
             :href="'https://github.com/' + codeURL"
             target="_blank"
+            rel="noopener noreferrer"
             class="inline-flex font-medium mt-2"
           >
             <i class="py-1">
@@ -60,6 +61,7 @@
           <a
             :href="siteURL"
             target="_blank"
+            rel="noopener noreferrer"
             class="inline-flex font-medium mt-2"
           >
             <i class="py-1">

@@ -35,7 +35,7 @@
         <h3 class="project-headings mt-5 dark:text-gray-300">Related Projects</h3>
         <p class="text-justify dark:text-gray-300">
             <ol class="list-disc mx-6">
-                <li><a class="text-blue-400 underline" target="_blank" href="https://github.com/av01d/fontpicker-jquery-plugin">https://github.com/av01d/fontpicker-jquery-plugin</a> (but it's Jquery plugin and dependend on Jquery).</li>
+                <li><a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://github.com/av01d/fontpicker-jquery-plugin">https://github.com/av01d/fontpicker-jquery-plugin</a> (but it's Jquery plugin and dependend on Jquery).</li>
             </ol>
         </p>
 
@@ -67,7 +67,7 @@
         <h3 class="project-headings mt-5 dark:text-gray-300">Related Projects</h3>
         <p class="text-justify dark:text-gray-300">
             <ol class="list-disc mx-6">
-                <li><a class="text-blue-400 underline" target="_blank" href="https://github.com/cs50/draw.cs50.io">https://github.com/cs50/draw.cs50.io</a> (but they are using paperjs and hammerjs lib).</li>
+                <li><a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://github.com/cs50/draw.cs50.io">https://github.com/cs50/draw.cs50.io</a> (but they are using paperjs and hammerjs lib).</li>
             </ol>
         </p>
 
@@ -117,10 +117,10 @@
         <h3 class="project-headings mt-5 dark:text-gray-300">Credits</h3>
         <p class="text-justify">
             <ol class="list-disc mx-6 break-all">
-                <li>Character: <a class="text-blue-400 underline" target="_blank" href="https://giphy.com/stickers/stem-2w9gmg97uKtbi">https://giphy.com/stickers/stem-2w9gmg97uKtbi</a></li>
-                <li>Tree: <a class="text-blue-400 underline" target="_blank" href="https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html">https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html</a></li>
-                <li>Sack of Seeds: <a class="text-blue-400 underline" target="_blank" href="https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/">https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/</a></li>
-                <li>Background: <a class="text-blue-400 underline" target="_blank" href="https://superawesomevectors.com/vector-desert-landscape-background/">https://superawesomevectors.com/vector-desert-landscape-background/</a></li>
+                <li>Character: <a class="text-blue-400 underline" target="_blank"  rel="noopener noreferrer" href="https://giphy.com/stickers/stem-2w9gmg97uKtbi">https://giphy.com/stickers/stem-2w9gmg97uKtbi</a></li>
+                <li>Tree: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html">https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html</a></li>
+                <li>Sack of Seeds: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/">https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/</a></li>
+                <li>Background: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://superawesomevectors.com/vector-desert-landscape-background/">https://superawesomevectors.com/vector-desert-landscape-background/</a></li>
             </ol>
         </p>
         <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
@@ -145,7 +145,7 @@
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
-            A Dart Package to find prayers/ramazan timings for your exact location. This is the rewrite version of PHP code provided by <a class="text-blue-400 underline" href="http://praytimes.org/" target="_blank">praytimes.org</a>
+            A Dart Package to find prayers/ramazan timings for your exact location. This is the rewrite version of PHP code provided by <a class="text-blue-400 underline" href="http://praytimes.org/" target="_blank" rel="noopener noreferrer">praytimes.org</a>
         </p>
         <hr class="mt-12 mb-4 dark:text-gray-300" />
         <PostInfo :stack="['Vue', 'Javascript']" title="Upwork Visualization" subtitle="March 2021" siteURL="https://lablnet.github.io/upwork_visualization/" codeURL="lablnet/upwork_visualization" />

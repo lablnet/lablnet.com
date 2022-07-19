@@ -175,6 +175,7 @@
                 class="font-bold"
                 href="https://github.com/lablnet"
                 target="_blank"
+                rel="noopener noreferrer"
                 >Muhammad Umer Farooq</a
               >
             </p>
@@ -190,6 +191,7 @@
               <a
                 href="https://github.com/lablnet"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="ml-3 text-gray-500"
               >
                 <img
@@ -207,6 +209,7 @@
                 :key="media"
                 :href="media.link"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="ml-3 text-gray-500"
               >
                 <img style="width: 1.6em; height: 1.6em" :src="media.picture" />
@@ -214,6 +217,7 @@
               <a
                 href="https://linkedin.com/in/lablnet"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="ml-3 text-gray-500"
               >
                 <img
