@@ -1,3 +1,6 @@
+[![Web Build and Deploy](https://github.com/lablnet/lablnet.com/actions/workflows/deploy.yml/badge.svg)](https://github.com/lablnet/lablnet.com/actions/workflows/deploy.yml)
+[![Create Branch](https://github.com/lablnet/lablnet.com/actions/workflows/branch.yml/badge.svg)](https://github.com/lablnet/lablnet.com/actions/workflows/branch.yml)
+
 # Portfolio
 My personal portfolio website [https://www.lablnet.com](https://www.lablnet.com)
 
