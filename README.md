@@ -37,7 +37,7 @@ npm run serve
 
 #### Generate sitemap
 ```sh
-npm run compile-routes && npm run generate-sitemap
+npm run sitemap
 ```
 
 #### Compiles and minifies for production
