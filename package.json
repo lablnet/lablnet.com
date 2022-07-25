@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "compile-routes": "tsc sitemap.ts",
+    "generate-sitemap": "node sitemap.js",
     "build": "vue-cli-service build",
+    "prod": "npm run compile-routes && npm run generate-sitemap && npm run build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
