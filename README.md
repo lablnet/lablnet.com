@@ -44,13 +44,7 @@ npm run sitemap
 
 ```sh
 npm run prod
-```
-
-#### Run your unit tests
-
-```
-npm run test:unit
-```  
+``` 
 
 #### Lints and fixes files
 
