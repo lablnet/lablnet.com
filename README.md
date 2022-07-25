@@ -15,6 +15,7 @@ My personal Portfolio website [https://www.lablnet.com](https://www.lablnet.com)
 2. Responsive design.
 3. Customizable.
 4. Modern web technology.
+5. Generate Sitemap base on `vue-router`
 
 ### Techonology Stack
 1. [VueJs](https://vuejs.org/) with [Vuex](https://vuex.vuejs.org/) and [Vue Router](https://router.vuejs.org/).
