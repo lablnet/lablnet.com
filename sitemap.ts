@@ -2,8 +2,8 @@ import routes from './src/router/routes';
 import * as fs from 'fs';
 import * as path from 'path';
 
-let base_url = 'https://www.lablnet.com/';
-let sitemap_string: string = `<?xml version="1.0" encoding="UTF-8"?>
+const base_url = 'https://www.lablnet.com/';
+let sitemap_string = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
 // loop thru routes and add to sitemap
@@ -21,5 +21,4 @@ routes.forEach(route => {
 sitemap_string += `</urlset>`;
 
 // save sitema to public directory.
-let sitemap_path: string = path.join(__dirname, './public/sitemap.xml')
-fs.writeFileSync(sitemap_path, sitemap_string)
+fs.writeFileSync(path.join(__dirname, './public/sitemap.xml'), sitemap_string)

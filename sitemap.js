@@ -13,5 +13,4 @@ routes_1["default"].forEach(function (route) {
 });
 sitemap_string += "</urlset>";
 // save sitema to public directory.
-var sitemap_path = path.join(__dirname, './public/sitemap.xml');
-fs.writeFileSync(sitemap_path, sitemap_string);
+fs.writeFileSync(path.join(__dirname, './public/sitemap.xml'), sitemap_string);
