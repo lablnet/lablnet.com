@@ -24,23 +24,22 @@
 <script lang="js">
 export default {
     name: "Skills",
-      data() {
-    return {
-      skills: [
-        {
-          title: "Languages",
-          description: "I mostly work with JavaScript, Python and PHP and am good at different databases including MySql, Firebase and mongodb, web development HTML/CSS. I also worked with other languages including Dart, C, C++ and a little bit of Ruby."
-        },
-        {
-          title: "Frameworks",
-          description: "I use the framework just as a booster to do the project(s) quickly. That is why I am always open to trying different framework(s). The frameworks I worked on include Laravel, Codeigniter, Vue, React, Electron, Jquery, TailwindCSS, AntDesign, Bootstrap, MaterializeCSS, Flask, Flutter, Selenium and little bit of Ruby on Rails."
-        },
-        {
-          title: "Tools/Platform",
-          description: "The tools I use on a daily basis are VS-Code, Jupyter Notebook, Git, Docker. I use Windows as my primary Operating system, I also use Ubuntu inside Windows using WSL/WSLG."
+    data() {
+        return {
+            skills: [{
+                    title: "Languages",
+                    description: "I mostly work with JavaScript, Python and PHP and am good at different databases including MySql, Firebase and mongodb, web development HTML/CSS. I also worked with other languages including Dart, C, C++ and a little bit of Ruby."
+                },
+                {
+                    title: "Frameworks",
+                    description: "I use the framework just as a booster to do the project(s) quickly. That is why I am always open to trying different framework(s). The frameworks I worked on include Laravel, Codeigniter, Vue, React, Electron, Jquery, TailwindCSS, AntDesign, Bootstrap, MaterializeCSS, Flask, Flutter, Selenium and little bit of Ruby on Rails."
+                },
+                {
+                    title: "Tools/Platform",
+                    description: "The tools I use on a daily basis are VS-Code, Jupyter Notebook, Git, Docker. I use Windows as my primary Operating system, I also use Ubuntu inside Windows using WSL/WSLG."
+                }
+            ]
         }
-      ]
     }
-  }
 }
 </script>
