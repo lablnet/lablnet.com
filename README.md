@@ -35,10 +35,15 @@ npm install
 npm run serve
 ```
 
+#### Generate sitemap
+```sh
+npm run compile-routes && npm run generate-sitemap
+```
+
 #### Compiles and minifies for production
 
 ```sh
-npm run build
+npm run prod
 ```
 
 #### Run your unit tests
