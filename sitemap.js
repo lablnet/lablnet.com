@@ -3,7 +3,7 @@ exports.__esModule = true;
 var routes_1 = require("./src/router/routes");
 var fs = require("fs");
 var path = require("path");
-var base_url = 'https://www.lablnet.com/';
+var base_url = 'https://www.lablnet.com';
 var sitemap_string = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">";
 // loop thru routes and add to sitemap
 routes_1["default"].forEach(function (route) {
