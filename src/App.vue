@@ -117,7 +117,7 @@
           >
 
           <span class="hidden md:inline-block mt-1">
-            <ThemeChanger :theme="appTheme"
+            <LablnetThemeChanger :theme="appTheme"
           /></span>
         </nav>
       </header>
