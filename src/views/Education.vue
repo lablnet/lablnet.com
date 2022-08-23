@@ -92,7 +92,7 @@ export default {
           institute: "Riphah International University (I-14 Islamabad)",
           from: "2020",
           to: "2024",
-          grade: "3.84 out of 4.00",
+          grade: "3.82 out of 4.00",
           major: "Bachelor of Science in Software Engineering",
           program: "Bachelor (SEM-5)",
           step: 3,
