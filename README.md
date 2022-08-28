@@ -2,10 +2,10 @@
 [![Create Branch](https://github.com/lablnet/lablnet.com/actions/workflows/branch.yml/badge.svg)](https://github.com/lablnet/lablnet.com/actions/workflows/branch.yml)
 
 # Portfolio
-My personal Portfolio website [https://www.lablnet.com](https://www.lablnet.com)
+My personal Portfolio website [https://lablnet.com](https://lablnet.com)
 
 ### Portfolios
-1. [lablnet.com](https://www.lablnet.com) latest one.
+1. [lablnet.com](https://lablnet.com) latest one.
 2. [lablnet.github.io](https://lablnet.github.io)  2021
 3. [lablnet.github.io/old1.html](https://lablnet.github.io/old1.html) 2020
 4. [lablnet.github.io/old.html](https://lablnet.github.io/old.html) 2019
