@@ -26,30 +26,47 @@ My personal Portfolio website [https://lablnet.com](https://lablnet.com)
 ## Project setup
 
 ```sh
-npm install
+npm install --force
+
+// or
+yarn install
 ```
  
 #### Compiles and hot-reloads for development
 
 ```sh
 npm run serve
+
+// or
+yarn run serve
 ```
 
 #### Generate sitemap
 ```sh
 npm run sitemap
+
+// or
+yarn run sitemap
 ```
 
 #### Compiles and minifies for production
 
 ```sh
 npm run prod
+
+// or
+
+yarn run prod
 ``` 
 
 #### Lints and fixes files
 
 ```sh
 npm run lint
+
+// or
+
+yarn run lint
 ```
 
 ## Contributing
