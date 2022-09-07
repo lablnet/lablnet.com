@@ -18,7 +18,7 @@ My personal Portfolio website [https://lablnet.com](https://lablnet.com)
 5. Generate Sitemap base on `vue-router`
 
 ### Techonology Stack
-1. [VueJs](https://vuejs.org/) with [Vuex](https://vuex.vuejs.org/) and [Vue Router](https://router.vuejs.org/).
+1. [VueJs](https://vuejs.org/) with [Pinia](https://pinia.vuejs.org/) and [Vue Router](https://router.vuejs.org/).
 2. [TailwindCSS](https://tailwindcss.com/).
 3. [Fancybox](https://fancyapps.com/docs/ui/fancybox/)
 
