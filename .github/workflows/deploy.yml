@@ -27,9 +27,8 @@ jobs:
       - name: Install and Build
         working-directory: .
         run: |
-          yarn global add @vue/cli
-          yarn global add @vue/cli-service
-          yarn run build
+          npm install --force
+          npm run build
           cd dist
           cp index.html 404.html
       - name: Deploy
