@@ -2,6 +2,10 @@
   "name": "portfolio",
   "version": "1.0.3",
   "private": true,
+  "engines" : { 
+    "yarn": "1.22.4",
+    "node" : ">=17"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
