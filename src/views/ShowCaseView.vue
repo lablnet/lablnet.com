@@ -129,7 +129,7 @@
 
 <script lang="js">
 export default {
-    name: "ShowCase",
+    name: "ShowCaseView",
     computed: {
         theme() {
             return this.$store.getters['Theme/theme']

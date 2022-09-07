@@ -41,7 +41,7 @@
 
 <script lang="js">
 export default {
-  name: "Projects",
+  name: "ProjectsView",
   data () {
     return {
       projects: [

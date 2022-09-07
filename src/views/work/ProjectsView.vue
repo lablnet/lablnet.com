@@ -216,7 +216,7 @@ import LablnetPostLayout from "@/components/LablnetPostLayout";
 import LablnetPostInfo from "@/components/LablnetPostInfo";
 
 export default {
-    name: "Alphasofthub",
+    name: "ProjectsView",
     components: {
         LablnetPostLayout,
         LablnetPostInfo,

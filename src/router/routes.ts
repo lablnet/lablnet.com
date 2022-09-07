@@ -4,7 +4,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue'),
+    component: () => import('../views/HomeView.vue'),
     meta: {
       title: "Home "
     }
@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/quotes',
     name: 'Quotes',
-    component: () => import('../views/Quotes.vue'),
+    component: () => import('../views/QuotesView.vue'),
     meta: {
       title: "Quotes"
     }
@@ -20,7 +20,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/work/resourcesr',
     name: 'ResourcesR',
-    component: () => import('../views/work/ResourcesR.vue'),
+    component: () => import('../views/work/ResourcesRView.vue'),
     meta: {
       title: "ResourcesR"
     }
@@ -28,7 +28,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/work/alphasofthub',
     name: 'AlphaSoftHub',
-    component: () => import('../views/work/Alphasofthub.vue'),
+    component: () => import('../views/work/AlphasofthubView.vue'),
     meta: {
       title: "AlphaSoftHub"
     }
@@ -36,7 +36,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/work/zest',
     name: 'Zest',
-    component: () => import('../views/work/Zest.vue'),
+    component: () => import('../views/work/ZestView.vue'),
     meta: {
       title: "Zest Framework"
     }
@@ -44,7 +44,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/work/projects',
     name: 'Projects',
-    component: () => import('../views/work/Projects.vue'),
+    component: () => import('../views/work/ProjectsView.vue'),
     meta: {
       title: "More Projects"
     }
@@ -52,7 +52,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/:pathMatch(.*)*',
     name: "404",
-    component: () => import('../views/site/404.vue'),
+    component: () => import('../views/site/404View.vue'),
     meta: {
       title: "404 Not Found"
     }

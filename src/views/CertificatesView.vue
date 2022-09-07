@@ -98,7 +98,7 @@
 import LablnetButton from "../components/LablnetButton.vue";
 
 export default {
-  name: "Certificates",
+  name: "CertificatesView",
   components: {
       LablnetButton,
   },

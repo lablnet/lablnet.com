@@ -23,7 +23,7 @@
 
 <script lang="js">
 export default {
-    name: "Skills",
+    name: "SkillsView",
     data() {
         return {
             skills: [{

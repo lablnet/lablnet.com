@@ -58,7 +58,7 @@
 import LablnetLoader from "@/components/LablnetLoader";
 
 export default {
-    name: "Quotes",
+    name: "QuotesView",
     components: {
         LablnetLoader
     },

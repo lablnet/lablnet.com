@@ -155,7 +155,7 @@ import LablnetPostLayout from "@/components/LablnetPostLayout";
 import LablnetPostInfo from "@/components/LablnetPostInfo";
 
 export default {
-  name: "ResourcesR",
+  name: "ResourcesRView",
   components: {
     LablnetPostLayout,
     LablnetPostInfo

@@ -8,7 +8,9 @@ module.exports = {
       'eslint:recommended'
     ],
     parserOptions: {
-      parser: 'babel-eslint'
+      parser: 'babel-eslint',
+      requireConfigFile: false,
+      ecmaVersion: 8,  
     },
     rules: {
       'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',

@@ -1081,7 +1081,7 @@
 import LablnetButton from "@/components/LablnetButton.vue";
 
 export default {
-  name: "Contact",
+  name: "ContactView",
   components: {
     LablnetButton,
   },

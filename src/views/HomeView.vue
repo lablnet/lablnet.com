@@ -61,52 +61,52 @@
 
     <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Skills -->
-    <Skills />
+    <SkillsView />
 
     <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Projects -->
-    <Projects />
+    <ProjectsView />
 
     <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Education -->
-    <Education />
+    <EducationView />
 
     <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Showcases -->
-    <ShowCase />
+    <ShowCaseView />
 
     <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Certificates -->
-    <Certificates />
+    <CertificatesView />
 
     <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
     <!--   Contact -->
-    <Contact />
+    <ContactView />
   </div>
 </template>
 
 <script lang="js">
 
 import LablnetButton from "@/components/LablnetButton"
-import Skills from "./Skills"
-import Education from "./Education"
-import Projects from "./Projects"
-import Certificates from "./Certificates"
+import SkillsView from "./SkillsView"
+import EducationView from "./EducationView"
+import ProjectsView from "./ProjectsView"
+import CertificatesView from "./CertificatesView"
 import LablnetCollaborator from "@/components/LablnetCollaborator"
-import Contact from "./Contact"
-import ShowCase from "./ShowCase"
+import ContactView from "./ContactView"
+import ShowCaseView from "./ShowCaseView"
 
 export default {
-  name: 'Home',
+  name: 'HomeView',
   components: {
     LablnetCollaborator,
     LablnetButton,
-    Education,
-    Projects,
-    Certificates,
-    Contact,
-    Skills,
-    ShowCase
+    EducationView,
+    ProjectsView,
+    CertificatesView,
+    ContactView,
+    SkillsView,
+    ShowCaseView
   },
   computed: {
     theme() {

@@ -84,7 +84,7 @@
 
 <script lang="js">
 export default {
-  name: "Education",
+  name: "EducationView",
   data() {
     return {
       educations: [
