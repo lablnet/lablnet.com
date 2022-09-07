@@ -95,6 +95,7 @@ import CertificatesView from "./CertificatesView"
 import LablnetCollaborator from "@/components/LablnetCollaborator"
 import ContactView from "./ContactView"
 import ShowCaseView from "./ShowCaseView"
+import { useThemeStore } from '@/store/ThemeStore';
 
 export default {
   name: 'HomeView',
@@ -110,7 +111,7 @@ export default {
   },
   computed: {
     theme() {
-        return this.$store.getters['Theme/theme']
+        return useThemeStore().theme;
     },
   }
 }

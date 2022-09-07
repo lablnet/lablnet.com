@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
     "compile-routes": "tsc sitemap.ts",
     "generate-sitemap": "node sitemap.js",
-    "sitemap": "npm run compile-routes && npm run generate-sitemap",
-    "build": "vue-cli-service build",
     "prod": "npm run sitemap && npm run build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "sitemap": "npm run compile-routes && npm run generate-sitemap"
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.26",
@@ -19,6 +19,7 @@
     "babel-eslint": "^10.1.0",
     "core-js": "^3.8.3",
     "nprogress": "^0.2.0",
+    "pinia": "^2.0.21",
     "register-service-worker": "^1.7.2",
     "standard": "^17.0.0",
     "vue": "^3.2.13",
@@ -54,6 +55,7 @@
     "tailwindcss": "^3.1.8",
     "ts-jest": "^27.0.4",
     "typescript": "~4.5.5",
+    "vue-cli-plugin-pinia": "~0.1.5",
     "vue-cli-plugin-tailwindcss": "~0.1.1"
   },
   "eslintConfig": {

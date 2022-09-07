@@ -128,11 +128,13 @@
 </template>
 
 <script lang="js">
+import { useThemeStore } from '@/store/ThemeStore';
+
 export default {
     name: "ShowCaseView",
     computed: {
         theme() {
-            return this.$store.getters['Theme/theme']
+            return useThemeStore().theme;
         },
   }
 }

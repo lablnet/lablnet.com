@@ -333,6 +333,7 @@ import {
     Fancybox
 } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox.css";
+import { useThemeStore } from '@/store/ThemeStore';
 
 export default {
     name: 'app',
@@ -408,7 +409,7 @@ export default {
     },
     computed: {
         appTheme() {
-            return this.$store.getters['Theme/theme']
+            return useThemeStore().theme;
         },
     },
     methods: {

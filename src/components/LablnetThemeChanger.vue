@@ -50,6 +50,8 @@
 </template>
 
 <script lang="js">
+import { useThemeStore } from '@/store/ThemeStore';
+
 export default {
   name: "LablnetThemeChanger",
 	props: {
@@ -67,7 +69,7 @@ export default {
 		toggleTheme() {
 			const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
 			localStorage.setItem('theme', newTheme);
-      this.$store.dispatch('Theme/changeTheme', newTheme);
+      useThemeStore().changeTheme(newTheme);
       this.currentTheme = newTheme;
 		},
 	},

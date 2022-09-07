@@ -13,10 +13,12 @@ const themeSetup = () => {
       ) {
         // @ts-ignore: Object is possibly 'null'.
         document.querySelector('body').classList.remove('bg-secondary-light');
+        // @ts-ignore: Object is possibly 'null'.
         document.querySelector('body').classList.add('bg-primary-dark');
       } else {
         // @ts-ignore: Object is possibly 'null'.
         document.querySelector('body').classList.remove('bg-primary-dark');
+        // @ts-ignore: Object is possibly 'null'.
         document.querySelector('body').classList.add('bg-secondary-light');
       }
 }
