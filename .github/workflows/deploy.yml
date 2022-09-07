@@ -27,6 +27,7 @@ jobs:
       - name: Install and Build
         working-directory: .
         run: |
+          yarn global add @vue/cli
           yarn run build
           cd dist
           cp index.html 404.html
