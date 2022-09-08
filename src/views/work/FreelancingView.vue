@@ -24,7 +24,7 @@ export default {
   data() {
     return {     
       title: "Freelancing",
-      description: "",
+      description: "These are the best projects I've worked on as a freelancer.",
     }
   },
   computed: {

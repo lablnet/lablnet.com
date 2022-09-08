@@ -62,6 +62,12 @@ export default {
           description: 'Zest is a simple yet powerful PHP MVC framework for rapid application development that is suited for small to medium scale apps and APIs.',
           image: require('../assets/images/zest.png'),
           link: 'zest',
+        },
+        {
+          name: 'Freelancing.',
+          description: "These are the best projects I've worked on as a freelancer.",
+          image: require('../assets/images/freelancing.png'),
+          link: 'freelancing',
         }
       ],
     }
