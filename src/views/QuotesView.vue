@@ -13,7 +13,7 @@
   >
     <h3 class="subtitle">Quotes.</h3>
     <p class="dark:text-gray-300">These are quotes written by me in different situations.</p>
-    <span class="mt-3 mb-3"><LablnetLoader :loading="loading" /></span>
+    <span class="mt-3 mb-3"><LoaderComp :loading="loading" /></span>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5" v-if="!error">
       <div
         class="
@@ -55,12 +55,12 @@
 
 <script lang="js">
 
-import LablnetLoader from "@/components/LablnetLoader";
+import LoaderComp from "@/components/LoaderComp";
 
 export default {
     name: "QuotesView",
     components: {
-        LablnetLoader
+        LoaderComp
     },
     data() {
         return {

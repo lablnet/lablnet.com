@@ -3,7 +3,7 @@
     <section class="flex-none md:flex py-10 px-5 container">
       <div class="flex-none md:flex-1">
         <h1 class="title">Muhammad Umer Farooq</h1>
-        <LablnetCollaborator
+        <CollaboratorComp
           text="lablent"
           :picture="require('../assets/images/umer-removebg.png')"
           link="https://github.com/lablnet"
@@ -37,7 +37,7 @@
         </p>
 
         <br />
-        <LablnetButton text="Contact Me" link="#contact" />
+        <ButtonComp text="Contact Me" link="#contact" />
       </div>
 
       <div class="hidden md:flex">
@@ -87,12 +87,12 @@
 
 <script lang="js">
 
-import LablnetButton from "@/components/LablnetButton"
+import ButtonComp from "@/components/ButtonComp"
 import SkillsView from "./SkillsView"
 import EducationView from "./EducationView"
 import ProjectsView from "./ProjectsView"
 import CertificatesView from "./CertificatesView"
-import LablnetCollaborator from "@/components/LablnetCollaborator"
+import CollaboratorComp from "@/components/CollaboratorComp"
 import ContactView from "./ContactView"
 import ShowCaseView from "./ShowCaseView"
 import { useThemeStore } from '@/store/ThemeStore';
@@ -100,8 +100,8 @@ import { useThemeStore } from '@/store/ThemeStore';
 export default {
   name: 'HomeView',
   components: {
-    LablnetCollaborator,
-    LablnetButton,
+    CollaboratorComp,
+    ButtonComp,
     EducationView,
     ProjectsView,
     CertificatesView,

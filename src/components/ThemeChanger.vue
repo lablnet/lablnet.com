@@ -53,7 +53,7 @@
 import { useThemeStore } from '@/store/ThemeStore';
 
 export default {
-  name: "LablnetThemeChanger",
+  name: "ThemeChanger",
 	props: {
 		theme: {
 			type: String,

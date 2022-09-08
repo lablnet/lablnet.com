@@ -98,7 +98,7 @@
 </template>
 <script lang="js">
 export default {
-    name: "LablnetBanner",
+    name: "BannerComp",
     data() {
         return {
             show: true,

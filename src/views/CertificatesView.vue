@@ -73,7 +73,7 @@
                     <p class="dark:text-gray-400">{{ certificate.institute }}</p>
                   </div>
 
-                  <LablnetButton
+                  <ButtonComp
                     text="View on Coursera"
                     :link="certificate.link"
                     target="_blank"
@@ -95,12 +95,12 @@
 </template>
 
 <script lang="js">
-import LablnetButton from "../components/LablnetButton.vue";
+import ButtonComp from "../components/ButtonComp.vue";
 
 export default {
   name: "CertificatesView",
   components: {
-      LablnetButton,
+      ButtonComp,
   },
   data() {
     return {

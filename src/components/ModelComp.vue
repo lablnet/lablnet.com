@@ -82,7 +82,7 @@
 
 <script lang="js">
 export default {
-    name: "LablnetModel",
+    name: "ModelComp",
     props: {
         show: {
             type: Boolean,

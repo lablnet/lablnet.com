@@ -18,7 +18,7 @@
 
 <script lang="js">
 export default {
-  name: "LablnetLoader",
+  name: "LoaderComp",
   props: {
     loading: Boolean,
   }
