@@ -135,6 +135,7 @@
 
 import PostLayout from "@/components/PostLayout";
 import PostInfo from "@/components/PostInfo";
+import { useThemeStore } from '@/store/ThemeStore';
 
 export default {
   name: "AlphasofthubView",
@@ -158,7 +159,7 @@ export default {
   },
   computed: {
     theme() {
-        return this.$store.getters['Theme/theme']
+        return useThemeStore().theme;
     },
   }
 }

@@ -112,6 +112,7 @@
 import TagComp from "@/components/TagComp";
 import CollaboratorComp from "@/components/CollaboratorComp";
 import LoaderComp from "@/components/LoaderComp";
+import { useThemeStore } from '@/store/ThemeStore';
 
 export default {
     name: "PostInfo",
@@ -193,7 +194,7 @@ export default {
     },
     computed: {
         theme() {
-            return this.$store.getters['Theme/theme']
+            return useThemeStore().theme;
         },
     }
 }
