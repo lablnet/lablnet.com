@@ -42,6 +42,14 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/work/freelancing',
+    name: 'Freelancing',
+    component: () => import('../views/work/FreelancingView.vue'),
+    meta: {
+      title: "Freelancing"
+    }
+  },
+  {
     path: '/work/projects',
     name: 'Projects',
     component: () => import('../views/work/ProjectsView.vue'),
