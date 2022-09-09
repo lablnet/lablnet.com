@@ -174,11 +174,12 @@ export default {
             fetch(`https://api.github.com/repos/${this.codeURL}/contributors`).then((resp) => resp.json())
                 .then(async (data) => {
                     let items = []
-                    let ignores = ["alphasofthub-bot", "dependabot[bot]", 'sider[bot]']
                     for (let index in data) {
                         const response = await fetch(`https://api.github.com/users/${data[index].login}`)
                         const user = await response.json()
-                        if (ignores.indexOf(data[index].login) == -1) {
+
+                        // Check if it does contain word bot then append it to the array.
+                        if (!data[index]?.login.includes("bot")) {
                             items.push({
                                 "name": user.name || data[index].login,
                                 "pic": data[index].avatar_url || null,
