@@ -106,24 +106,6 @@
                 <li>Not working properly in mobile.</li>
             </ol>
         </p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript', 'Jquery', 'Firebase']" title="LumberJack Game" subtitle="December 2019" siteURL="https://lablnet.github.io/LumberJack-game/v2/index.html" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-
-        <p class="text-justify dark:text-gray-300">
-            It was my freelancing project [but the man from Japan contacted me directly] and hired me. The ideas of the game were followed.
-            <i>This game invites players to “plant trees” in a race against a malevolent lumberjack who sought to chop them down. As the time passed it gets faster and harder to click on the sack to "plant trees". Once time ran out, players are presented with a fact about the necessity of trees for a healthy planet.</i>
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Credits</h3>
-        <p class="text-justify">
-            <ol class="list-disc mx-6 break-all">
-                <li>Character: <a class="text-blue-400 underline" target="_blank"  rel="noopener noreferrer" href="https://giphy.com/stickers/stem-2w9gmg97uKtbi">https://giphy.com/stickers/stem-2w9gmg97uKtbi</a></li>
-                <li>Tree: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html">https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html</a></li>
-                <li>Sack of Seeds: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/">https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/</a></li>
-                <li>Background: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://superawesomevectors.com/vector-desert-landscape-background/">https://superawesomevectors.com/vector-desert-landscape-background/</a></li>
-            </ol>
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
 
         <hr class="mt-12 mb-4" />
         <PostInfo :stack="['JavaScript', 'Cordova']" title="EasyTool App" subtitle="Jamuary 2020" siteURL="https://play.google.com/store/apps/details?id=com.lablnet.easytools" codeURL="lablnet/EasyTools-Source" />
@@ -163,50 +145,13 @@
             </ol>
         </p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['WordPress']" title="Travel With Atif Raiz" subtitle="March 2022" siteURL="https://www.travelwithatifriaz.com" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <p class="text-justify dark:text-gray-300">
-            This is a travel agency website created for my social media marketing teacher.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['WordPress']" title="SpendBTC" subtitle="July 2019" siteURL="https://spendbtc.io" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-
-        <p class="text-justify dark:text-gray-300">
-            It was my freelancing project [but the man from Japan contacted me directly] and hired me. This is an Amazon gift buying site using various cryptocurrency options. For the first time in this project I have developed a theme and various plugins for WordPress.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Python', 'Flask', 'Bootstrap']" title="lablnet-flask" subtitle="April 2021" siteURL="https://lablnet-flask.herokuapp.com" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-        <p class="text-justify dark:text-gray-300">
-            It was my freelancing project. It is a website backend in Flask, for user login, signup, reset password and calculation. It also has an admin panel for writing blogs and managing users.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-        <hr class="mt-12 mb-4" />
         <PostInfo :stack="['Javascript']" title="Resume" subtitle="May 2021" siteURL="https://lablnet.github.io/resume" codeURL="alphasofthub/resume" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
             The main objective of this project is to easily create a resume on the GitHub page.
         </p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['JavaScript', 'Cordova']" title="AINDA" subtitle="February 2020" siteURL="https://play.google.com/store/apps/details?id=com.practicalvalue.ainda&hl=en" :collabrators="collabrators" />
-        <p class="mt-9 text-justify dark:text-gray-300">
-            It was my freelancing project [but the man from Barazil contacted me directly] and hired me. This is an Android application that lets us log in to find the best business partner.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['JavaScript', 'CSS']" title="Simple Software House Site Template" subtitle="December 2020" siteURL="https://lablnet.github.io/softhubpro/index.html" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-
-        <p class="text-justify dark:text-gray-300">
-            This is a template for a software house realty company, I started it with some partners but our deal was canceled after a few days so this project could not work.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Although this is not a client project, the agreement was to make source code confidential, no doubt the partnership was canceled but I still stand by my agreement.</p>
     </PostLayout>
 </div>
 </template>
