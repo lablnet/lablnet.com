@@ -7,7 +7,7 @@ import re
 import urllib.request
 
 
-def sendEmail(receiver: str, subject: str, message: str, user_email: str) -> bool:
+def sendEmail(receiver: str, subject: str, message: str, user_email: str, sent_to: str = 'lablnet') -> bool:
     """
     Send email.
     :param receiver: Receiver email.
@@ -23,9 +23,12 @@ def sendEmail(receiver: str, subject: str, message: str, user_email: str) -> boo
     s.login(os.environ.get("SMTP_USER"), os.environ.get("SMTP_PASS"))
     msg = MIMEMultipart()
     # Add reply to header.
-    msg.add_header('reply-to', user_email)
-    # Add CC header.
-    msg.add_header('cc', os.environ.get("SMTP_CC"))
+    msg.add_header('reply-to', user_email if sent_to ==
+                   'lablnet' else os.environ.get("SMTP_CC"))
+
+    if sent_to == 'lablnet':
+        # Add CC header.
+        msg.add_header('cc', os.environ.get("SMTP_CC"))
 
     msg['From'] = os.environ.get("SMTP_USER")
     msg['To'] = receiver
@@ -124,15 +127,23 @@ def lambda_handler(event, context):
         return response(400, errors)
 
     # load template and replace placeholders.
-    template = open('template.html', 'r').read()
-    template = template.replace('{{name}}', data['name'])
-    template = template.replace('{{email}}', data['email'])
-    template = template.replace('{{subject}}', data['subject'])
-    template = template.replace('{{msg}}', data['message'])
+    lablnet_template = open('templates/lablnet.html', 'r').read()
+    lablnet_template = lablnet_template.replace('{{name}}', data['name'])
+    lablnet_template = lablnet_template.replace('{{email}}', data['email'])
+    lablnet_template = lablnet_template.replace('{{subject}}', data['subject'])
+    lablnet_template = lablnet_template.replace('{{msg}}', data['message'])
     subject = 'You have new contact form submission | ' + data['subject']
     # send the email.
     result = sendEmail(os.environ.get("SMTP_TO"),
-                       subject, template, data['email'])
+                       subject, lablnet_template, data['email'], sent_to='lablnet')
+    user_template = open('templates/user.html', 'r').read()
+    user_template = user_template.replace('{{name}}', data['name'])
+    user_template = user_template.replace('{{email}}', data['email'])
+    user_template = user_template.replace('{{subject}}', data['subject'])
+    user_template = user_template.replace('{{msg}}', data['message'])
+    subject = 'Your request has been received'
+    sendEmail(data['email'], subject, user_template,
+              data['email'], sent_to='user')
     if result:
         return response(200)
     else:
