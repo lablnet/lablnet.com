@@ -26,7 +26,6 @@ def validateEmail(email: str) -> bool:
     :return: boolean
     :author Muhammad Umer Farooq
     """
-    import re
     if (re.search('^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$', email)):
         return True
     else:
