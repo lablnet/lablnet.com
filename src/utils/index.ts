@@ -23,6 +23,16 @@ const themeSetup = () => {
       }
 }
 
+// URLs.
+let urls = {
+  contact: 'https://contact.lablnet.com/',
+}
+
+// Recaptcha token.
+let recaptchaToken = '6LcevvYhAAAAAG1MMRgl_fKqtGx6ZNv8KdnLSLic';
+
 export {
     themeSetup,
+    urls,
+    recaptchaToken,
 }

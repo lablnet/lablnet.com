@@ -1011,6 +1011,16 @@
         </div>
         <div class="mt-8">
           <InputComp
+            placeholder="Subject"
+            :required="true"
+            :error="errors.subject"
+            label="Subject"
+            type="text"
+            v-model="subject"
+          />
+        </div>
+        <div class="mt-8">
+          <InputComp
             placeholder="Email"
             :required="true"
             :error="errors.email"
@@ -1029,14 +1039,19 @@
           />
         </div>
         <div class="mt-8">
+          <span class="mt-3 mb-3"><LoaderComp :loading="loading" /></span>
+          <span class="mt-3 mb-3 text-red-500" v-if="error">{{error}}</span>
+          <span class="mt-3 mb-3 text-green-500" v-if="success">
+            Your message has been sent successfully.
+          </span>
           <ButtonComp
+            v-if="!loading"
             text="Send Message"
             @submitForm="doSubmi"
             :disable="
               !name ||
               !email ||
               !message ||
-              loading ||
               errors.name ||
               errors.email ||
               errors.message
@@ -1054,24 +1069,31 @@
 import ButtonComp from "@/components/ButtonComp.vue";
 import InputComp from "@/components/InputComp";
 import TextareaComp from "@/components/TextareaComp";
+import LoaderComp from "@/components/LoaderComp";
+import { urls, recaptchaToken } from "@/utils";
 
 export default {
   name: "ContactView",
   components: {
     ButtonComp,
     InputComp,
-    TextareaComp
+    TextareaComp,
+    LoaderComp
   },
   data() {
     return {
+      loading: false,
+      succes: false,
       name: null,
       email: null,
       message: null,
-      error: "Please fill the form.",
+      subject: null,
+      error: null,
       errors: {
         name: null,
         email: null,
-        message: null
+        message: null,
+        subject: null,
       }
     }
   },
@@ -1104,10 +1126,65 @@ export default {
       }
     }
   },
+  mounted() {
+    let recaptchaScript = document.createElement("script");
+    recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${recaptchaToken}`;
+    recaptchaScript.async = true;
+    recaptchaScript.defer = true;
+    document.head.appendChild(recaptchaScript);
+  },
   methods: {
     doSubmi()
     {
-      // do something
+      let self = this;
+      self.success = false;
+      self.error = null;
+      self.loading = true;
+    
+      // eslint-disable-next-line no-undef
+      grecaptcha.ready(function() {
+        // eslint-disable-next-line no-undef
+        grecaptcha.execute(recaptchaToken, {action: 'submit'}).then(function(token) {
+            fetch(urls.contact, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                name: self.name,
+                email: self.email,
+                message: self.message,
+                subject: self.subject,
+                captcha: token
+              })
+            })
+              .then(res => res.json())
+              .then(res => {
+                if (res.statusCode !== 200) {
+                  self.errors = res.body.errors;
+                  if (res.body?.errors?.captcha) {
+                    self.error = res.body.errors.captcha;
+                  }
+                } else {
+                  self.loading = false;
+                  self.error = null;
+                  self.name = null;
+                  self.email = null;
+                  self.message = null;
+                  self.subject = null;
+                  self.success = true;
+                }
+                self.loading = false;
+              })
+              .catch(err => {
+                self.loading = false;
+                self.error = "Unexpected error occured, please try again.";
+              });
+        }).catch(function(error) {
+            self.loading = false;
+            self.error = "Google reCaptcha error, please try again.";
+        });
+      })
     }
   }
 }

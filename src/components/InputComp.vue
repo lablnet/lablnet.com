@@ -57,7 +57,7 @@ export default {
         },
         name: {
             type: String,
-            required: true,
+            default: "text"
         },
         placeholder: {
             type: String,
