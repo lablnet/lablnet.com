@@ -74,7 +74,8 @@
               !message ||
               errors.name ||
               errors.email ||
-              errors.message
+              errors.message ||
+              error.subject
             "
             b_type="button"
           />
@@ -143,6 +144,14 @@ export default {
         this.errors.message = null;
       } else {
         this.errors.message = "Please enter your message.";
+      }
+    },
+    Subject(val) {
+      // check if subject not empty
+      if (val) {
+        this.errors.subject = null;
+      } else {
+        this.errors.subject = "Please enter your subject.";
       }
     }
   },
