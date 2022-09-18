@@ -104,7 +104,7 @@ export default {
   data() {
     return {
       loading: false,
-      succes: false,
+      success: false,
       name: null,
       email: null,
       message: null,

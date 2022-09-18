@@ -76,7 +76,7 @@ export default {
             default: null,
         },
         error: {
-            type: Boolean,
+            type: String,
             default: null,
         },
     },
