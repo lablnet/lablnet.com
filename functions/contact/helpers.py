@@ -63,7 +63,7 @@ def validateCaptcha(captcha: str) -> bool:
     """
     url = 'https://www.google.com/recaptcha/api/siteverify'
     payload = {
-        'secret': os.environ.get("G_RECAPTCHA_SECRET"),
+        'secret': os.environ.get("CAPTCHA_SECRET"),
         'response': captcha
     }
     response = urllib.request.urlopen(

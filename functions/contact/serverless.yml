@@ -12,7 +12,7 @@ provider:
   # and others SMTP credentials
   # we'll obtain the correct value from our .env file
   environment:
-    RECAPTCHA_SECRET: ${env:RECAPTCHA_SECRET}
+    CAPTCHA_SECRET: ${env:CAPTCHA_SECRET}
     SMTP_HOST: ${env:SMTP_HOST}
     SMTP_PORT: ${env:SMTP_PORT}
     SMTP_USER: ${env:SMTP_USER}
