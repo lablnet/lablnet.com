@@ -62,7 +62,7 @@ export default {
         },
         name: {
             type: String,
-            required: true,
+            default: "textarea",
         },
         placeholder: {
             type: String,

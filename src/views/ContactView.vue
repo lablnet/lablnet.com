@@ -75,7 +75,7 @@
               errors.name ||
               errors.email ||
               errors.message ||
-              error.subject
+              errors.subject
             "
             b_type="button"
           />
