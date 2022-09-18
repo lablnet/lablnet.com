@@ -80,7 +80,6 @@ export default {
             default: null,
         },
     },
-
     methods: {
         updateValue(e) {
             this.$emit('update:modelValue', e.target.value);
