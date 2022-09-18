@@ -13,10 +13,11 @@
         "
         >{{ label }}</label
       >
-      <input
+      <textarea
         :id="id"
         :name="name"
-        :type="type"
+        :cols="cols"
+        :rows="rows"
         :autocomplete="autocomplete"
         :required="required"
         class="
@@ -51,9 +52,13 @@ export default {
             type: String,
             default: "off"
         },
-        type: {
-            type: String,
-            default: "text",
+        cols: {
+            type: Number,
+            default: 5
+        },
+        rows: {
+            type: Number,
+            default: 5
         },
         name: {
             type: String,
@@ -85,7 +90,6 @@ export default {
         updateValue(e) {
             this.$emit('update:modelValue', e.target.value);
         }
-
     }
 }
 </script>

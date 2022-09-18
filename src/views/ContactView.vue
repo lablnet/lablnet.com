@@ -5,7 +5,14 @@
         <h3 class="subtitle">Do you need my help?</h3>
         <div class="dark:text-white text-gray-700 mt-8 dark:text-gray-300">
           Hate forms? Send me an
-          <a href="mailto:umer@lablnet.com" class="underline font-bold" target="_blank" rel="noopener noreferrer">email</a> instead.
+          <a
+            href="mailto:umer@lablnet.com"
+            class="underline font-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+            >email</a
+          >
+          instead.
         </div>
 
         <div class="mt-8 p-5 text-center hidden md:block">
@@ -992,84 +999,50 @@
           </svg>
         </div>
       </div>
-      <form
-        ref="contact"
-        action="https://formspree.io/f/xzbvkrwy"
-        method="POST"
-        class="col-span-1"
-      >
+      <form role="form" class="col-span-1">
         <div class="mt-10">
-          <span class="uppercase text-sm font-bold dark:text-gray-300">Full Name</span>
-          <input
-            class="
-              w-full
-              bg-gray-200
-              text-gray-900
-              mt-2
-              p-3
-              rounded-lg
-              focus:outline-none focus:shadow-outline
-              dark:bg-gray-900
-              dark:text-gray-400
-            "
-            type="text"
-            placeholder="Write your Name."
-            required
+          <InputComp
+            placeholder="Name"
+            :required="true"
+            :error="errors.name"
+            label="Name"
             v-model="name"
-            ref="contactName"
           />
         </div>
         <div class="mt-8">
-          <span class="uppercase text-sm font-bold dark:text-gray-300">Email</span>
-          <input
-            class="
-              w-full
-              bg-gray-200
-              text-gray-900
-              mt-2
-              p-3
-              rounded-lg
-              focus:outline-none focus:shadow-outline
-              dark:bg-gray-900
-              dark:text-gray-400
-            "
+          <InputComp
+            placeholder="Email"
+            :required="true"
+            :error="errors.email"
+            label="Email"
             type="email"
-            placeholder="Write your Email."
-            required
             v-model="email"
-            ref="contactEmail"
           />
         </div>
         <div class="mt-8">
-          <span class="uppercase text-sm font-bold dark:text-gray-300">Message</span>
-          <textarea
-            class="
-              w-full
-              h-32
-              bg-gray-200
-              text-gray-900
-              mt-2
-              p-3
-              rounded-lg
-              focus:outline-none focus:shadow-outline
-              dark:bg-gray-900
-              dark:text-gray-400
-            "
-            placeholder="Write your message..."
-            required
-            minlength="15"
-            maxlength="100000"
+          <TextareaComp
+            placeholder="Message"
+            :required="true"
+            :error="errors.message"
+            label="Message"
             v-model="message"
-            ref="contactMessage"
-          ></textarea>
+          />
         </div>
         <div class="mt-8">
-          <p class="text-red-500 text-xs italic" v-if="error">
-            {{ error }}
-          </p>
-        </div>
-        <div class="mt-8">
-          <ButtonComp text="Send Message" @click="submitForm()" />
+          <ButtonComp
+            text="Send Message"
+            @submitForm="doSubmi"
+            :disable="
+              !name ||
+              !email ||
+              !message ||
+              loading ||
+              errors.name ||
+              errors.email ||
+              errors.message
+            "
+            b_type="button"
+          />
         </div>
       </form>
     </section>
@@ -1079,11 +1052,15 @@
 <script lang="js">
 
 import ButtonComp from "@/components/ButtonComp.vue";
+import InputComp from "@/components/InputComp";
+import TextareaComp from "@/components/TextareaComp";
 
 export default {
   name: "ContactView",
   components: {
     ButtonComp,
+    InputComp,
+    TextareaComp
   },
   data() {
     return {
@@ -1091,57 +1068,46 @@ export default {
       email: null,
       message: null,
       error: "Please fill the form.",
+      errors: {
+        name: null,
+        email: null,
+        message: null
+      }
     }
   },
   
   watch: {
     name(val) {
-      // validate that the name is not empty
-      let elem = this.$refs.contactName;
-      this.errorTrigger(elem, val);
+      // check if name not empty
+      if (val) {
+        this.errors.name = null;
+      } else {
+        this.errors.name = "Please enter your name.";
+      }
     },
     email(val) {
-      // validate that the name is not empty
-      let elem = this.$refs.contactEmail;
-      this.errorTrigger(elem, val);
+      // validate that the email is not empty
+      // validate email regex.
+      let validEmail = /\S+@\S+\.\S+/;
+      if (val && validEmail.test(val)) {
+        this.errors.email = null;
+      } else {
+        this.errors.email = "Please enter your email.";
+      }
     },
     message(val) {
-      // validate that the name is not empty
-      let elem = this.$refs.contactMessage;
-      this.errorTrigger(elem, val);
+      // check if message not empty
+      if (val) {
+        this.errors.message = null;
+      } else {
+        this.errors.message = "Please enter your message.";
+      }
     }
   },
   methods: {
-    errorTrigger(elem, val) {
-      if (val === null || val === "") {
-        this.error = "Please fix the errors above.";
-        elem.classList.add("border-red-500");
-        elem.classList.add("border-2");
-        return;
-      } else {
-        if (elem.getAttribute('type') == 'email') {
-          // validate the email.
-          if (val.length > 0) {
-            if (val.indexOf('@') === -1) {
-              this.error = "Please enter a valid email address.";
-              elem.classList.add('border-red-500');
-              elem.classList.add('border-2');
-              return;
-            }
-          }
-        }
-      }
-      elem.classList.remove("border-red-500");
-      elem.classList.remove("border-2");
-      if (this.name !== null && this.email !== null && this.message !== null && this.name !== "" && this.email !== "" && this.message !== "") {
-        this.error = null;
-      }
-    },
-    submitForm() {
-      let elem = this.$refs.contact;
-      if (this.error === null) {
-        elem.submit();
-      }
+    doSubmi()
+    {
+      // do something
     }
   }
 }
