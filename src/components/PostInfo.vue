@@ -169,6 +169,17 @@ export default {
             }
             if (this.codeURL === null) return
 
+            // check if cache is not expired.
+            const cache_time = localStorage.getItem(`${this.codeURL}-time`)
+            // Check if exists not not expired.
+            if (cache_time !== null && cache_time > Date.now()) {
+              let cache = localStorage.getItem(this.codeURL)
+              if (cache) {
+                  this.contributors = JSON.parse(cache)
+                  return
+              }
+            }
+
             let that = this
             this.loading = true
             fetch(`https://api.github.com/repos/${this.codeURL}/contributors`).then((resp) => resp.json())
@@ -189,6 +200,10 @@ export default {
                         }
                     }
                     that.contributors = items
+                    // put in cache, for 7 days.
+                    localStorage.setItem(this.codeURL, JSON.stringify(items))
+                    // add cache time for 7 days.
+                    localStorage.setItem(`${this.codeURL}-time`, Date.now() + 604800000)
                     that.loading = false
                 }).catch(function (error) {})
         }
