@@ -23,12 +23,12 @@ const themeSetup = () => {
       }
 }
 
-const clearCache = async () => {
+const clearCache = () => {
   // clear local storage all data.
-  await localStorage.clear();
+  localStorage.clear();
 
   // clear all cache data.
-  await caches.keys().then((keyList: any) =>
+  caches.keys().then((keyList: any) =>
     Promise.all(
       keyList.map((key: any) => {
           return caches.delete(key);
@@ -49,5 +49,4 @@ export {
     themeSetup,
     urls,
     recaptchaToken,
-    clearCache,
 }

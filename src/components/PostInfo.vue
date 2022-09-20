@@ -180,7 +180,7 @@ export default {
               }
             }
 
-            let that = this
+            let self = this
             this.loading = true
             fetch(`https://api.github.com/repos/${this.codeURL}/contributors`).then((resp) => resp.json())
                 .then(async (data) => {
@@ -199,12 +199,12 @@ export default {
                             })
                         }
                     }
-                    that.contributors = items
+                    self.contributors = items
                     // put in cache, for 7 days.
-                    localStorage.setItem(this.codeURL, JSON.stringify(items))
+                    localStorage.setItem(self.codeURL, JSON.stringify(items))
                     // add cache time for 7 days.
-                    localStorage.setItem(`${this.codeURL}-time`, Date.now() + 604800000)
-                    that.loading = false
+                    localStorage.setItem(`${self.codeURL}-time`, Date.now() + 604800000)
+                    self.loading = false
                 }).catch(function (error) {})
         }
     },
