@@ -67,15 +67,9 @@
           <ButtonComp
             v-if="!loading"
             text="Send Message"
-            @submitForm="doSubmi"
+            @click="doSubmi"
             :disable="
-              !name ||
-              !email ||
-              !message ||
-              errors.name ||
-              errors.email ||
-              errors.message ||
-              errors.subject
+              disabled
             "
             b_type="button"
           />
@@ -146,7 +140,7 @@ export default {
         this.errors.message = "Please enter your message.";
       }
     },
-    Subject(val) {
+    subject(val) {
       // check if subject not empty
       if (val) {
         this.errors.subject = null;
@@ -163,8 +157,13 @@ export default {
     document.head.appendChild(recaptchaScript);
   },
   methods: {
-    doSubmi()
+    doSubmi(e)
     {
+      e.preventDefault();
+      e.stopPropagation();
+    
+      if (this.disabled) return;
+    
       let self = this;
       self.success = false;
       self.error = null;
@@ -214,6 +213,21 @@ export default {
             self.error = "Google reCaptcha error, please try again.";
         });
       })
+    }
+  },
+  computed: {
+    disabled() {
+      return (
+        !this.name ||
+        !this.email ||
+        !this.message ||
+        !this.subject ||
+        this.errors.name ||
+        this.errors.email ||
+        this.errors.message ||
+        this.errors.subject ||
+        this.loading
+      );
     }
   }
 }

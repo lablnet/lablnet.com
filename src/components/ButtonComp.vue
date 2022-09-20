@@ -51,7 +51,6 @@
       "
       :class="gray === true ? 'border-black' : ''"
       :disabled="disable"
-      @click="onClick"
     >
       {{ text }}
     </button>
@@ -86,14 +85,6 @@ export default {
           type: Boolean,
           default: false
         }
-    },
-    methods: {
-      onClick(e) {
-        if (this.disabled) return;
-        e.preventDefault();
-        e.stopPropagation();
-        this.$emit("submitForm");
-      }
     }
 }
 </script>
