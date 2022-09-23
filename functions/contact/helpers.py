@@ -112,7 +112,7 @@ def sendEmail(receiver: str, subject: str, message: str, user_email: str, sent_t
     msg = MIMEMultipart()
     # Add reply to header.
     msg.add_header('reply-to', user_email if sent_to ==
-                   'lablnet' else os.environ.get("SMTP_CC"))
+                   'lablnet' else os.environ.get("SMTP_TO"))
 
     if sent_to == 'lablnet':
         # Add CC header.
