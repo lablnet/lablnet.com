@@ -202,7 +202,7 @@ export default {
       // eslint-disable-next-line no-undef
       grecaptcha.ready(function() {
         // eslint-disable-next-line no-undef
-        grecaptcha.execute(recaptchaToken, {action: 'submit', invisible: true}).then(function(token) {
+        grecaptcha.execute(recaptchaToken, {action: 'submit'}).then(function(token) {
             fetch(urls.contact, {
               method: "POST",
               headers: {
