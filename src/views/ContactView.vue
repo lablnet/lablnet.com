@@ -16,7 +16,10 @@
         </div>
 
         <div class="mt-8 p-5 text-center hidden md:block">
-          <img :src="require('@/assets/images/contact-art.svg')" alt="contact" />
+          <img
+            :src="require('@/assets/images/contact-art.svg')"
+            alt="contact"
+          />
         </div>
       </div>
       <form role="form" class="col-span-1">
@@ -60,17 +63,44 @@
         </div>
         <div class="mt-8">
           <span class="mt-3 mb-3"><LoaderComp :loading="loading" /></span>
-          <span class="mt-3 mb-3 text-red-500" v-if="error">{{error}}</span>
+          <span class="mt-3 mb-3 text-red-500" v-if="error">{{ error }}</span>
           <span class="mt-3 mb-3 text-green-500" v-if="success">
             Your message has been sent successfully.
           </span>
+
+          <!-- It is totally legal to hide the reCAPTCHA badge. -->
+          <!-- As long as we include below lines. -->
+          <!-- source: https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-badge.-what-is-allowed -->
+          <p class="text-justify dark:text-gray-300">
+            This site is protected by
+            <a
+              class="text-blue-400"
+              href="https://www.google.com/recaptcha/about/"
+              target="_blank"
+            >
+              reCAPTCHA</a
+            >
+            and the Google
+            <a
+              class="text-blue-400"
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              >Privacy Policy</a
+            >
+            and
+            <a
+              class="text-blue-400"
+              href="https://policies.google.com/terms"
+              target="_blank"
+              >Terms of Service</a
+            >
+            apply.
+          </p>
           <ButtonComp
             v-if="!loading"
             text="Send Message"
             @click="doSubmi"
-            :disable="
-              disabled
-            "
+            :disable="disabled"
             b_type="button"
           />
         </div>
@@ -172,7 +202,7 @@ export default {
       // eslint-disable-next-line no-undef
       grecaptcha.ready(function() {
         // eslint-disable-next-line no-undef
-        grecaptcha.execute(recaptchaToken, {action: 'submit'}).then(function(token) {
+        grecaptcha.execute(recaptchaToken, {action: 'submit', invisible: true}).then(function(token) {
             fetch(urls.contact, {
               method: "POST",
               headers: {
