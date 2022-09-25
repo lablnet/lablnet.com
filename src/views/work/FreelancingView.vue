@@ -3,8 +3,36 @@
     <PostLayout
       :title="title"
       :description="description"
-      :coverPic="this.theme === 'dark' ? require('../../assets/images/transparent/freelancing.png') : require('../../assets/images/freelancing.png')"
+      :coverPic="
+        this.theme === 'dark'
+          ? require('../../assets/images/transparent/freelancing.png')
+          : require('../../assets/images/freelancing.png')
+      "
     >
+      <h2 class="text-2xl font-bold mb-4">Upwork</h2>
+      <p class="text-justify dark:text-gray-300">
+        I have been working on Upwork for the past 2 years. I've completed over
+        40 projects and have a 5-star reviews on 90% of my projects. I am not
+        going to list all of my projects here, but I will list some of the
+        projects that I am most proud of.
+      </p>
+
+      <PostInfo
+        :stack="['Laravel', 'Vue', 'TailwindCSS', 'MySQL', 'PHP']"
+        title="Web based Student Information System"
+        subtitle="Aug 27, 2022 - Sep 22, 2022"
+        siteURL="https://sis.munacjny.org"
+        :collabrators="collabrators"
+      />
+      <h3 class="project-headings mt-9 dark:text-gray-300">Overview</h3>
+      <p class="text-justify dark:text-gray-300">
+        This is a web based student information system that I built for a
+        school. It is a full fledged system that allows the school to manage
+        their students, teachers, classes, and more.
+      </p>
+
+      <hr class="mt-12 mb-4" />
+
     </PostLayout>
   </div>
 </template>
@@ -12,7 +40,7 @@
 <script lang="js">
 
 import PostLayout from "@/components/PostLayout";
-//import PostInfo from "@/components/PostInfo";
+import PostInfo from "@/components/PostInfo";
 import { useThemeStore } from '@/store/ThemeStore';
 
 // TODO
@@ -44,10 +72,17 @@ export default {
   name: "ZestView",
   components: {
     PostLayout,
-   // PostInfo,
+    PostInfo,
   },
   data() {
-    return {     
+    return {
+      collabrators: [
+        {
+          name: "Muhammad Umer Farooq",
+          pic: require("@/assets/images/u.png"),
+          link: "https://lablnet.com",
+        }
+      ],
       title: "Freelancing",
       description: "These are the best projects I've worked on as a freelancer.",
     }
