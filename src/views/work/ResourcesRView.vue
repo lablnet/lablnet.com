@@ -122,7 +122,7 @@
     <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
     <p class="text-justify dark:text-gray-300">
-      It was just an app in Flask, very light weight for browsers without any JavaScript. It can be rendered by formally famous UC Browsers 🤔Remember it?.
+      It was just an app in Flask, very light weight for browsers without any JavaScript. It can be rendered by formally famous UC Browsers 🤔 Remember it?.
     </p>
 
     <hr class="mt-12 mb-4" />
