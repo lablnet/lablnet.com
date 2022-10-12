@@ -11,8 +11,8 @@
           text-gray-700
           dark:text-gray-200
         "
-        >{{ label }}</label
-      >
+        >{{ label }} <span v-if="required == true" class="text-red-400">*</span>:
+      </label>
       <input
         :id="id"
         :name="name"
@@ -84,7 +84,6 @@ export default {
         updateValue(e) {
             this.$emit('update:modelValue', e.target.value);
         }
-
     }
 }
 </script>
