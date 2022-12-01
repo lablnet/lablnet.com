@@ -26,8 +26,8 @@
             class=""
             src="./assets/images/muf.png"
             alt="Logo"
-            width="50"
-            height="50"
+            width="100"
+            height="100"
             title="Logo"
           />
         </router-link>
