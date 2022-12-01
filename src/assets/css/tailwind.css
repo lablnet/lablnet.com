@@ -50,22 +50,22 @@
         @apply absolute pointer-events-none;
         margin-top: 3px;
         margin-left: 9px;
-        content: url("../icons/arrow-above.svg");
+        content: url("../icons/white/arrow-above.svg")
     }
 
     a.arrow:hover:after,
     a.arrow:focus:after {
-        content: url("../icons/arrow-right.svg");
+        content: url("../icons/white/arrow-right.svg");
     }
 
-    /* For Dark theme */
-    .bg-primary-dark a.arrow:after {
-        content: url("../icons/white/arrow-above.svg") !important;
+    /* For Light theme */
+    .light a.arrow:after {
+        content: url("../icons/arrow-above.svg") !important;
     }
 
-    .bg-primary-dark a.arrow:hover:after,
-    .bg-primary-dark a.arrow:focus:after {
-        content: url("../icons/white/arrow-right.svg") !important;
+    .light a.arrow:hover:after,
+    .light a.arrow:focus:after {
+        content: url("../icons/arrow-right.svg") !important;
     }
 
     .backtotop {
