@@ -23,6 +23,31 @@ const themeSetup = () => {
       }
 }
 
+const clearCache = async () => {
+  // clear local storage all data.
+  await localStorage.clear();
+
+  // clear all cache data.
+  await caches.keys().then((keyList: any) =>
+    Promise.all(
+      keyList.map((key: any) => {
+          return caches.delete(key);
+      })
+    )
+  )
+}
+
+// URLs.
+let urls = {
+  contact: 'https://contact.lablnet.com/',
+}
+
+// Recaptcha token.
+let recaptchaToken = '6LcevvYhAAAAAG1MMRgl_fKqtGx6ZNv8KdnLSLic';
+
 export {
     themeSetup,
+    urls,
+    recaptchaToken,
+    clearCache,
 }

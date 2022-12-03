@@ -58,6 +58,14 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/cache',
+    name: "Cache",
+    component: () => import('../views/site/cacheView.vue'),
+    meta: {
+      title: "Clear Cache"
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: "404",
     component: () => import('../views/site/404View.vue'),

@@ -169,16 +169,28 @@ export default {
             }
             if (this.codeURL === null) return
 
-            let that = this
+            // check if cache is not expired.
+            const cache_time = localStorage.getItem(`${this.codeURL}-time`)
+            // Check if exists not not expired.
+            if (cache_time !== null && cache_time > Date.now()) {
+              let cache = localStorage.getItem(this.codeURL)
+              if (cache) {
+                  this.contributors = JSON.parse(cache)
+                  return
+              }
+            }
+
+            let self = this
             this.loading = true
             fetch(`https://api.github.com/repos/${this.codeURL}/contributors`).then((resp) => resp.json())
                 .then(async (data) => {
                     let items = []
-                    let ignores = ["alphasofthub-bot", "dependabot[bot]", 'sider[bot]']
                     for (let index in data) {
                         const response = await fetch(`https://api.github.com/users/${data[index].login}`)
                         const user = await response.json()
-                        if (ignores.indexOf(data[index].login) == -1) {
+
+                        // Check if it does contain word bot then append it to the array.
+                        if (!data[index]?.login.includes("bot")) {
                             items.push({
                                 "name": user.name || data[index].login,
                                 "pic": data[index].avatar_url || null,
@@ -187,8 +199,12 @@ export default {
                             })
                         }
                     }
-                    that.contributors = items
-                    that.loading = false
+                    self.contributors = items
+                    // put in cache, for 7 days.
+                    localStorage.setItem(self.codeURL, JSON.stringify(items))
+                    // add cache time for 7 days.
+                    localStorage.setItem(`${self.codeURL}-time`, Date.now() + 604800000)
+                    self.loading = false
                 }).catch(function (error) {})
         }
     },

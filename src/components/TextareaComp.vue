@@ -11,12 +11,13 @@
           text-gray-700
           dark:text-gray-200
         "
-        >{{ label }} <span v-if="required == true" class="text-red-400">*</span>:
-      </label>
-      <input
+        >{{ label }}</label
+      >
+      <textarea
         :id="id"
         :name="name"
-        :type="type"
+        :cols="cols"
+        :rows="rows"
         :autocomplete="autocomplete"
         :required="required"
         class="
@@ -51,13 +52,17 @@ export default {
             type: String,
             default: "off"
         },
-        type: {
-            type: String,
-            default: "text",
+        cols: {
+            type: Number,
+            default: 5
+        },
+        rows: {
+            type: Number,
+            default: 5
         },
         name: {
             type: String,
-            default: "text"
+            default: "textarea",
         },
         placeholder: {
             type: String,
@@ -80,6 +85,7 @@ export default {
             default: null,
         },
     },
+
     methods: {
         updateValue(e) {
             this.$emit('update:modelValue', e.target.value);

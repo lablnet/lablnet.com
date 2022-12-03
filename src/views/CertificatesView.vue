@@ -106,6 +106,14 @@ export default {
     return {
       certificates: [
         {
+          title: "Cryptography I",
+          institute: "Coursera online course (Stanford)",
+          completed: "Sep 15, 2022",
+          picture: require('../assets/images/certificates/Coursera 5DZ79VRJSBK3-1.jpg'),
+          link: "https://www.coursera.org/account/accomplishments/certificate/5DZ79VRJSBK3",
+          step: 3,    
+        },
+        {
           title: "Python For Everybody",
           institute: "Coursera online course (University of Michigan)",
           completed: "Aug 07, 2020",

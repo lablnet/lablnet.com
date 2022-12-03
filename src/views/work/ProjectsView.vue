@@ -2,6 +2,58 @@
 <div>
     <PostLayout :title="title" :description="description">
 
+        <!-- Pakistan Weather Scrapper Start -->
+        <PostInfo :stack="['Python', 'React', 'TailwindCSS']" title="Pakistan Weather Scrapper" subtitle="July 2022" siteURL="https://weather.lablnet.com/" codeURL="lablnet/pakweather_scrapper" />
+
+        <h3 class="project-headings mt-9 dark:text-gray-300">⚠️ Note</h3>
+        <ol class="list-disc mx-6 mt-3 dark:text-gray-300">
+            <li>
+                Multithreading does not affect the network throughput, it only splits the urls into multiple threads which wait in the network queue. But the data updating in the file is concurrent.
+            </li>
+            <ol class="list-disc mx-6 mt-3">
+                <li>
+                    For example, if the 1st thread is updating data in the file at the same time the 2nd thread is fetching data from the network, the 2nd thread does not have to wait for the 1st thread to finish.
+                </li>
+            </ol>
+        </ol>
+        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+        <p class="text-justify dark:text-gray-300">
+            <ol class="list-disc mx-6 mt-3">
+                <li>
+                    The sole purpose of this project is to get the weather data of Pakistan from Weather Channel and store it in a database/csv. The data is then can be used for further analysis.
+                </li>
+                <li>
+                    After completion of this project, I thought why not to create simple web app to show the weather data of Pakistan. So I created a simple web app to show the weather data of Pakistan, so the fun purpose is to check latest weather report.
+                </li>
+            </ol>
+        </p>
+        <h3 class="project-headings mt-9 dark:text-gray-300">Woking</h3>
+        <p class="text-justify dark:text-gray-300">
+            The script run every hour and fetch the weather data from the weather channel and store it in a database using GitHub Actions. <strong> I should thank <a href="https://github.com" target="_blank">GitHub</a> for providing free CI/CD services. </strong>
+        </p>
+       <h3 class="project-headings mt-9 dark:text-gray-300">Data Files</h3>
+        <p class="text-justify dark:text-gray-300">
+            I did not store the data into single file, instead the data is stored in multiple files, these files created with name of month under the year folder. For example, the data of Auguest 2022 is stored in the file named <code>/data/2022/aug.csv</code>. The data is stored in the CSV format.
+            <br />
+            <strong>The reason behind this as follow:</strong>
+            <ol class="list-disc mx-6 mt-3">
+                <li>
+                    If the data is stored in a single file, the file size will be huge and it will be difficult to read the data. So I decided to store the data in multiple files. 
+                </li>
+                <li>
+                    I am using GitHub as a database, and GitHub has a limit of 100MB per file. So I decided to store the data in multiple files.
+                </li>
+            </ol>
+            <br />
+            But there is a problem, if the data is stored in multiple files, it will be difficult to read the data from multiple files. So I will created a simple script to read the data from multiple files and store it in a single file.
+        </p>
+         <h3 class="project-headings mt-9 dark:text-gray-300">Future Thoughts</h3>
+        <p class="text-justify dark:text-gray-300">
+            I monitor If the GitHub action is failing, if it is failing, I will check the logs and fix the issue. and at end I will create the script to merge the data from multiple files into a single file.
+        </p>
+        <hr class="mt-12 mb-4" />
+        <!-- Pakistan Weather Scrapper End -->
+
         <PostInfo :stack="['Javascript', 'Python']" title="Fontpicker" subtitle="July 2022" siteURL="https://lablnet.github.io/fontpicker/" codeURL="lablnet/fontpicker" />
 
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
@@ -106,24 +158,6 @@
                 <li>Not working properly in mobile.</li>
             </ol>
         </p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript', 'Jquery', 'Firebase']" title="LumberJack Game" subtitle="December 2019" siteURL="https://lablnet.github.io/LumberJack-game/v2/index.html" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-
-        <p class="text-justify dark:text-gray-300">
-            It was my freelancing project [but the man from Japan contacted me directly] and hired me. The ideas of the game were followed.
-            <i>This game invites players to “plant trees” in a race against a malevolent lumberjack who sought to chop them down. As the time passed it gets faster and harder to click on the sack to "plant trees". Once time ran out, players are presented with a fact about the necessity of trees for a healthy planet.</i>
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Credits</h3>
-        <p class="text-justify">
-            <ol class="list-disc mx-6 break-all">
-                <li>Character: <a class="text-blue-400 underline" target="_blank"  rel="noopener noreferrer" href="https://giphy.com/stickers/stem-2w9gmg97uKtbi">https://giphy.com/stickers/stem-2w9gmg97uKtbi</a></li>
-                <li>Tree: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html">https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html</a></li>
-                <li>Sack of Seeds: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/">https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/</a></li>
-                <li>Background: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://superawesomevectors.com/vector-desert-landscape-background/">https://superawesomevectors.com/vector-desert-landscape-background/</a></li>
-            </ol>
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
 
         <hr class="mt-12 mb-4" />
         <PostInfo :stack="['JavaScript', 'Cordova']" title="EasyTool App" subtitle="Jamuary 2020" siteURL="https://play.google.com/store/apps/details?id=com.lablnet.easytools" codeURL="lablnet/EasyTools-Source" />
@@ -163,50 +197,13 @@
             </ol>
         </p>
         <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['WordPress']" title="Travel With Atif Raiz" subtitle="March 2022" siteURL="https://www.travelwithatifriaz.com" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <p class="text-justify dark:text-gray-300">
-            This is a travel agency website created for my social media marketing teacher.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['WordPress']" title="SpendBTC" subtitle="July 2019" siteURL="https://spendbtc.io" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-
-        <p class="text-justify dark:text-gray-300">
-            It was my freelancing project [but the man from Japan contacted me directly] and hired me. This is an Amazon gift buying site using various cryptocurrency options. For the first time in this project I have developed a theme and various plugins for WordPress.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Python', 'Flask', 'Bootstrap']" title="lablnet-flask" subtitle="April 2021" siteURL="https://lablnet-flask.herokuapp.com" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-        <p class="text-justify dark:text-gray-300">
-            It was my freelancing project. It is a website backend in Flask, for user login, signup, reset password and calculation. It also has an admin panel for writing blogs and managing users.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-        <hr class="mt-12 mb-4" />
         <PostInfo :stack="['Javascript']" title="Resume" subtitle="May 2021" siteURL="https://lablnet.github.io/resume" codeURL="alphasofthub/resume" />
         <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
         <p class="text-justify dark:text-gray-300">
             The main objective of this project is to easily create a resume on the GitHub page.
         </p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['JavaScript', 'Cordova']" title="AINDA" subtitle="February 2020" siteURL="https://play.google.com/store/apps/details?id=com.practicalvalue.ainda&hl=en" :collabrators="collabrators" />
-        <p class="mt-9 text-justify dark:text-gray-300">
-            It was my freelancing project [but the man from Barazil contacted me directly] and hired me. This is an Android application that lets us log in to find the best business partner.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Since this was a client project, the source code is confidential and the copyright belongs to this client.</p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['JavaScript', 'CSS']" title="Simple Software House Site Template" subtitle="December 2020" siteURL="https://lablnet.github.io/softhubpro/index.html" :collabrators="collabrators" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-
-        <p class="text-justify dark:text-gray-300">
-            This is a template for a software house realty company, I started it with some partners but our deal was canceled after a few days so this project could not work.
-        </p>
-        <p class="text-justify text-red-500 dark:text-red-300"><strong>Note:</strong> Although this is not a client project, the agreement was to make source code confidential, no doubt the partnership was canceled but I still stand by my agreement.</p>
     </PostLayout>
 </div>
 </template>
