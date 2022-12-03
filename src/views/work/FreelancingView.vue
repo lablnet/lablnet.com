@@ -31,23 +31,7 @@
       />
       <h3 class="project-headings mt-9 dark:text-gray-300">Overview</h3>
       <p class="text-justify dark:text-gray-300">
-        I found this project to be particularly engaging and was able to
-        complete it within seven days (The remaining time was spent on testing
-        by the client). <br />
-        The project description was as follow: <br />
-        <i
-          >Our subscription software service offers customers the ability to
-          choose from five products for their subscription. We currently utilize
-          CheddarGetter for payment management, customer email communications,
-          and other necessary tasks. However, we are in the process of migrating
-          to Stripe.com's subscription billing service and transitioning our
-          code from Asp.net to PHP</i
-        >
-        <br />
-        <br />
-        Beside above description, I also had to create a new database table to
-        store the customer's subscription information, with simple admin panel
-        to manage the subscriptions. <br />
+        One of my recent projects involved the development of a subscription software service for a client. The service offered customers the ability to choose from five products for their subscription, and utilized CheddarGetter for payment management, customer email communications, and other necessary tasks. However, the client was in the process of migrating to Stripe.com's subscription billing service and transitioning their code from Asp.net to PHP. I was tasked with implementing these changes, as well as creating a new database table to store the customer's subscription information and a simple admin panel to manage the subscriptions. I found this project to be engaging and was able to complete it within seven days, with the remaining time spent on testing by the client. This project allowed me to showcase my skills in web development and database management.
       </p>
 
       <hr class="mt-12 mb-4" />
