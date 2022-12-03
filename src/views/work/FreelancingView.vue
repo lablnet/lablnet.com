@@ -73,7 +73,78 @@
 
       <!-- Post Content Upwork End -->
 
-      <!-- Post Content Others Start -->
+      <!-- Post Content Direct Client Start -->
+      <h2 class="!text-4xl">Direct Client</h2>
+      <p class="text-justify dark:text-gray-300">
+        As a developer with over five years of experience, I have had the
+        opportunity to work with a variety of clients and companies. Over the
+        course of my career, I have successfully completed more than seven
+        projects, each one offering its own unique challenges and rewards. While
+        I am unable to list all of the projects I have worked on, I am proud to
+        highlight a few of my most notable achievements.
+      </p>
+
+      <hr class="mt-9 mb-4 mx-auto !w-50" style="width: 50%" />
+
+      <!-- Project 1 Start -->
+        <PostInfo 
+          :stack="['Javascript', 'Jquery', 'Firebase']" title="LumberJack Game"
+          subtitle="December 2019"
+          siteURL="https://lablnet.github.io/LumberJack-game/v2/index.html" 
+          :collabrators="collabrators"
+        />
+        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+
+        <p class="text-justify dark:text-gray-300">
+            One of my freelance projects was the development of a game that focused on the importance of trees for the health of our planet. In the game, players are invited to "plant trees" in a race against a malevolent lumberjack who seeks to chop them down. As the game progresses, it becomes increasingly faster and harder to click on the sack to "plant trees". Once time runs out, players are presented with a fact about the importance of trees for the environment. This game was developed after a man from Japan contacted me directly and hired me for the job. I was responsible for bringing the game concept to life, and was pleased with the final result. This project allowed me to showcase my skills in game development and contribute to a important environmental message.
+        </p>
+        <h3 class="project-headings mt-5 dark:text-gray-300">Credits</h3>
+        <p class="text-justify">
+            <ol class="list-disc mx-6 break-all">
+                <li>Character: <a class="text-blue-400 underline" target="_blank"  rel="noopener noreferrer" href="https://giphy.com/stickers/stem-2w9gmg97uKtbi">https://giphy.com/stickers/stem-2w9gmg97uKtbi</a></li>
+                <li>Tree: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html">https://www.cleanpng.com/png-computer-icons-acacia-gum-arabic-tree-clip-art-2752802/download-png.html</a></li>
+                <li>Sack of Seeds: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/">https://www.clipartwiki.com/iclip/ihbiTih_vector-illustration-of-sack-of-milled-wheat-grain/</a></li>
+                <li>Background: <a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://superawesomevectors.com/vector-desert-landscape-background/">https://superawesomevectors.com/vector-desert-landscape-background/</a></li>
+            </ol>
+        </p>
+        <hr class="mt-12 mb-4" />
+        <!-- Project 1 End -->
+
+        <!-- Project 2 Start -->
+        <PostInfo 
+          :stack="['WordPress']"
+          title="SpendBTC"
+          subtitle="July 2019"
+          siteURL="https://spendbtc.io"
+          :collabrators="collabrators"
+         />
+        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+
+        <p class="text-justify dark:text-gray-300">
+            This project involved the development of an Amazon gift buying site that allowed users to make purchases using various cryptocurrencies. This was a new challenge for me, as it was the first time I had developed a custom theme and plugins for WordPress. The project was initiated when a man from Japan contacted me directly and hired me for the job. Despite the challenges, I was able to successfully complete the project, resulting in a fully functional and user-friendly website. This experience allowed me to expand my skillset and broaden my expertise in WordPress development.
+        </p>
+        <hr class="mt-12 mb-4" />
+
+        <!-- Project 2 End -->
+
+        <!-- Project 3 Start -->
+
+        <PostInfo 
+          :stack="['JavaScript', 'Cordova']"
+          title="AINDA"
+          subtitle="February 2020"
+          siteURL="https://play.google.com/store/apps/details?id=com.practicalvalue.ainda&hl=en"
+          :collabrators="collabrators"
+        />
+        <p class="mt-9 text-justify dark:text-gray-300">
+            One of my project was the development of an Android application for Icontem, a Brazil-based company owned by Manuel Lemos. The goal of the app was to help users find the best business partners by allowing them to log in and search for potential partners based on various criteria. I was responsible for the entire development process, from conceptualization to deployment, and was able to deliver a high-quality product that met the client's needs and expectations. This project allowed me to gain valuable experience in developing mobile applications, and I was pleased to be able to contribute to the success of Icontem.
+        </p>
+        <hr class="mt-12 mb-4" />
+
+        <!-- Project 3 End -->
+
+      <!-- Post Content Direct Client End -->
+
     </PostLayout>
     <!-- Post Layout End -->
   </div>
