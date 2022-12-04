@@ -15,51 +15,43 @@
     <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
     <p class="text-justify dark:text-gray-300">
-      As a university student in Pakistan, a common problem faced by students is
-      that they do not get lectures, slides and other resources on exam night.
-      So I decided to make an application for my university. Although keep in
-      mind that the university has its own portal, there is no app for it. So, I
-      just sat for ten days and developed an Android application using Dart,
-      Flutter and Firebase. I never thought it would help the students and it
-      did, but it didn't last long.
+      As a university student in Pakistan, I noticed a common problem among my peers: they did not have access to lectures, slides, and other resources on exam night. I decided to develop an Android application to address this issue, as my university did not have an app available. I used Dart, Flutter, and Firebase to create the app, and was pleasantly surprised by the positive response from students. However, the app did not last long due to issues with resource management.
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
 
     <p class="text-justify dark:text-gray-300">
       <ol class="list-disc mx-6">
-        <li>Share Class Resources i.e. lecture, upcoming Assignment, Quiz etc.</li>
-        <li>See today’s event like lectures etc.</li>
-        <li>Keep class notified with any announcement.</li>
+        <li>Sharing of class resources such as lectures, assignments, and quizzes.</li>
+        <li>Viewing of today's events and class announcements.</li>
         <li>Weekly timetable.</li>
-        <li>Download and manage downloaded resources from the app.</li>
-        <li>Share downloaded resources directly from the app.</li>
+        <li>Downloading and managing resources within the app.</li>
+        <li>Sharing of downloaded resources directly from the app.</li>
       </ol>
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Issues Faced</h3>
     <p class="text-justify dark:text-gray-300">
       <ol class="list-disc mx-6">
-        <li>The first issue was about maintaining the resources. I myself volunteered to add resources like lectures slides, textbooks, etc. But, now I wanted the CRs to do so who were quite lazy enough to do so.</li>
-        <li>There was another frustrating issue related to Firebase Function as I was not able to get it because my Bank Card was not working at Google 🤔. So I add firebase rules by adding email manually.</li>
-        <li>On the top of it, at that time Flutter was too young so have less support.</li>
+        <li>Difficulty in maintaining resources, as I relied on voluntary contributions from class representatives (CRs) who were often unwilling to help.</li>
+        <li>Challenges with Firebase functions and Google payment due to my bank card not working 🤔. So I add firebase rules by adding email manually.</li>
+        <li>On the top of it, timited support for Flutter as it was a relatively new technology at the time.</li>
       </ol>
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Some Goodies</h3>
     <p class="text-justify dark:text-gray-300">
       <ol class="list-disc mx-6">
-        <li>The app support dark theme.</li>
-        <li>As it is in Flutter it can be compiles to many platforms with minimal efforts.</li>
-        <li>I enjoyed while working on this project.</li>
+        <li>The app supports  dark theme.</li>
+        <li>It can be compiled for multiple platforms with minimal effort thanks to Flutter.</li>
+        <li>Working on the project was enjoyable.</li>
       </ol>
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Lessons Learnt</h3>
 
     <p class="text-justify dark:text-gray-300">
-      This was my first Flutter and Firebase app for some real users. I learned
-      few new technologies Flutter and Firebase.
+      This was my first project using Flutter and Firebase, and I learned about these technologies while working on it.
     </p>
 
     <hr class="mt-12 mb-4" />
@@ -76,37 +68,37 @@
     <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
     <p class="text-justify dark:text-gray-300">
-      The purpose of the web app is the same as stated above. I could able to compile the Flutter App to Web but it was damn slow. So I developed the app in VueJs.
+      The purpose of this web app is similar to the previous project, but with a faster and more efficient design. I was able to compile the Flutter app to web, but it was very slow. Therefore, I developed the app in VueJs to improve its performance.
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
 
     <p class="text-justify dark:text-gray-300">
       <ol class="list-disc mx-6 dark:text-gray-300">
-        <li>Share Class Resources i.e. lecture, upcoming Assignment, Quiz etc.</li>
-        <li>See today’s event like lectures etc.</li>
-        <li>Only class CR or management can manage and update resources.</li>
+        <li>Sharing of class resources such as lectures, assignments, and quizzes.</li>
+        <li>Viewing of today's events.</li>
+        <li>Only class representatives or management can manage and update resources.</li>
       </ol>
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Issues Faced</h3>
     <p class="text-justify dark:text-gray-300">
       <ol class="list-disc mx-6">
-        <li>The problem I encountered was like the project above.</li>
+        <li>The same challenges as the previous project, including difficulty in maintaining resources and issues with Firebase functions.</li>
       </ol>
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Some Goodies</h3>
     <p class="text-justify dark:text-gray-300">
       <ol class="list-disc mx-6">
-        <li>I also managed to add some admin features like adding resources etc.</li>
+        <li>I added additional features for admin users, such as the ability to add resources.</li>
       </ol>
     </p>
 
     <h3 class="project-headings mt-5 dark:text-gray-300">Lessons Learnt</h3>
 
     <p class="text-justify dark:text-gray-300">
-      This was first time I use Firebase as Database. I learned Firebase.
+      This was my first time using Firebase as a database, and I learned about its capabilities through this project.
     </p>
 
     <hr class="mt-12 mb-4" />
@@ -122,7 +114,7 @@
     <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
     <p class="text-justify dark:text-gray-300">
-      It was just an app in Flask, very light weight for browsers without any JavaScript. It can be rendered by formally famous UC Browsers 🤔 Remember it?.
+      This was a simple app developed in Flask that was lightweight and could be rendered on browsers without JavaScript. It was designed to be compatible with UC Browsers, a once-popular browser 🤔 Remember it?.
     </p>
 
     <hr class="mt-12 mb-4" />
@@ -138,13 +130,13 @@
     <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
     <p class="text-justify dark:text-gray-300">
-      The purpose of the Command Line App is to scrap the data from Riphah International University Website and put in Firebase, the main data we were interested to fetch related to facility members.
+      The purpose of this command line app is to scrape data from the Riphah International University website and store it in Firebase. The main data we were interested in were related to faculty members.
     </p>
     
     <h3 class="project-headings mt-5 dark:text-gray-300">Future Thoughts</h3>
 
     <p class="text-justify dark:text-gray-300">
-      I would like  to continue maintaining it and to add the configuration base scraper so it would work for every site.
+      I plan to continue maintaining this app and add a configurable scraper so that it can be used on any website.
     </p>
   </PostLayout>
 </template>
