@@ -5,8 +5,7 @@
   >
     <h3 class="subtitle dark:text-white">Skills</h3>
     <p>
-      I am still a student and will remain, the knowledge is endless. Here are
-      the skill sets that I have.
+      As a student, I am constantly learning and expanding my knowledge. Some of the skills I have developed include:
     </p>
     <div class="grid md:grid-cols-3 mx-auto py-5">
       <div class="flex flex-col px-4 py-4" v-for="skill in skills" :key="skill">
@@ -28,15 +27,15 @@ export default {
         return {
             skills: [{
                     title: "Languages",
-                    description: "I mostly work with JavaScript, Python and PHP and am good at different databases including MySql, Firebase and mongodb, web development HTML/CSS. I also worked with other languages including Dart, C, C++ and a little bit of Ruby."
+                    description: "I am proficient in JavaScript, Python, and PHP, and have experience working with various databases such as MySql, Firebase, and mongodb. Additionally, I have expertise in web development with HTML and CSS. I have also worked with other languages such as Dart, C, C++, and Ruby."
                 },
                 {
                     title: "Frameworks",
-                    description: "I use the framework just as a booster to do the project(s) quickly. That is why I am always open to trying different framework(s). The frameworks I worked on include Laravel, Codeigniter, Vue, React, Electron, Jquery, TailwindCSS, AntDesign, Bootstrap, MaterializeCSS, Flask, Flutter, Selenium and little bit of Ruby on Rails."
+                    description: "I use frameworks to speed up the development process and am open to exploring different options. I have experience working with Laravel, Codeigniter, Vue, React, Electron, Jquery, TailwindCSS, AntDesign, Bootstrap, MaterializeCSS, Flask, Flutter, Selenium, and Ruby on Rails."
                 },
                 {
                     title: "Tools/Platform",
-                    description: "The tools I use on a daily basis are VS-Code, Jupyter Notebook, Git, Docker. I use Windows as my primary Operating system, I also use Ubuntu inside Windows using WSL/WSLG."
+                    description: "I use VS-Code, Jupyter Notebook, Git, and Docker on a daily basis. My primary operating system is Windows, but I also use Ubuntu inside Windows through WSL/WSLG."
                 }
             ]
         }
