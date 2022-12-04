@@ -165,7 +165,7 @@ export default {
     return {
       stack: ["Vue", "Firebase", "Flutter"],
       title: "ResourcesR",
-      description: "An app that provides a platform to share resources for study especially for Riphah Students. Features including sharing resources, timetable, events, assignments, etc.",
+      description: "I developed an app that offers a platform for students at Riphah University to share and access study resources.",
     }
   },
   computed: {

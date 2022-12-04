@@ -154,7 +154,7 @@ export default {
       ],
       stack: ["PHP"],
       title: "AlphaSoftHub",
-      description: "I started my own business on 12 Feb 2021. At AlphaSoftHub (Private) Limited I am working as lead developer of the different company’s project(s).",
+      description: "I started my own business, AlphaSoftHub (Private) Limited, on February 12, 2021. In this role, I serve as the lead developer for the company's various projects.",
     }
   },
   computed: {

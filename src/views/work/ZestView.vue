@@ -126,7 +126,7 @@ export default {
   data() {
     return {     
       title: "Zest Framework",
-      description: "Zest is a simple yet powerful PHP MVC framework for rapid application development that is suited for small to medium scale apps and APIs.",
+      description: "Zest is a PHP MVC framework designed for rapid application development, particularly for small to medium scale apps and APIs. It offers a simple, yet powerful solution for creating efficient and scalable applications.",
     }
   },
   computed: {
