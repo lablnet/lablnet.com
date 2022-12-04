@@ -58,6 +58,14 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/work/riphah',
+    name: 'Riphah',
+    component: () => import('../views/work/RiphahView.vue'),
+    meta: {
+      title: "Riphah"
+    }
+  },
+  {
     path: '/cache',
     name: "Cache",
     component: () => import('../views/site/cacheView.vue'),

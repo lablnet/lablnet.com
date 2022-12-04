@@ -16,25 +16,19 @@
       <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
       <p class="text-justify dark:text-gray-300">
-        Its main purpose is to create a site for my registered company
-        AlphaSoftHub (Private) Limited.
+        The main purpose of this project was to create a website for my registered company, AlphaSoftHub (Private) Limited.
       </p>
       <h3 class="project-headings mt-5 dark:text-gray-300">Problems Faced</h3>
       <p class="text-justify dark:text-gray-300">
-        I wanted the backend of the system for account handling to be in Python,
-        oh yes it is but I am still unable to host it because I can't afford the
-        server!. Still, I have shared hosting. 😔
+        I initially wanted the backend of the system to be in Python, but I was unable to host it because I could not afford a dedicated server. I am currently using shared hosting. 😔
       </p>
       <h3 class="project-headings mt-5 dark:text-gray-300">Lessons Learnt</h3>
       <p class="text-justify dark:text-gray-300">
-        This was probably the first web app I developed in which I used
-        tailwindCSS and learned about tailwindCSS. After working with
-        tailwindCSS I want to use it for all my projects.
+        This was one of the first web apps I developed that utilized tailwindCSS, and it was a great learning experience. I now plan to use tailwindCSS in all of my future projects.
       </p>
       <h3 class="project-headings mt-5 dark:text-gray-300">Future Thoughts</h3>
       <p class="text-justify dark:text-gray-300">
-        The functionality of the blog does not work properly and I need the site
-        to allow users to log in to the system and manage their orders.
+        The blog functionality does not currently work as intended, and I would like to improve it. I also want to add a login system for users to manage their orders.
       </p>
       <hr class="mt-12 mb-4" />
 
@@ -49,14 +43,8 @@
       <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
       <p class="text-justify dark:text-gray-300">
-        The main purpose of the project is to create a superfast COVID-19 dashboard and parser.
+        The main purpose of this project is to create a fast COVID-19 dashboard and parser that can raise awareness among the public, visualize data for easy understanding, gather data for research and experiences, and provide a platform for the public to interact with the data.
 
-        <ol class="list-disc mx-6 dark:text-gray-300">
-            <li>Develop awareness among the public.</li>
-            <li>Visualized the data for everyone to understand.</li>
-            <li>Gather data for research/experiences.</li>
-            <li>Create a platform for the public to interact with the data.</li>
-        </ol>
       </p>
       <h3 class="project-headings mt-5 dark:text-gray-300">Problems Faced</h3>
       <p class="text-justify">
@@ -71,30 +59,30 @@
       <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
       <p class="text-justify">
           <ol class="list-disc mx-6 dark:text-gray-300">
-              <li>Parse data from government websites automatically daily, automated using GitHub Action of multiple countries.</li>
-              <li>Parse data from WHO automatically on every Monday, automated using GitHub Actions.</li>
+              <li>Automated parsing of data from government websites daily using GitHub Actions for multiple countries.</li>
+              <li>Automated parsing of data from WHO on every Monday using GitHub Actions.</li>
               <li>Dashboard to visualize data.</li>
-              <li>Publicly Data downloading.</li>
-              <li>Multiple country handling frontend.</li>
+              <li>Publicly available data downloading.</li>
+              <li>Support for multiple countries on the frontend.</li>
               <li>Super Fast performance.</li>
-              <li>Fully customizable for country website for more info look Contribution guideline.</li>
+              <li>Fully customizable for country websites - see the contribution guideline for more information.</li>
           </ol>
       </p>
 
       <h3 class="project-headings mt-5 dark:text-gray-300">Some Goodies</h3>
        <p class="text-justify">
         <ol class="list-disc mx-6 dark:text-gray-300">
-          <li>Simple and easy UI makes it easy to discover COVID19 statistics.</li>
-          <li>It can be easily ported to multiple countries by adding a new scraper and adding support to the front site.</li>
-          <li>It is highly scalable and fast.</li>
-          <li>The data is publicly available..</li>
+          <li>Simple and easy-to-use UI for discovering COVID-19 statistics.</li>
+          <li>Easily portable to multiple countries by adding a new scraper and frontend support.</li>
+          <li>Highly scalable and fast.</li>
+          <li>Publicly available data.</li>
           <li>I enjoyed working in it.</li>
         </ol>
       </p>
 
       <h3 class="project-headings mt-5 dark:text-gray-300">Lessons Learnt</h3>
       <p class="text-justify dark:text-gray-300">
-        Although, this was my first project use selenium and beautiful-soup library. So I learnt it along with GitHub actions.
+        Although, this was my first project using the selenium and beautiful-soup libraries, so I learned about them along with GitHub Actions.
       </p>
       <hr class="mt-12 mb-4" />
 
@@ -108,8 +96,7 @@
       <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
       <p class="text-justify dark:text-gray-300">
-        The primary purpose of the library is to make a robust validation
-        library for flasks like Laravel Style.
+        The main purpose of this library is to create a robust validation library for Flask, similar to the one available in Laravel.
       </p>
 
       <hr class="mt-12 mb-4" />
@@ -125,7 +112,7 @@
       <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
       <p class="text-justify dark:text-gray-300">
-        This was the old site for AlphaSoftHub (Private) Limited.
+        This is the previous website for AlphaSoftHub (Private) Limited.
       </p>
     </PostLayout>
   </div>
@@ -149,12 +136,12 @@ export default {
         {
           name: "Muhammad Umer Farooq",
           pic: require("@/assets/images/u.png"),
-          link: "https://www.lablnet.com",
+          link: "https://lablnet.com",
         },
       ],
       stack: ["PHP"],
       title: "AlphaSoftHub",
-      description: "I started my own business on 12 Feb 2021. At AlphaSoftHub (Private) Limited I am working as lead developer of the different company’s project(s).",
+      description: "I started my own business, AlphaSoftHub (Private) Limited, on February 12, 2021. In this role, I serve as the lead developer for the company's various projects.",
     }
   },
   computed: {

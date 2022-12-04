@@ -2,8 +2,7 @@
   <section class="py-10 px-5 container" id="projects">
     <h3 class="subtitle">Projects I've worked on.</h3>
     <p class="dark:text-gray-300">
-      I like to keep working on new projects, here is a look at the project(s) I
-      have worked on.
+      I enjoy taking on new projects and have worked on the following:
     </p>
 
     <div class="grid md:grid-cols-3 mx-auto py-5">
@@ -47,21 +46,27 @@ export default {
       projects: [
         {
           name: 'Working at AlphaSoftHub (Pvt) Ltd.',
-          description: 'I started my own business on 12 Feb 2021. At AlphaSoftHub (Private) Limited I am working as lead developer of the different company’s project(s).',
+          description: 'I started my own business, AlphaSoftHub (Private) Limited, on February 12, 2021. In this role, I serve as the lead developer for the company\'s various projects.',
           image: require('../assets/images/ash.png'),
           link: 'alphasofthub',
         },
         {
           name: 'ResourcesR.',
-          description: 'An app that provides a platform to share resources for study especially for Riphah Students.',
+          description: 'I developed an app that offers a platform for students at Riphah University to share and access study resources.',
           image: require('../assets/images/resourcesr.png'),
           link: 'resourcesr',
         },
         {
           name: 'Zest Framework.',
-          description: 'Zest is a simple yet powerful PHP MVC framework for rapid application development that is suited for small to medium scale apps and APIs.',
+          description: 'Zest is a PHP MVC framework designed for rapid application development, particularly for small to medium scale apps and APIs. It offers a simple, yet powerful solution for creating efficient and scalable applications.',
           image: require('../assets/images/zest.png'),
           link: 'zest',
+        },
+        {
+          name: 'Riphah International University.',
+          description: 'The opportunity to work on building an alumni management system for Riphah International University was offered to me. This system was intended to be used by the university to manage and connect with its alumni. I was excited to take on the project and help the university strengthen its relationship with its graduates.',
+          image: require('../assets/images/riphah.png'),
+          link: 'riphah',
         },
         {
           name: 'Freelancing.',
