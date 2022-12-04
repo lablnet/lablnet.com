@@ -8,16 +8,16 @@
         <p class="text-justify dark:text-gray-300">
             It was the start of the summer semester, and as I looked over the course list, I spotted the dreaded Web Engineering course. It was a mandatory course, so there was no getting out of it. Reluctantly, I enrolled, knowing full well that it was going to be a tedious and boring experience. <br /> <br />
 
-            But as the semester started, I quickly realized that my fears were justified. The course was a complete drag, and I found myself unable to stay focused or motivated. Desperate for a solution, I turned to my friend <a href="https://www.linkedin.com/in/muhammadusmannaeem/" target="_blank">Usman</a> for advice. <br /> <br />
+            But as the semester started, I quickly realized that my fears were justified. The course was a complete drag, and I found myself unable to stay focused or motivated. Desperate for a solution, I turned to my friend <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/muhammadusmannaeem/" target="_blank">Usman</a> for advice. <br /> <br />
 
             "You should talk to the professor," he suggested. "Maybe they can help." <br /> <br />
 
             I was skeptical. "They'll probably just tell me to suck it up and deal with it," I replied. <br /> <br />
 
-            But <a href="https://www.linkedin.com/in/muhammadusmannaeem/" target="_blank"> Usman</a>
+            But <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/muhammadusmannaeem/" target="_blank"> Usman</a>
              was smarter than that. "Why don't you send them your portfolio?" he suggested. "Maybe they'll see that you're capable of more than the course is offering, and they'll come up with something else for you." <br /> <br />
 
-            I was hesitant, but I knew he was right. So I took his advice and sent my portfolio to the professor, <a href="https://www.linkedin.com/in/saudkhanpk/" target="_blank">Saud Khan</a>. <br /> <br />
+            I was hesitant, but I knew he was right. So I took his advice and sent my portfolio to the professor, <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/saudkhanpk/" target="_blank">Saud Khan</a>. <br /> <br />
 
             To my surprise, he responded quickly, praising my work and acknowledging that the course was probably not a good fit for me. "I have another plan for you," he said. <br /> <br />
 
@@ -26,9 +26,9 @@
             I was excited by the prospect of working on a real-world project, and I agreed to take on the challenge. The boring Web Engineering course was a thing of the past, and I was looking forward to a new and exciting opportunity. My grade would be computed on the basis of output of the project. The scope of project and requirements were discussed and mutually agreed upon over a timeframe of four months. <br /> <br />
 
 
-            After receiving an A+ in my Web Engineering course, I was approached by my professor, <a href="https://www.linkedin.com/in/saudkhanpk/" target="_blank">Saud Khan</a>, with the opportunity to continue working on the project as an intern. Riphah University would provide me with an internship certificate, 3 credit hours, and a letter of recommendation from the Director of Computing. After discussing the opportunity with my brother Hamza, I decided to take on the internship, which allowed me to drop a course called Mobile Application Development. <br /> <br />
+            After receiving an A+ in my Web Engineering course, I was approached by my professor, <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/saudkhanpk/" target="_blank">Saud Khan</a>, with the opportunity to continue working on the project as an intern. Riphah University would provide me with an internship certificate, 3 credit hours, and a letter of recommendation from the Director of Computing. After discussing the opportunity with my brother Hamza, I decided to take on the internship, which allowed me to drop a course called Mobile Application Development. <br /> <br />
 
-            As the lead developer, I was responsible for forming a team of 2-3 members to work under my supervision. I interviewed and selected my friend <a href="https://www.linkedin.com/in/zain-ul-abdin-0769a6207/" target="_blank">Zain</a>, and after some convincing, also added <a href="https://www.linkedin.com/in/muhammadusmannaeem/" target="_blank">Usman</a> to the team. We have been working on the project for the past three months, and it has been a valuable experience in team management and leadership. 
+            As the lead developer, I was responsible for forming a team of 2-3 members to work under my supervision. I interviewed and selected my friend <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/zain-ul-abdin-0769a6207/" target="_blank">Zain</a>, and after some convincing, also added <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/muhammadusmannaeem/" target="_blank">Usman</a> to the team. We have been working on the project for the past three months, and it has been a valuable experience in team management and leadership. 
         </p>
         <hr class="mt-9 mb-4 mx-auto !w-50" style="width: 50%" />
         <PostInfo 
@@ -67,8 +67,6 @@
         <p class="text-justify dark:text-gray-300">
             This project has the potential to continue growing and evolving even after I have moved on to other endeavors. The future direction of the project will be determined by our professor, <a href="https://www.linkedin.com/in/saudkhanpk/" target="_blank">Saud Khan</a>. I am confident that under his guidance, this project will continue to thrive and provide valuable support to the Riphah Alumni community.
         </p>
-        <hr class="mt-12 mb-4" />
-
     </PostLayout>
 </div>
 </template>
