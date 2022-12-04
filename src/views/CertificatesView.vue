@@ -5,8 +5,7 @@
   >
     <h3 class="subtitle dark:text-white">Certificates.</h3>
     <p class="dark:text-gray-400">
-      In addition to my educational background, I have taken a few courses to
-      enhance my knowledge.
+      In addition to my formal education, I have completed a few courses to expand my knowledge and skills.
     </p>
     <section class="body-font">
       <div class="container py-6 mx-auto flex flex-wrap">

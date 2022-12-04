@@ -5,8 +5,7 @@
   >
     <h3 class="subtitle dark:text-white">Education.</h3>
     <p class="dark:text-gray-400">
-      I love challenges that are given by my teachers. Here’s my educational
-      background.
+      I enjoy facing challenges that are given by my teachers. Here is my educational background.
     </p>
     <section class="body-font">
       <div class="container py-6 mx-auto flex flex-wrap">
