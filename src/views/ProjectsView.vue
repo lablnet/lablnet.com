@@ -61,6 +61,12 @@ export default {
           description: 'Zest is a PHP MVC framework designed for rapid application development, particularly for small to medium scale apps and APIs. It offers a simple, yet powerful solution for creating efficient and scalable applications.',
           image: require('../assets/images/zest.png'),
           link: 'zest',
+        },
+        {
+          name: 'Riphah International University.',
+          description: 'The opportunity to work on building an alumni management system for Riphah International University was offered to me. This system was intended to be used by the university to manage and connect with its alumni. I was excited to take on the project and help the university strengthen its relationship with its graduates.',
+          image: require('../assets/images/riphah.png'),
+          link: 'riphah',
         }
       ],
     }
