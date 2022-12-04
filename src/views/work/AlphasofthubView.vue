@@ -136,7 +136,7 @@ export default {
         {
           name: "Muhammad Umer Farooq",
           pic: require("@/assets/images/u.png"),
-          link: "https://www.lablnet.com",
+          link: "https://lablnet.com",
         },
       ],
       stack: ["PHP"],

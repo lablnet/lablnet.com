@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-            <loc>https://www.lablnet.com/</loc>
+            <loc>https://lablnet.com/</loc>
             <lastmod>2022-09-08T04:55:08.171Z</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
 <url>
-            <loc>https://www.lablnet.com/quotes</loc>
+            <loc>https://lablnet.com/quotes</loc>
             <lastmod>2022-09-08T04:55:08.171Z</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
 <url>
-            <loc>https://www.lablnet.com/work/resourcesr</loc>
+            <loc>https://lablnet.com/work/resourcesr</loc>
             <lastmod>2022-09-08T04:55:08.171Z</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
 <url>
-            <loc>https://www.lablnet.com/work/alphasofthub</loc>
+            <loc>https://lablnet.com/work/alphasofthub</loc>
             <lastmod>2022-09-08T04:55:08.171Z</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
 <url>
-            <loc>https://www.lablnet.com/work/zest</loc>
+            <loc>https://lablnet.com/work/zest</loc>
             <lastmod>2022-09-08T04:55:08.171Z</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
 <url>
-            <loc>https://www.lablnet.com/work/projects</loc>
+            <loc>https://lablnet.com/work/riphah</loc>
+            <lastmod>2022-12-04T04:29:08.171Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+<url>
+            <loc>https://lablnet.com/work/projects</loc>
             <lastmod>2022-09-08T04:55:08.171Z</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>

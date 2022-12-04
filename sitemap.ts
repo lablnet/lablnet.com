@@ -2,7 +2,7 @@ import routes from './src/router/routes';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const base_url = 'https://www.lablnet.com';
+const base_url = 'https://lablnet.com';
 let sitemap_string = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
