@@ -1,211 +1,186 @@
 <template>
-<div>
-    <PostLayout :title="title" :description="description">
+    <div>
+        <PostLayout :title="title" :description="description">
 
-        <!-- Pakistan Weather Scrapper Start -->
-        <PostInfo :stack="['Python', 'React', 'TailwindCSS']" title="Pakistan Weather Scrapper" subtitle="July 2022" siteURL="https://weather.lablnet.com/" codeURL="lablnet/pakweather_scrapper" />
+            <!-- Pakistan Weather Scrapper Start -->
+            <PostInfo :stack="['Python', 'React', 'TailwindCSS']" title="Pakistan Weather Scrapper" subtitle="July 2022" siteURL="https://weather.lablnet.com/" codeURL="lablnet/pakweather_scrapper" />
 
-        <h3 class="project-headings mt-9 dark:text-gray-300">⚠️ Note</h3>
-        <ol class="list-disc mx-6 mt-3 dark:text-gray-300">
-            <li>
-                Multithreading does not affect the network throughput, it only splits the urls into multiple threads which wait in the network queue. But the data updating in the file is concurrent.
-            </li>
-            <ol class="list-disc mx-6 mt-3">
+            <h3 class="project-headings mt-9 dark:text-gray-300">⚠️ Note</h3>
+            <ol class="list-disc mx-6 mt-3 dark:text-gray-300">
                 <li>
-                    For example, if the 1st thread is updating data in the file at the same time the 2nd thread is fetching data from the network, the 2nd thread does not have to wait for the 1st thread to finish.
+                    Multithreading does not affect network throughput, as it only splits URLs into multiple threads that wait in the network queue. However, data updating in the file is concurrent, meaning that
                 </li>
+                <ol class="list-disc mx-6 mt-3">
+                    <li>
+                        for example, if the first thread is updating data in the file at the same time the second thread is fetching data from the network, the second thread does not have to wait for the first thread to finish.
+                    </li>
+                </ol>
             </ol>
-        </ol>
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6 mt-3">
-                <li>
-                    The sole purpose of this project is to get the weather data of Pakistan from Weather Channel and store it in a database/csv. The data is then can be used for further analysis.
-                </li>
-                <li>
-                    After completion of this project, I thought why not to create simple web app to show the weather data of Pakistan. So I created a simple web app to show the weather data of Pakistan, so the fun purpose is to check latest weather report.
-                </li>
-            </ol>
-        </p>
-        <h3 class="project-headings mt-9 dark:text-gray-300">Woking</h3>
-        <p class="text-justify dark:text-gray-300">
-            The script run every hour and fetch the weather data from the weather channel and store it in a database using GitHub Actions. <strong> I should thank <a href="https://github.com" target="_blank">GitHub</a> for providing free CI/CD services. </strong>
-        </p>
-       <h3 class="project-headings mt-9 dark:text-gray-300">Data Files</h3>
-        <p class="text-justify dark:text-gray-300">
-            I did not store the data into single file, instead the data is stored in multiple files, these files created with name of month under the year folder. For example, the data of Auguest 2022 is stored in the file named <code>/data/2022/aug.csv</code>. The data is stored in the CSV format.
-            <br />
-            <strong>The reason behind this as follow:</strong>
-            <ol class="list-disc mx-6 mt-3">
-                <li>
-                    If the data is stored in a single file, the file size will be huge and it will be difficult to read the data. So I decided to store the data in multiple files. 
-                </li>
-                <li>
-                    I am using GitHub as a database, and GitHub has a limit of 100MB per file. So I decided to store the data in multiple files.
-                </li>
-            </ol>
-            <br />
-            But there is a problem, if the data is stored in multiple files, it will be difficult to read the data from multiple files. So I will created a simple script to read the data from multiple files and store it in a single file.
-        </p>
-         <h3 class="project-headings mt-9 dark:text-gray-300">Future Thoughts</h3>
-        <p class="text-justify dark:text-gray-300">
-            I monitor If the GitHub action is failing, if it is failing, I will check the logs and fix the issue. and at end I will create the script to merge the data from multiple files into a single file.
-        </p>
-        <hr class="mt-12 mb-4" />
-        <!-- Pakistan Weather Scrapper End -->
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <p class="text-justify dark:text-gray-300">
+                The sole purpose of this project is to retrieve weather data for Pakistan from the Weather Channel and store it in a database or CSV file. This data can then be used for further analysis. Additionally, I created a simple web app to display the latest weather reports for Pakistan as a fun extension of the project.
+            </p>
+            <h3 class="project-headings mt-9 dark:text-gray-300">Woking</h3>
+            <p class="text-justify dark:text-gray-300">
+                The script runs every hour, using <a class="text-blue-500 hover:underline" href="https://github.com" target="_blank">GitHub Actions</a> to fetch the weather data from the Weather Channel and store it in the database.
+            </p>
+            <h3 class="project-headings mt-9 dark:text-gray-300">Data Files</h3>
+            <p class="text-justify dark:text-gray-300">
+                To avoid creating a large, unwieldy file, the data is stored in multiple files organized by year and month. For example, data for August 2022 would be stored in the file "/data/2022/aug.csv" in CSV format. This approach was chosen because storing the data in a single file would make it difficult to read, and GitHub's file size limit of 100MB necessitated the use of multiple files. <br /> <br />
+                However, this approach creates a new problem: it is difficult to read data from multiple files. To address this issue, I plan to create a simple script that will read data from multiple files and store it in a single file.
+            </p>
+            <h3 class="project-headings mt-9 dark:text-gray-300">Future Thoughts</h3>
+            <p class="text-justify dark:text-gray-300">
+                In the future, I plan to monitor the status of the GitHub action and fix any issues that may arise. I will also create a script to merge the data from multiple files into a single file for easier access and analysis.
+            </p>
+            <hr class="mt-12 mb-4" />
+            <!-- Pakistan Weather Scrapper End -->
 
-        <PostInfo :stack="['Javascript', 'Python']" title="Fontpicker" subtitle="July 2022" siteURL="https://lablnet.github.io/fontpicker/" codeURL="lablnet/fontpicker" />
+            <!-- Fontpicker Project Start -->
+            <PostInfo :stack="['Javascript', 'Python']" title="Fontpicker" subtitle="July 2022" siteURL="https://lablnet.github.io/fontpicker/" codeURL="lablnet/fontpicker" />
 
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <p class="text-justify dark:text-gray-300">
-            A standalone font picker for the web. A package to quickly choose fonts from Google Web Fonts and preview a font from Google's large range of free fonts, and optionally select a font weight and font style (normal or italics).
+            <p class="text-justify dark:text-gray-300">
+                The purpose of this project is to create a standalone font picker for the web. The font picker will allow users to quickly preview and select fonts from Google's large range of free fonts. Users will be able to select a font family, as well as optional font weight and style (normal or italics).
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li>Quickly preview and select any Google font family.</li>
+                    <li>Optionally choose font weight and font style.</li>
+                </ol>
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300" id="fontpickertodo">Todo</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li>Find fonts by name, language, and category (serif, sans-serif, display, handwriting, monospace).</li>
+                    <li>Update style to make it mobile responsive.</li>
+                </ol>
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Related Projects</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li><a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://github.com/av01d/fontpicker-jquery-plugin">https://github.com/av01d/fontpicker-jquery-plugin</a> (but it's Jquery plugin and dependend on Jquery).</li>
+                </ol>
+            </p>
 
-            <br />
-            The sole purpose of this project is to provide a simple and easy to use font picker for the CRM, ERP and other system.
-            <ol class="list-disc mx-6 mt-3">
-                <li>Admin to update site fonts.</li>
-                <li>Enable users to customize their profile as they want.</li>
-                <li>And more</li>
-            </ol>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Future Thoughts</h3>
+            <p class="text-justify dark:text-gray-300">
+                Continue to work on adding more features to this project, such as those listed in the <a href="#fontpickertodo">Todo</a> section
+            </p>
+            <hr class="mt-12 mb-4" />
 
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li>Quickly preview and select any Google font family.</li>
-                <li>Optionally choose font weight and font style.</li>
-            </ol>
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300" id="fontpickertodo">Todo</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li>Find fonts by name, language and category (serif, sans-serif, display, handwriting, monospace).</li>
-                <li>Update style to make it mobile responsive .</li>
-            </ol>
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Related Projects</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li><a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://github.com/av01d/fontpicker-jquery-plugin">https://github.com/av01d/fontpicker-jquery-plugin</a> (but it's Jquery plugin and dependend on Jquery).</li>
-            </ol>
-        </p>
+            <!-- Fontpicker Project End -->
 
-        <h3 class="project-headings mt-5 dark:text-gray-300">Future Thoughts</h3>
-        <p class="text-justify dark:text-gray-300">
-            I would like to continue to work on adding more features to this
-            project, which are stated in <a href="#fontpickertodo">Todo</a> and more.
-        </p>
+            <!-- Board Project Start -->
+            <PostInfo :stack="['Javascript']" title="Board" subtitle="Auguest 2020" siteURL="https://board.lablnet.com/" codeURL="lablnet/board" />
 
-        <hr class="mt-12 mb-4" />
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <PostInfo :stack="['Javascript']" title="Board" subtitle="Auguest 2020" siteURL="https://board.lablnet.com/" codeURL="lablnet/board" />
+            <p class="text-justify dark:text-gray-300">
+                The purpose of this project is to create a simple, standalone, and flexible board app or progressive web app (PWA) using vanilla JavaScript.
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li>Platform-friendly design for mobile and desktop devices.</li>
+                    <li>Multiple styling options.</li>
+                    <li>Export options.</li>
+                    <li>And more.</li>
+                </ol>
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Related Projects</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li><a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://github.com/cs50/draw.cs50.io">https://github.com/cs50/draw.cs50.io</a> (uses Paper.js and Hammer.js libraries).</li>
+                </ol>
+            </p>
 
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Future Thoughts</h3>
+            <p class="text-justify dark:text-gray-300">
+                In the future, we plan to add more features to this project, such as live sharing via sockets for collaboration with multiple users.
+            </p>
+            <hr class="mt-12 mb-4" />
 
-        <p class="text-justify dark:text-gray-300">
-            The main objective of this project is to create simple, standalone,
-            flexible and very lightweight board app / PWA in vanilla JavaScript.
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li>Platform friendly (Mobile and Desktop)</li>
-                <li>Different styling options.</li>
-                <li>Exports options.</li>
-                <li>And more.</li>
-            </ol>
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Related Projects</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li><a class="text-blue-400 underline" target="_blank" rel="noopener noreferrer" href="https://github.com/cs50/draw.cs50.io">https://github.com/cs50/draw.cs50.io</a> (but they are using paperjs and hammerjs lib).</li>
-            </ol>
-        </p>
+            <!-- Board Project End -->
 
-        <h3 class="project-headings mt-5 dark:text-gray-300">Future Thoughts</h3>
-        <p class="text-justify dark:text-gray-300">
-            I would like to continue to work on adding more features to this
-            project, such as a socket for handling live sharing with more than one
-            person, etc.
-        </p>
+            <!-- Snack Game Project Start -->
+            <PostInfo :stack="['Javascript']" title="Snake" subtitle="November 2020" siteURL="https://snake.lablnet.com/index.html" codeURL="lablnet/snake" />
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript']" title="Snake" subtitle="November 2020" siteURL="https://snake.lablnet.com/index.html" codeURL="lablnet/snake" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <p class="text-justify dark:text-gray-300">
+                This project is an implementation of the classic Snake game using HTML5 canvas and vanilla JavaScript.
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Known Issues</h3>
+            <p class="text-justify">
+                <ol class="list-disc mx-6 dark:text-gray-300">
+                    <li>When the game is over, it does not restart on click, and the user must refresh the page to play again.</li>
+                    <li>The game does not function properly on mobile devices.</li>
+                </ol>
+            </p>
+            <hr class="mt-12 mb-4" />
+            <PostInfo :stack="['Javascript']" title="Tic Tac Toe" subtitle="May 2021" siteURL="https://tictactoe.lablnet.com/" codeURL="lablnet/TicTacToe" />
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <p class="text-justify dark:text-gray-300">
-            It is my own implementation of Snake Game in HTML 5 canvas and vanilla js.
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">KNown Issues</h3>
-        <p class="text-justify">
-            <ol class="list-disc mx-6 dark:text-gray-300">
-                <li>When game over, it does not play again on click user have to refresh page.</li>
-                <li>Not working properly in mobile.</li>
-            </ol>
-        </p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Javascript']" title="Tic Tac Toe" subtitle="May 2021" siteURL="https://tictactoe.lablnet.com/" codeURL="lablnet/TicTacToe" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <p class="text-justify dark:text-gray-300">
+                The purpose of this project is to implement a Tic Tac Toe game using the Minimax algorithm.
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Known Issues</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li>The game does not restart automatically after it ends; the user must refresh the page to play again.</li>
+                    <li>The game may not function properly on mobile devices.</li>
+                </ol>
+            </p>
 
-        <p class="text-justify dark:text-gray-300">
-            It is my own implementation of Tic Tac Toe game using Minimax algorithm.
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Known Issues</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li>When game over, it does not play again on click user have to refresh page.</li>
-                <li>Not working properly in mobile.</li>
-            </ol>
-        </p>
+            <hr class="mt-12 mb-4" />
+            <PostInfo :stack="['JavaScript', 'Cordova']" title="EasyTool App" subtitle="Jamuary 2020" siteURL="https://play.google.com/store/apps/details?id=com.lablnet.easytools" codeURL="lablnet/EasyTools-Source" />
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['JavaScript', 'Cordova']" title="EasyTool App" subtitle="Jamuary 2020" siteURL="https://play.google.com/store/apps/details?id=com.lablnet.easytools" codeURL="lablnet/EasyTools-Source" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <p class="text-justify dark:text-gray-300">
+                This was my first attempt at creating an Android application. It was developed for the purpose of practicing Android development.
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li>Notes and Todos: Users can create and manage notes and to-do lists.</li>
+                    <li>Calculator and Converter: Users can perform basic arithmetic calculations and unit conversions.</li>
+                    <li>Color Picker, Stopwatch, Timer, and Counter: Users can select colors, measure time intervals, set timers, and count events.</li>
+                </ol>
+            </p>
+            <hr class="mt-12 mb-4" />
+            <PostInfo :stack="['Dart', 'Flutter']" title="Prayers Time" subtitle="April 2021" siteURL="https://play.google.com/store/apps/details?id=prayer_time.lablnet.app" codeURL="alphasofthub/prayer_time" />
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <p class="text-justify dark:text-gray-300">
-            This was my first Android application, I created it just for practice.
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li>Notes and Todos.</li>
-                <li>Calculator and Converter.</li>
-                <li>Color picker, Stopwatch, Timer and Counter.</li>
-            </ol>
-        </p>
-        <hr class="mt-12 mb-4" />
-        <PostInfo :stack="['Dart', 'Flutter']" title="Prayers Time" subtitle="April 2021" siteURL="https://play.google.com/store/apps/details?id=prayer_time.lablnet.app" codeURL="alphasofthub/prayer_time" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <p class="text-justify dark:text-gray-300">
+                This is a Dart package that can be used to find prayer and Ramadan timings for a specific location. It is a rewritten version of the PHP code provided by <a class="text-blue-400 underline" href="http://praytimes.org/" target="_blank" rel="noopener noreferrer">praytimes.org</a>
+            </p>
+            <hr class="mt-12 mb-4 dark:text-gray-300" />
+            <PostInfo :stack="['Vue', 'Javascript']" title="Upwork Visualization" subtitle="March 2021" siteURL="https://lablnet.github.io/upwork_visualization/" codeURL="lablnet/upwork_visualization" />
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <p class="text-justify dark:text-gray-300">
-            A Dart Package to find prayers/ramazan timings for your exact location. This is the rewrite version of PHP code provided by <a class="text-blue-400 underline" href="http://praytimes.org/" target="_blank" rel="noopener noreferrer">praytimes.org</a>
-        </p>
-        <hr class="mt-12 mb-4 dark:text-gray-300" />
-        <PostInfo :stack="['Vue', 'Javascript']" title="Upwork Visualization" subtitle="March 2021" siteURL="https://lablnet.github.io/upwork_visualization/" codeURL="lablnet/upwork_visualization" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
+            <p class="text-justify dark:text-gray-300">
+                As a freelancer on Upwork, I developed this tool to help visualize and track my earnings and other statistics. I am publishing it for others to use as well.
+                <i>Upwork does not provide charts or graphs showing earnings or statistics. -14 April, 2021</i>, so this project aims to provide that functionality.
+            </p>
+            <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
+            <p class="text-justify dark:text-gray-300">
+                <ol class="list-disc mx-6">
+                    <li>Shows charts of earnings and other statistics.</li>
+                    <li>No server involvement is required.</li>
+                </ol>
+            </p>
+            <hr class="mt-12 mb-4" />
 
-        <p class="text-justify dark:text-gray-300">
-            Actually, being a freelancer in Upwork, I made this tool for myself but I publish it for others to take advantage of.
-            <i>Upwork does not show charts of your earnings and stat of total earnings, this project purpose is to visualize graphically so you know how you’re making progress, how much you have earned, how much you spend and how much Upwork has charged you. -14 April, 2021</i>
-        </p>
-        <h3 class="project-headings mt-5 dark:text-gray-300">Features</h3>
-        <p class="text-justify dark:text-gray-300">
-            <ol class="list-disc mx-6">
-                <li>Show chart of earnings.</li>
-                <li>No server is involved.</li>
-            </ol>
-        </p>
-        <hr class="mt-12 mb-4" />
+            <PostInfo :stack="['Javascript']" title="Resume" subtitle="May 2021" siteURL="https://lablnet.github.io/resume" codeURL="alphasofthub/resume" />
+            <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
 
-        <PostInfo :stack="['Javascript']" title="Resume" subtitle="May 2021" siteURL="https://lablnet.github.io/resume" codeURL="alphasofthub/resume" />
-        <h3 class="project-headings mt-9 dark:text-gray-300">Purpose</h3>
-
-        <p class="text-justify dark:text-gray-300">
-            The main objective of this project is to easily create a resume on the GitHub page.
-        </p>
-    </PostLayout>
-</div>
+            <p class="text-justify dark:text-gray-300">
+                The goal of this project is to provide an easy way to create and publish a resume on a GitHub page.
+            </p>
+        </PostLayout>
+    </div>
 </template>
 
 <script lang="js">
