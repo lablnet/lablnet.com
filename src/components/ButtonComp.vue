@@ -21,6 +21,7 @@
         arrow
         bg-white
         dark:border-white dark:bg-transparent
+        dark:text-white
       "
       :target="target"
       :class="gray === true ? 'border-black' : ''"

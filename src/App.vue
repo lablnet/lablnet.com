@@ -273,15 +273,7 @@
             dark:text-gray-400
           "
         >
-          Every donation helps to improve me. The funds will be used to purchase
-          better equipment, software, books, and other resources that help out
-          with making new projects. They also help out with server costs and the
-          hiring of new developers for the projects.
-
-          <spam class="mt-3">
-            Please sent me a donation at the following bitcoin address:
-          </spam>
-          <code class="mt-2 mx-2">37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV </code>
+          Your donation will make a big difference in my ability to continue creating new projects and improving existing ones. The funds will be used to purchase better equipment, software, books, and other resources that will help me to continue developing new and innovative projects. They will also help with server costs and the hiring of additional developers to work on these projects. If you would like to support my work, please consider making a donation to the following Bitcoin address: <code>37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV</code>. Every donation is greatly appreciated and will help me to continue creating valuable resources for the community. Thank you for your support!
         </p>
       </div>
 
@@ -292,28 +284,14 @@
           rounded-b
           border-t border-gray-200
           dark:border-gray-600
-          p-2
+          p-6
         "
       >
-        <button
-          type="button"
-          class="
-            mt-2
-            text-gray-500
-            bg-white
-            rounded-lg
-            border border-gray-200
-            text-sm
-            font-medium
-            px-5
-            py-2.5
-            focus:z-10
-            dark:bg-secondary-dark
-          "
+        <ButtonComp
+          text="Do not show this again"
+          :gray="true"
           @click="this.doNotShowModel"
-        >
-          Do not show again
-        </button>
+        />
       </div>
     </ModelComp>
   </div>
@@ -327,6 +305,7 @@ import {
 } from "vuex";
 
 import ModelComp from "@/components/ModelComp";
+import ButtonComp from "@/components/ButtonComp";
 
 // fancybox.
 import {
@@ -340,6 +319,7 @@ export default {
     components: {
         ThemeChanger,
         ModelComp,
+        ButtonComp,
         // Banner
     },
     watch: {
