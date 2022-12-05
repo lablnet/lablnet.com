@@ -11,6 +11,12 @@
         @apply w-full mx-auto px-6 max-w-5xl;
     }
 
+    @media only screen and (max-width: 986px) {
+        .container {
+            @apply px-2;
+        }
+    }
+
     section .title {
         @apply text-4xl md:text-4xl lg:text-5xl font-normal mb-0;
     }
