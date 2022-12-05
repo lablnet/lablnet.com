@@ -64,7 +64,7 @@ export default {
         },
         {
           name: 'Riphah International University.',
-          description: 'The opportunity to work on building an alumni management system for Riphah International University was offered to me. This system was intended to be used by the university to manage and connect with its alumni. I was excited to take on the project and help the university strengthen its relationship with its graduates.',
+          description: 'Riphah International University offered me the opportunity to work on building an alumni management system for Riphah International University. The university will use this system to manage and connect with its alumni. I was excited to take on the project and help the university strengthen its relationship with its graduates.',
           image: require('../assets/images/riphah.png'),
           link: 'riphah',
         }
