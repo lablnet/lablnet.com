@@ -52,12 +52,16 @@
     <!--   Education -->
     <EducationView />
 
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
+
     <section class="py-10 px-5 container" id="showcase">
         <div class="grid grid-cols-1 gap-5 md:gap-8 xl:grid-cols-3 xl:gap-5">
             <div class="flex flex-col items-center justify-center text-center md:flex-row md:text-left">
             </div>
         </div>
     </section>
+
+    <hr class="mt-2 mb-2" v-if="theme === 'dark'" />
 
     <!--   Certificates -->
     <CertificatesView />
