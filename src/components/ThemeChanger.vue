@@ -65,6 +65,18 @@ export default {
       currentTheme: this.theme,
     };
   },
+  created() {
+    // media query for dark theme
+    const darkThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkThemeMediaQuery.addEventListener('change', (e) => {
+      // Get the new color scheme
+      const newColorScheme = e.matches ? 'dark' : 'light';
+      // Set the current theme to the new color scheme
+      this.currentTheme = newColorScheme;
+      // Change the theme in the store
+      useThemeStore().changeTheme(this.currentTheme);
+    });
+  },
 	methods: {
 		toggleTheme() {
 			const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
