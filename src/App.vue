@@ -121,7 +121,9 @@
           /></span>
         </nav>
       </header>
-
+          <div class="">
+      <ProgressBar />
+    </div>
       <div class="" ref="main">
         <router-view />
       </div>
@@ -273,7 +275,17 @@
             dark:text-gray-400
           "
         >
-          Your donation will make a big difference in my ability to continue creating new projects and improving existing ones. The funds will be used to purchase better equipment, software, books, and other resources that will help me to continue developing new and innovative projects. They will also help with server costs and the hiring of additional developers to work on these projects. If you would like to support my work, please consider making a donation to the following Bitcoin address: <code>37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV</code>. Every donation is greatly appreciated and will help me to continue creating valuable resources for the community. Thank you for your support!
+          Your donation will make a big difference in my ability to continue
+          creating new projects and improving existing ones. The funds will be
+          used to purchase better equipment, software, books, and other
+          resources that will help me to continue developing new and innovative
+          projects. They will also help with server costs and the hiring of
+          additional developers to work on these projects. If you would like to
+          support my work, please consider making a donation to the following
+          Bitcoin address: <code>37x6PA4qtPu2fQnYdW5U7jztYhbchASpBV</code>.
+          Every donation is greatly appreciated and will help me to continue
+          creating valuable resources for the community. Thank you for your
+          support!
         </p>
       </div>
 
@@ -306,6 +318,7 @@ import {
 
 import ModelComp from "@/components/ModelComp";
 import ButtonComp from "@/components/ButtonComp";
+import ProgressBar from '@/components/ProgressBar';
 
 // fancybox.
 import {
@@ -320,6 +333,7 @@ export default {
         ThemeChanger,
         ModelComp,
         ButtonComp,
+        ProgressBar,
         // Banner
     },
     watch: {

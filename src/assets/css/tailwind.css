@@ -85,6 +85,12 @@
     .light-text-color {
         @apply text-gray-800;
     }
+    .progress-bar-blue {
+        background-color: #4c3eff;
+    }
+    .progress-bar-green {
+        background-color: #00c853;
+    }
 }
 
 @media only screen and (max-width: 900px) {
