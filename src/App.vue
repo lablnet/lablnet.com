@@ -121,9 +121,9 @@
           /></span>
         </nav>
       </header>
-          <div class="">
-      <ProgressBar />
-    </div>
+      <div class="">
+        <ProgressBar />
+      </div>
       <div class="" ref="main">
         <router-view />
       </div>
@@ -325,7 +325,9 @@ import {
     Fancybox
 } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox.css";
-import { useThemeStore } from '@/store/ThemeStore';
+import {
+    useThemeStore
+} from '@/store/ThemeStore';
 
 export default {
     name: 'app',
