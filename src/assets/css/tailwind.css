@@ -75,9 +75,9 @@
     }
 
     .backtotop {
-        @apply cursor-pointer text-xl p-2 fixed;
+        @apply cursor-pointer text-sm p-2 fixed;
         bottom: 80px;
-        right: 30px;
+        right: 20px;
         z-index: 99;
         outline: none;
     }

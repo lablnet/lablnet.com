@@ -238,16 +238,11 @@
     </div>
     <button
       v-if="top"
-      class="backtotop bg-gray-900 mb-2"
+      class="backtotop bg-gray-200 dark:bg-gray-900 mb-2"
       v-on:click="scrollTop()"
       title="Go to top"
     >
-      <i class="text-black fa">
-        <img
-          style="width: 0.75em; height: 0.75em"
-          :src="require('./assets/icons/arrowup.svg')"
-        />
-      </i>
+      <i class="text-black dark:text-white fa fa-arrow-up"></i>
     </button>
 
     <ModelComp title="Support Me" :show="showModel">
