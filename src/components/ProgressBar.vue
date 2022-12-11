@@ -18,15 +18,24 @@ export default {
     },
     methods: {
         handleScroll() {
+            // Get the scroll position of the current page
             const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+            // Get the height of the whole document
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            // Calculate the percentage the user has scrolled down the page
             const percent = (windowScroll / height) * 100;
+
+            // Update the progress bar color
             this.klass = (percent > 99) ? "progress-bar-green" : "progress-bar-blue";
 
+            // Update the progress bar width
             this.progress = percent;
         }
     },
     mounted() {
+        // Add the scroll event listener
         window.addEventListener("scroll", this.handleScroll);
     }
 }
