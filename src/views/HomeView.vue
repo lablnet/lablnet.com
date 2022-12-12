@@ -7,7 +7,7 @@
 
             <div class="flex md:hidden">
                 <div class="sm:px-0 mx-auto">
-                    <img class="w-64 h-64 mx-auto rounded-full pointer-events-none" :src="require('../assets/images/umer-removebg-resized.png')" alt="Muhammad Umer Farooq" />
+                    <img class="w-64 h-64 mx-auto rounded-full pointer-events-none" :src="require('../assets/images/umer-removebg.png')" alt="Muhammad Umer Farooq" />
                 </div>
             </div>
             <p class="text-justify dark:text-gray-300">
@@ -35,7 +35,7 @@
               rounded-full
               object-cover
               pointer-events-none
-            " :src="require('../assets/images/umer-removebg-resized.png')" alt="Muhammad Umer Farooq" />
+            " :src="require('../assets/images/umer-removebg.png')" alt="Muhammad Umer Farooq" />
             </div>
         </div>
     </section>
