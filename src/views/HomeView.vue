@@ -11,14 +11,15 @@
                 </div>
             </div>
             <p class="text-justify dark:text-gray-300">
-                Hello, I am a Software Developer with a passion for open source products.
+                Hello, I am a Professional Software Developer with a passion for working on open-source products.
             </p>
 
             <p class="text-justify dark:text-gray-300">
-                I have extensive experience in Full Stack development, including web, mobile, and desktop applications, as well as web scraping, web crawling, and API integrations. I have worked on a wide range of projects and have a deep interest in deep learning, algorithm implementation, kernel development, compilers, computer vision, and cryptography.
+                I have extensive experience in Full Stack development, including web, mobile, and desktop applications. I have also worked with web scraping, web crawling, and web API integrations. I have worked on a wide range of projects and have interest in deep learning, computer vision, deterministic algorithms, kernel development, compilers, and cryptography.
+
             </p>
             <p class="text-justify mb-6 dark:text-gray-300">
-                I am highly motivated to work on open source projects and contribute to the community. I am always looking for opportunities to collaborate and learn from others.
+                I am highly motivated to work on open-source projects and contribute to the community. I am always looking for opportunities to collaborate and learn from others.
             </p>
 
             <br />
