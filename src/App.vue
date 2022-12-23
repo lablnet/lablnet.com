@@ -109,6 +109,13 @@
             @click="mobileMenuOpen = false"
             ><i class="fa-solid fa-quote-left"></i> Quotes</router-link
           >
+           <a
+            href="https://lablnet.com/cv/CV.pdf"
+            target="_blank"
+            class="block py-1"
+            @click="mobileMenuOpen = false"
+            ><i class="fa-solid fa-file"></i> CV</a
+          >
           <router-link
             :to="{ path: path, hash: '#contact' }"
             class="block py-1"
