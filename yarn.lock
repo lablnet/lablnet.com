@@ -910,9 +910,9 @@
   version "4.0.31"
   resolved "https://registry.npmjs.org/@fancyapps/ui/-/ui-4.0.31.tgz"
 
-"@fortawesome/fontawesome-free@^6.1.1":
-  version "6.2.0"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-6.2.0.tgz"
+"@fortawesome/fontawesome-free@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.3.0.tgz#b5877182692a6f7a39d1108837bec24247ba4bd7"
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
