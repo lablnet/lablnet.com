@@ -93,7 +93,7 @@ export default {
           to: "2024",
           grade: "3.82 out of 4.00",
           major: "Bachelor of Science in Software Engineering",
-          program: "Bachelor (SEM-6)",
+          program: "Bachelor (SEM-7)",
           step: 3,
         },
         {
