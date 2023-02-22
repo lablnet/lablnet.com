@@ -2005,7 +2005,7 @@
   optionalDependencies:
     prettier "^1.18.2 || ^2.0.0"
 
-"@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.1.4", "@vue/devtools-api@^6.5.0":
+"@vue/devtools-api@^6.1.4", "@vue/devtools-api@^6.5.0":
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.5.0.tgz#98b99425edee70b4c992692628fa1ea2c1e57d07"
 
@@ -3041,9 +3041,9 @@ core-js-compat@^3.21.0, core-js-compat@^3.22.1, core-js-compat@^3.8.3:
     browserslist "^4.21.3"
     semver "7.0.0"
 
-core-js@^3.8.3:
-  version "3.25.0"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.25.0.tgz"
+core-js@^3.28.0, core-js@^3.8.3:
+  version "3.28.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.28.0.tgz#ed8b9e99c273879fdfff0edfc77ee709a5800e4a"
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -8018,12 +8018,6 @@ vue@^3.2.13:
     "@vue/runtime-dom" "3.2.38"
     "@vue/server-renderer" "3.2.38"
     "@vue/shared" "3.2.38"
-
-vuex@^4.0.0:
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/vuex/-/vuex-4.0.2.tgz"
-  dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.11"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"
