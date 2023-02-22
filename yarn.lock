@@ -1633,13 +1633,13 @@
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/parser@^5.4.0":
-  version "5.36.2"
-  resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-5.36.2.tgz"
+"@typescript-eslint/parser@^5.53.0":
+  version "5.53.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.53.0.tgz#a1f2b9ae73b83181098747e96683f1b249ecab52"
   dependencies:
-    "@typescript-eslint/scope-manager" "5.36.2"
-    "@typescript-eslint/types" "5.36.2"
-    "@typescript-eslint/typescript-estree" "5.36.2"
+    "@typescript-eslint/scope-manager" "5.53.0"
+    "@typescript-eslint/types" "5.53.0"
+    "@typescript-eslint/typescript-estree" "5.53.0"
     debug "^4.3.4"
 
 "@typescript-eslint/scope-manager@5.36.2":
@@ -1648,6 +1648,13 @@
   dependencies:
     "@typescript-eslint/types" "5.36.2"
     "@typescript-eslint/visitor-keys" "5.36.2"
+
+"@typescript-eslint/scope-manager@5.53.0":
+  version "5.53.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-5.53.0.tgz#42b54f280e33c82939275a42649701024f3fafef"
+  dependencies:
+    "@typescript-eslint/types" "5.53.0"
+    "@typescript-eslint/visitor-keys" "5.53.0"
 
 "@typescript-eslint/type-utils@5.36.2":
   version "5.36.2"
@@ -1662,12 +1669,28 @@
   version "5.36.2"
   resolved "https://registry.npmjs.org/@typescript-eslint/types/-/types-5.36.2.tgz"
 
+"@typescript-eslint/types@5.53.0":
+  version "5.53.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.53.0.tgz#f79eca62b97e518ee124086a21a24f3be267026f"
+
 "@typescript-eslint/typescript-estree@5.36.2":
   version "5.36.2"
   resolved "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-5.36.2.tgz"
   dependencies:
     "@typescript-eslint/types" "5.36.2"
     "@typescript-eslint/visitor-keys" "5.36.2"
+    debug "^4.3.4"
+    globby "^11.1.0"
+    is-glob "^4.0.3"
+    semver "^7.3.7"
+    tsutils "^3.21.0"
+
+"@typescript-eslint/typescript-estree@5.53.0":
+  version "5.53.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-5.53.0.tgz#bc651dc28cf18ab248ecd18a4c886c744aebd690"
+  dependencies:
+    "@typescript-eslint/types" "5.53.0"
+    "@typescript-eslint/visitor-keys" "5.53.0"
     debug "^4.3.4"
     globby "^11.1.0"
     is-glob "^4.0.3"
@@ -1690,6 +1713,13 @@
   resolved "https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-5.36.2.tgz"
   dependencies:
     "@typescript-eslint/types" "5.36.2"
+    eslint-visitor-keys "^3.3.0"
+
+"@typescript-eslint/visitor-keys@5.53.0":
+  version "5.53.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-5.53.0.tgz#8a5126623937cdd909c30d8fa72f79fa56cc1a9f"
+  dependencies:
+    "@typescript-eslint/types" "5.53.0"
     eslint-visitor-keys "^3.3.0"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.4.0":
@@ -2005,7 +2035,7 @@
   optionalDependencies:
     prettier "^1.18.2 || ^2.0.0"
 
-"@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.1.4", "@vue/devtools-api@^6.5.0":
+"@vue/devtools-api@^6.1.4", "@vue/devtools-api@^6.5.0":
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.5.0.tgz#98b99425edee70b4c992692628fa1ea2c1e57d07"
 
@@ -8018,12 +8048,6 @@ vue@^3.2.13:
     "@vue/runtime-dom" "3.2.38"
     "@vue/server-renderer" "3.2.38"
     "@vue/shared" "3.2.38"
-
-vuex@^4.0.0:
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/vuex/-/vuex-4.0.2.tgz"
-  dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.11"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"
