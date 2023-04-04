@@ -13,8 +13,8 @@
       <!-- Post Content Upwork Start -->
       <h2 class="!text-4xl">Upwork</h2>
       <p class="text-justify dark:text-gray-300">
-        As a freelancer on Upwork for the past two years, I have successfully
-        completed over 45 projects and have received a 5-star rating on 90% of
+        As a Top Rated freelancer on Upwork for the past two years, I have successfully
+        completed over 50 projects and have received a 5-star rating on 90% of
         them. While I am unable to list all of my projects, I am proud to
         highlight a few of my most notable achievements.
       </p>
