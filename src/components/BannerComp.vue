@@ -22,9 +22,9 @@
               </svg>
             </span>
             <p class="ml-3 font-medium truncate">
-              <span class="md:hidden"> We announced a new product! </span>
+              <span class="md:hidden"> Top Rated badge on Upwork </span>
               <span class="hidden md:inline">
-                Big news! We're excited to announce COVID19 Dashboard.
+                Big news! I have achieved the Top Rated badge on Upwork.
               </span>
             </p>
           </div>
@@ -38,7 +38,7 @@
             "
           >
             <a
-              href="https://www.covid19.earth/"
+              href="https://www.upwork.com/freelancers/lablnet"
               target="_blank"
               rel="noopener noreferrer"
               class="
