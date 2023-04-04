@@ -314,9 +314,6 @@
 <script lang="js">
 //import Banner from "@/components/Banner";
 import ThemeChanger from "@/components/ThemeChanger";
-import {
-    mapState
-} from "vuex";
 
 import ModelComp from "@/components/ModelComp";
 import ButtonComp from "@/components/ButtonComp";
