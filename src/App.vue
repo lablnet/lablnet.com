@@ -1,6 +1,6 @@
 <template>
   <div :class="appTheme">
-    <Banner />
+    <BannerComp />
     <div class="dark:text-white light-text-color bg-white dark:bg-gray-700">
       <header
         x-data="{ mobileMenuOpen : false }"
@@ -312,7 +312,7 @@
 </template>
 
 <script lang="js">
-import Banner from "@/components/Banner";
+import BannerComp from "@/components/BannerComp";
 import ThemeChanger from "@/components/ThemeChanger";
 
 import ModelComp from "@/components/ModelComp";
@@ -335,7 +335,7 @@ export default {
         ModelComp,
         ButtonComp,
         ProgressBar,
-        Banner
+        BannerComp
     },
     watch: {
         $route(to, from) {
