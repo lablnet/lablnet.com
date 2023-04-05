@@ -8125,9 +8125,9 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
 
-vue-cli-plugin-pinia@~0.1.5:
-  version "0.1.5"
-  resolved "https://registry.npmjs.org/vue-cli-plugin-pinia/-/vue-cli-plugin-pinia-0.1.5.tgz"
+vue-cli-plugin-pinia@~0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-pinia/-/vue-cli-plugin-pinia-0.2.3.tgz#36b22f3ca7b6b1182b86fb8b6dcdddcabf7a382b"
 
 vue-cli-plugin-tailwindcss@~0.1.1:
   version "0.1.1"
