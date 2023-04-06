@@ -916,9 +916,9 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fancyapps/ui@^4.0.26":
-  version "4.0.31"
-  resolved "https://registry.npmjs.org/@fancyapps/ui/-/ui-4.0.31.tgz"
+"@fancyapps/ui@^5.0.15":
+  version "5.0.15"
+  resolved "https://registry.yarnpkg.com/@fancyapps/ui/-/ui-5.0.15.tgz#df333bf6dc233511853281d1c72c7c8caf8b3fbe"
 
 "@fortawesome/fontawesome-free@^6.3.0":
   version "6.3.0"
