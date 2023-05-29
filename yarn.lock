@@ -5683,9 +5683,9 @@ kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz"
 
-klona@^2.0.4, klona@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/klona/-/klona-2.0.5.tgz"
+klona@^2.0.5, klona@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.6.tgz#85bffbf819c03b2f53270412420a4555ef882e22"
 
 launch-editor-middleware@^2.2.1:
   version "2.6.0"
@@ -7194,11 +7194,11 @@ safe-regex-test@^1.0.0:
   version "2.1.2"
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
 
-sass-loader@^12.0.0:
-  version "12.6.0"
-  resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-12.6.0.tgz"
+sass-loader@^13.3.1:
+  version "13.3.1"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-13.3.1.tgz#32ee5791434b9b4dbd1adcce76fcb4cea49cc12c"
   dependencies:
-    klona "^2.0.4"
+    klona "^2.0.6"
     neo-async "^2.6.2"
 
 sass@^1.62.1:
