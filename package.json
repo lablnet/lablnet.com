@@ -26,7 +26,7 @@
     "register-service-worker": "^1.7.2",
     "standard": "^17.0.0",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.1"
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
