@@ -82,6 +82,14 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/success',
+    name: "Success",
+    component: () => import('../views/site/SuccessView.vue'),
+    meta: {
+      title: "Payment Successful"
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: "404",
     component: () => import('../views/site/404View.vue'),
