@@ -2,9 +2,7 @@
   "name": "portfolio",
   "version": "1.0.4",
   "private": true,
-  "engines": {
-    "node": ">=17"
-  },
+
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

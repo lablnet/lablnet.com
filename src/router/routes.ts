@@ -74,6 +74,14 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/donate',
+    name: "Donate",
+    component: () => import('../views/site/DonationView.vue'),
+    meta: {
+      title: "Make a Donation"
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: "404",
     component: () => import('../views/site/404View.vue'),
