@@ -40,6 +40,13 @@ exports.customizeProduct = functions.https.onRequest(async (request, response) =
         }
 
         const amount = data.amount;
+
+        // If amount is less then 1, return error.
+        if (amount < 1) {
+            response.status(400).send('Please provide a valid amount');
+            return;
+        }
+
         // Set the url, headers and body for the API request
         let url = `https://api.transaction.cloud/v1/customize-product/${PID}`;
         let headers = {
