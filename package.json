@@ -22,7 +22,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.1.4",
     "register-service-worker": "^1.7.2",
-    "standard": "^17.0.0",
+    "standard": "^17.1.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },
