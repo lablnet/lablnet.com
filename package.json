@@ -14,7 +14,7 @@
     "sitemap": "npm run compile-routes && npm run generate-sitemap"
   },
   "dependencies": {
-    "@fancyapps/ui": "^4.0.26",
+    "@fancyapps/ui": "^5.0.20",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "babel-eslint": "^10.1.0",
