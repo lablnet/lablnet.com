@@ -44,19 +44,21 @@
 
       <div class="hidden md:flex">
         <div class="sm:px-0 md:px-20">
+          <div class="rounded-full bg-blue-500 overflow-hidden">
           <img
             class="
-              w-58
-              h-58
+              w-32
+              h-32
               ml-4
-              mt-24
               rounded-full
               object-cover
               pointer-events-none
             "
             :src="require('../assets/images/umer-removebg.png')"
             alt="Muhammad Umer Farooq"
+            style="margin-top: 16px;"
           />
+        </div>
         </div>
       </div>
     </section>
