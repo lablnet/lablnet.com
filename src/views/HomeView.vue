@@ -13,8 +13,8 @@
         <div class="flex md:hidden">
           <div class="sm:px-0 mx-auto">
             <img
-              class="w-64 h-64 mx-auto rounded-full pointer-events-none"
-              :src="require('../assets/images/umer-removebg.png')"
+              class="w-32 h-32 mx-auto rounded-full pointer-events-none"
+              :src="require('../assets/images/umer2023.jpg')"
               alt="Muhammad Umer Farooq"
             />
           </div>
@@ -44,17 +44,18 @@
 
       <div class="hidden md:flex">
         <div class="sm:px-0 md:px-20">
-          <div class="rounded-full bg-blue-500 overflow-hidden">
+          <div class="rounded-full mt-12 overflow-hidden">
           <img
             class="
-              w-32
-              h-32
+              w-64
+              h-64
               ml-4
               rounded-full
               object-cover
               pointer-events-none
+              mt-12
             "
-            :src="require('../assets/images/umer-removebg.png')"
+            :src="require('../assets/images/umer2023.jpg')"
             alt="Muhammad Umer Farooq"
             style="margin-top: 16px;"
           />
