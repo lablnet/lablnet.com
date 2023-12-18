@@ -1003,9 +1003,9 @@
   version "8.43.0"
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.43.0.tgz#559ca3d9ddbd6bf907ad524320a0d14b85586af0"
 
-"@fancyapps/ui@^4.0.26":
-  version "4.0.31"
-  resolved "https://registry.npmjs.org/@fancyapps/ui/-/ui-4.0.31.tgz"
+"@fancyapps/ui@^5.0.31":
+  version "5.0.31"
+  resolved "https://registry.yarnpkg.com/@fancyapps/ui/-/ui-5.0.31.tgz#31941861483c4e45aa81a2d63be119d990be0186"
 
 "@fortawesome/fontawesome-free@^6.4.0":
   version "6.4.0"
