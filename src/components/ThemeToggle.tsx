@@ -21,12 +21,13 @@ export default function ThemeToggle(): FunctionalComponent {
 
     useEffect(() => {
         setTheme(localStorage.getItem("theme") || "light");
-        if (theme === "dark") {
-        document.documentElement.classList.add("dark");
-        document.documentElement.classList.remove("light");
+        if (theme === "dark" && document.querySelector('body').classList.contains('app-theme')        ) {
+            document.querySelector('body').classList.remove('bg-secondary-light');
+            document.querySelector('body').classList.add('bg-primary-dark');
+
         } else {
-        document.documentElement.classList.remove("dark");
-            document.documentElement.classList.add("light");
+            document.querySelector('body').classList.remove('bg-primary-dark');
+            document.querySelector('body').classList.add('bg-secondary-light');
         }
         localStorage.setItem("theme", theme);
     }, []);
