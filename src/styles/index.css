@@ -1,0 +1,132 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .container {
+        @apply w-full mx-auto px-6 max-w-5xl;
+    }
+
+    @media only screen and (max-width: 986px) {
+        .container {
+            @apply px-2;
+        }
+    }
+
+    section .title {
+        @apply text-4xl md:text-4xl lg:text-5xl font-normal mb-0;
+    }
+
+    section .subtitle,
+    h1 {
+        @apply text-3xl md:text-4xl;
+    }
+
+    section p {
+        @apply mt-5;
+    }
+
+    h4 {
+        @apply font-semibold;
+    }
+
+    .project-headings {
+        @apply font-semibold text-xl mb-2;
+        line-height: 1.6;
+    }
+
+    a.arrow {
+        @apply font-semibold hover:underline transform transition hover:scale-105 duration-300 ease-in-out
+    }
+
+    a.arrow:before {
+        content: ' '
+    }
+
+    a.arrow:hover:before,
+    a.hover:hover:after {
+        width: calc(100% + 4px);
+    }
+
+    a.arrow:after {
+        @apply absolute pointer-events-none;
+        margin-top: 3px;
+        margin-left: 9px;
+        content: url("../icons/white/arrow-above.svg")
+    }
+
+    a.arrow:hover:after,
+    a.arrow:focus:after {
+        content: url("../icons/white/arrow-right.svg");
+    }
+
+    /* For Light theme */
+    .light a.arrow:after {
+        content: url("../icons/arrow-above.svg") !important;
+    }
+
+    .light a.arrow:hover:after,
+    .light a.arrow:focus:after {
+        content: url("../icons/arrow-right.svg") !important;
+    }
+
+
+    .light .github {
+        background-image: url("../assets/icons/github.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .dark .github {
+        background-image: url("../assets/icons/white/github.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .light .linkedin {
+        background-image: url("../assets/icons/linkedin.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .dark .linkedin {
+        background-image: url("../assets/icons/white/linkedin.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .backtotop {
+        @apply cursor-pointer text-sm p-2 fixed;
+        bottom: 80px;
+        right: 20px;
+        z-index: 99;
+        outline: none;
+    }
+
+    .light-text-color {
+        @apply text-gray-800;
+    }
+    .progress-bar-blue {
+        background-color: #4c3eff;
+    }
+    .progress-bar-green {
+        background-color: #00c853;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .backtotop {
+        bottom: 20px;
+    }
+}
+
+img[data-fancybox="default"],
+img[data-fancybox="certificate"] {
+    cursor: zoom-in;
+}
+
+/* Hide Google reCaptcha badge */
+/* https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-badge.-what-is-allowed */
+.grecaptcha-badge {
+    visibility: hidden;
+}
