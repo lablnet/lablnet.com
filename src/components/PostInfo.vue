@@ -5,8 +5,8 @@
         <img
           :src="
             theme === 'dark'
-              ? require('@/assets/icons/white/link.svg')
-              : require('@/assets/icons/link.svg')
+              ? '../assets/icons/white/link.svg'
+              : '../assets/icons/link.svg'
           "
         />
         <span class="mx-3">{{ title }}</span></a
@@ -109,9 +109,9 @@
 
 
 <script lang="js">
-import TagComp from "./components/TagComp.astro";
-import CollaboratorComp from "./CollaboratorComp.astro"
-import LoaderComp from "./components/LoaderComp";
+import TagComp from "./TagComp.vue";
+import CollaboratorComp from "./CollaboratorComp.vue"
+import LoaderComp from "./LoaderComp.vue";
 
 export default {
     name: "PostInfo",
