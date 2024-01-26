@@ -9,10 +9,14 @@ export default function ThemeToggle(): FunctionalComponent {
             let _theme = theme === "light" ? "dark" : "light";
             setTheme(_theme)
             if (_theme === "dark") {
+                // @ts-ignore
                 document.documentElement.classList.add("dark");
+                // @ts-ignore
                 document.documentElement.classList.remove("light");
             } else {
+              // @ts-ignore
                 document.documentElement.classList.remove("dark");
+                // @ts-ignore
                 document.documentElement.classList.add("light");
             }
             localStorage.setItem("theme", _theme);
@@ -21,12 +25,17 @@ export default function ThemeToggle(): FunctionalComponent {
 
     useEffect(() => {
         setTheme(localStorage.getItem("theme") || "light");
+        // @ts-ignore
         if (theme === "dark" && document.querySelector('body').classList.contains('app-theme')        ) {
-            document.querySelector('body').classList.remove('bg-secondary-light');
+          // @ts-ignore  
+          document.querySelector('body').classList.remove('bg-secondary-light');
+          // @ts-ignore
             document.querySelector('body').classList.add('bg-primary-dark');
 
         } else {
+          // @ts-ignore
             document.querySelector('body').classList.remove('bg-primary-dark');
+            // @ts-ignore
             document.querySelector('body').classList.add('bg-secondary-light');
         }
         localStorage.setItem("theme", theme);
