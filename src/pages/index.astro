@@ -9,10 +9,11 @@ import Projects from './components/Projects.astro';
 import Education from './components/Education.astro';
 import Certificate from './components/Certificate.astro';
 import Spacer from './components/Spacer.astro';
-
+import Contact from './components/Contact.vue';
 ---
 
 <Layout title="Muhammad Umer Farooq">
+
 	<!-- Intro -->
 	<Intro />
 
@@ -36,4 +37,7 @@ import Spacer from './components/Spacer.astro';
 
 	<!-- Certificates -->
 	<Certificate />
+
+	<!-- Contact -->
+	<Contact client:only="vue" />
 </Layout>

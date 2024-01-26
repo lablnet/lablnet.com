@@ -4,6 +4,8 @@ module.exports = {
   content: [
     './src/**/*.html',
     './src/**/*.astro',
+    './src/**/*.vue',
+    './src/**/*.tsx',
   ],
   safelist: [
     "dark", 'secondary-light', 'primary-light', 'primary-dark',

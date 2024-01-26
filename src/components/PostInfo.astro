@@ -1,7 +1,7 @@
 ---
 import TagComp from './TagComp.astro';
 import CollaboratorComp from './CollaboratorComp.astro';
-import LoaderComp from './LoaderComp';
+import LoaderComp from './LoaderComp.vue';
 
 const {
 	stack,
@@ -169,7 +169,7 @@ if (collaborators.length > 0) {
 					</span>
 					<span class="mt-3 mb-3">
 						{' '}
-						<LoaderComp loading={loading} client:only="preact" />
+						<LoaderComp loading={loading} client:only="vue" />
 					</span>
 				</div>
 			) : (

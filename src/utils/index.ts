@@ -22,7 +22,17 @@ const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
     return +b.data.endDate - +a.data.endDate;
 }
 
+// URLs.
+let urls = {
+    contact: 'https://contact.lablnet.com/',  
+}
+  
+// Recaptcha token.
+let recaptchaToken = '6LcevvYhAAAAAG1MMRgl_fKqtGx6ZNv8KdnLSLic';
+  
 export {
     df,
     compareByDate,
+    urls,
+    recaptchaToken,
 }
