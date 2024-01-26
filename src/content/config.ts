@@ -25,7 +25,6 @@ const projectsCollection = defineCollection({
     endDate: z.date().optional(),
     title: z.string(),
     stacks: z.array(z.string()),
-    slug: z.string(),
     company: z.string(),
     collaborators: z.array(z.object({
       name: z.string(),
