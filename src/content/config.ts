@@ -28,7 +28,7 @@ const projectsCollection = defineCollection({
     company: z.string(),
     collaborators: z.array(z.object({
       name: z.string(),
-      picture: z.string(),
+      picture: z.string().optional(),
     })).optional(),
     live: z.string().optional(),
     github: z.string().optional(),
