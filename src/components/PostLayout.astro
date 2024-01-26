@@ -1,0 +1,27 @@
+---
+const { title, description, coverPic } = Astro.props;
+---
+
+<div class="min-h-screen container">
+	<section class="py-10 px-5">
+		{
+			coverPic && (
+				<section class="hero container max-w-screen-lg mx-auto pb-10">
+					<img class="rounded object-cover !m-0" src={coverPic} />
+				</section>
+			)
+		}
+		<section>
+			{
+				title && (
+					<div class="container">
+						<h1 class="title">{title}</h1>
+						{description && <p class="text-justify mb-6 dark:text-gray-300">{description}</p>}
+					</div>
+				)
+			}
+			<hr class="mt-9 mb-4" />
+			<slot />
+		</section>
+	</section>
+</div>
