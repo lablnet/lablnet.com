@@ -3,8 +3,9 @@
 import { getCollection, getEntry } from 'astro:content';
 
 import PostLayout from '../../components/PostLayout.astro';
-import PostInfo from '../../components/PostInfo.vue';
+import PostInfo from '../../components/PostInfo.astro';
 import Layout from '../../layouts/Layout.astro';
+import { df } from '../../utils';
 
 export async function getStaticPaths() {
 	let companies = await getCollection('companies');
@@ -43,18 +44,20 @@ let title = companies.length > 0 ? companies[0].data.title : 'Company not found'
 								? ''
 								: projects.map(async (project: any) => {
 										const { Content } = await project.render();
+										let endDate = company.data.endDate ? df.format(company.data.endDate) : 'Present';
+										let subtitle :any = `${df.format(company.data.startDate)} - ${endDate}`;
 										return (
 											<div>
 												<PostInfo
 													stack={project.data.stacks}
 													title={project.data.title}
-													subtitle={project.data.startDate + ' - ' + project.data.endDate}
+													subtitle={subtitle}
 													codeURL={project.data.github}
 													siteURL={project.data.live}
 													coverPic={project.data.coverPic}
-                                                    client:only
+													collaborators={project.data.collaborators}
 												/>
-												<div class="mt-4">
+												<div class="mt-4 prose">
 													<Content />
 												</div>
 												<hr class="mt-12 mb-4" />
