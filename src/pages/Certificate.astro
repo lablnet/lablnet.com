@@ -14,86 +14,43 @@ certificates.sort((a: any, b: any) => {
 		<p class="dark:text-gray-400 prose">
 			In addition to my formal education, I have completed a few courses to expand my knowledge and skills.
 		</p>
-		<section class="body-font">
-			<div class="container py-6 mx-auto flex flex-wrap">
-				<div class="flex flex-wrap w-full">
-					<div class="">
-						{
-							certificates.map((certificate: any) => {
-								return (
-									<div class="flex relative pb-12">
-										{certificate.data.step != 1 ? (
-											<div
-												class="
-                                                    h-full
-                                                    w-10
-                                                    absolute
-                                                    inset-0
-                                                    flex
-                                                    items-center
-                                                    justify-center
-                                                    "
-											>
-												<div class="h-full w-1 bg-indigo-500 pointer-events-none" />
-											</div>
-										) : (
-											''
-										)}
-										<div
-											class="
-                                                flex-shrink-0
-                                                w-10
-                                                h-10
-                                                rounded-full
-                                                bg-indigo-500
-                                                inline-flex
-                                                items-center
-                                                justify-center
-                                                text-white
-                                                relative
-                                                z-10
-                                                "
-										>
-											{certificate.data.step}
-										</div>
-
-										<div class="grid grid-cols-1 sm:grid-cols-2">
-											<div class="col-span-1">
-												<img
-                                                    alt={certificate.data.title}
-													src={certificate.data.picture}
-													class="object-contain h-48 w-96 rounded sm:-mx-7 mt-5"
-													data-fancybox="certificate"
-													data-caption={
-														certificate.data.title + ' - ' + certificate.data.institute
-													}
-												/>
-											</div>
-											<div class="col-span-1">
-												<div class="flex-grow mt-10 sm:-mx-10 mb-10">
-													<a href={certificate.data.link} target="_blank" class="font-medium title-font mb-1 dark:text-gray-400 prose">
-														{certificate.data.title}
-													</a>
-
-													<h5 class="font-mediume title-font dark:text-gray-400 prose">
-														<i>{certificate.data.completed}</i>
-													</h5>
-													<p class="dark:text-gray-400 prose ">{certificate.data.institute}</p>
-												</div>
-											</div>
-										</div>
-										{certificate.data.step !== 1 ? (
-											<hr class="mt-3 text-black dark:text-white" />
-										) : (
-											''
-										)}
-									</div>
-								);
-							})
-						}
-					</div>
-				</div>
-			</div>
-		</section>
-	</section>
+        <div class="container mx-auto">
+            <div class="flex flex-col divide-y divide-gray-300">
+                {certificates.map((certificate:any, index: number) => (
+                    <div>
+                        <button
+                            data-id={index}
+                            class="accordion-button flex justify-between items-center w-full py-2 px-4 text-left prose dark:text-gray-400"
+                        >
+                            <span>{certificate.data.title} - {certificate.data.institute}</span>
+                            <span class="w-6 h-6">🏆</span>
+                        </button>
+                        <div data-id={index} class="accordion-content overflow-hidden transition-all duration-300 hidden">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+                                <div>
+                                    <a href={certificate.data.link} target="_blank" class="prose dark:text-gray-400">View Certificate</a>
+                                    <p class="text-sm italic prose dark:text-gray-400">{certificate.data.completed}</p>
+                                </div>
+                                <div class="image-container">
+                                    <img src={certificate.data.picture} class="object-contain h-48 w-96 rounded sm:-mx-7 mt-5" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
 </main>
+
+<script lang="js">
+let buttons = document.querySelectorAll('.accordion-button');
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+        let content = document.querySelectorAll('.accordion-content');
+        let id = this.getAttribute('data-id');
+        content[id].classList.toggle('hidden');
+    });
+}
+</script>
+
