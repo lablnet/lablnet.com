@@ -1,5 +1,5 @@
 ---
-title: Resourcesr App
+title: ResourcesR App
 slug: resourcesr
 startDate: 2020-10-10
 stacks: [Dart, Flutter, Firebases]
