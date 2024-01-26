@@ -1,8 +1,9 @@
+import { h } from 'preact';
 import { useEffect, useState } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
 
-export default function ThemeToggle(): FunctionalComponent {
-    const [theme, setTheme] = useState('light');
+export default function ThemeToggle(): h.JSX.Element {
+  const [theme, setTheme] = useState('light');
 
     const handleClick = () => {
             console.log ("handle click", theme)
