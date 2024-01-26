@@ -5,6 +5,7 @@ const df = new Intl.DateTimeFormat(undefined, {
     year: 'numeric',
 });
 
+// @ts-ignore
 const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
     // If both 'b' and 'a' do not have an 'endDate', compare their 'startDate's
     if (!b.data.endDate && !a.data.endDate) {
@@ -23,12 +24,12 @@ const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
 }
 
 // URLs.
-let urls = {
+let urls : object = {
     contact: 'https://contact.lablnet.com/',  
 }
   
 // Recaptcha token.
-let recaptchaToken = '6LcevvYhAAAAAG1MMRgl_fKqtGx6ZNv8KdnLSLic';
+let recaptchaToken :string = '6LcevvYhAAAAAG1MMRgl_fKqtGx6ZNv8KdnLSLic';
   
 export {
     df,

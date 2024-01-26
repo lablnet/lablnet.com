@@ -63,7 +63,7 @@ import Footer from './Footer.astro';
 		</div>
 	</body>
 
-	<script is:inline>
+	<script is:inline lang="js">
 		// theme
 		const theme = (() => {
 			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -106,7 +106,7 @@ import Footer from './Footer.astro';
 		let projectsButton = document.getElementById('projectsButton');
 		let dropdownItems = document.getElementsByClassName('dropdown-item');
 		for (let i = 0; i < dropdownItems.length; i++) {
-			dropdownItems[i].addEventListener('click', function (event) {
+			dropdownItems[i].addEventListener('click', function () {
 				dropdownMenu.style.display = 'none';
 			});
 		}
