@@ -109,10 +109,9 @@
 
 
 <script lang="js">
-import TagComp from "@/components/TagComp";
+import TagComp from "./components/TagComp.astro";
 import CollaboratorComp from "./CollaboratorComp.astro"
-import LoaderComp from "@/components/LoaderComp";
-import { useThemeStore } from '@/store/ThemeStore';
+import LoaderComp from "./components/LoaderComp";
 
 export default {
     name: "PostInfo",
@@ -210,7 +209,7 @@ export default {
     },
     computed: {
         theme() {
-            return useThemeStore().theme;
+            return 'light';
         },
     }
 }
