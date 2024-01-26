@@ -6,7 +6,7 @@ link: https://www.riphah.edu.pk/
 slug: riu
 company: riu
 banner: ../assets/images/riphah.png
-icon: ../assets/icons/riphah.png
+icon: ../assets/icons/riphah.jpg
 step: 2
 featured: true
 type: company

@@ -2,8 +2,8 @@
 startDate: 2020-12-07
 title: Freelancer
 link: https://lablnet.com/
-slug: ash
-company: ash
+slug: freelancer
+company: freelancer
 icon: ../assets/icons/upwork.svg
 step: 1
 featured: true

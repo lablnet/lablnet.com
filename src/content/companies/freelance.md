@@ -2,8 +2,8 @@
 startDate: 2021-02-12
 title: Freelance.com
 link: https://www.fiverr.com/umerlablnet01
-slug: fiverr
-company: fiverr
+slug: freelance
+company: freelance
 banner: ../assets/images/fiverr.png
 icon: ../assets/icons/fiverr.svg
 step: 7

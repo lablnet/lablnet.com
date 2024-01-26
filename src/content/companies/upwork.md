@@ -2,8 +2,8 @@
 startDate: 2021-02-12
 title: AlphaSoftHub
 link: https://alphasofthub.com/
-slug: ash
-company: ash
+slug: upwork
+company: upwork
 banner: ../assets/images/ash.png
 icon: ../assets/icons/ash.png
 step: 5

@@ -1,9 +1,19 @@
 ---
+// @ts-ignore
+import { getCollection } from 'astro:content';
+
 import Layout from '../layouts/Layout.astro';
 import CollaboratorComp from '../components/CollaboratorComp.astro';
 import Skills from './Skills.astro';
 import Education from './Education.astro';
 import Certificate from './Certificate.astro';
+
+import { df } from '../utils/date.ts';
+let companies = await getCollection('companies', (p:any) => p.data.featured);
+// sort with step.
+companies.sort((a:any, b:any) => {
+	return a.data.step - b.data.step;
+});
 
 ---
 
@@ -68,6 +78,58 @@ import Certificate from './Certificate.astro';
 	</main>
 
 	<Skills />
+
+
+	<section class="dark:bg-gray-700 mt-12 py-10 px-5 container" id="projects">
+		<h2 class="text-emphasis font-recoleta text-2xl dark:text-white">Where I’ve worked.</h2>
+
+		<p class="dark:text-gray-400 prose mt-4">I enjoy taking on new projects and have worked on the following:</p>
+
+		<div class="mt-8 space-y-12">
+			{
+				companies.map(async (company:any) => {
+					const { Content } = await company.render();
+					return (
+						<section>
+							<div class="flex group relative">
+								<div class="px-px shrink-0">
+									<img
+										class="rounded w-12 h-12 mt-2.5"
+										width="100"
+										height="100"
+										src={company.data.icon}
+										alt={company.data.title}
+									/>
+								</div>
+								<div class="ml-8">
+									<div class="font-medium text-muted text-sm dark:text-gray-400 prose">
+										{df.format(company.data.startDate)} -{' '}
+										{company.data.endDate ? df.format(company.data.endDate) : 'Now'}
+									</div>
+									<div class="font-medium text-emphasis dark:text-gray-400 prose">
+										<a class="accent dark:text-gray-400 prose" href={`/${company.data.company}`}>
+											<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block dark:text-gray-400 prose" />
+											<span>{company.data.title}</span>
+										</a>{' '}
+										·{' '}
+										<a class="relative dark:text-gray-400 prose arrow" href={company.data.link} target="_blank">
+											{company.data.title}
+										</a>
+									</div>
+									<div class="mt-2 dark:text-gray-400 prose">
+										<Content />
+									</div>
+								</div>
+							</div>
+							{company.data.step != 4 ? <hr class="mt-8" /> : ''}
+						</section>
+					);
+				})
+			}
+		</div>
+	</section>
+
+
 	<Education />
 	<section class="py-10 px-5 container" id="showcase">
 		<div class="grid grid-cols-1 gap-5 md:gap-8 xl:grid-cols-3 xl:gap-5">
