@@ -1,8 +1,8 @@
 ---
-const { title, description, coverPic } = Astro.props;
+const { title, description, coverPic = null} = Astro.props;
 ---
 
-<div class="min-h-screen container">
+<div class="container">
 	<section class="py-10 px-5">
 		{
 			coverPic && (

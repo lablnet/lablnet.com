@@ -9,7 +9,7 @@ const companiesCollection = defineCollection({
     title: z.string(),
     link: z.string(),
     banner: z.string().optional(),
-    icon: z.string(),
+    icon: z.string().optional(),
     company: z.string(),
     step: z.number(),
     featured: z.boolean().default(false),

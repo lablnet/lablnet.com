@@ -1,11 +1,9 @@
 ---
 startDate: 2021-02-12
-title: AlphaSoftHub
+title: Upwork
 link: https://alphasofthub.com/
 slug: upwork
-company: upwork
-banner: ../assets/images/ash.png
-icon: ../assets/icons/ash.png
+company: freelancer
 step: 5
 featured: false
 type: company

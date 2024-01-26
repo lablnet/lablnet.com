@@ -3,7 +3,7 @@ title: Collaboration App
 slug: collaboration-app
 startDate: 2024-01-26
 stacks: [typescript, javascript, firebase, functions, vue, tailwindCSS, Zoom]
-company: freelancer
+company: upwork
 featured: true
 ---
 

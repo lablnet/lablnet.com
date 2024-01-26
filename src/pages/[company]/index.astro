@@ -30,7 +30,7 @@ let title = companies.length > 0 ? companies[0].data.title : 'Company not found'
 			: companies.map(async (company: any) => {
 					const { Content } = await company.render();
 					// get all projects where project=ash
-					const projects = await getCollection('projects', (p) => p.data.company === company.data.company);
+					const projects = await getCollection('projects', (p) => p.data.company === company.slug);
 					projects.sort(compareByDate);
 					return (
 						<PostLayout
