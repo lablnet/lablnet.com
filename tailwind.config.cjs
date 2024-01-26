@@ -2,7 +2,8 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,astro}"
+    './src/**/*.html',
+    './src/**/*.astro',
   ],
   safelist: [
     "dark", 'secondary-light', 'primary-light', 'primary-dark',
@@ -995,5 +996,7 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus']
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/typography'),
+  ]
 }

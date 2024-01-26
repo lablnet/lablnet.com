@@ -1,4 +1,6 @@
 ---
+import '../styles/index.css';
+
 import ThemeToggle from '../components/ThemeToggle';
 interface Props {
 	title: string;
@@ -6,7 +8,6 @@ interface Props {
 
 const { title } = Astro.props;
 
-import '../styles/index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 let medias = [
 	{
@@ -32,6 +33,10 @@ let medias = [
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 		<title>{title}</title>
 	</head>
 	<body id="app-theme" class="app-theme">
