@@ -36,9 +36,8 @@ projects = projects.sort(compareByDate);
 								{company ? (
 									<>
 										{' '}
-										@{' '}
-										<a class="dark:text-gray-300" href={`/${company.slug}`}>
-											{company.data.title}
+										<a class="dark:text-gray-300 arrow" href={`/${company.slug}`}>
+											@{' '}{company.data.title}
 										</a>
 									</>
 								) : (
