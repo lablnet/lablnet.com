@@ -113,9 +113,18 @@ let medias = [
 					  hidden
 					  md:block"
 					>
-						<a href="/#projects" class="block py-1 menu-item"
-							><i class="fa-solid fa-bars-progress"></i> Projects</a
-						>
+						<a href="#" id="projectsButton" class="block py-1">
+							<i class="fa-solid fa-bars-progress"></i> Work
+							<div
+								id="dropdownMenu"
+								class="absolute bg-white shadow-md mt-2 p-2 w-48 rounded-md z-50 mt-6"
+								style="display: none;"
+							>
+								<a href="/#projects" class="block py-1 dropdown-item">Work Experience</a>
+								<a href="/#top" class="block py-1 dropdown-item">Top Projects</a>
+								<a href="/#recent" class="block py-1 dropdown-item">Recent Projects</a>
+							</div>
+						</a>
 						<a href="/#skills" class="block py-1 menu-item"><i class="fa-solid fa-chalkboard"></i> Skills</a
 						>
 						<a href="/#education" class="block py-1 menu-item"
@@ -257,5 +266,32 @@ let medias = [
 		}
 		// @ts-ignore
 		document.getElementById('menu-button').addEventListener('click', toggleMenu);
+
+		// dropdown menu
+		let dropdownMenu = document.getElementById('dropdownMenu');
+		let projectsButton = document.getElementById('projectsButton');
+		let dropdownItems = document.getElementsByClassName('dropdown-item');
+		for (let i = 0; i < dropdownItems.length; i++) {
+			dropdownItems[i].addEventListener('click', function (event) {
+				dropdownMenu.style.display = 'none';
+			});
+		}
+		projectsButton.addEventListener('click', function (event) {
+			event.preventDefault();
+			if (dropdownMenu.style.display === 'none') {
+				dropdownMenu.style.display = 'block';
+			} else {
+				dropdownMenu.style.display = 'none';
+			}
+		});
+
+		// Hide dropdown when clicking outside
+		document.addEventListener('click', function (event) {
+			let isClickInside = projectsButton.contains(event.target) || dropdownMenu.contains(event.target);
+
+			if (!isClickInside && dropdownMenu.style.display === 'block') {
+				dropdownMenu.style.display = 'none';
+			}
+		});
 	</script>
 </html>
