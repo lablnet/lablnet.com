@@ -10,6 +10,8 @@ const { title } = Astro.props;
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Header from './Header.astro';
+import ProgressBar from '../components/ProgressBar.vue';
+
 import Main from './Main.astro';
 import Footer from './Footer.astro';
 ---
@@ -49,6 +51,10 @@ import Footer from './Footer.astro';
 		<div class="light">
 			<!-- Header -->
 			<Header />
+			<div class="">
+				<ProgressBar client:only />
+			</div>
+			
 			<!-- Main -->
 			<Main><slot /></Main>
 
