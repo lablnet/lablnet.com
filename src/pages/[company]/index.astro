@@ -45,8 +45,8 @@ let title = companies.length > 0 ? companies[0].data.title : 'Company not found'
 								? ''
 								: projects.map(async (project: any) => {
 										const { Content } = await project.render();
-										let endDate = company.data.endDate ? df.format(company.data.endDate) : 'Present';
-										let subtitle :any = `${df.format(company.data.startDate)} - ${endDate}`;
+										let endDate = project.data.endDate ? df.format(project.data.endDate) : 'Present';
+										let subtitle :any = `${df.format(project.data.startDate)} - ${endDate}`;
 										return (
 											<div>
 												<PostInfo
