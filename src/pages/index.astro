@@ -6,7 +6,7 @@ import Skills from './components/Skills.astro';
 import Companies from './components/Companies.astro';
 import Education from './components/Education.astro';
 import Certificate from './components/Certificate.astro';
-
+import Spacer from './components/Spacer.astro';
 
 ---
 
@@ -75,16 +75,8 @@ import Certificate from './components/Certificate.astro';
 
 	<Companies type="companies" />
 	<Companies type="projects" title="Top Projects" description="These are some of my top projects." />
-
+	<Spacer />
 	<Education />
-	<section class="py-10 px-5 container" id="showcase">
-		<div class="grid grid-cols-1 gap-5 md:gap-8 xl:grid-cols-3 xl:gap-5">
-			<div class="flex flex-col
-		  items-center
-		  justify-center
-		  text-center
-		  md:flex-row md:text-left"></div>
-		</div>
-	</section>
+	<Spacer />
 	<Certificate />
 </Layout>
