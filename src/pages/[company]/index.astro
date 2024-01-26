@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { getCollection, getEntry } from 'astro:content';
+
+import PostLayout from '../../components/PostLayout.astro';
+import PostInfo from '../../components/PostInfo.vue';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	let companies = await getCollection('companies');
+	return companies.map((entity) => ({
+		params: { company: entity.data.company },
+	}));
+}
+
+// Usage of getCollection to fetch companies
+const { company } = Astro.params;
+
+// get all companies where slug=companySlug
+const companies = await getCollection('companies', (p) => p.data.company === company);
+// get all projects where project=ash
+const projects = await getCollection('projects', (p) => p.data.company === company);
+
+let title = companies.length > 0 ? companies[0].data.title : 'Company not found';
+---
+
+<Layout title={title}>
+	{
+		!companies
+			? ''
+			: companies.map(async (company: any) => {
+					const { Content } = await company.render();
+					return (
+						<PostLayout
+							title={company.data.title}
+							subtitle={company.data.subtitle ?? ''}
+							coverPic={company.data.banner}
+						>
+							<div class="mt-4">
+								<Content />
+							</div>
+							{!projects
+								? ''
+								: projects.map(async (project: any) => {
+										const { Content } = await project.render();
+										return (
+											<div>
+												<PostInfo
+													stack={project.data.stacks}
+													title={project.data.title}
+													subtitle={project.data.startDate + ' - ' + project.data.endDate}
+													codeURL={project.data.github}
+													siteURL={project.data.live}
+													coverPic={project.data.coverPic}
+                                                    client:only
+												/>
+												<div class="mt-4">
+													<Content />
+												</div>
+												<hr class="mt-12 mb-4" />
+											</div>
+										);
+									})}
+						</PostLayout>
+					);
+				})
+	}
+</Layout>
