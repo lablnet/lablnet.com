@@ -5,7 +5,7 @@ import { getCollection, getEntry } from 'astro:content';
 import PostLayout from '../../components/PostLayout.astro';
 import PostInfo from '../../components/PostInfo.astro';
 import Layout from '../../layouts/Layout.astro';
-import { df } from '../../utils';
+import { compareByDate, df } from '../../utils';
 
 export async function getStaticPaths() {
 	let companies = await getCollection('companies');
@@ -19,8 +19,6 @@ const { company } = Astro.params;
 
 // get all companies where slug=companySlug
 const companies = await getCollection('companies', (p) => p.data.company === company);
-// get all projects where project=ash
-const projects = await getCollection('projects', (p) => p.data.company === company);
 
 let title = companies.length > 0 ? companies[0].data.title : 'Company not found';
 ---
@@ -31,6 +29,9 @@ let title = companies.length > 0 ? companies[0].data.title : 'Company not found'
 			? ''
 			: companies.map(async (company: any) => {
 					const { Content } = await company.render();
+					// get all projects where project=ash
+					const projects = await getCollection('projects', (p) => p.data.company === company.data.company);
+
 					return (
 						<PostLayout
 							title={company.data.title}
