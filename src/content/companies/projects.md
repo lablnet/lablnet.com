@@ -5,7 +5,7 @@ link: https://mennr.tech/
 slug: projects
 company: others
 step: -1
-featured: true
+featured: false
 type: company
 ---
 
