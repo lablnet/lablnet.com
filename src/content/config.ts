@@ -17,6 +17,27 @@ const companiesCollection = defineCollection({
   }),
 });
 
+// Projects Collections.
+const projectsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    startDate: z.date(),
+    endDate: z.date().optional(),
+    title: z.string(),
+    stacks: z.array(z.string()),
+    slug: z.string(),
+    company: z.string(),
+    collaborators: z.array(z.object({
+      name: z.string(),
+      picture: z.string(),
+    })).optional(),
+    live: z.string().optional(),
+    github: z.string().optional(),
+    image: z.string().optional(),
+    featured: z.boolean().default(false),
+  }),
+});
+
 // Education Collection.
 const educationCollections = defineCollection({
     type: 'content',
@@ -45,6 +66,7 @@ const certificateCollection = defineCollection({
 
 export const collections = {
     'companies': companiesCollection,
+    'projects': projectsCollection,
     'educations': educationCollections,
     'certificates': certificateCollection,
 };
