@@ -13,6 +13,7 @@ const companiesCollection = defineCollection({
     company: z.string(),
     step: z.number(),
     featured: z.boolean().default(false),
+    type: z.enum(['company', 'project']).default('companies'),
   }),
 });
 
