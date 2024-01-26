@@ -8,21 +8,23 @@ projects = projects.sort(compareByDate);
 
 <section class="mt-12 py-10 px-5 container">
 	<h2 class="text-emphasis font-recoleta text-2xl dark:text-gray-300">Things I've been working on.</h2>
-    <p class="dark:text-gray-300 prose mt-4">
-        I've been working on a lot of things over the years. Here are some of the things I've been working on recently.
-    </p>
+	<p class="dark:text-gray-300 prose mt-4">
+		I've been working on a lot of things over the years. Here are some of the things I've been working on recently.
+	</p>
 	<div class="mt-8 space-y-12">
 		{
 			projects.map(async (project: any) => {
 				const { Content } = await project.render();
 
-                console.log ("comp", project.data.company)
-				let company :any = project.data.company ? await getCollection('companies', (p) => p.slug === project.data.company) : undefined;
-                // check if its array.
-                if (company && company.length > 0) {
-                    company = company[0];
-                }
-				console.log('company', company, "title", company.data);
+				console.log('comp', project.data.company);
+				let company: any = project.data.company
+					? await getCollection('companies', (p) => p.slug === project.data.company)
+					: undefined;
+				// check if its array.
+				if (company && company.length > 0) {
+					company = company[0];
+				}
+				console.log('company', company, 'title', company.data);
 				return (
 					<div class="flex">
 						<div class="text-muted font-medium text-sm w-20 pt-0.5 shrink-0 dark:text-gray-300">
@@ -34,7 +36,10 @@ projects = projects.sort(compareByDate);
 								{company ? (
 									<>
 										{' '}
-										@ <a class="dark:text-gray-300" href={`/${company.slug}`}>{company.data.title}</a>
+										@{' '}
+										<a class="dark:text-gray-300" href={`/${company.slug}`}>
+											{company.data.title}
+										</a>
 									</>
 								) : (
 									''
