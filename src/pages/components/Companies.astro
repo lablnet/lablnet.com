@@ -73,7 +73,8 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 								</div>
 							</div>
 						</div>
-						{company.data.step != 4 || company.data.step != 9 ? <hr class="mt-8" /> : ''}
+						{company.data.step != 4 && type != 'projects' ? <hr class="mt-8" /> : ''}
+                        {company.data.step != 9 && type == 'projects' ? <hr class="mt-8" /> : ''}
 					</section>
 				);
 			})
