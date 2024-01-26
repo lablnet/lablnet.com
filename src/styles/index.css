@@ -52,26 +52,27 @@
         width: calc(100% + 4px);
     }
 
-    a.arrow:after {
-        @apply absolute pointer-events-none;
-        margin-top: 3px;
-        margin-left: 9px;
-        content: url("../icons/white/arrow-above.svg")
-    }
-
-    a.arrow:hover:after,
-    a.arrow:focus:after {
-        content: url("../icons/white/arrow-right.svg");
-    }
-
     /* For Light theme */
     .light a.arrow:after {
-        content: url("../icons/arrow-above.svg") !important;
+        content: url("../assets/icons/arrow-above.svg") !important;
     }
 
     .light a.arrow:hover:after,
     .light a.arrow:focus:after {
-        content: url("../icons/arrow-right.svg") !important;
+        content: url("../assets/icons/arrow-right.svg") !important;
+    }
+
+    /* For dark theme */
+    .dark a.arrow:after {
+        @apply absolute pointer-events-none;
+        margin-top: 3px;
+        margin-left: 9px;
+        content: url("../assets/icons/white/arrow-above.svg")!important;
+    }
+
+    .dark a.arrow:hover:after,
+    .dark a.arrow:focus:after {
+        content: url("../assets/icons/white/arrow-right.svg")!important;
     }
 
 
