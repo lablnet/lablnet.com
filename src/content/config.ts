@@ -1,5 +1,21 @@
 import { z, defineCollection } from 'astro:content';
 
+// Companies Collection.
+const companiesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    startDate: z.date(),
+    endDate: z.date().optional(),
+    title: z.string(),
+    link: z.string(),
+    banner: z.string().optional(),
+    icon: z.string(),
+    company: z.string(),
+    step: z.number(),
+    featured: z.boolean().default(false),
+  }),
+});
+
 // Education Collection.
 const educationCollections = defineCollection({
     type: 'content',
@@ -27,6 +43,7 @@ const certificateCollection = defineCollection({
 
 
 export const collections = {
+    'companies': companiesCollection,
     'educations': educationCollections,
     'certificates': certificateCollection,
 };
