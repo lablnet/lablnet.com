@@ -83,7 +83,7 @@ companies.sort((a:any, b:any) => {
 	<section class="dark:bg-gray-700 mt-12 py-10 px-5 container" id="projects">
 		<h2 class="text-emphasis font-recoleta text-2xl dark:text-white">Where I’ve worked.</h2>
 
-		<p class="dark:text-gray-400 prose mt-4">I enjoy taking on new projects and have worked on the following:</p>
+		<p class="dark:text-gray-300 prose mt-4">I enjoy taking on new projects and have worked on the following:</p>
 
 		<div class="mt-8 space-y-12">
 			{
@@ -102,21 +102,21 @@ companies.sort((a:any, b:any) => {
 									/>
 								</div>
 								<div class="ml-8">
-									<div class="font-medium text-muted text-sm dark:text-gray-400 prose">
+									<div class="font-medium text-muted text-sm dark:text-gray-300 prose">
 										{df.format(company.data.startDate)} -{' '}
 										{company.data.endDate ? df.format(company.data.endDate) : 'Now'}
 									</div>
-									<div class="font-medium text-emphasis dark:text-gray-400 prose">
-										<a class="accent dark:text-gray-400 prose arrow" href={`/${company.data.company}`}>
+									<div class="font-medium text-emphasis dark:text-gray-300 prose">
+										<a class="accent dark:text-gray-300 prose arrow" href={`/${company.data.company}`}>
 											<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block dark:text-gray-400 prose" />
 											<span>{company.data.title}</span>
 										</a>{' '}
 										·{' '}
-										<a class="relative dark:text-gray-400 prose arrow" href={company.data.link} target="_blank">
+										<a class="relative dark:text-gray-300 prose arrow" href={company.data.link} target="_blank">
 											{company.data.title}
 										</a>
 									</div>
-									<div class="mt-2 dark:text-gray-400 prose">
+									<div class="mt-2 dark:text-gray-300 prose">
 										<Content />
 									</div>
 								</div>
@@ -127,7 +127,7 @@ companies.sort((a:any, b:any) => {
 				})
 			}
 		</div>
-		<a href="/others" class="mr-4 float-right prose dark:text-gray-400 arrow">More Projects</a>
+		<a href="/others" class="mr-4 float-right prose dark:text-gray-300 arrow">More Projects</a>
 	</section>
 
 
