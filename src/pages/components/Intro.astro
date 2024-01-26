@@ -1,5 +1,5 @@
 ---
-import CollaboratorComp from '../../components/CollaboratorComp.astro';
+import CollaboratorComp from '../../components/CollaboratorComp.vue';
 ---
 
 <main class="dark:bg-gray-700">
@@ -11,6 +11,7 @@ import CollaboratorComp from '../../components/CollaboratorComp.astro';
 				picture="../assets/images/umer-removebg.png"
 				link="https://github.com/lablnet"
 				contributionsStatus="true"
+				client:load
 			/>
 
 			<div class="flex md:hidden">
