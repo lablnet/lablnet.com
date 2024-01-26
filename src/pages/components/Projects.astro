@@ -6,7 +6,7 @@ let projects = await getCollection('projects', (p) => p.data.featured);
 projects = projects.sort(compareByDate);
 ---
 
-<section class="mt-12 py-10 px-5 container">
+<section class="mt-12 py-10 px-5 container" id="recent">
 	<h2 class="text-emphasis font-recoleta text-2xl dark:text-gray-300">Things I've been working on.</h2>
 	<p class="dark:text-gray-300 prose mt-4">
 		I've been working on a lot of things over the years. Here are some of the things I've been working on recently.

@@ -28,7 +28,7 @@ let _klass = `mt-12 py-10 px-5 container `;
 _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-900`;
 ---
 
-<section class={_klass} id="projects">
+<section class={_klass} id={type}>
 	<h2 class="text-emphasis font-recoleta text-2xl dark:text-white">{title}</h2>
 
 	<p class="dark:text-gray-300 prose mt-4">{description}</p>
