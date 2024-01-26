@@ -33,18 +33,32 @@ let medias = [
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 		<title>{title}</title>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKMM6EQFM6"></script>
+		<script lang="js">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-JKMM6EQFM6');
+		</script>
 	</head>
 	<body id="app-theme" class="app-theme">
 		<div class="light">
-				<div class="dark:text-white light-text-color bg-white dark:bg-gray-700">
-					<header
-						x-data="{ mobileMenuOpen : false }"
-						class="flex flex-wrap flex-row
+			<div class="dark:text-white light-text-color bg-white dark:bg-gray-700">
+				<header
+					x-data="{ mobileMenuOpen : false }"
+					class="flex flex-wrap flex-row
 					justify-between
 					md:items-center md:space-x-4
 					py-6
@@ -56,34 +70,27 @@ let medias = [
 					dark:bg-gray-900
 					bg-white
 					relative"
-					>
-						<a href="/" class="block">
-							<span class="sr-only"></span>
-							<img
-								class=""
-								src="../assets/images/muf.png"
-								alt="Logo"
-								width="100"
-								height="100"
-								title="Logo"
-							/>
-						</a>
-						<span class="inline-block mx-auto mr-1 mt-1 md:hidden">
-							<ThemeToggle client:load />
-						</span>
+				>
+					<a href="/" class="block">
+						<span class="sr-only"></span>
+						<img class="" src="../assets/images/muf.png" alt="Logo" width="100" height="100" title="Logo" />
+					</a>
+					<span class="inline-block mx-auto mr-1 mt-1 md:hidden">
+						<ThemeToggle client:load />
+					</span>
 
-						<button id="menu-button" class="inline-block md:hidden w-8 h-8 p-1">
-							<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-								<path
-									fill-rule="evenodd"
-									d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-									clip-rule="evenodd"></path>
-							</svg>
-						</button>
+					<button id="menu-button" class="inline-block md:hidden w-8 h-8 p-1">
+						<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
 
-						<nav
-							id="nav"
-							class="absolute
+					<nav
+						id="nav"
+						class="absolute
 					  md:relative
 					  top-16
 					  left-0
@@ -105,43 +112,40 @@ let medias = [
 					  bg-white
 					  hidden
 					  md:block"
+					>
+						<a href="/#projects" class="block py-1 menu-item"
+							><i class="fa-solid fa-bars-progress"></i> Projects</a
 						>
-							<a href="/#projects" class="block py-1 menu-item"
-								><i class="fa-solid fa-bars-progress"></i> Projects</a
-							>
-							<a href="/#skills" class="block py-1 menu-item"
-								><i class="fa-solid fa-chalkboard"></i> Skills</a
-							>
-							<a href="/#education" class="block py-1 menu-item"
-								><i class="fa-solid fa-graduation-cap"></i> Education</a
-							>
-							<a href="/#certificates" class="block py-1 menu-item"
-								><i class="fa-solid fa-certificate"></i> Certificates</a
-							>
-							<a href="/quotes" class="block py-1 menu-item"
-								><i class="fa-solid fa-quote-left"></i> Quotes</a
-							>
-							<a href="https://lablnet.com/cv/CV.pdf" target="_blank" class="block py-1 menu-item"
-								><i class="fa-solid fa-file"></i> CV</a
-							>
-							<a href="/#contact" class="block py-1"><i class="fa-solid fa-address-book"></i> Contact</a>
+						<a href="/#skills" class="block py-1 menu-item"><i class="fa-solid fa-chalkboard"></i> Skills</a
+						>
+						<a href="/#education" class="block py-1 menu-item"
+							><i class="fa-solid fa-graduation-cap"></i> Education</a
+						>
+						<a href="/#certificates" class="block py-1 menu-item"
+							><i class="fa-solid fa-certificate"></i> Certificates</a
+						>
+						<a href="/quotes" class="block py-1 menu-item"><i class="fa-solid fa-quote-left"></i> Quotes</a>
+						<a href="https://lablnet.com/cv/CV.pdf" target="_blank" class="block py-1 menu-item"
+							><i class="fa-solid fa-file"></i> CV</a
+						>
+						<a href="/#contact" class="block py-1"><i class="fa-solid fa-address-book"></i> Contact</a>
 
-							<span class="hidden md:inline-block mt-1">
-								<ThemeToggle client:load />
-							</span>
-						</nav>
-					</header>
-					<!-- <div class="">
+						<span class="hidden md:inline-block mt-1">
+							<ThemeToggle client:load />
+						</span>
+					</nav>
+				</header>
+				<!-- <div class="">
 				  <ProgressBar />
 				</div>
 					   -->
-				</div>
-				<slot />
+			</div>
+			<slot />
 
-				<!-- Footer -->
-				<footer class="text-gray-600 body-font">
-					<div class="bg-gray-100 dark:text-white dark:bg-gray-900">
-						<div class="container
+			<!-- Footer -->
+			<footer class="text-gray-600 body-font">
+				<div class="bg-gray-100 dark:text-white dark:bg-gray-900">
+					<div class="container
 				  px-5
 				  py-6
 				  mx-auto
@@ -149,108 +153,107 @@ let medias = [
 				  items-center
 				  sm:flex-row
 				  flex-col">
-							<a href="/" class="flex
+						<a href="/" class="flex
 					title-font
 					font-medium
 					items-center
 					md:justify-start
 					justify-center">
-								<span class="ml-3">
-									<img
-										src="./assets/images/muf.png"
-										style="width: 80px; height 80px;"
-										alt="Muhammad Umer Farooq"
-									/>
-								</span>
-							</a>
-							<p class="inline-flex
+							<span class="ml-3">
+								<img
+									src="./assets/images/muf.png"
+									style="width: 80px; height 80px;"
+									alt="Muhammad Umer Farooq"
+								/>
+							</span>
+						</a>
+						<p class="inline-flex
 					text-sm text-gray-500
 					dark:text-gray-300
 					sm:ml-6 sm:mt-0
 					mt-4">
-								Made with &nbsp;
-								<img class="h-6 w-6" src="../assets/icons/heart.gif" />
-								&nbsp; By &nbsp;
-								<a
-									class="font-bold"
-									href="https://github.com/lablnet"
-									target="_blank"
-									rel="noopener noreferrer">Muhammad Umer Farooq</a
-								>
-							</p>
-							<span class="inline-flex
+							Made with &nbsp;
+							<img class="h-6 w-6" src="../assets/icons/heart.gif" />
+							&nbsp; By &nbsp;
+							<a
+								class="font-bold"
+								href="https://github.com/lablnet"
+								target="_blank"
+								rel="noopener noreferrer">Muhammad Umer Farooq</a
+							>
+						</p>
+						<span class="inline-flex
 					sm:ml-auto sm:mt-0
 					mt-4
 					justify-center
 					sm:justify-start">
-								<a
-									href="https://github.com/lablnet"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="ml-3 text-gray-500 mt-1 github">ㅤ</a
-								>
-								{
-									medias.map((media) => (
-										<a
-											href={media.link}
-											target="_blank"
-											rel="noopener noreferrer"
-											class="ml-3 text-gray-500"
-										>
-											<img style="width: 1.6em; height: 1.6em" src={media.picture} />
-										</a>
-									))
-								}
-								<a
-									href="https://linkedin.com/in/lablnet"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="ml-3 text-gray-500 mt-1 linkedin">ㅤ</a
-								>
-							</span>
-						</div>
+							<a
+								href="https://github.com/lablnet"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="ml-3 text-gray-500 mt-1 github">ㅤ</a
+							>
+							{
+								medias.map((media) => (
+									<a
+										href={media.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="ml-3 text-gray-500"
+									>
+										<img style="width: 1.6em; height: 1.6em" src={media.picture} />
+									</a>
+								))
+							}
+							<a
+								href="https://linkedin.com/in/lablnet"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="ml-3 text-gray-500 mt-1 linkedin">ㅤ</a
+							>
+						</span>
 					</div>
-				</footer>
-			</header>
+				</div>
+			</footer>
 		</div>
-
-		<script is:inline>
-			// theme
-			const theme = (() => {
-				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-					return localStorage.getItem('theme');
-				}
-				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					return 'dark';
-				}
-				return 'light';
-			})();
-
-			if (theme === 'light') {
-				document.documentElement.classList.remove('dark');
-				document.body.classList.remove('dark');
-			} else {
-				document.documentElement.classList.add('dark');
-				document.body.classList.add('dark');
-			}
-			window.localStorage.setItem('theme', theme);
-
-			// mobile menu
-			let menuVisible = false;
-
-			function toggleMenu() {
-				const nav = document.getElementById('nav');
-				menuVisible = !menuVisible;
-				// @ts-ignore
-				nav.classList.toggle('hidden', !menuVisible);
-			}
-
-			let elements = document.getElementsByClassName('menu-item');
-			for (let i = 0; i < elements.length; i++) {
-				elements[i].addEventListener('click', toggleMenu);
-			}
-			// @ts-ignore
-			document.getElementById('menu-button').addEventListener('click', toggleMenu);
-		</script>
 	</body>
+
+	<script is:inline>
+		// theme
+		const theme = (() => {
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+				return localStorage.getItem('theme');
+			}
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				return 'dark';
+			}
+			return 'light';
+		})();
+
+		if (theme === 'light') {
+			document.documentElement.classList.remove('dark');
+			document.body.classList.remove('dark');
+		} else {
+			document.documentElement.classList.add('dark');
+			document.body.classList.add('dark');
+		}
+		window.localStorage.setItem('theme', theme);
+
+		// mobile menu
+		let menuVisible = false;
+
+		function toggleMenu() {
+			const nav = document.getElementById('nav');
+			menuVisible = !menuVisible;
+			// @ts-ignore
+			nav.classList.toggle('hidden', !menuVisible);
+		}
+
+		let elements = document.getElementsByClassName('menu-item');
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].addEventListener('click', toggleMenu);
+		}
+		// @ts-ignore
+		document.getElementById('menu-button').addEventListener('click', toggleMenu);
+	</script>
 </html>
