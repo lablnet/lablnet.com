@@ -19,6 +19,10 @@ const { company } = Astro.params;
 
 // get all companies where slug=companySlug
 const companies = await getCollection('companies', (p) => p.data.company === company);
+// sort with step.
+companies.sort((a: any, b: any) => {
+	return a.data.step - b.data.step;
+});
 
 let title = companies.length > 0 ? companies[0].data.title : 'Company not found';
 ---
