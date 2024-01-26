@@ -30,7 +30,8 @@ import Footer from './Footer.astro';
 		/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 		<title>{title}</title>
-		
+
+		{!import.meta.env.DEV && (
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKMM6EQFM6"></script>
 		<script lang="js">
@@ -42,6 +43,7 @@ import Footer from './Footer.astro';
 
 			gtag('config', 'G-JKMM6EQFM6');
 		</script>
+		)}
 	</head>
 	<body id="app-theme" class="app-theme">
 		<div class="light">
