@@ -1,10 +1,10 @@
 ---
 startDate: 2021-02-12
-title: Freelance.com
-link: https://www.fiverr.com/umerlablnet01
-slug: freelance
+title: Direct Client
+link: https://www.lablnet.com/
+slug: direct
 company: freelancer
-step: 8
+step: 6
 featured: false
 type: company
 ---
