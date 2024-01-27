@@ -49,6 +49,7 @@
         arrow
         bg-white
         dark:border-white dark:bg-transparent
+        dark:text-gray-300
       "
       :class="gray === true ? 'border-black' : ''"
       :disabled="disable"

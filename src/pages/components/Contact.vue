@@ -2,7 +2,7 @@
   <section class="py-10 px-5 container" id="contact">
     <section class="grid grid-cols-1 md:grid-cols-2">
       <div class="col-span-1">
-        <h3 class="subtitle">Do you need my help?</h3>
+        <h3 class="subtitle dark:text-gray-300">Do you need my help?</h3>
         <div class="dark:text-white text-gray-700 mt-8 dark:text-gray-300">
           Hate forms? Send me an
           <a
