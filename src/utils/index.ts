@@ -25,11 +25,11 @@ const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
 
 // URLs.
 let urls : object = {
-    contact: 'https://contact.lablnet.com/',  
+    contact: import.meta.env.PUBLIC_CONTACT_URL || '',
 }
   
 // Recaptcha token.
-let recaptchaToken :string = '6LcevvYhAAAAAG1MMRgl_fKqtGx6ZNv8KdnLSLic';
+let recaptchaToken :string = import.meta.env.PUBLIC_RECAPTCHA_TOKEN || '';
   
 export {
     df,
