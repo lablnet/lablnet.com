@@ -3,61 +3,39 @@ import CollaboratorComp from '../../components/CollaboratorComp.vue';
 ---
 
 <main class="dark:bg-gray-700">
-	<section class="flex-none md:flex py-10 px-5 container">
-		<div class="flex-none md:flex-1">
-			<h1 class="title dark:text-gray-300 prose">Muhammad Umer Farooq</h1>
-			<CollaboratorComp
-				name="lablent"
-				picture="../assets/images/umer-removebg.png"
-				link="https://github.com/lablnet"
-				contributionsStatus="true"
-				client:load
-			/>
-
-			<div class="flex md:hidden">
-				<div class="sm:px-0 mx-auto">
-					<img
-						class="w-32 h-32 mx-auto rounded-full pointer-events-none"
-						src="../assets/images/umer2023.jpg"
-						alt="Muhammad Umer Farooq"
-					/>
-				</div>
+	<section class="container">
+		<div class="block flex items-center gap-x-4">
+				<img
+					class="w-16 h-16 md:w-32 md:h-32 rounded-full mt-12"
+					src="../assets/images/umer.jpg"
+					alt="Muhammad Umer Farooq"
+				/>
+			<div class="block mt-16">
+				<h1 class="title dark:text-gray-300 prose">Muhammad Umer Farooq</h1>
+				<CollaboratorComp
+					name="lablent"
+					picture="../assets/images/umer-removebg.png"
+					link="https://github.com/lablnet"
+					contributionsStatus="true"
+					client:load
+				/>
 			</div>
+		</div>
+		<div class="md:ml-12">
 			<p class="prose text-justify dark:text-gray-300">
 				Hello, I am a Professional Software Developer with a passion for working on open-source products.
 			</p>
-
+	
 			<p class="prose text-justify dark:text-gray-300">
-				I have extensive experience in Full Stack development, including web, mobile, and desktop applications.
-				I have also worked with web scraping, web crawling, and web API integrations. I have worked on a wide
-				range of projects and have interest in deep learning, computer vision, deterministic algorithms, kernel
-				development, compilers, and cryptography.
+				I have extensive experience in Full Stack development, including web, mobile, and desktop applications. I
+				have also worked with web scraping, web crawling, and web API integrations. I have worked on a wide range of
+				projects and have interest in deep learning, computer vision, deterministic algorithms, kernel development,
+				compilers, and cryptography.
 			</p>
 			<p class="prose text-justify mb-6 dark:text-gray-300">
-				I am highly motivated to work on open-source projects and contribute to the community. I am always
-				looking for opportunities to collaborate and learn from others.
+				I am highly motivated to work on open-source projects and contribute to the community. I am always looking
+				for opportunities to collaborate and learn from others.
 			</p>
-
-			<br />
-		</div>
-
-		<div class="hidden md:flex">
-			<div class="sm:px-0 md:px-20">
-				<div class="rounded-full mt-12 overflow-hidden">
-					<img
-						class="w-64
-            h-64
-            ml-4
-            rounded-full
-            object-cover
-            pointer-events-none
-            mt-12"
-						src="../assets/images/umer2023.jpg"
-						alt="Muhammad Umer Farooq"
-						style="margin-top: 16px;"
-					/>
-				</div>
-			</div>
 		</div>
 	</section>
 </main>

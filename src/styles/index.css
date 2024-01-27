@@ -18,7 +18,7 @@
     }
 
     section .title {
-        @apply text-4xl md:text-4xl lg:text-5xl font-normal mb-0;
+        @apply text-lg md:text-4xl lg:text-5xl font-bold mb-0;
     }
 
     section .subtitle,
