@@ -9,7 +9,7 @@
               : '../assets/icons/link.svg'
           "
         />
-        <span class="mx-3 dark:text-gray-300">{{ title }}</span></a
+        <span class="mx-3 dark:text-gray-300">{{ title }} - {{theme}}</span></a
       >
     </h3>
     <h3 class="text mt-2 mb-4 opacity-70 dark:text-gray-300">{{ subtitle }}</h3>
@@ -154,10 +154,31 @@ export default {
         return {
             contributors: [],
             loading: false,
+            theme: 'light'
         }
     },
     async mounted() {
         await this.getContributors()
+        var targetNode = document.querySelector('html');
+        var config = { attributes: true, attributeFilter: ['class'] };
+
+        var callback = (mutationsList, observer) => {
+            for(let mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    if (mutation.target.className) {
+                      this.theme = mutation.target.className;
+                      console.log ('class changed', this.theme)
+                    }
+                }
+            }
+        };
+        var observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
+    },
+    watch: {
+        theme: function (newTheme, oldTheme) {
+            console.log('theme changed', newTheme, oldTheme)
+        }
     },
     methods: {
         async getContributors() {
@@ -206,20 +227,6 @@ export default {
                     self.loading = false
                 }).catch(function (error) {})
         }
-    },
-    computed: {
-        theme() {
-            // get class from html tag.
-            // @ts-ignore
-            const html = document.querySelector("html")
-            // check if it contains dark class.
-
-            // @ts-ignore
-            if (html.classList.contains("dark")) {
-                return 'dark'
-            }
-            return 'light'
-        },
     }
 }
 </script>
