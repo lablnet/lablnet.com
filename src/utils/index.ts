@@ -23,7 +23,7 @@ const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
     return +b.data.endDate - +a.data.endDate;
 }
 
-const setAppTheme = (theme) => {
+const setAppTheme = (theme: string) => {
     const bodyClassList = document.querySelector('body')?.classList;
     const documentElementClassList = document.documentElement?.classList;
 
