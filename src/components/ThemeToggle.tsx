@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { useEffect, useState } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
+import { setAppTheme } from "../utils";
 
 export default function ThemeToggle(): h.JSX.Element {
   const [theme, setTheme] = useState('light');
@@ -9,36 +10,14 @@ export default function ThemeToggle(): h.JSX.Element {
             console.log ("handle click", theme)
             let _theme = theme === "light" ? "dark" : "light";
             setTheme(_theme)
-            if (_theme === "dark") {
-                // @ts-ignore
-                document.documentElement.classList.add("dark");
-                // @ts-ignore
-                document.documentElement.classList.remove("light");
-            } else {
-              // @ts-ignore
-                document.documentElement.classList.remove("dark");
-                // @ts-ignore
-                document.documentElement.classList.add("light");
-            }
+            setAppTheme(_theme);
             localStorage.setItem("theme", _theme);
             console.log ("setting the thenme", _theme)
     };
 
     useEffect(() => {
         setTheme(localStorage.getItem("theme") || "light");
-        // @ts-ignore
-        if (theme === "dark" && document.querySelector('body').classList.contains('app-theme')        ) {
-          // @ts-ignore  
-          document.querySelector('body').classList.remove('bg-secondary-light');
-          // @ts-ignore
-            document.querySelector('body').classList.add('bg-primary-dark');
-
-        } else {
-          // @ts-ignore
-            document.querySelector('body').classList.remove('bg-primary-dark');
-            // @ts-ignore
-            document.querySelector('body').classList.add('bg-secondary-light');
-        }
+        setAppTheme(localStorage.getItem("theme") || "light");
         localStorage.setItem("theme", theme);
     }, []);
 
