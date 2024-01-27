@@ -167,18 +167,12 @@ export default {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     if (mutation.target.className) {
                       this.theme = mutation.target.className;
-                      console.log ('class changed', this.theme)
                     }
                 }
             }
         };
         var observer = new MutationObserver(callback);
         observer.observe(targetNode, config);
-    },
-    watch: {
-        theme: function (newTheme, oldTheme) {
-            console.log('theme changed', newTheme, oldTheme)
-        }
     },
     methods: {
         async getContributors() {
