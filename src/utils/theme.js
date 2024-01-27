@@ -16,8 +16,5 @@ window.setAppTheme = (theme) => {
     window.localStorage.setItem('theme', theme);
 }
 let theme = window.localStorage.getItem("theme") || "dark"
-console.log("theme", theme)
 // set the theme.
 window.setAppTheme(theme);
-
-

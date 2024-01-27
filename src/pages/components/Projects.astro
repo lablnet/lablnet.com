@@ -16,7 +16,6 @@ projects = projects.sort(compareByDate);
 			projects.map(async (project: any) => {
 				const { Content } = await project.render();
 
-				console.log('comp', project.data.company);
 				let company: any = project.data.company
 					? await getCollection('companies', (p) => p.slug === project.data.company)
 					: undefined;
@@ -24,7 +23,6 @@ projects = projects.sort(compareByDate);
 				if (company && company.length > 0) {
 					company = company[0];
 				}
-				console.log('company', company, 'title', company.data);
 				return (
 					<div class="flex">
 						<div class="text-muted font-medium text-sm w-20 pt-0.5 shrink-0 dark:text-gray-300">
