@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="bg-gray-300 h-1 fixed top-0 left-0 w-full z-50"
-    v-if="progress > 0"
-  >
+  <div class="bar-head" v-if="progress > 0">
     <div :style="{ width: progress + '%' }" class="h-1" :class="klass"></div>
   </div>
 </template>
@@ -40,3 +37,24 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.bar-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 0.25rem;
+  background-color: #d1d5db;
+}
+.h-1 {
+  height: 0.25rem;
+}
+.progress-bar-blue {
+  background-color: #4c3eff;
+}
+.progress-bar-green {
+  background-color: #00c853;
+}
+</style>

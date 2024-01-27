@@ -1,0 +1,56 @@
+---
+// @ts-ignore
+import { getCollection } from 'astro:content';
+const certificates = await getCollection('certificates');
+// sort by step.
+certificates.sort((a: any, b: any) => {
+	return b.data.step - a.data.step;
+});
+---
+
+<main>
+	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container" id="certificates">
+		<h3 class="subtitle dark:text-white prose">Certificates.</h3>
+		<p class="dark:text-gray-400 prose">
+			In addition to my formal education, I have completed a few courses to expand my knowledge and skills.
+		</p>
+        <div class="container mx-auto">
+            <div class="flex flex-col divide-y divide-gray-300">
+                {certificates.map((certificate:any, index: number) => (
+                    <div>
+                        <button
+                            data-id={index}
+                            class="accordion-button flex justify-between items-center w-full py-2 px-4 text-left prose dark:text-gray-400"
+                        >
+                            <span>{certificate.data.title} - {certificate.data.institute}</span>
+                            <span class="w-6 h-6">🏆</span>
+                        </button>
+                        <div data-id={index} class="accordion-content overflow-hidden transition-all duration-300 hidden">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+                                <div>
+                                    <a href={certificate.data.link} target="_blank" class="prose dark:text-gray-400">View Certificate</a>
+                                    <p class="text-sm italic prose dark:text-gray-400">{certificate.data.completed}</p>
+                                </div>
+                                <div class="image-container">
+                                    <img src={certificate.data.picture} class="object-contain h-48 w-96 rounded sm:-mx-7 mt-5" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+</main>
+
+<script lang="js">
+let buttons = document.querySelectorAll('.accordion-button');
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+        let content = document.querySelectorAll('.accordion-content');
+        let id = this.getAttribute('data-id');
+        content[id].classList.toggle('hidden');
+    });
+}
+</script>
+

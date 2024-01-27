@@ -1,0 +1,129 @@
+---
+import '../styles/index.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+import Header from './Header.astro';
+import ProgressBar from '../components/ProgressBar.vue';
+
+import Main from './Main.astro';
+import Footer from './Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="title" content="Muhammad Umer Farooq" />
+		<meta name="author" content="Muhammad Umer Farooq" />
+		<meta name="url" content="https://lablnet.com/" />
+		<meta name="type" content="website" />
+		<meta name="image" content="../assets/images/umer.jpg" />
+		<meta name=" keywords" content="portfolio,umer,web developer,software developer" />
+		<meta name="description"
+		  content="Hi there, I'm a Software Developer. I love building and rebuilding open source products. I have experience in Full Stack software development, including Web, Mobile applications, Desktop applications, web scraping, web crawling, and API integrations, working on many projects. Beside all these..." />
+		<meta name="og:title" content="Muhammad Umer Farooq" />
+		<meta name="og:author" content="Muhammad Umer Farooq" />
+		<meta name="og:url" content="https://lablnet.com/" />
+		<meta name="og:type" content="website" />
+		<meta name="og:image" content="../assets/images/umer.jpg" />
+		<meta name=" og:keywords" content="portfolio,umer,web developer,software developer" />
+		<meta name="og:description"
+		  content="Hi there, I'm a Software Developer. I love building and rebuilding open source products. I have experience in Full Stack software development, including Web, Mobile applications, Desktop applications, web scraping, web crawling, and API integrations, working on many projects. Beside all these..." />
+		<meta name="theme-color" content="#ffffff" />
+			  <meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+		<title>{title}</title>
+
+		{!import.meta.env.DEV && (
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKMM6EQFM6"></script>
+		<script lang="js">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-JKMM6EQFM6');
+		</script>
+		)}
+	</head>
+	<body id="app-theme" class="app-theme">
+		<div class="light">
+			<!-- Header -->
+			<Header />
+			<div class="">
+				<ProgressBar client:only />
+			</div>
+			
+			<!-- Main -->
+			<Main><slot /></Main>
+
+			<!-- Footer -->
+			<Footer />
+		</div>
+	</body>
+
+	<script src="../utils/theme.js"></script>
+	<script lang="js">
+
+		// mobile menu
+		let menuVisible = false;
+
+		function toggleMenu() {
+			const nav = document.getElementById('nav');
+			menuVisible = !menuVisible;
+			// @ts-ignore
+			nav.classList.toggle('hidden', !menuVisible);
+		}
+
+		let elements = document.getElementsByClassName('menu-item');
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].addEventListener('click', toggleMenu);
+		}
+		// @ts-ignore
+		document.getElementById('menu-button').addEventListener('click', toggleMenu);
+
+		// dropdown menu
+		let dropdownMenu = document.getElementById('dropdownMenu');
+		let projectsButton = document.getElementById('projectsButton');
+		let dropdownItems = document.getElementsByClassName('dropdown-item');
+		for (let i = 0; i < dropdownItems.length; i++) {
+			dropdownItems[i].addEventListener('click', function () {
+				dropdownMenu.style.display = 'none';
+			});
+		}
+		projectsButton.addEventListener('click', function (event) {
+			event.preventDefault();
+			if (dropdownMenu.style.display === 'none') {
+				dropdownMenu.style.display = 'block';
+			} else {
+				dropdownMenu.style.display = 'none';
+			}
+		});
+
+		// Hide dropdown when clicking outside
+		document.addEventListener('click', function (event) {
+			let isClickInside = projectsButton.contains(event.target) || dropdownMenu.contains(event.target);
+
+			if (!isClickInside && dropdownMenu.style.display === 'block') {
+				dropdownMenu.style.display = 'none';
+			}
+		});
+	</script>
+</html>

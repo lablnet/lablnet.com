@@ -4,7 +4,8 @@
 My personal Portfolio website [https://lablnet.com](https://lablnet.com)
 
 ### Portfolios
-1. [lablnet.com](https://lablnet.com) latest one.
+1. [lablnet.com](https://lablnet.com) latest one in AstroJs using VueJs, Preact and TailwindCSS.
+2. [vue.lablnet.com](https://vue.lablnet.com)  2022-2023
 2. [lablnet.github.io](https://lablnet.github.io)  2021
 3. [lablnet.github.io/old1.html](https://lablnet.github.io/old1.html) 2020
 4. [lablnet.github.io/old.html](https://lablnet.github.io/old.html) 2019
@@ -14,10 +15,11 @@ My personal Portfolio website [https://lablnet.com](https://lablnet.com)
 2. Responsive design.
 3. Customizable.
 4. Modern web technology.
-5. Generate Sitemap base on `vue-router`
+5. Content-Driven using Markdown.
+
 
 ### Techonology Stack
-1. [VueJs](https://vuejs.org/) with [Pinia](https://pinia.vuejs.org/) and [Vue Router](https://router.vuejs.org/).
+1. [AstroJs](https://astro.build/), [VueJs](https://vuejs.org/), [Preact](https://preactjs.com/) and [TailwindCSS](https://tailwindcss.com/).
 2. [TailwindCSS](https://tailwindcss.com/).
 3. [Fancybox](https://fancyapps.com/docs/ui/fancybox/)
 
@@ -25,7 +27,7 @@ My personal Portfolio website [https://lablnet.com](https://lablnet.com)
 ## Project setup
 
 ```sh
-npm install --force
+npm install
 
 // or
 yarn install
@@ -40,22 +42,14 @@ npm run serve
 yarn run serve
 ```
 
-#### Generate sitemap
-```sh
-npm run sitemap
-
-// or
-yarn run sitemap
-```
-
 #### Compiles and minifies for production
 
 ```sh
-npm run prod
+npm run build
 
 // or
 
-yarn run prod
+yarn run build
 ``` 
 
 #### Lints and fixes files
@@ -78,4 +72,3 @@ Thank you for considering contributing to the this project! Feel free to create 
 
 ## License
 - MIT
-
