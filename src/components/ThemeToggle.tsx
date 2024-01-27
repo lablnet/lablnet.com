@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { useEffect, useState } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
-import { setAppTheme } from "../utils";
+import '../utils/theme.js'
 
 export default function ThemeToggle(): h.JSX.Element {
   const [theme, setTheme] = useState('light');
@@ -16,8 +16,11 @@ export default function ThemeToggle(): h.JSX.Element {
     };
 
     useEffect(() => {
-        setTheme(localStorage.getItem("theme") || "light");
-        localStorage.setItem("theme", theme);
+      let theme = localStorage.getItem("theme") || "light"
+      // console.log("theme", theme)
+  
+        setTheme(theme);
+      //   setAppTheme(theme);
     }, []);
 
 

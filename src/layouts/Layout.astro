@@ -63,7 +63,16 @@ import Footer from './Footer.astro';
 		</div>
 	</body>
 
-	<script is:inline lang="js">
+	<!-- include ../utils/theme.js -->
+	<script src="../utils/theme.js"></script>
+	<script lang="js">
+		// import { setAppTheme } from "../utils";
+
+		// let theme = window.localStorage.getItem("theme") || "dark"
+		// console.log("theme", theme)
+		// // set the theme.
+		// window.setAppTheme(theme);
+
 		// mobile menu
 		let menuVisible = false;
 
