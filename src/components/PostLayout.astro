@@ -15,7 +15,7 @@ const { title, description, coverPic = null} = Astro.props;
 			{
 				title && (
 					<div class="container">
-						<h1 class="title">{title}</h1>
+						<h1 class="title dark:text-gray-300">{title}</h1>
 						{description && <p class="text-justify mb-6 dark:text-gray-300">{description}</p>}
 					</div>
 				)

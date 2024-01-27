@@ -9,10 +9,10 @@
               : '../assets/icons/link.svg'
           "
         />
-        <span class="mx-3">{{ title }}</span></a
+        <span class="mx-3 dark:text-gray-300">{{ title }}</span></a
       >
     </h3>
-    <h3 class="text mt-2 mb-4 opacity-70">{{ subtitle }}</h3>
+    <h3 class="text mt-2 mb-4 opacity-70 dark:text-gray-300">{{ subtitle }}</h3>
 
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-10">
       <div class="col-span-1" v-if="codeURL">
@@ -22,7 +22,7 @@
             :href="'https://github.com/' + codeURL"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex font-medium mt-2"
+            class="inline-flex font-medium mt-2 dark:text-white"
           >
             <i class="py-1">
               <svg
@@ -62,7 +62,7 @@
             :href="siteURL"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex font-medium mt-2"
+            class="inline-flex font-medium mt-2 dark:text-white"
           >
             <i class="py-1">
               <svg
@@ -209,6 +209,15 @@ export default {
     },
     computed: {
         theme() {
+            // get class from html tag.
+            // @ts-ignore
+            const html = document.querySelector("html")
+            // check if it contains dark class.
+
+            // @ts-ignore
+            if (html.classList.contains("dark")) {
+                return 'dark'
+            }
             return 'light'
         },
     }
