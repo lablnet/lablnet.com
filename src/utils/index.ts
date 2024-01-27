@@ -1,53 +1,58 @@
-/**
- * Function to set the theme.
- * @since v1.0.0
- * @returns null
- */
-const themeSetup = () => {
-    const appTheme = localStorage.getItem('theme') || 'light';
+import type {CollectionEntry} from 'astro:content';
 
-      if (
-        appTheme === 'dark' &&
-        // @ts-ignore: Object is possibly 'null'.
-        document.querySelector('body').classList.contains('app-theme')
-      ) {
-        // @ts-ignore: Object is possibly 'null'.
-        document.querySelector('body').classList.remove('bg-secondary-light');
-        // @ts-ignore: Object is possibly 'null'.
-        document.querySelector('body').classList.add('bg-primary-dark');
-      } else {
-        // @ts-ignore: Object is possibly 'null'.
-        document.querySelector('body').classList.remove('bg-primary-dark');
-        // @ts-ignore: Object is possibly 'null'.
-        document.querySelector('body').classList.add('bg-secondary-light');
-      }
+const df = new Intl.DateTimeFormat(undefined, {
+    month: 'short',
+    year: 'numeric',
+});
+
+// @ts-ignore
+const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
+    // If both 'b' and 'a' do not have an 'endDate', compare their 'startDate's
+    if (!b.data.endDate && !a.data.endDate) {
+        return +b.data.startDate - +a.data.startDate;
+    }
+    // If only 'b' does not have an 'endDate', 'b' is considered "greater"
+    if (!b.data.endDate) {
+        return 1;
+    }
+    // If only 'a' does not have an 'endDate', 'a' is considered "greater"
+    if (!a.data.endDate) {
+        return -1;
+    }
+    // If both 'b' and 'a' have an 'endDate', compare those
+    return +b.data.endDate - +a.data.endDate;
 }
 
-const clearCache = async () => {
-  // clear local storage all data.
-  await localStorage.clear();
+const setAppTheme = (theme: string) => {
+    const bodyClassList = document.querySelector('body')?.classList;
+    const documentElementClassList = document.documentElement?.classList;
 
-  // clear all cache data.
-  await caches.keys().then((keyList: any) =>
-    Promise.all(
-      keyList.map((key: any) => {
-          return caches.delete(key);
-      })
-    )
-  )
+    if (theme === "dark" && bodyClassList?.contains('app-theme')) {
+        bodyClassList?.remove('bg-secondary-light');
+        bodyClassList?.add('bg-primary-dark');
+        documentElementClassList?.add("dark");
+        documentElementClassList?.remove("light");
+    } else {
+        bodyClassList?.remove('bg-primary-dark');
+        bodyClassList?.add('bg-secondary-light');
+        documentElementClassList?.remove("dark");
+        documentElementClassList?.add("light");
+    }
+    window.localStorage.setItem('theme', theme);
 }
 
 // URLs.
-let urls = {
-  contact: 'https://contact.lablnet.com/',
+let urls : object = {
+    contact: import.meta.env.PUBLIC_CONTACT_URL || '',
 }
-
+  
 // Recaptcha token.
-let recaptchaToken = '6LcevvYhAAAAAG1MMRgl_fKqtGx6ZNv8KdnLSLic';
-
+let recaptchaToken :string = import.meta.env.PUBLIC_RECAPTCHA_TOKEN || '';
+  
 export {
-    themeSetup,
+    df,
+    compareByDate,
     urls,
     recaptchaToken,
-    clearCache,
+    setAppTheme
 }

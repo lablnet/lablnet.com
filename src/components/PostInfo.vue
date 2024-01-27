@@ -5,14 +5,14 @@
         <img
           :src="
             theme === 'dark'
-              ? require('@/assets/icons/white/link.svg')
-              : require('@/assets/icons/link.svg')
+              ? '../assets/icons/white/link.svg'
+              : '../assets/icons/link.svg'
           "
         />
-        <span class="mx-3">{{ title }}</span></a
+        <span class="mx-3 dark:text-gray-300">{{ title }}</span></a
       >
     </h3>
-    <h3 class="text mt-2 mb-4 opacity-70">{{ subtitle }}</h3>
+    <h3 class="text mt-2 mb-4 opacity-70 dark:text-gray-300">{{ subtitle }}</h3>
 
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-10">
       <div class="col-span-1" v-if="codeURL">
@@ -22,7 +22,7 @@
             :href="'https://github.com/' + codeURL"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex font-medium mt-2"
+            class="inline-flex font-medium mt-2 dark:text-white"
           >
             <i class="py-1">
               <svg
@@ -62,7 +62,7 @@
             :href="siteURL"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex font-medium mt-2"
+            class="inline-flex font-medium mt-2 dark:text-white"
           >
             <i class="py-1">
               <svg
@@ -93,8 +93,8 @@
           <div class="flex flex-wrap gap-5">
             <span v-for="items in contributors" :key="items">
               <CollaboratorComp
-                :text="items.name"
-                :picture="items.pic"
+                :name="items.name"
+                :picture="items.picture"
                 :link="items.link"
                 :contributions="items.contributions"
               />
@@ -109,10 +109,9 @@
 
 
 <script lang="js">
-import TagComp from "@/components/TagComp";
-import CollaboratorComp from "@/components/CollaboratorComp";
-import LoaderComp from "@/components/LoaderComp";
-import { useThemeStore } from '@/store/ThemeStore';
+import TagComp from "./TagComp.vue";
+import CollaboratorComp from "./CollaboratorComp.vue";
+import LoaderComp from "./LoaderComp.vue";
 
 export default {
     name: "PostInfo",
@@ -146,7 +145,7 @@ export default {
             type: String,
             default: "View Site"
         },
-        collabrators: {
+        collaborators: {
             type: Array,
             default: () => [],
         },
@@ -155,19 +154,35 @@ export default {
         return {
             contributors: [],
             loading: false,
+            theme: 'light'
         }
     },
     async mounted() {
         await this.getContributors()
+        var targetNode = document.querySelector('html');
+        this.theme = targetNode.className;
+        var config = { attributes: true, attributeFilter: ['class'] };
+
+        var callback = (mutationsList, observer) => {
+            for(let mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    if (mutation.target.className) {
+                      this.theme = mutation.target.className;
+                    }
+                }
+            }
+        };
+        var observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
     },
     methods: {
         async getContributors() {
-            // check if collabrators is not empty array.
-            if (this.collabrators.length > 0) {
-                this.contributors = this.collabrators
+            // check if collaborators is not empty array.
+            if (this.collaborators.length > 0) {
+                this.contributors = this.collaborators
                 return
             }
-            if (this.codeURL === null) return
+            if (this.codeURL === null || this.codeURL === '') return
 
             // check if cache is not expired.
             const cache_time = localStorage.getItem(`${this.codeURL}-time`)
@@ -193,7 +208,7 @@ export default {
                         if (!data[index]?.login.includes("bot")) {
                             items.push({
                                 "name": user.name || data[index].login,
-                                "pic": data[index].avatar_url || null,
+                                "picture": data[index].avatar_url || null,
                                 "link": data[index].html_url,
                                 "contributions": data[index].contributions
                             })
@@ -207,11 +222,6 @@ export default {
                     self.loading = false
                 }).catch(function (error) {})
         }
-    },
-    computed: {
-        theme() {
-            return useThemeStore().theme;
-        },
     }
 }
 </script>

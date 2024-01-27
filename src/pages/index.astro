@@ -1,0 +1,43 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+
+import Intro from './components/Intro.astro';
+import Skills from './components/Skills.astro';
+import Companies from './components/Companies.astro';
+import Projects from './components/Projects.astro';
+import Education from './components/Education.astro';
+import Certificate from './components/Certificate.astro';
+import Spacer from './components/Spacer.astro';
+import Contact from './components/Contact.vue';
+---
+
+<Layout title="Muhammad Umer Farooq">
+
+	<!-- Intro -->
+	<Intro />
+
+	<!-- Skills -->
+	<Skills />
+
+	<!-- Companies -->
+	<Companies type="companies" />
+
+	<!-- Top Projects -->
+	<Companies type="projects" title="Top Projects" description="These are some of my top projects." />
+	
+	<!-- Projects -->
+	<Projects />
+
+	<!-- Education -->
+	<Education />
+
+	<!-- Spacer -->
+	<Spacer />
+
+	<!-- Certificates -->
+	<Certificate />
+
+	<!-- Contact -->
+	<Contact client:only="vue" />
+</Layout>
