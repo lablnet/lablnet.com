@@ -93,8 +93,8 @@
           <div class="flex flex-wrap gap-5">
             <span v-for="items in contributors" :key="items">
               <CollaboratorComp
-                :text="items.name"
-                :picture="items.pic"
+                :name="items.name"
+                :picture="items.picture"
                 :link="items.link"
                 :contributions="items.contributions"
               />
@@ -213,7 +213,7 @@ export default {
                         if (!data[index]?.login.includes("bot")) {
                             items.push({
                                 "name": user.name || data[index].login,
-                                "pic": data[index].avatar_url || null,
+                                "picture": data[index].avatar_url || null,
                                 "link": data[index].html_url,
                                 "contributions": data[index].contributions
                             })
