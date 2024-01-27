@@ -31,7 +31,7 @@
       :src="picture"
       :alt="text"
     />
-    <span class="pl-5">{{ text }}</span>
+    <span class="pl-5">{{ name }}</span>
     <span
       class="
         pl-2
@@ -53,7 +53,7 @@
 export default {
     name: "CollaboratorComp",
     props: {
-        text: {
+        name: {
             type: String,
             required: true,
         },
