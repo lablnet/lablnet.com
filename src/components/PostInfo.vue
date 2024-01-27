@@ -160,6 +160,7 @@ export default {
     async mounted() {
         await this.getContributors()
         var targetNode = document.querySelector('html');
+        this.theme = targetNode.className;
         var config = { attributes: true, attributeFilter: ['class'] };
 
         var callback = (mutationsList, observer) => {
