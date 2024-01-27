@@ -145,7 +145,7 @@ export default {
             type: String,
             default: "View Site"
         },
-        collabrators: {
+        collaborators: {
             type: Array,
             default: () => [],
         },
@@ -176,12 +176,12 @@ export default {
     },
     methods: {
         async getContributors() {
-            // check if collabrators is not empty array.
-            if (this.collabrators.length > 0) {
-                this.contributors = this.collabrators
+            // check if collaborators is not empty array.
+            if (this.collaborators.length > 0) {
+                this.contributors = this.collaborators
                 return
             }
-            if (this.codeURL === null) return
+            if (this.codeURL === null || this.codeURL === '') return
 
             // check if cache is not expired.
             const cache_time = localStorage.getItem(`${this.codeURL}-time`)

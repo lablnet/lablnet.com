@@ -51,6 +51,8 @@ let title = companies.length > 0 ? companies[0].data.title : 'Company not found'
 										const { Content } = await project.render();
 										let endDate = project.data.endDate ? df.format(project.data.endDate) : 'Present';
 										let subtitle :any = `${df.format(project.data.startDate)} - ${endDate}`;
+										let colbs = project.data.collaborators
+										console.log ("colbs", colbs)
 										return (
 											<div>
 												<PostInfo
