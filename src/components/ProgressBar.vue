@@ -29,14 +29,11 @@ export default {
 
             // Update the progress bar width
             this.progress = percent;
-
-            console.log ("F", this.progress)
         }
     },
     mounted() {
         // Add the scroll event listener
         window.addEventListener("scroll", this.handleScroll);
-        console.log ("shit", )
     }
 }
 </script>
