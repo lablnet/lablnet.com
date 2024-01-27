@@ -9,7 +9,7 @@
               : '../assets/icons/link.svg'
           "
         />
-        <span class="mx-3 dark:text-gray-300">{{ title }} - {{theme}}</span></a
+        <span class="mx-3 dark:text-gray-300">{{ title }}</span></a
       >
     </h3>
     <h3 class="text mt-2 mb-4 opacity-70 dark:text-gray-300">{{ subtitle }}</h3>
