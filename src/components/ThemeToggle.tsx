@@ -17,7 +17,6 @@ export default function ThemeToggle(): h.JSX.Element {
 
     useEffect(() => {
         setTheme(localStorage.getItem("theme") || "light");
-        setAppTheme(localStorage.getItem("theme") || "light");
         localStorage.setItem("theme", theme);
     }, []);
 
