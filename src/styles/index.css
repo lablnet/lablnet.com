@@ -13,7 +13,7 @@
 
     @media only screen and (max-width: 986px) {
         .container {
-            @apply px-2;
+            @apply px-6 max-w-xl;
         }
     }
 
