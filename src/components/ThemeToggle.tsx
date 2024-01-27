@@ -9,6 +9,7 @@ export default function ThemeToggle(): h.JSX.Element {
     const handleClick = () => {
             let _theme = theme === "light" ? "dark" : "light";
             setTheme(_theme)
+            // @ts-ignore
             setAppTheme(_theme);
             localStorage.setItem("theme", _theme);
     };
