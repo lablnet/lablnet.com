@@ -1,6 +1,8 @@
 import { h } from 'preact';
 import { useEffect, useState } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
+
+// @ts-ignore
 import '../utils/theme.js'
 
 export default function ThemeToggle(): h.JSX.Element {
