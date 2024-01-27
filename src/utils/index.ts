@@ -38,6 +38,7 @@ const setAppTheme = (theme: string) => {
         documentElementClassList?.remove("dark");
         documentElementClassList?.add("light");
     }
+    window.localStorage.setItem('theme', theme);
 }
 
 // URLs.

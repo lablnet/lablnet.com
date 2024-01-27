@@ -66,12 +66,8 @@ import Footer from './Footer.astro';
 	<script is:inline lang="js">
 		import { setAppTheme } from "../utils";
 
-		// theme
-		const theme = (() => {
-				return localStorage.getItem('theme') ?? 'light';
-		})();
 		// set the theme.
-		setAppTheme(theme);
+		setAppTheme(localStorage.getItem('theme') ?? 'light');
 
 		// mobile menu
 		let menuVisible = false;
