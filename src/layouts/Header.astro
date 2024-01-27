@@ -1,12 +1,11 @@
 ---
 import ThemeToggle from '../components/ThemeToggle';
-
 ---
 
 <div class="dark:text-white light-text-color bg-white dark:bg-gray-700">
-    <header
-        x-data="{ mobileMenuOpen : false }"
-        class="flex flex-wrap flex-row
+	<header
+		x-data="{ mobileMenuOpen : false }"
+		class="flex flex-wrap flex-row
         justify-between
         md:items-center md:space-x-4
         py-6
@@ -18,27 +17,27 @@ import ThemeToggle from '../components/ThemeToggle';
         dark:bg-gray-900
         bg-white
         relative"
-    >
-        <a href="/" class="block">
-            <span class="sr-only"></span>
-            <img class="" src="../assets/images/muf.png" alt="Logo" width="100" height="100" title="Logo" />
-        </a>
-        <span class="inline-block mx-auto mr-1 mt-1 md:hidden">
-            <ThemeToggle client:load />
-        </span>
+	>
+		<a href="/" class="block">
+			<span class="sr-only"></span>
+			<img class="" src="../assets/images/muf.png" alt="Logo" width="100" height="100" title="Logo" />
+		</a>
+		<span class="inline-block mx-auto mr-1 mt-1 md:hidden">
+			<ThemeToggle client:load />
+		</span>
 
-        <button id="menu-button" class="inline-block md:hidden w-8 h-8 p-1">
-            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    fill-rule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </button>
+		<button id="menu-button" class="inline-block md:hidden w-8 h-8 p-1">
+			<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path
+					fill-rule="evenodd"
+					d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+					clip-rule="evenodd"></path>
+			</svg>
+		</button>
 
-        <nav
-            id="nav"
-            class="absolute
+		<nav
+			id="nav"
+			class="absolute
           md:relative
           top-16
           left-0
@@ -60,36 +59,33 @@ import ThemeToggle from '../components/ThemeToggle';
           bg-white
           hidden
           md:block"
-        >
-            <a href="#" id="projectsButton" class="block py-1">
-                <i class="fa-solid fa-bars-progress"></i> Work
-                <div
-                    id="dropdownMenu"
-                    class="absolute bg-white dark:bg-gray-900 shadow-md mt-2 p-2 w-48 rounded-md z-50 md:mt-6"
-                    style="display: none;"
-                >
-                    <a href="/#companies" class="block py-1 dropdown-item">Work Experience</a>
-                    <a href="/#projects" class="block py-1 dropdown-item">Top Projects</a>
-                    <a href="/#recent" class="block py-1 dropdown-item">Recent Projects</a>
-                </div>
-            </a>
-            <a href="/#skills" class="block py-1 menu-item"><i class="fa-solid fa-chalkboard"></i> Skills</a
-            >
-            <a href="/#education" class="block py-1 menu-item"
-                ><i class="fa-solid fa-graduation-cap"></i> Education</a
-            >
-            <a href="/#certificates" class="block py-1 menu-item"
-                ><i class="fa-solid fa-certificate"></i> Certificates</a
-            >
-            <a href="/quotes" class="block py-1 menu-item"><i class="fa-solid fa-quote-left"></i> Quotes</a>
-            <a href="../assets/cv/CV.pdf" target="_blank" class="block py-1 menu-item"
-                ><i class="fa-solid fa-file"></i> CV</a
-            >
-            <a href="/#contact" class="block py-1"><i class="fa-solid fa-address-book"></i> Contact</a>
+		>
+			<a href="#" id="projectsButton" class="block py-1">
+				<i class="fa-solid fa-bars-progress"></i> Work
+				<div
+					id="dropdownMenu"
+					class="absolute bg-white dark:bg-gray-900 shadow-md mt-2 p-2 w-48 rounded-md z-50 md:mt-6"
+					style="display: none;"
+				>
+					<a href="/#companies" class="block py-1 dropdown-item">Work Experience</a>
+					<a href="/#projects" class="block py-1 dropdown-item">Top Projects</a>
+					<a href="/#recent" class="block py-1 dropdown-item">Recent Projects</a>
+				</div>
+			</a>
+			<a href="/#skills" class="block py-1 menu-item"><i class="fa-solid fa-chalkboard"></i> Skills</a>
+			<a href="/#education" class="block py-1 menu-item"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+			<a href="/#certificates" class="block py-1 menu-item"
+				><i class="fa-solid fa-certificate"></i> Certificates</a
+			>
+			<a href="/quotes" class="block py-1 menu-item"><i class="fa-solid fa-quote-left"></i> Quotes</a>
+			<a href="../assets/cv/CV.pdf" target="_blank" class="block py-1 menu-item"
+				><i class="fa-solid fa-file"></i> CV</a
+			>
+			<a href="/#contact" class="block py-1"><i class="fa-solid fa-address-book"></i> Contact</a>
 
-            <span class="hidden md:inline-block mt-1">
-                <ThemeToggle client:load />
-            </span>
-        </nav>
-    </header>
+			<span class="hidden md:inline-block mt-1">
+				<ThemeToggle client:load />
+			</span>
+		</nav>
+	</header>
 </div>
