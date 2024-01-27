@@ -7,10 +7,10 @@ export default function ThemeToggle(): h.JSX.Element {
   const [theme, setTheme] = useState('light');
 
     const handleClick = () => {
-            let _theme = theme === "light" ? "dark" : "light";
-            setTheme(_theme)
-            // @ts-ignore
-            setAppTheme(_theme);
+      let _theme = theme === "light" ? "dark" : "light";
+      setTheme(_theme)
+      // @ts-ignore
+      setAppTheme(_theme);
     };
 
     useEffect(() => {
