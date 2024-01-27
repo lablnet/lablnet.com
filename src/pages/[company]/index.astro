@@ -3,7 +3,7 @@
 import { getCollection, getEntry } from 'astro:content';
 
 import PostLayout from '../../components/PostLayout.astro';
-import PostInfo from '../../components/PostInfo.astro';
+import PostInfo from '../../components/PostInfo.vue';
 import Layout from '../../layouts/Layout.astro';
 import { compareByDate, df } from '../../utils';
 
@@ -61,6 +61,7 @@ let title = companies.length > 0 ? companies[0].data.title : 'Company not found'
 													siteURL={project.data.live}
 													coverPic={project.data.coverPic}
 													collaborators={project.data.collaborators}
+													client:only="vue"
 												/>
 												<div class="mt-4 prose">
 													<Content />
