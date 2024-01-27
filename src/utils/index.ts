@@ -23,6 +23,24 @@ const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
     return +b.data.endDate - +a.data.endDate;
 }
 
+const setAppTheme = (theme) => {
+    const bodyClassList = document.querySelector('body')?.classList;
+    const documentElementClassList = document.documentElement?.classList;
+
+    if (theme === "dark" && bodyClassList?.contains('app-theme')) {
+        bodyClassList?.remove('bg-secondary-light');
+        bodyClassList?.add('bg-primary-dark');
+        documentElementClassList?.add("dark");
+        documentElementClassList?.remove("light");
+    } else {
+        bodyClassList?.remove('bg-primary-dark');
+        bodyClassList?.add('bg-secondary-light');
+        documentElementClassList?.remove("dark");
+        documentElementClassList?.add("light");
+    }
+    window.localStorage.setItem('theme', theme);
+}
+
 // URLs.
 let urls : object = {
     contact: import.meta.env.PUBLIC_CONTACT_URL || '',
@@ -36,4 +54,5 @@ export {
     compareByDate,
     urls,
     recaptchaToken,
+    setAppTheme
 }
