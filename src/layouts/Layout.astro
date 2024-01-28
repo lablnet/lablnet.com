@@ -127,6 +127,16 @@ import Footer from './Footer.astro';
 	</script>
 
 	<script>
-		// Do not remove this, it's needed for vite pwa to generate a sw.js file.
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/serviceWorker.js')
+				.then(registration => {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, err => {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+			}
+
 	</script>
 </html>
