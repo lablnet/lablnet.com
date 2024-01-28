@@ -8,4 +8,4 @@ export default defineConfig({
     vue(),
 
   ],
-});
+196});
