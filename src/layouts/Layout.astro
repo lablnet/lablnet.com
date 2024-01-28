@@ -1,5 +1,7 @@
 ---
 import '../styles/index.css';
+// @ts-ignore
+import { pwaInfo } from 'virtual:pwa-info';
 
 interface Props {
 	title: string;
@@ -47,6 +49,9 @@ import Footer from './Footer.astro';
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+		{ pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
+		<script src="/src/pwa.ts"></script>
+	
 		<title>{title}</title>
 
 		{!import.meta.env.DEV && (
