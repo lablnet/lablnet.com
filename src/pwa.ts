@@ -2,7 +2,7 @@ import { registerSW } from 'virtual:pwa-register'
 
 registerSW({
   immediate: true,
-  onRegisteredSW(swScriptUrl) {
+  onRegisteredSW(swScriptUrl :string) {
     // eslint-disable-next-line no-console
     console.log('SW registered: ', swScriptUrl)
   },

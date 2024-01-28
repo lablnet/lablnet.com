@@ -13,11 +13,10 @@ export default defineConfig({
       mode: 'development',
       base: '/',
       scope: '/',
-      registerType: 'autoUpdate',
       manifest,
       workbox: {
         navigateFallback: '/',
-        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
+        globPatterns: ['**/*.{css,js,html,svg,png,ico}'],
       },
       devOptions: {
         enabled: true,
