@@ -1,13 +1,14 @@
 ---
 // @ts-ignore
 import { getCollection } from 'astro:content';
+import { meta } from '../../utils/const';
 
 // get props from Astro props.
 
 let {
 	type = 'companies',
-	title = 'Where I’ve worked.',
-	description = 'I enjoy taking on new projects and have worked on the following:',
+	title = meta.company.title,
+	description = meta.company.description,
 } = Astro.props;
 
 import { df } from '../../utils/index.ts';

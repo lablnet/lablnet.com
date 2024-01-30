@@ -1,6 +1,7 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
+import { meta } from '../utils/const';
 
 import Intro from '../components/Home/Intro.astro';
 import Skills from '../components/Home/Skills.astro';
@@ -24,7 +25,7 @@ import Contact from '../components/Home/Contact.vue';
 	<Companies type="companies" />
 
 	<!-- Top Projects -->
-	<Companies type="projects" title="Top Projects" description="These are some of my top projects." />
+	<Companies type="projects" title={meta.topProjects.title} description={meta.topProjects.description} />
 	
 	<!-- Projects -->
 	<Projects />

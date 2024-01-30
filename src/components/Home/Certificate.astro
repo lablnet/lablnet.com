@@ -2,6 +2,8 @@
 // @ts-ignore
 import { getCollection } from 'astro:content';
 const certificates = await getCollection('certificates');
+import { meta } from '../../utils/const';
+
 // sort by step.
 certificates.sort((a: any, b: any) => {
 	return b.data.step - a.data.step;
@@ -10,9 +12,9 @@ certificates.sort((a: any, b: any) => {
 
 <main>
 	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container" id="certificates">
-		<h3 class="subtitle dark:text-white prose">Certificates.</h3>
+		<h3 class="subtitle dark:text-white prose">{ meta.certificate.title }.</h3>
 		<p class="dark:text-gray-400 prose">
-			In addition to my formal education, I have completed a few courses to expand my knowledge and skills.
+			{ meta.certificate.description }
 		</p>
         <div class="container mx-auto">
             <div class="flex flex-col divide-y divide-gray-300">

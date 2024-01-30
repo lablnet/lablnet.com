@@ -2,6 +2,8 @@
 // @ts-ignore
 import { getCollection } from 'astro:content';
 const educations = await getCollection('educations');
+import { meta } from '../../utils/const';
+
 // sort by step.
 educations.sort((a: any, b: any) => {
 	return b.data.step - a.data.step;
@@ -10,9 +12,9 @@ educations.sort((a: any, b: any) => {
 
 <main>
 	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container" id="education">
-		<h3 class="subtitle dark:text-white prose">Education.</h3>
+		<h3 class="subtitle dark:text-white prose">{ meta.education.title }</h3>
 		<p class="dark:text-gray-400 prose">
-			I enjoy facing challenges that are given by my teachers. Here is my educational background.
+			{ meta.education.description }
 		</p>
 		<section class="body-font">
 			<div class="container py-6 mx-auto flex flex-wrap">

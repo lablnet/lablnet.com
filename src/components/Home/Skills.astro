@@ -3,6 +3,7 @@
 import { getCollection } from 'astro:content';
 const skills = await getCollection('skills');
 import { meta } from '../../utils/const';
+
 // sort by step.
 skills.sort((a: any, b: any) => {
 	return b.data.step - a.data.step;
@@ -13,7 +14,7 @@ skills.sort((a: any, b: any) => {
 	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 dark:text-gray-400 container" id="skills">
 		<h3 class="subtitle dark:text-white prose">{ meta.skills.title }</h3>
 		<p class="prose dark:text-gray-400">
-			{ meta.skills.subtitle }
+			{ meta.skills.description }
 		</p>
 		<div class="grid md:grid-cols-3 mx-auto py-5">
 			{
