@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 console.log("slug", slug);
 
-const company = await getEntry('companies', slug);
+const company :any = await getEntry('companies', slug);
 const { Content } = await company.render();
 const projects = await getCollection('projects', (p) => p.data.company === slug);
 projects.sort(compareByDate);
