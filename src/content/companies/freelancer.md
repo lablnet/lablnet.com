@@ -4,7 +4,7 @@ title: Freelancer
 link: https://lablnet.com/
 slug: freelancer
 company: freelancer
-banner: ../assets/images/freelancing.png
+heroImage: ../assets/images/freelancing.png
 icon: ../assets/icons/upwork.svg
 step: 1
 featured: true

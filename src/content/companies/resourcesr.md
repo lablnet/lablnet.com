@@ -4,7 +4,7 @@ title: ResourcesR
 link: https://github.com/resourcesr
 slug: resourcesr
 company: resourcesr
-banner: ../assets/images/resourcesr.png
+heroImage: ../assets/images/resourcesr.png
 icon: ../assets/icons/resourcesr.png
 step: 9
 featured: false

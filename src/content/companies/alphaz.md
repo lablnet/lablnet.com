@@ -4,7 +4,7 @@ title: AlphaZ
 link: https://github.com/alphazframework
 slug: alphaz
 company: alphaz
-banner: ../assets/images/zest.png
+heroImage: ../assets/images/zest.png
 icon: ../assets/icons/alphaz.png
 step: 8
 featured: false

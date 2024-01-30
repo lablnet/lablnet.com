@@ -8,7 +8,7 @@ const companiesCollection = defineCollection({
     endDate: z.date().optional(),
     title: z.string(),
     link: z.string(),
-    banner: z.string().optional(),
+    heroImage: z.string().optional(),
     icon: z.string().optional(),
     company: z.string(),
     step: z.number(),

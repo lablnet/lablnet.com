@@ -4,7 +4,7 @@ title: AlphaSoftHub
 link: https://alphasofthub.com/
 slug: ash
 company: ash
-banner: ../assets/images/ash.png
+heroImage: ../assets/images/ash.png
 icon: ../assets/icons/ash.png
 step: 4
 featured: true
