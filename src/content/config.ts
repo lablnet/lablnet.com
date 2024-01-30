@@ -55,7 +55,7 @@ const certificateCollection = defineCollection({
     schema: z.object({
       title: z.string(),
       institute: z.string(),
-      completed: z.string(),
+      completed: z.date(),
       picture: z.string(),
       link: z.string(),
       step: z.number(),

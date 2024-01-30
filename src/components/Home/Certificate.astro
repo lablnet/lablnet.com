@@ -1,13 +1,11 @@
 ---
 // @ts-ignore
 import { getCollection } from 'astro:content';
-const certificates = await getCollection('certificates');
 import { meta } from '../../utils/const';
+import { df, compareByDate } from '../../utils/index.ts';
 
-// sort by step.
-certificates.sort((a: any, b: any) => {
-	return b.data.step - a.data.step;
-});
+const certificates = await getCollection('certificates');
+certificates.sort(compareByDate);
 ---
 
 <main>
@@ -31,7 +29,7 @@ certificates.sort((a: any, b: any) => {
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
                                 <div>
                                     <a href={certificate.data.link} target="_blank" class="prose dark:text-gray-400">View Certificate</a>
-                                    <p class="text-sm italic prose dark:text-gray-400">{certificate.data.completed}</p>
+                                    <p class="text-sm italic prose dark:text-gray-400">{df.format(certificate.data.completed)}</p>
                                 </div>
                                 <div class="image-container">
                                     <img src={certificate.data.picture} class="object-contain h-48 w-96 rounded sm:-mx-7 mt-5" />
