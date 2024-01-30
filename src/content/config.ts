@@ -62,10 +62,18 @@ const certificateCollection = defineCollection({
     }),
 });
 
+// Skills Collection.
+const skillsCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+      title: z.string()
+    }),
+});
 
 export const collections = {
     'companies': companiesCollection,
     'projects': projectsCollection,
     'educations': educationCollections,
     'certificates': certificateCollection,
+    'skills': skillsCollection,
 };

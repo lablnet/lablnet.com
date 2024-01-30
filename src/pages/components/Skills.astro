@@ -1,21 +1,11 @@
 ---
-let skills = [
-	{
-		title: 'Languages',
-		description:
-			'I am proficient in JavaScript, Python, and PHP, and have experience working with various databases such as MySql, Firebase, and mongodb. Additionally, I have expertise in web development with HTML and CSS. I have also worked with other languages such as Dart, C, C++, and Ruby.',
-	},
-	{
-		title: 'Frameworks',
-		description:
-			'I use frameworks to speed up the development process and am open to exploring different options. I have experience working with Laravel, Codeigniter, Vue, React, Electron, Jquery, TailwindCSS, AntDesign, Bootstrap, MaterializeCSS, Flask, Flutter, Selenium, and Ruby on Rails.',
-	},
-	{
-		title: 'Tools/Platform',
-		description:
-			'I use VS-Code, Jupyter Notebook, Git, and Docker on a daily basis. My primary operating system is Windows, but I also use Ubuntu inside Windows through WSL/WSLG.',
-	},
-];
+// @ts-ignore
+import { getCollection } from 'astro:content';
+const skills = await getCollection('skills');
+// sort by step.
+skills.sort((a: any, b: any) => {
+	return b.data.step - a.data.step;
+});
 ---
 
 <main class="mt-2 mb-2">
@@ -27,12 +17,16 @@ let skills = [
 		</p>
 		<div class="grid md:grid-cols-3 mx-auto py-5">
 			{
-				skills.map((skill) => {
+				skills.map(async (skill) => {
+					const { Content } = await skill.render();
+
 					return (
 						<div class="flex flex-col px-4 py-4">
 							<div class="flex-grow flex flex-col">
-								<h4 class="mt-0 dark:text-white prose">{skill.title}</h4>
-								<p class="text-justify line-clamp-4 flex-grow prose dark:text-gray-400">{skill.description}</p>
+								<h4 class="mt-0 dark:text-white prose">{skill.data.title}</h4>
+								<p class="prose -mt-4">
+									<Content />	
+								</p>
 							</div>
 						</div>
 					);

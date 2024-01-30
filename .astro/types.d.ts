@@ -553,6 +553,29 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
+"skills": {
+"frameworks.md": {
+	id: "frameworks.md";
+  slug: "frameworks";
+  body: string;
+  collection: "skills";
+  data: any
+} & { render(): Render[".md"] };
+"languages.md": {
+	id: "languages.md";
+  slug: "languages";
+  body: string;
+  collection: "skills";
+  data: any
+} & { render(): Render[".md"] };
+"tools.md": {
+	id: "tools.md";
+  slug: "tools";
+  body: string;
+  collection: "skills";
+  data: any
+} & { render(): Render[".md"] };
+};
 
 	};
 
