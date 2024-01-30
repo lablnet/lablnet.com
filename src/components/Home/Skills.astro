@@ -2,6 +2,7 @@
 // @ts-ignore
 import { getCollection } from 'astro:content';
 const skills = await getCollection('skills');
+import { meta } from '../../utils/const';
 // sort by step.
 skills.sort((a: any, b: any) => {
 	return b.data.step - a.data.step;
@@ -10,10 +11,9 @@ skills.sort((a: any, b: any) => {
 
 <main class="mt-2 mb-2">
 	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 dark:text-gray-400 container" id="skills">
-		<h3 class="subtitle dark:text-white prose">Skills</h3>
+		<h3 class="subtitle dark:text-white prose">{ meta.skills.title }</h3>
 		<p class="prose dark:text-gray-400">
-			As a student, I am constantly learning and expanding my knowledge. Some of the skills I have developed
-			include:
+			{ meta.skills.subtitle }
 		</p>
 		<div class="grid md:grid-cols-3 mx-auto py-5">
 			{
