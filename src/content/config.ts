@@ -44,8 +44,8 @@ const educationCollections = defineCollection({
       title: z.string(),
       grade: z.string(),
       institution: z.string(),
-      duration: z.string(),
-      step: z.number(),
+      startDate: z.date(),
+      endDate: z.date().optional(),
     }),
 });
 

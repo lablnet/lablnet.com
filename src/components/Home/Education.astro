@@ -1,13 +1,13 @@
 ---
 // @ts-ignore
 import { getCollection } from 'astro:content';
-const educations = await getCollection('educations');
 import { meta } from '../../utils/const';
+import { df, compareByDate } from '../../utils/index.ts';
 
-// sort by step.
-educations.sort((a: any, b: any) => {
-	return b.data.step - a.data.step;
-});
+const educations = await getCollection('educations');
+educations.sort(compareByDate);
+
+let length = educations.length + 1;
 ---
 
 <main>
@@ -22,10 +22,11 @@ educations.sort((a: any, b: any) => {
 					<div class="">
 						{
 							educations.map((education: any) => {
+								length--;
 								return (
 									<div class="flex relative pb-12">
 										{
-                                            education.data.step !== 1 ? (
+                                            length !== 1 ? (
                                             <div
 											class="
                                                 h-full
@@ -55,12 +56,16 @@ educations.sort((a: any, b: any) => {
                                                 relative
                                                 z-10
                                                 ">
-											{education.data.step}
+											{length}
 										</div>
 										<div class="flex-grow pl-4 dark:text-gray-400">
 											<h2 class="font-medium title-font mb-1">{education.data.title}</h2>
 											<h5 class="font-mediume title-font mb-1 prose dark:text-gray-400">
-												<i>{education.data.duration}</i>
+												<i>
+													{df.format(education.data.startDate)} -{' '}
+									{education.data.endDate ? df.format(education.data.endDate) : '...'}
+	
+												</i>
 											</h5>
 
 											<div class="flex flex-col space-y-2">
