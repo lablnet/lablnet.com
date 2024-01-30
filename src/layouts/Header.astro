@@ -2,10 +2,11 @@
 import ThemeToggle from '../components/ThemeToggle';
 ---
 
-<div class="dark:text-white light-text-color bg-white dark:bg-gray-700">
+<div class="bg-background dark:bg-background text dark:text-text">
 	<header
 		x-data="{ mobileMenuOpen : false }"
-		class="flex flex-wrap flex-row
+		class="
+		flex flex-wrap flex-row
         justify-between
         md:items-center md:space-x-4
         py-6
@@ -14,9 +15,10 @@ import ThemeToggle from '../components/ThemeToggle';
         z-50
         animated
         shadow-lg
-        dark:bg-gray-900
-        bg-white
+		dark:bg-secondary
+		text
         relative"
+		
 	>
 		<a href="/" class="block">
 			<span class="sr-only"></span>
@@ -55,8 +57,7 @@ import ThemeToggle from '../components/ThemeToggle';
           p-6
           pt-0
           md:p-0
-          dark:bg-gray-900
-          bg-white
+		  bg-background dark:bg-secondary text dark:text-text
           hidden
           md:block"
 		>

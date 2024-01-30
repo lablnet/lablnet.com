@@ -11,10 +11,9 @@
       rounded-full
       text-sm
       font-medium
-      bg-gray-200
-      dark:bg-gray-900
-      dark:text-gray-400
-      text-gray-800
+      bg-primary
+      dark:bg-secondary
+      text-text
     "
   >
     <img
@@ -31,7 +30,7 @@
       :src="picture"
       :alt="text"
     />
-    <span class="pl-5">{{ name }}</span>
+    <span class="pl-5 text-text">{{ name }}</span>
     <span
       class="
         pl-2
@@ -39,9 +38,8 @@
         mx-3
         mr-0
         rounded-full
-        bg-white
-        text-black
-        dark:bg-gray-700 dark:text-gray-300
+        bg-accent
+        text-text
       "
       v-if="!contributionsStatus"
       >{{ contributions }}
