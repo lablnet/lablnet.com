@@ -66,7 +66,8 @@ const certificateCollection = defineCollection({
 const skillsCollection = defineCollection({
     type: 'content',
     schema: z.object({
-      title: z.string()
+      title: z.string(),
+      step: z.number(),
     }),
 });
 
