@@ -11,7 +11,7 @@ let {
 	description = meta.company.description,
 } = Astro.props;
 
-import { df } from '../../utils/index.ts';
+import { df, compareByDate } from '../../utils/index.ts';
 let companies: any = [];
 
 if (type === 'companies') {
@@ -19,11 +19,8 @@ if (type === 'companies') {
 } else {
 	companies = await getCollection('companies', (p: any) => p.data.type === 'project');
 }
-
-// sort with step.
-companies.sort((a: any, b: any) => {
-	return a.data.step - b.data.step;
-});
+companies.sort(compareByDate);
+let step = companies.length + 1;
 
 let _klass = `mt-12 py-10 px-5 container `;
 _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-900`;
@@ -38,6 +35,7 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 		{
 			companies.map(async (company: any) => {
 				const { Content } = await company.render();
+				step--;
 				return (
 					<section>
 						<div class="flex group relative">
@@ -56,7 +54,7 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 									{company.data.endDate ? df.format(company.data.endDate) : 'Now'}
 								</div>
 								<div class="font-medium text-emphasis dark:text-gray-300 prose">
-									<a class="accent dark:text-gray-300 prose arrow" href={`/${company.data.company}`}>
+									<a class="accent dark:text-gray-300 prose arrow" href={`/${company.slug}`}>
 										<span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block dark:text-gray-400 prose" />
 										<span>{company.data.title}</span>
 									</a>{' '}
@@ -66,7 +64,7 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 										href={company.data.link}
 										target="_blank"
 									>
-										{company.data.title}
+										{company.data.name}
 									</a>
 								</div>
 								<div class="mt-2 dark:text-gray-300 prose">
@@ -74,8 +72,8 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 								</div>
 							</div>
 						</div>
-						{company.data.step != 4 && type != 'projects' ? <hr class="mt-8" /> : ''}
-                        {company.data.step != 9 && type == 'projects' ? <hr class="mt-8" /> : ''}
+						{step != 1 && type != 'projects' ? <hr class="mt-8" /> : ''}
+                        {step != 1 && type == 'projects' ? <hr class="mt-8" /> : ''}
 					</section>
 				);
 			})
@@ -83,11 +81,16 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 	</div>
 	{
 		type === 'projects' ? (
-			<a href="/others" class="mr-4 float-right prose dark:text-gray-300 arrow">
+			<a href="/projects" class="mr-4 float-right prose dark:text-gray-300 arrow">
 				More Projects
 			</a>
 		) : (
-			''
+		<a href="/fiverr" class="mr-4 float-right prose dark:text-gray-300 arrow">
+				Fiverr Projects
+			</a>
+			<a href="/direct" class="mr-4 float-right prose dark:text-gray-300 arrow">
+				Direct Client Projects
+			</a>
 		)
 	}
 </section>

@@ -5,7 +5,7 @@ startDate: 2021-02-12
 endDate: 2021-02-14
 stacks: [PHP, WordPress]
 live: https://old.alphasofthub.com/
-company: ash
+company: alphasofthub
 featured: false
 ---
 

@@ -2,9 +2,6 @@
 startDate: 2021-02-12
 title: Fiverr
 link: https://www.fiverr.com/umerlablnet01
-slug: fiverr
-company: freelancer
-step: 7
 featured: false
 type: company
 ---

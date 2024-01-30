@@ -1,11 +1,10 @@
 ---
 startDate: 2021-02-12
-title: Upwork
+title: Top Rated Freelancer
+name: Upwork
 link: https://alphasofthub.com/
-slug: upwork
-company: freelancer
-step: 5
-featured: false
+icon: ../assets/icons/upwork.svg
+featured: true
 type: company
 ---
 

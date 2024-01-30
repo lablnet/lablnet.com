@@ -1,9 +1,8 @@
 ---
 startDate: 2019-02-20
-title: AlphaZ
+title: Developer
+name: AlphaZ
 link: https://github.com/alphazframework
-slug: alphaz
-company: alphaz
 heroImage: ../assets/images/zest.png
 icon: ../assets/icons/alphaz.png
 step: 8

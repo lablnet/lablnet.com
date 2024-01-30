@@ -1,0 +1,65 @@
+---
+// @ts-ignore
+import { getCollection, getEntry } from 'astro:content';
+
+import PostLayout from '../../components/PostLayout.astro';
+import PostInfo from '../../components/PostInfo.vue';
+import Layout from '../../layouts/Layout.astro';
+import { compareByDate, df } from '../../utils';
+
+export async function getStaticPaths() {
+  let companies = await getCollection('companies');
+  return companies.map((entity: any) => ({
+    params: {slug: entity.slug},
+  }));
+}
+
+const { slug } = Astro.params;
+console.log("slug", slug);
+
+const company = await getEntry('companies', slug);
+const { Content } = await company.render();
+const projects = await getCollection('projects', (p) => p.data.company === slug);
+projects.sort(compareByDate);
+---
+
+<Layout title={`${company.title} - ${company.name}`}>
+	{
+		(
+			<PostLayout
+				title={`${company.data.title} at ${company.data.name}`}
+				subtitle={`${df.format(company.data.startDate)} - ${company.data.endDate ? df.format(company.data.endDate) : 'Present'}`}
+				coverPic={company.data.heroImage}
+			>
+				<div class="mt-4 dark:text-gray-300">
+					<Content />
+				</div>
+				{!projects
+					? ''
+					: projects.map(async (project: any) => {
+							const { Content } = await project.render();
+							let endDate = project.data.endDate ? df.format(project.data.endDate) : 'Present';
+							let subtitle: any = `${df.format(project.data.startDate)} - ${endDate}`;
+							return (
+								<div>
+									<PostInfo
+										stack={project.data.stacks}
+										title={project.data.title}
+										subtitle={subtitle}
+										codeURL={project.data?.github ?? ''}
+										siteURL={project.data.live}
+										coverPic={project.data.coverPic}
+										collaborators={project.data.collaborators}
+										client:only="vue"
+									/>
+									<div class="mt-4 prose dark:text-gray-300">
+										<Content />
+									</div>
+									<hr class="mt-12 mb-4" />
+								</div>
+							);
+						})}
+			</PostLayout>
+		)
+	}
+</Layout>

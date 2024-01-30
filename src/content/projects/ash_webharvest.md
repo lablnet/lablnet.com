@@ -11,7 +11,7 @@ collaborators: [
 ]
 live: https://webharvest.lablnet.com
 github: lablnet/webharvest
-company: ash
+company: alphasofthub
 featured: true
 ---
 

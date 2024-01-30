@@ -6,7 +6,7 @@ endDate: 2020-10-01
 stacks: [Python, TypeScript, JavaScript, Vue, Bootstrap]
 live: https://covid19.alphasofthub.com/
 github: lablnet/covid19
-company: ash
+company: alphasofthub
 featured: false
 ---
 

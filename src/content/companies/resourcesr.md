@@ -1,12 +1,10 @@
 ---
 startDate: 2019-02-20
 title: ResourcesR
+name: ResourcesR
 link: https://github.com/resourcesr
-slug: resourcesr
-company: resourcesr
 heroImage: ../assets/images/resourcesr.png
 icon: ../assets/icons/resourcesr.png
-step: 9
 featured: false
 type: project
 ---

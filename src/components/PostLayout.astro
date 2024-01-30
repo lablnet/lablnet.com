@@ -1,5 +1,5 @@
 ---
-const { title, description, coverPic = null} = Astro.props;
+const { title, subtitle, coverPic = null} = Astro.props;
 ---
 
 <div class="container">
@@ -16,7 +16,7 @@ const { title, description, coverPic = null} = Astro.props;
 				title && (
 					<div class="container">
 						<h1 class="title dark:text-gray-300">{title}</h1>
-						{description && <p class="text-justify mb-6 dark:text-gray-300">{description}</p>}
+						{subtitle && <p class="prose ml-2 text-justify mb-6 dark:text-gray-300">{subtitle}</p>}
 					</div>
 				)
 			}

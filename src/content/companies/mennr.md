@@ -1,12 +1,10 @@
 ---
 startDate: 2022-10-01
 endDate: 2023-01-01
-title: Mennr
+title: Contract Engineer
+name: Mennr
 link: https://mennr.tech/
-slug: mennr
-company: mennr
 icon: ../assets/icons/mennr.png
-step: 3
 featured: true
 type: company
 ---

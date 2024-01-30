@@ -5,7 +5,7 @@ startDate: 2022-02-03
 endDate: 2022-03-03
 stacks: [Python]
 github: alphasofthub/validity
-company: ash
+company: alphasofthub
 featured: false
 ---
 

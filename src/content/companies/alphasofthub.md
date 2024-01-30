@@ -1,12 +1,9 @@
 ---
 startDate: 2021-02-12
-title: AlphaSoftHub
+title: Founder & CEO
+name: AlphaSoftHub (Private) Limited
 link: https://alphasofthub.com/
-slug: ash
-company: ash
-heroImage: ../assets/images/ash.png
 icon: ../assets/icons/ash.png
-step: 4
 featured: true
 type: company
 ---

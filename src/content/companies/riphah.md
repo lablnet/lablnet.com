@@ -1,13 +1,11 @@
 ---
 startDate: 2022-10-01
 endDate: 2023-08-31
-title: Riphah International University
+title: Web Developer
+name: Riphah International University
 link: https://www.riphah.edu.pk/
-slug: riu
-company: riu
 heroImage: ../assets/images/riphah.png
 icon: ../assets/icons/riphah.jpg
-step: 2
 featured: true
 type: company
 ---

@@ -17,7 +17,6 @@ projects = projects.sort(compareByDate);
 		{
 			projects.map(async (project: any) => {
 				const { Content } = await project.render();
-
 				let company: any = project.data.company
 					? await getCollection('companies', (p) => p.slug === project.data.company)
 					: undefined;
@@ -37,7 +36,7 @@ projects = projects.sort(compareByDate);
 									<>
 										{' '}
 										<a class="dark:text-gray-300 arrow" href={`/${company.slug}`}>
-											@{' '}{company.data.title}
+											@{' '}{company.data.name}
 										</a>
 									</>
 								) : (

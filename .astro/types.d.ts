@@ -200,7 +200,7 @@ declare module 'astro:content' {
 "companies": {
 "alphasofthub.md": {
 	id: "alphasofthub.md";
-  slug: "ash";
+  slug: "alphasofthub";
   body: string;
   collection: "companies";
   data: InferEntrySchema<"companies">
@@ -222,20 +222,6 @@ declare module 'astro:content' {
 "fiverr.md": {
 	id: "fiverr.md";
   slug: "fiverr";
-  body: string;
-  collection: "companies";
-  data: InferEntrySchema<"companies">
-} & { render(): Render[".md"] };
-"freelance.md": {
-	id: "freelance.md";
-  slug: "freelance";
-  body: string;
-  collection: "companies";
-  data: InferEntrySchema<"companies">
-} & { render(): Render[".md"] };
-"freelancer.md": {
-	id: "freelancer.md";
-  slug: "freelancer";
   body: string;
   collection: "companies";
   data: InferEntrySchema<"companies">
@@ -263,7 +249,7 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 "riphah.md": {
 	id: "riphah.md";
-  slug: "riu";
+  slug: "riphah";
   body: string;
   collection: "companies";
   data: InferEntrySchema<"companies">
@@ -328,13 +314,6 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"alumni_riu.md": {
-	id: "alumni_riu.md";
-  slug: "alumni_riu";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
 "ash_alphasofthub.md": {
 	id: "ash_alphasofthub.md";
   slug: "alphasofthub_ash";
@@ -359,6 +338,13 @@ declare module 'astro:content' {
 "ash_validity.md": {
 	id: "ash_validity.md";
   slug: "validity_ash";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"ash_webharvest.md": {
+	id: "ash_webharvest.md";
+  slug: "webharvest";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -496,6 +482,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"riu_alumni.md": {
+	id: "riu_alumni.md";
+  slug: "alumni_riu";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "upwork_ pythonconsulting.md": {
 	id: "upwork_ pythonconsulting.md";
   slug: "upwork_pythonconsulting";
@@ -541,13 +534,6 @@ declare module 'astro:content' {
 "upwork_weareappointments.md": {
 	id: "upwork_weareappointments.md";
   slug: "upwork_weareappointments";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"webharvest.md": {
-	id: "webharvest.md";
-  slug: "webharvest";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

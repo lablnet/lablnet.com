@@ -2,8 +2,6 @@
 startDate: 2021-02-12
 title: Direct Client
 link: https://www.lablnet.com/
-slug: direct
-company: freelancer
 step: 6
 featured: false
 type: company

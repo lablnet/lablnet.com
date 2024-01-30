@@ -5,7 +5,7 @@ startDate: 2022-08-01
 endDate: 2022-09-01
 stacks: [Vue, TailwindCSS, TypeScript, JavaScript, Vue]
 live: https://alphasofthub.com/
-company: ash
+company: alphasofthub
 featured: false
 ---
 

@@ -34,7 +34,7 @@ collaborators: [
         name: Shahid Abbas,
     },
 ]
-company: riu
+company: riphah
 featured: false
 ---
 
