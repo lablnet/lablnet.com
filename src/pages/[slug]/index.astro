@@ -15,7 +15,6 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-console.log("slug", slug);
 
 const company :any = await getEntry('companies', slug);
 const { Content } = await company.render();
