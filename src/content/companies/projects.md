@@ -1,6 +1,7 @@
 ---
 startDate: 2018-01-01
 title: Other Projects
+name: Projects
 link: https://mennr.tech/
 featured: false
 type: company
