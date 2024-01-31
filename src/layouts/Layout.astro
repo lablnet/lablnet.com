@@ -76,6 +76,15 @@ import Footer from './Footer.astro';
 
 			<!-- Footer -->
 			<Footer />
+
+			<!-- Back to top Button -->
+			<button
+			class="backtotop hidden bg-gray-200 dark:bg-gray-900 mb-2"
+			id="backtotop"
+			title="Go to top"
+		  >
+			<i class="text-black dark:text-white fa fa-arrow-up"></i>
+		  </button>
 		</div>
 	</body>
 
@@ -124,6 +133,21 @@ import Footer from './Footer.astro';
 			if (!isClickInside && dropdownMenu.style.display === 'block') {
 				dropdownMenu.style.display = 'none';
 			}
+		});
+
+		// back to top button handler.
+		window.addEventListener('scroll', function () {
+			let _top = document.querySelector('#backtotop');
+			if (window.scrollY > 100) {
+				_top.classList.remove('hidden');
+			} else {
+				_top.classList.add('hidden');
+			}
+		});
+		// Back to top button
+		let _top = document.querySelector('#backtotop');
+		_top.addEventListener('click', function () {
+			window.scrollTo(0, 0);
 		});
 	</script>
 </html>
