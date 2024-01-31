@@ -19,7 +19,7 @@ console.log("slug", slug);
 
 const company :any = await getEntry('companies', slug);
 const { Content } = await company.render();
-const projects = await getCollection('projects', (p) => p.data.company === slug);
+const projects = await getCollection('projects', (p) => p.data.company === slug && !p.data.draft);
 projects.sort(compareByDate);
 ---
 
