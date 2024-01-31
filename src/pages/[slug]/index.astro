@@ -8,7 +8,7 @@ import Layout from '../../layouts/Layout.astro';
 import { compareByDate, df } from '../../utils';
 
 export async function getStaticPaths() {
-  let companies = await getCollection('companies');
+  let companies = await getCollection('companies', (p) => !p.data.draft);
   return companies.map((entity: any) => ({
     params: {slug: entity.slug},
   }));
