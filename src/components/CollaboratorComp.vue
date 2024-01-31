@@ -43,7 +43,7 @@
         text-black
         dark:bg-gray-700 dark:text-gray-300
       "
-      v-if="!contributionsStatus"
+      v-if="contributionsStatus"
       >{{ contributions }}
     </span>
   </a>
@@ -71,7 +71,7 @@ export default {
         },
         contributionsStatus: {
           type: Boolean,
-          default: false,
+          default: true,
         }
     }   
 }
