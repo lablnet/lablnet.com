@@ -65,22 +65,24 @@ let socialMediaHandles = [
 				looking for opportunities to collaborate and learn from others.
 			</p>
 		</div>
-		<div class="mt-4 md:ml-12 mb-24 grid grid-cols-3 gap-6 md:inline">
-			{
-				socialMediaHandles.map((socialMediaHandle) => {
-					return (
-						<div class="md:inline col-span-1 pr-4">
-							<CollaboratorComp
-								name={socialMediaHandle.name}
-								picture={socialMediaHandle.picture}
-								link={socialMediaHandle.link}
-								contributionsStatus={false}
-								client:load
-							/>
-						</div>
-					);
-				})
-			}
+		<div class="mt-4 mb-24 md:ml-12">
+			<div class="grid grid-cols-3 gap-6 md:inline">
+				{
+					socialMediaHandles.map((socialMediaHandle) => {
+						return (
+							<div class="md:inline col-span-1 pr-4">
+								<CollaboratorComp
+									name={socialMediaHandle.name}
+									picture={socialMediaHandle.picture}
+									link={socialMediaHandle.link}
+									contributionsStatus={false}
+									client:load
+								/>
+							</div>
+						);
+					})
+				}
+			</div>
 		</div>
 	</section>
 </main>
