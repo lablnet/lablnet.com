@@ -23,7 +23,7 @@ const projects = await getCollection('projects', (p) => p.data.company === slug)
 projects.sort(compareByDate);
 ---
 
-<Layout title={`${company.title} - ${company.name}`}>
+<Layout title={`${company.data.title} - ${company.data.name}`}>
 	{
 		(
 			<PostLayout
