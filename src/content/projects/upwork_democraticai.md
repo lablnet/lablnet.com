@@ -3,7 +3,7 @@ title: Democratic AI
 slug: democraticai
 startDate: 2023-07-15
 endDate: 2023-11-17
-stacks: [VueJs, TailwindCSS, JavaScript, TypeScript, Firebase, Lambda]
+stacks: [Vue, TailwindCSS, JavaScript, TypeScript, Firebase, Lambda]
 company: upwork
 live: https://www.upwork.com/jobs/~018e8ebcdde7fc9eee
 collaborators: [
