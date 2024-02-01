@@ -13,7 +13,6 @@ collaborators: [
         link: https://lablnet.com/
     }
 ]
-featured: false
 ---
 
 ### Purpose
