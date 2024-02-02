@@ -1,7 +1,7 @@
 <template>
   <section class="mb-3 mt-5">
-    <h3 class="title" :id="title">
-      <a class="flex mx-3" :href="'#' + title">
+    <h3 class="title" :id="slug">
+      <a class="flex mx-3" :href="`./#${slug}`">
         <img
           :src="
             theme === 'dark'
@@ -126,6 +126,10 @@ export default {
             required: true,
         },
         title: {
+            type: String,
+            required: true,
+        },
+        slug: {
             type: String,
             required: true,
         },

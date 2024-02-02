@@ -39,11 +39,13 @@ projects.sort(compareByDate);
 							const { Content } = await project.render();
 							let endDate = project.data.endDate ? df.format(project.data.endDate) : 'Present';
 							let subtitle: any = `${df.format(project.data.startDate)} - ${endDate}`;
+							console.log("Project", project.slug)
 							return (
 								<div>
 									<PostInfo
 										stack={project.data.stacks}
 										title={project.data.title}
+										slug={project.slug}
 										subtitle={subtitle}
 										codeURL={project.data?.github ?? ''}
 										siteURL={project.data.live}
