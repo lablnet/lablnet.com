@@ -8,6 +8,8 @@ name: Create Branch
 
 jobs:
   build:
+    permissions: # Read more at : https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
+      contents: write
     name: Create Branch
     runs-on: ubuntu-latest
     steps:
@@ -15,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Create Branch
         id: create_branch
-        uses: lablnet/create-branch-from-tag@v1.0.2
+        uses: lablnet/create-branch-from-tag@v1.0.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
