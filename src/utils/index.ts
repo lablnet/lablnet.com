@@ -23,6 +23,18 @@ const compareByDate = (a: CollectionEntry, b: CollectionEntry) => {
     return +b.data.endDate - +a.data.endDate;
 }
 
+const scrollToHash =() => {
+    if (window.location.hash) {
+        let hash = window.location.hash.substring(1);
+        // console.log ("Hash", hash)
+        let element = document.getElementById(hash);
+            if (element) {
+                // console.log ("Element", element)
+                element.scrollIntoView();
+            }
+      }
+}
+
 const setAppTheme = (theme: string) => {
     const bodyClassList = document.querySelector('body')?.classList;
     const documentElementClassList = document.documentElement?.classList;
@@ -54,5 +66,6 @@ export {
     compareByDate,
     urls,
     recaptchaToken,
-    setAppTheme
+    setAppTheme,
+    scrollToHash
 }

@@ -112,6 +112,7 @@
 import TagComp from "./TagComp.vue";
 import CollaboratorComp from "./CollaboratorComp.vue";
 import LoaderComp from "./LoaderComp.vue";
+import { scrollToHash } from "../utils";
 
 export default {
     name: "PostInfo",
@@ -178,6 +179,9 @@ export default {
         };
         var observer = new MutationObserver(callback);
         observer.observe(targetNode, config);
+
+        // Scroll to the hash if it exists.
+        scrollToHash();
     },
     methods: {
         async getContributors() {
