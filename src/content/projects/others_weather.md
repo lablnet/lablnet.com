@@ -20,9 +20,6 @@ The sole purpose of this project is to retrieve weather data for Pakistan from t
 ### Woking
 The script runs every hour, using [GitHub Actions](https://github.com/features/actions) to fetch the weather data from the Weather Channel and store it in the database.
 
-### Related Projects
-- [https://github.com/av01d/fontpicker-jquery-plugin](https://github.com/av01d/fontpicker-jquery-plugin) (but it's Jquery plugin and dependend on Jquery).
-
 ### Data Files
 To avoid creating a large, unwieldy file, the data is stored in multiple files organized by year and month. For example, data for August 2022 would be stored in the file "/data/2022/aug.csv" in CSV format. This approach was chosen because storing the data in a single file would make it difficult to read, and GitHub's file size limit of 100MB necessitated the use of multiple files.
 
