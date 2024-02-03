@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import { meta } from '../../utils/const';
 
 // get props from Astro props.
+
 let { type = 'companies', title = meta.company.title, description = meta.company.description } = Astro.props;
 
 import { df, compareByDate } from '../../utils/index.ts';
@@ -17,7 +18,7 @@ if (type === 'companies') {
 companies.sort(compareByDate);
 let step = companies.length + 1;
 
-let _klass = `mt-2 mb-2 py-10 px-5 container `;
+let _klass = `mt-12 py-10 px-5 container `;
 _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-900`;
 ---
 
@@ -67,7 +68,7 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 								</div>
 							</div>
 						</div>
-						{step != 1 ? <hr class="mt-8" /> : ''}
+						{step !== 1 ? <hr class="mt-8" /> : ''}
 					</section>
 				);
 			})
@@ -79,14 +80,14 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 				More Projects
 			</a>
 		) : (
-			<>
+			<div class="mb-12 md:mb-0">
 				<a href="/fiverr" class="mr-4 float-right prose dark:text-gray-300 arrow">
 					Fiverr Projects
 				</a>
 				<a href="/direct" class="mr-4 float-right prose dark:text-gray-300 arrow">
 					Direct Client Projects
 				</a>
-			</>
+			</div>
 		)
 	}
 </section>
