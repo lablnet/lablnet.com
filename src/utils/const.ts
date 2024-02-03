@@ -30,12 +30,14 @@ export const data = [
 		{
 			id: "workexp",
 			key: 'work',
+			icon: 'fa-file',
 			title: 'Work Experience',
 			component: 'Companies'
 		},
 		{
 			id: "workexp",
 			key: 'skills',
+			icon: 'fa-chalkboard',
 			title: 'Skills',
 			component: 'Skills'
 		}
@@ -44,12 +46,14 @@ export const data = [
 		{
 			id: "projects",
 			key: "recent",
+			icon: "fa-bars-progress",
 			title: "Recent Projects",
 			component: "RecentProjects"
 		},
 		{
 			id: "projects",
 			key: "top",
+			icon: "fa-project-diagram",
 			title: "Top Projects",
 			component: "Projects"
 		}
@@ -58,12 +62,14 @@ export const data = [
 		{
 			id: "educert",
 			key: "education",
+			icon: 'fa-graduation-cap',
 			title: "Education",
 			component: "Education"
 		},
 		{
 			id: "educert",
 			key: "certifications",
+			icon: 'fa-certificate',
 			title: "Certifications",
 			component: "Certificate"
 		}

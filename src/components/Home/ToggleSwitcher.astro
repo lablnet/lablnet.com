@@ -26,11 +26,12 @@ const componentMap : any = {
 
 <div class="flex justify-center gap-4 mt-6 mb-4">
     {sections.map((section:any , index:any) => (
+
         <a href="javascript:void(0)"
            class={`${section.key}-toggle toggle ${index === 0 ? 'active' : ''} float-right prose dark:text-gray-300 font-bold hover:text-blue-500`}
            data-key={section.key}
            data-id={section.id}
-        >
+        > <i class={`fa-solid ${section.icon}`}></i>
             {section.title}
         </a>
     ))}
