@@ -12,64 +12,76 @@ import Spacer from './Spacer.astro';
 // Props for sections
 let { sections } = Astro.props;
 
-// Mapping for dynamic rendering
-const componentMap : any = {
-    'Skills': Skills,
-    'Companies': Companies,
-    'RecentProjects': RecentProjects,
-    'Projects': Projects,
-    'Education': Education,
-    'Certificate': Certificate
-};
 ---
 
 <div class="flex justify-center gap-6 mt-6 mb-4">
-    {sections.map((section:any , index:any) => (
-
-        <a href="javascript:void(0)"
-           class={`${section.key}-toggle toggle ${index === 0 ? 'active' : ''} float-right prose dark:text-gray-300 font-bold hover:text-blue-500`}
-           data-key={section.key}
-           data-id={section.id}
-        > <i class={`fa-solid ${section.icon}`}></i>
-            {section.title}
-        </a>
-    ))}
+	{
+		sections.map((section: any, index: any) => (
+			<a
+				href="javascript:void(0)"
+				class={`${section.key}-toggle toggle ${
+					index === 0 ? 'active' : ''
+				} float-right prose dark:text-gray-300 font-bold hover:text-blue-500`}
+				data-key={section.key}
+				data-id={section.id}
+			>
+				{' '}
+				<i class={`fa-solid ${section.icon}`} />
+				{section.title}
+			</a>
+		))
+	}
 </div>
 <hr class="short" />
 
-{sections.map((section:any, index:any) => (
-    <div id={section.key} class={`${index !== 0 ? 'hidden' : ''} toggle-elems`} data-key={section.key} data-id={section.id}>
-       {componentMap[section.component] ? <componentMap[section.component] /> : <div>Component not found</div>}
-    </div>
-))}
+{
+	sections.map((section: any, index: any) => {
+
+		return (
+			<div
+				id={section.key}
+				class={`${index !== 0 ? 'hidden' : ''} toggle-elems`}
+				data-key={section.key}
+				data-id={section.id}
+			>
+				{section.component === 'Skills' && <Skills />}
+				{section.component === 'Companies' && <Companies />}
+				{section.component === 'RecentProjects' && <RecentProjects />}
+				{section.component === 'Projects' && <Projects />}
+				{section.component === 'Education' && <Education />}
+				{section.component === 'Certificate' && <Certificate />}
+			</div>
+		);
+	})
+}
 
 <script lang="js" is:inline>
-    document.querySelectorAll('.toggle').forEach(toggle => {
-        toggle.addEventListener('click', function () {
-            const key = this.getAttribute('data-key');
-            const id = this.getAttribute('data-id');
-            const elem = document.getElementById(key);
-            const sections = document.querySelectorAll('.toggle-elems');
-            const toggles = document.querySelectorAll('.toggle');
-            // remove active class from all.
-            toggles.forEach(tgl => {
-                let dataID = tgl.getAttribute('data-id');
-                if (id === dataID) {
-                    tgl.classList.remove('active');
-                }
-            });
+	document.querySelectorAll('.toggle').forEach((toggle) => {
+		toggle.addEventListener('click', function () {
+			const key = this.getAttribute('data-key');
+			const id = this.getAttribute('data-id');
+			const elem = document.getElementById(key);
+			const sections = document.querySelectorAll('.toggle-elems');
+			const toggles = document.querySelectorAll('.toggle');
+			// remove active class from all.
+			toggles.forEach((tgl) => {
+				let dataID = tgl.getAttribute('data-id');
+				if (id === dataID) {
+					tgl.classList.remove('active');
+				}
+			});
 
-            toggle.classList.add('active');
-            // hide all.
-            sections.forEach(section => {
-                const dataID = section.getAttribute('data-id');
-                console.log ("keys", id, dataID, dataID === id);
-                if (id == dataID) {
-                    section.classList.add('hidden');
-                }
-            });
-            // toggle class of elem hidden.
-            elem.classList.toggle('hidden');
-        });
-    });
+			toggle.classList.add('active');
+			// hide all.
+			sections.forEach((section) => {
+				const dataID = section.getAttribute('data-id');
+				console.log('keys', id, dataID, dataID === id);
+				if (id == dataID) {
+					section.classList.add('hidden');
+				}
+			});
+			// toggle class of elem hidden.
+			elem.classList.toggle('hidden');
+		});
+	});
 </script>
