@@ -48,14 +48,14 @@ export const data = [
 			key: "recent",
 			icon: "fa-bars-progress",
 			title: "Recent Projects",
-			component: "RecentProjects"
+			component: "Projects"
 		},
 		{
 			id: "projects",
 			key: "top",
 			icon: "fa-project-diagram",
 			title: "Top Projects",
-			component: "Projects"
+			component: "RecentProjects"
 		}
 	],
 	[
