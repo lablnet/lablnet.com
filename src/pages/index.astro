@@ -1,5 +1,4 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
 import { meta } from '../utils/const';
 
@@ -14,7 +13,6 @@ import Contact from '../components/Home/Contact.vue';
 ---
 
 <Layout title="Muhammad Umer Farooq">
-
 	<!-- Intro -->
 	<Intro />
 
@@ -24,11 +22,33 @@ import Contact from '../components/Home/Contact.vue';
 	<!-- Companies -->
 	<Companies type="companies" />
 
-	<!-- Top Projects -->
-	<Companies type="projects" title={meta.topProjects.title} description={meta.topProjects.description} />
-	
-	<!-- Projects -->
-	<Projects />
+	<hr class="mt-2 mb-4" />
+
+	<div class="flex justify-center">
+		<a
+			href="javascript:void(0)"
+			class="project-toggle active -ml-4 mr-4 float-right prose dark:text-gray-300 font-bold hover:text-blue-500"
+		>
+			Recent Projects
+		</a>
+		<a
+			href="javascript:void(0)"
+			class="project-toggle float-right prose dark:text-gray-300 font-bold hover:text-blue-500"
+		>
+			Top Projects</a
+		>
+	</div>
+	<hr class="short" />
+
+	<div id="recent-projects" class="hidden">
+		<!-- Top Projects -->
+		<Companies type="projects" title={meta.topProjects.title} description={meta.topProjects.description} />
+		<Spacer />
+	</div>
+	<div id="top-projects" class="">
+		<!-- Projects -->
+		<Projects />
+	</div>
 
 	<!-- Education -->
 	<Education />
@@ -42,3 +62,21 @@ import Contact from '../components/Home/Contact.vue';
 	<!-- Contact -->
 	<Contact client:only="vue" />
 </Layout>
+
+<script lang="js">
+	// get button by class project-toggle
+	const projectToggle = document.querySelectorAll('.project-toggle');
+	for (let i = 0; i < projectToggle.length; i++) {
+		projectToggle[i].addEventListener('click', function () {
+			const recentProjects = document.getElementById('recent-projects');
+			const topProjects = document.getElementById('top-projects');
+			// hide the recent projects
+			recentProjects.classList.toggle('hidden');
+			// hide the top projects
+			topProjects.classList.toggle('hidden');
+			// add active class to the clicked button, and remove from the other.
+			projectToggle[i].classList.add('active');
+			projectToggle[i === 0 ? 1 : 0].classList.remove('active');
+		});
+	}
+</script>

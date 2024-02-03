@@ -34,6 +34,13 @@
         @apply font-semibold;
     }
 
+    .active {
+        @apply text-blue-500;
+    }
+    hr.short {
+        /* But center */
+        @apply w-32 border-t-2 border-gray-300 my-4 mx-auto;
+    }
     .project-headings {
         @apply font-semibold text-xl mb-2;
         line-height: 1.6;
