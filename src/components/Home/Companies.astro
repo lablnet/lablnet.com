@@ -4,12 +4,7 @@ import { getCollection } from 'astro:content';
 import { meta } from '../../utils/const';
 
 // get props from Astro props.
-
-let {
-	type = 'companies',
-	title = meta.company.title,
-	description = meta.company.description,
-} = Astro.props;
+let { type = 'companies', title = meta.company.title, description = meta.company.description } = Astro.props;
 
 import { df, compareByDate } from '../../utils/index.ts';
 let companies: any = [];
@@ -84,12 +79,14 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 				More Projects
 			</a>
 		) : (
-		<a href="/fiverr" class="mr-4 float-right prose dark:text-gray-300 arrow">
-				Fiverr Projects
-			</a>
-			<a href="/direct" class="mr-4 float-right prose dark:text-gray-300 arrow">
-				Direct Client Projects
-			</a>
+			<>
+				<a href="/fiverr" class="mr-4 float-right prose dark:text-gray-300 arrow">
+					Fiverr Projects
+				</a>
+				<a href="/direct" class="mr-4 float-right prose dark:text-gray-300 arrow">
+					Direct Client Projects
+				</a>
+			</>
 		)
 	}
 </section>
