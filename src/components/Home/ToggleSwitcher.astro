@@ -39,7 +39,7 @@ const componentMap : any = {
 
 {sections.map((section:any, index:any) => (
     <div id={section.key} class={`${index !== 0 ? 'hidden' : ''} toggle-elems`} data-key={section.key} data-id={section.id}>
-        {componentMap[section.component] ? <componentMap[section.component] /> : <div>Component not found</div>}
+       {componentMap[section.component] ? <componentMap[section.component] /> : <div>Component not found</div>}
     </div>
 ))}
 
