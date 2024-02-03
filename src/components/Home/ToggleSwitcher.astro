@@ -1,13 +1,11 @@
 ---
-// @ts-disable
+import { meta } from '../../utils/const';
 
 import Skills from './Skills.astro';
 import Companies from './Companies.astro';
-import RecentProjects from './RecentProjects.astro';
 import Projects from './Projects.astro';
 import Education from './Education.astro';
 import Certificate from './Certificate.astro';
-import Spacer from './Spacer.astro';
 
 // Props for sections
 let { sections } = Astro.props;
@@ -46,7 +44,7 @@ let { sections } = Astro.props;
 			>
 				{section.component === 'Skills' && <Skills />}
 				{section.component === 'Companies' && <Companies />}
-				{section.component === 'RecentProjects' && <RecentProjects />}
+				{section.component === 'RecentProjects' && <Companies type="projects" title={meta.topProjects.title} description={meta.topProjects.description} />}
 				{section.component === 'Projects' && <Projects />}
 				{section.component === 'Education' && <Education />}
 				{section.component === 'Certificate' && <Certificate />}
