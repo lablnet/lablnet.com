@@ -11,7 +11,7 @@ let step = projects.length + 1;
 
 ---
 
-<section class="mt-12 py-10 px-5 container" id="recent">
+<section class="mt-12 py-10 px-5 bg-white container" id="recent">
 	<h2 class="text-emphasis font-recoleta text-2xl dark:text-gray-300">{ meta.projects.title }</h2>
 	<p class="dark:text-gray-300 prose mt-4">
 		{ meta.projects.description }
@@ -51,7 +51,7 @@ let step = projects.length + 1;
 								<Content />
 							</div>
 						</div>
-						{step !== 1 ? <hr class="mt-8" /> : ''}
+						{true ? <hr class="mt-8" /> : ''}
 					</div>
 				);
 			})

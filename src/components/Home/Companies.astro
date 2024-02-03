@@ -68,7 +68,8 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 								</div>
 							</div>
 						</div>
-						{step !== 1 ? <hr class="mt-8" /> : ''}
+						{step !== 1 && type === 'companies' ? <hr class="mt-8" /> : ''}
+						{step !== 1 && type === 'projects' ? <hr class="mt-8 border-t border-gray-500" /> : ''}
 					</section>
 				);
 			})
