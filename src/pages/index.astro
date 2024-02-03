@@ -4,72 +4,20 @@ import Layout from '../layouts/Layout.astro';
 import Intro from '../components/Home/Intro.astro';
 import Contact from '../components/Home/Contact.vue';
 import ToggleSwitcher from '../components/Home/ToggleSwitcher.astro';
-
-let data = [
-	[
-		{
-			id: "workexp",
-			key: 'work',
-			title: 'Work Experience',
-			component: 'Companies'
-		},
-		{
-			id: "workexp",
-			key: 'skills',
-			title: 'Skills',
-			component: 'Skills'
-		}
-	],
-	[
-		{
-			id: "projects",
-			key: "recent",
-			title: "Recent Projects",
-			component: "RecentProjects"
-		},
-		{
-			id: "projects",
-			key: "top",
-			title: "Top Projects",
-			component: "Projects"
-		}
-	],
-	[
-		{
-			id: "educert",
-			key: "education",
-			title: "Education",
-			component: "Education"
-		},
-		{
-			id: "educert",
-			key: "certifications",
-			title: "Certifications",
-			component: "Certificate"
-		}
-	]
-]
+import { data } from '../utils/const';
 ---
 
 <Layout title="Muhammad Umer Farooq">
 	<!-- Intro -->
 	<Intro />
 
+	<!-- Dynamic Sections -->
 	{
 		data.map((sections: any[]) => {
-			return (
-				<ToggleSwitcher sections={sections} />
-			)
+			return <ToggleSwitcher sections={sections} />;
 		})
 	}
-
-	<!-- Project Switcher
-	<ProjectSwitcher />
-
-	Education & Certifications
-	<EduCert /> -->
 
 	<!-- Contact -->
 	<Contact client:only="vue" />
 </Layout>
-
