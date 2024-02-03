@@ -8,13 +8,12 @@ let projects = await getCollection('projects', (p) => p.data.featured);
 projects = projects.sort(compareByDate);
 
 let step = projects.length + 1;
-
 ---
 
 <section class="mt-12 py-10 px-5 bg-white container" id="recent">
-	<h2 class="text-emphasis font-recoleta text-2xl dark:text-gray-300">{ meta.projects.title }</h2>
+	<h2 class="text-emphasis font-recoleta text-2xl dark:text-gray-300">{meta.projects.title}</h2>
 	<p class="dark:text-gray-300 prose mt-4">
-		{ meta.projects.description }
+		{meta.projects.description}
 	</p>
 	<div class="mt-8 space-y-12">
 		{
@@ -29,30 +28,32 @@ let step = projects.length + 1;
 				}
 				step--;
 				return (
-					<div class="flex">
-						<div class="text-muted font-medium text-sm w-20 pt-0.5 shrink-0 dark:text-gray-300">
-							{project.data.endDate ? df.format(project.data.endDate) : 'Ongoing'}
-						</div>
-						<div class="ml-0.5">
-							<h3 class="text-emphasis font-medium dark:text-gray-300">
-								<span>{project.data.title}</span>
-								{company ? (
-									<>
-										{' '}
-										<a class="dark:text-gray-300 arrow" href={`/${company.slug}`}>
-											@{' '}{company.data.name}
-										</a>
-									</>
-								) : (
-									''
-								)}
-							</h3>
-							<div class="prose mt-2 dark:text-gray-300">
-								<Content />
+					<section>
+						<div class="flex">
+							<div class="text-muted font-medium text-sm w-20 pt-0.5 shrink-0 dark:text-gray-300">
+								{project.data.endDate ? df.format(project.data.endDate) : 'Ongoing'}
+							</div>
+							<div class="ml-0.5">
+								<h3 class="text-emphasis font-medium dark:text-gray-300">
+									<span>{project.data.title}</span>
+									{company ? (
+										<>
+											{' '}
+											<a class="dark:text-gray-300 arrow" href={`/${company.slug}`}>
+												@ {company.data.name}
+											</a>
+										</>
+									) : (
+										''
+									)}
+								</h3>
+								<div class="prose mt-2 dark:text-gray-300">
+									<Content />
+								</div>
 							</div>
 						</div>
-						{true ? <hr class="mt-8" /> : ''}
-					</div>
+						{step !== 1 ? <hr class="mt-8" /> : ''}
+					</section>
 				);
 			})
 		}
