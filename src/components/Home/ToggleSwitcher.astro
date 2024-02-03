@@ -1,0 +1,73 @@
+---
+// @ts-disable
+
+import Skills from './Skills.astro';
+import Companies from './Companies.astro';
+import Projects from './Projects.astro';
+import Education from './Education.astro';
+import Certificate from './Certificate.astro';
+import Spacer from './Spacer.astro';
+
+// Props for sections
+let { sections } = Astro.props;
+
+// Mapping for dynamic rendering
+const componentMap : any = {
+    'Skills': Skills,
+    'Companies': Companies,
+    'Projects': Projects,
+    'Education': Education,
+    'Certificate': Certificate
+};
+---
+
+
+<div class="flex justify-center gap-4 mt-6 mb-4">
+    {sections.map((section:any , index:any) => (
+        <a href="javascript:void(0)"
+           class={`${section.key}-toggle toggle ${index === 0 ? 'active' : ''} float-right prose dark:text-gray-300 font-bold hover:text-blue-500`}
+           data-key={section.key}
+           data-id={section.id}
+        >
+            {section.title}
+        </a>
+    ))}
+</div>
+<hr class="short" />
+
+{sections.map((section:any, index:any) => (
+    <div id={section.key} class={`${index !== 0 ? 'hidden' : ''} toggle-elems`} data-key={section.key} data-id={section.id}>
+        {componentMap[section.component] ? <componentMap[section.component] /> : <div>Component not found</div>}
+    </div>
+))}
+
+<script lang="js" is:inline>
+    document.querySelectorAll('.toggle').forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            const key = this.getAttribute('data-key');
+            const id = this.getAttribute('data-id');
+            const elem = document.getElementById(key);
+            const sections = document.querySelectorAll('.toggle-elems');
+            const toggles = document.querySelectorAll('.toggle');
+            // remove active class from all.
+            toggles.forEach(tgl => {
+                let dataID = tgl.getAttribute('data-id');
+                if (id === dataID) {
+                    tgl.classList.remove('active');
+                }
+            });
+
+            toggle.classList.add('active');
+            // hide all.
+            sections.forEach(section => {
+                const dataID = section.getAttribute('data-id');
+                console.log ("keys", id, dataID, dataID === id);
+                if (id == dataID) {
+                    section.classList.add('hidden');
+                }
+            });
+            // toggle class of elem hidden.
+            elem.classList.toggle('hidden');
+        });
+    });
+</script>

@@ -2,25 +2,74 @@
 import Layout from '../layouts/Layout.astro';
 
 import Intro from '../components/Home/Intro.astro';
-import WorkExperience from '../components/Home/WorkExperience.astro';
-import ProjectSwitcher from '../components/Home/ProjectSwitcher.astro';
-import EduCert from '../components/Home/EduCert.astro';
 import Contact from '../components/Home/Contact.vue';
+import ToggleSwitcher from '../components/Home/ToggleSwitcher.astro';
+
+let data = [
+	[
+		{
+			id: "workexp",
+			key: 'work',
+			title: 'Work Experience',
+			component: 'Companies'
+		},
+		{
+			id: "workexp",
+			key: 'skills',
+			title: 'Skills',
+			component: 'Skills'
+		}
+	],
+	[
+		{
+			id: "projects",
+			key: "recent",
+			title: "Recent Projects",
+			component: "RecentProjects"
+		},
+		{
+			id: "projects",
+			key: "top",
+			title: "Top Projects",
+			component: "TopProjects"
+		}
+	],
+	[
+		{
+			id: "educert",
+			key: "education",
+			title: "Education",
+			component: "Education"
+		},
+		{
+			id: "educert",
+			key: "certifications",
+			title: "Certifications",
+			component: "Certificate"
+		}
+	]
+]
 ---
 
 <Layout title="Muhammad Umer Farooq">
 	<!-- Intro -->
 	<Intro />
 
-	<!-- Work Experience -->
-	<WorkExperience />
+	{
+		data.map((sections: any[]) => {
+			return (
+				<ToggleSwitcher sections={sections} />
+			)
+		})
+	}
 
-	<!-- Project Switcher -->
+	<!-- Project Switcher
 	<ProjectSwitcher />
 
-	<!-- Education & Certifications -->
-	<EduCert />
+	Education & Certifications
+	<EduCert /> -->
 
 	<!-- Contact -->
 	<Contact client:only="vue" />
 </Layout>
+
