@@ -8,7 +8,7 @@ export const meta = {
         description: ""
     },
     projects:  {
-        title: "Things I've been worki`ng on.",
+        title: "Things I've been working on.",
         description: ""
     },
     skills: {
