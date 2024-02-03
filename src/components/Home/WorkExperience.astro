@@ -1,0 +1,49 @@
+---
+import Skills from './Skills.astro';
+import Companies from './Companies.astro';
+import Spacer from './Spacer.astro';
+---
+
+
+<div id="work-experience" class="flex justify-center mt-6 mb-4">
+	<a
+		href="javascript:void(0)"
+		class="work-toggle active -ml-4 mr-4 float-right prose dark:text-gray-300 font-bold hover:text-blue-500"
+	>
+		Work Experience
+	</a>
+	<a
+		href="javascript:void(0)"
+		class="work-toggle float-right prose dark:text-gray-300 font-bold hover:text-blue-500"
+	>
+		Skills
+    </a>
+</div>
+<hr class="short" />
+
+<div id="work" class="">
+
+	<!-- Companies -->
+	<Companies type="companies" />
+</div>
+<div id="skills" class="hidden">
+	<!-- Skills -->
+	<Skills />
+</div>
+
+<script lang="js" is:inline>
+	// get button by class work-toggle
+	const workexp = document.querySelectorAll('.work-toggle');
+	for (let i = 0; i < workexp.length; i++) {
+		workexp[i].addEventListener('click', function () {
+			const work = document.getElementById('work');
+			const skills = document.getElementById('skills');
+			// Toggle the class.
+			work.classList.toggle('hidden');
+			skills.classList.toggle('hidden');
+			// add active class to the clicked button, and remove from the other.
+			workexp[i].classList.add('active');
+			workexp[i === 0 ? 1 : 0].classList.remove('active');
+		});
+	}
+</script>
