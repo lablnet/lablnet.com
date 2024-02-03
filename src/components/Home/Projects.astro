@@ -6,6 +6,9 @@ import { meta } from '../../utils/const';
 
 let projects = await getCollection('projects', (p) => p.data.featured);
 projects = projects.sort(compareByDate);
+
+let step = projects.length + 1;
+
 ---
 
 <section class="mt-12 py-10 px-5 container" id="recent">
@@ -24,6 +27,7 @@ projects = projects.sort(compareByDate);
 				if (company && company.length > 0) {
 					company = company[0];
 				}
+				step--;
 				return (
 					<div class="flex">
 						<div class="text-muted font-medium text-sm w-20 pt-0.5 shrink-0 dark:text-gray-300">
@@ -47,6 +51,7 @@ projects = projects.sort(compareByDate);
 								<Content />
 							</div>
 						</div>
+						{step !== 1 ? <hr class="mt-8" /> : ''}
 					</div>
 				);
 			})
