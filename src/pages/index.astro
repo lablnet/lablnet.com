@@ -5,9 +5,7 @@ import Intro from '../components/Home/Intro.astro';
 import Skills from '../components/Home/Skills.astro';
 import Companies from '../components/Home/Companies.astro';
 import ProjectSwitcher from '../components/Home/ProjectSwitcher.astro';
-import Education from '../components/Home/Education.astro';
-import Certificate from '../components/Home/Certificate.astro';
-import Spacer from '../components/Home/Spacer.astro';
+import EduCert from '../components/Home/EduCert.astro';
 import Contact from '../components/Home/Contact.vue';
 ---
 
@@ -24,14 +22,8 @@ import Contact from '../components/Home/Contact.vue';
 	<!-- Project Switcher -->
 	<ProjectSwitcher />
 
-	<!-- Education -->
-	<Education />
-
-	<!-- Spacer -->
-	<Spacer />
-
-	<!-- Certificates -->
-	<Certificate />
+	<!-- Education & Certifications -->
+	<EduCert />
 
 	<!-- Contact -->
 	<Contact client:only="vue" />
