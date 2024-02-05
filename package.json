@@ -14,7 +14,7 @@
     "@astrojs/vue": "^4.0.8",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.3.0",
+    "astro": "^4.3.2",
     "postcss": "^8.4.33",
     "preact": "^10.19.3",
     "typescript": "^5.3.3",
