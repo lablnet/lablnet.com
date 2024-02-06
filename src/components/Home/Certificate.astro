@@ -22,7 +22,7 @@ certificates.sort(compareByDate);
                             data-id={index}
                             class="accordion-button flex justify-between items-center w-full py-2 px-4 text-left prose dark:text-gray-400"
                         >
-                            <span>{certificate.data.title} - {certificate.data.institute}</span>
+                            <span><b>{df.format(certificate.data.completed)}</b> {certificate.data.title} - {certificate.data.institute}</span>
                             <span class="w-6 h-6">🏆</span>
                         </button>
                         <div data-id={index} class="accordion-content overflow-hidden transition-all duration-300 hidden">
