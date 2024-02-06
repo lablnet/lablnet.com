@@ -18,10 +18,10 @@ dependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
   astro:
-    specifier: ^4.3.0
+    specifier: ^4.3.2
     version: 4.3.2(typescript@5.3.3)
   postcss:
-    specifier: ^8.4.33
+    specifier: ^8.4.34
     version: 8.4.34
   preact:
     specifier: ^10.19.3
