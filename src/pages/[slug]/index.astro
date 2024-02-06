@@ -8,22 +8,21 @@ import Layout from '../../layouts/Layout.astro';
 import { compareByDate, df } from '../../utils';
 
 export async function getStaticPaths() {
-  let companies = await getCollection('companies');
+  let companies = await getCollection('companies', (p) => !p.data.draft);
   return companies.map((entity: any) => ({
     params: {slug: entity.slug},
   }));
 }
 
 const { slug } = Astro.params;
-console.log("slug", slug);
 
 const company :any = await getEntry('companies', slug);
 const { Content } = await company.render();
-const projects = await getCollection('projects', (p) => p.data.company === slug);
+const projects = await getCollection('projects', (p) => p.data.company === slug && !p.data.draft);
 projects.sort(compareByDate);
 ---
 
-<Layout title={`${company.title} - ${company.name}`}>
+<Layout title={`${company.data.title} - ${company.data.name}`}>
 	{
 		(
 			<PostLayout
@@ -45,6 +44,7 @@ projects.sort(compareByDate);
 									<PostInfo
 										stack={project.data.stacks}
 										title={project.data.title}
+										slug={project.slug}
 										subtitle={subtitle}
 										codeURL={project.data?.github ?? ''}
 										siteURL={project.data.live}

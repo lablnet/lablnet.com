@@ -1,5 +1,33 @@
 ---
 import CollaboratorComp from '../../components/CollaboratorComp.vue';
+
+let socialMediaHandles = [
+	{
+		name: 'lablnet',
+		picture: '../assets/icons/upwork.svg',
+		link: 'https://www.upwork.com/freelancers/~010c32fc720f5f9624',
+	},
+	{
+		name: 'lablnet',
+		picture: '../assets/icons/linkedin.svg',
+		link: 'https://linkedin.com/in/lablnet',
+	},
+	{
+		name: 'lablnet',
+		picture: '../assets/icons/github.svg',
+		link: 'https://github.com/lablnet',
+	},
+	{
+		name: 'lablnet',
+		picture: '../assets/icons/twitter.svg',
+		link: 'https://twitter.com/lablnet',
+	},
+	{
+		name: 'umerlablnet01',
+		picture: '../assets/icons/fiverr.svg',
+		link: 'https://fiverr.com/umerlablnet01',
+	},
+];
 ---
 
 <main class="bg-background">
@@ -32,6 +60,25 @@ import CollaboratorComp from '../../components/CollaboratorComp.vue';
 			</p>
 			<p class="prose text-justify mb-6 text dark:text-text">
 				I am highly motivated to work on open-source projects and contribute to the community. I am always looking for opportunities to collaborate and learn from others.			</p>
+		</div>
+		<div class="mt-4 mb-24 md:ml-12">
+			<div class="grid grid-cols-3 gap-6 md:inline">
+				{
+					socialMediaHandles.map((socialMediaHandle) => {
+						return (
+							<div class="md:inline col-span-1 pr-4">
+								<CollaboratorComp
+									name={socialMediaHandle.name}
+									picture={socialMediaHandle.picture}
+									link={socialMediaHandle.link}
+									contributionsStatus={false}
+									client:load
+								/>
+							</div>
+						);
+					})
+				}
+			</div>
 		</div>
 	</section>
 </main>

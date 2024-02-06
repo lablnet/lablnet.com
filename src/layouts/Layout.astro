@@ -76,6 +76,15 @@ import Footer from './Footer.astro';
 
 			<!-- Footer -->
 			<Footer />
+
+			<!-- Back to top Button -->
+			<button
+			class="backtotop hidden bg-gray-200 dark:bg-gray-900 mb-2"
+			id="backtotop"
+			title="Go to top"
+		  >
+			<i class="text-black dark:text-white fa fa-arrow-up"></i>
+		  </button>
 		</div>
 	</body>
 
@@ -99,31 +108,20 @@ import Footer from './Footer.astro';
 		// @ts-ignore
 		document.getElementById('menu-button').addEventListener('click', toggleMenu);
 
-		// dropdown menu
-		let dropdownMenu = document.getElementById('dropdownMenu');
-		let projectsButton = document.getElementById('projectsButton');
-		let dropdownItems = document.getElementsByClassName('dropdown-item');
-		for (let i = 0; i < dropdownItems.length; i++) {
-			dropdownItems[i].addEventListener('click', function () {
-				dropdownMenu.style.display = 'none';
-			});
-		}
-		projectsButton.addEventListener('click', function (event) {
-			event.preventDefault();
-			if (dropdownMenu.style.display === 'none') {
-				dropdownMenu.style.display = 'block';
+		// back to top button handler.
+		window.addEventListener('scroll', function () {
+			let _top = document.querySelector('#backtotop');
+			if (window.scrollY > 100) {
+				_top.classList.remove('hidden');
 			} else {
-				dropdownMenu.style.display = 'none';
+				_top.classList.add('hidden');
 			}
 		});
 
-		// Hide dropdown when clicking outside
-		document.addEventListener('click', function (event) {
-			let isClickInside = projectsButton.contains(event.target) || dropdownMenu.contains(event.target);
-
-			if (!isClickInside && dropdownMenu.style.display === 'block') {
-				dropdownMenu.style.display = 'none';
-			}
+		// Back to top button
+		let _top = document.querySelector('#backtotop');
+		_top.addEventListener('click', function () {
+			window.scrollTo(0, 0);
 		});
 	</script>
 </html>

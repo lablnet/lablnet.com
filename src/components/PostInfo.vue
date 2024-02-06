@@ -1,7 +1,7 @@
 <template>
   <section class="mb-3 mt-5">
-    <h3 class="title" :id="title">
-      <a class="flex mx-3" :href="'#' + title">
+    <h3 class="title" :id="slug">
+      <a class="flex mx-3" :href="`./#${slug}`">
         <img
           :src="
             theme === 'dark'
@@ -112,6 +112,7 @@
 import TagComp from "./TagComp.vue";
 import CollaboratorComp from "./CollaboratorComp.vue";
 import LoaderComp from "./LoaderComp.vue";
+import { scrollToHash } from "../utils";
 
 export default {
     name: "PostInfo",
@@ -126,6 +127,10 @@ export default {
             required: true,
         },
         title: {
+            type: String,
+            required: true,
+        },
+        slug: {
             type: String,
             required: true,
         },
@@ -159,21 +164,34 @@ export default {
     },
     async mounted() {
         await this.getContributors()
+
+        // Observe the theme change.
         var targetNode = document.querySelector('html');
         this.theme = targetNode.className;
+        // Options for the observer (which mutations to observe)
         var config = { attributes: true, attributeFilter: ['class'] };
 
+        // Callback function to execute when mutations are observed
         var callback = (mutationsList, observer) => {
             for(let mutation of mutationsList) {
+                // Check if the class attribute has changed.
                 if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    // Check if class is not empty.
                     if (mutation.target.className) {
+                      // Set the theme to the new class.
                       this.theme = mutation.target.className;
                     }
                 }
             }
         };
+
+        // Create an observer instance linked to the callback function
         var observer = new MutationObserver(callback);
+        // Start observing the target node for configured mutations
         observer.observe(targetNode, config);
+
+        // Scroll to the hash if it exists.
+        scrollToHash();
     },
     methods: {
         async getContributors() {

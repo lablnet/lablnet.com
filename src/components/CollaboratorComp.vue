@@ -41,7 +41,7 @@
         bg-accent
         text-text
       "
-      v-if="!contributionsStatus"
+      v-if="contributionsStatus"
       >{{ contributions }}
     </span>
   </a>
@@ -69,7 +69,7 @@ export default {
         },
         contributionsStatus: {
           type: Boolean,
-          default: false,
+          default: true,
         }
     }   
 }

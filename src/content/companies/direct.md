@@ -1,6 +1,7 @@
 ---
 startDate: 2021-02-12
 title: Direct Client
+name: Projects
 link: https://www.lablnet.com/
 step: 6
 featured: false

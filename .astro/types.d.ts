@@ -524,9 +524,23 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"upwork_leadcrm.md": {
+	id: "upwork_leadcrm.md";
+  slug: "leadcrm";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "upwork_munacjny.md": {
 	id: "upwork_munacjny.md";
   slug: "upwork_munacjny";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"upwork_replay.md": {
+	id: "upwork_replay.md";
+  slug: "replay-connect";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

@@ -24,3 +24,54 @@ export const meta = {
         description: 'I enjoy facing challenges that are given by my teachers. Here is my educational background.',
     },
 }
+
+export const data = [
+	[
+		{
+			id: "workexp",
+			key: 'work',
+			icon: 'fa-file',
+			title: 'Work Experience',
+			component: 'Companies'
+		},
+		{
+			id: "workexp",
+			key: 'skills',
+			icon: 'fa-chalkboard',
+			title: 'Skills',
+			component: 'Skills'
+		}
+	],
+	[
+		{
+			id: "projects",
+			key: "recent",
+			icon: "fa-bars-progress",
+			title: "Recent Projects",
+			component: "Projects"
+		},
+		{
+			id: "projects",
+			key: "top",
+			icon: "fa-project-diagram",
+			title: "Top Projects",
+			component: "RecentProjects"
+		}
+	],
+	[
+		{
+			id: "educert",
+			key: "education",
+			icon: 'fa-graduation-cap',
+			title: "Education",
+			component: "Education"
+		},
+		{
+			id: "educert",
+			key: "certifications",
+			icon: 'fa-certificate',
+			title: "Certifications",
+			component: "Certificate"
+		}
+	]
+]

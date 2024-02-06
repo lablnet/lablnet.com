@@ -1,43 +1,22 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
-import { meta } from '../utils/const';
 
 import Intro from '../components/Home/Intro.astro';
-import Skills from '../components/Home/Skills.astro';
-import Companies from '../components/Home/Companies.astro';
-import Projects from '../components/Home/Projects.astro';
-import Education from '../components/Home/Education.astro';
-import Certificate from '../components/Home/Certificate.astro';
-import Spacer from '../components/Home/Spacer.astro';
 import Contact from '../components/Home/Contact.vue';
+import ToggleSwitcher from '../components/Home/ToggleSwitcher.astro';
+import { data } from '../utils/const';
 ---
 
 <Layout title="Muhammad Umer Farooq">
-
 	<!-- Intro -->
 	<Intro />
 
-	<!-- Skills -->
-	<Skills />
-
-	<!-- Companies -->
-	<Companies type="companies" />
-
-	<!-- Top Projects -->
-	<Companies type="projects" title={meta.topProjects.title} description={meta.topProjects.description} />
-	
-	<!-- Projects -->
-	<Projects />
-
-	<!-- Education -->
-	<Education />
-
-	<!-- Spacer -->
-	<Spacer />
-
-	<!-- Certificates -->
-	<Certificate />
+	<!-- Dynamic Sections -->
+	{
+		data.map((sections: any[]) => {
+			return <ToggleSwitcher sections={sections} />;
+		})
+	}
 
 	<!-- Contact -->
 	<Contact client:only="vue" />
