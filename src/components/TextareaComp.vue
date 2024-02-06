@@ -28,7 +28,13 @@
           p-3
           rounded-lg
           focus:outline-none focus:shadow-outline
-          dark:bg-gray-900 dark:text-gray-400
+                    bg-background
+          text-text
+          dark:bg-background
+          border-primary
+          border-2 
+          dark:text-text
+
         "
         :class="error ? 'border-red-500' : ''"
         :placeholder="placeholder"

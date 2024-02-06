@@ -47,9 +47,10 @@
         duration-300
         ease-in-out
         arrow
-        bg-white
-        dark:border-white dark:bg-transparent
-        dark:text-gray-300
+        text-text
+        dark:border-white
+        bg-primary dark:bg-accent
+        dark:text-text
       "
       :class="gray === true ? 'border-black' : ''"
       :disabled="disable"

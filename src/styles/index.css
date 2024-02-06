@@ -5,6 +5,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+      --text: #081e17;
+      --background: #f1fbf9;
+      --primary: #4acfa8;
+      --secondary: #92c4e2;
+      --accent: #61dbb6;
+    }
+    .dark {
+      --text: #e3f8f1;
+      --background: #04100e;
+      --primary: #30b58d;
+      --secondary: #1d4e6d;
+      --accent: #249e79;
+    }
+}  
 
 @layer utilities {
     .container {

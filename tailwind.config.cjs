@@ -18,13 +18,11 @@ module.exports = {
         'sans': ['IBM Plex Sans', 'ui-sans-serif', 'sans-serif']
       },
       colors: {
-        'primary-light': '#F7F8FC',
-        'secondary-light': '#FFFFFF',
-        'ternary-light': '#f6f7f8',
-
-        'primary-dark': '#383838',
-        'secondary-dark': '#121212',
-        'ternary-dark': '#383838',
+        'text': 'var(--text)',
+        'background': 'var(--background)',
+        'primary': 'var(--primary)',
+        'secondary': 'var(--secondary)',
+        'accent': 'var(--accent)',       
       },
     },
     screens: {

@@ -8,10 +8,10 @@
           text-sm
           font-medium
           leading-5
-          text-gray-700
-          dark:text-gray-200
+          text-text
+          dark:text-text
         "
-        >{{ label }} <span v-if="required == true" class="text-red-400">*</span>:
+        >{{ label }} <span v-if="required == true" class="text-accent">*</span>:
       </label>
       <input
         :id="id"
@@ -21,15 +21,20 @@
         :required="required"
         class="
           w-full
-          bg-gray-200
-          text-gray-900
+          bg-background
           mt-2
           p-3
           rounded-lg
-          focus:outline-none focus:shadow-outline
-          dark:bg-gray-900 dark:text-gray-400
+          focus:outline-none
+          focus:shadow-outline
+          bg-background
+          text-text
+          dark:bg-background
+          border-primary
+          border-2 
+          dark:text-text
         "
-        :class="error ? 'border-red-500' : ''"
+        :class="error ? '!border-red-500' : ''"
         :placeholder="placeholder"
         :value="modelValue"
         @input="updateValue"
@@ -38,6 +43,7 @@
     </div>
   </div>
 </template>
+
 
 <script lang="js">
 export default {

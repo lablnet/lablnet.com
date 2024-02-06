@@ -11,44 +11,44 @@ let length = educations.length + 1;
 ---
 
 <main>
-	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container" id="education">
-		<h3 class="subtitle dark:text-white prose">{ meta.education.title }</h3>
-		<p class="dark:text-gray-400 prose">
-			{ meta.education.description }
-		</p>
-		<section class="body-font">
-			<div class="container py-6 mx-auto flex flex-wrap">
-				<div class="flex flex-wrap w-full">
-					<div class="">
-						{
-							educations.map((education: any) => {
-								length--;
-								return (
-									<div class="flex relative pb-12">
-										{
+    <section class="py-10 px-5 bg-background dark:bg-background container" id="education">
+        <h3 class="subtitle text dark:text-text prose">{ meta.education.title }</h3>
+        <p class="text dark:text-text prose">
+            { meta.education.description }
+        </p>
+        <section class="body-font">
+            <div class="container py-6 mx-auto flex flex-wrap">
+                <div class="flex flex-wrap w-full">
+                    <div class="">
+                        {
+                            educations.map((education: any) => {
+                                length--;
+                                return (
+                                    <div class="flex relative pb-12">
+                                        {
                                             length !== 1 ? (
                                             <div
-											class="
-                                                h-full
-                                                w-10
-                                                absolute
-                                                inset-0
-                                                flex
-                                                items-center
-                                                justify-center
-                                                "
-										>
-											<div class="h-full w-1 bg-indigo-500 pointer-events-none" />
-										</div>
+                                                class="
+                                                    h-full
+                                                    w-10
+                                                    absolute
+                                                    inset-0
+                                                    flex
+                                                    items-center
+                                                    justify-center
+                                                    "
+                                            >
+                                                <div class="h-full w-1 bg-primary dark:bg-accent pointer-events-none" />
+                                            </div>
                                             ) : null
                                         }
-										<div
-											class="
+                                        <div
+                                            class="
                                                 flex-shrink-0
                                                 w-10
                                                 h-10
                                                 rounded-full
-                                                bg-indigo-500
+                                                bg-primary dark:bg-accent
                                                 inline-flex
                                                 items-center
                                                 justify-center
@@ -56,42 +56,41 @@ let length = educations.length + 1;
                                                 relative
                                                 z-10
                                                 ">
-											{length}
-										</div>
-										<div class="flex-grow pl-4 dark:text-gray-400">
-											<h2 class="font-medium title-font mb-1">{education.data.title}</h2>
-											<h5 class="font-mediume title-font mb-1 prose dark:text-gray-400">
-												<i>
-													{df.format(education.data.startDate)} -{' '}
-									{education.data.endDate ? df.format(education.data.endDate) : '...'}
-	
-												</i>
-											</h5>
+                                            {length}
+                                        </div>
+                                        <div class="flex-grow pl-4 text dark:text-text">
+                                            <h2 class="font-medium title-font mb-1">{education.data.title}</h2>
+                                            <h5 class="font-mediume title-font mb-1 prose text dark:text-text">
+                                                <i>
+                                                    {df.format(education.data.startDate)} -{' '}
+                                                    {education.data.endDate ? df.format(education.data.endDate) : '...'}
+                                                </i>
+                                            </h5>
 
-											<div class="flex flex-col space-y-2">
-												<div class="flex space-x-2">
-													<div
-														style="padding-top: 0.1em; padding-bottom: 0.1rem"
-														class="
+                                            <div class="flex flex-col space-y-2">
+                                                <div class="flex space-x-2">
+                                                    <div
+                                                        style="padding-top: 0.1em; padding-bottom: 0.1rem"
+                                                        class="
                                                             text-xs
                                                             px-3
-                                                            bg-blue-200
-                                                            text-blue-800
+                                                            bg-primary dark:bg-accent
+                                                            text-white
                                                             rounded-full
                                                         ">
-														{education.data.grade}
-													</div>
-												</div>
-											</div>
-											<p class="leading-relaxed prose dark:text-gray-400">{education.data.institution}</p>
-										</div>
-									</div>
-								);
-							})
-						}
-					</div>
-				</div>
-			</div>
-		</section>
-	</section>
+                                                        {education.data.grade}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="leading-relaxed prose text dark:text-text">{education.data.institution}</p>
+                                        </div>
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
 </main>

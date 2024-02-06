@@ -11,9 +11,9 @@ skills.sort((a: any, b: any) => {
 ---
 
 <main class="mt-2 mb-2">
-	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 dark:text-gray-400 container" id="skills">
-		<h3 class="subtitle dark:text-white prose">{ meta.skills.title }</h3>
-		<p class="prose dark:text-gray-400">
+	<section class="py-10 px-5 bg-background dark:bg-background container" id="skills">
+		<h3 class="subtitle prose dark:text-primary">{ meta.skills.title }</h3>
+		<p class="prose dark:text-text">
 			{ meta.skills.description }
 		</p>
 		<div class="grid md:grid-cols-3 mx-auto py-5">
@@ -24,8 +24,8 @@ skills.sort((a: any, b: any) => {
 					return (
 						<div class="flex flex-col px-4 py-4">
 							<div class="flex-grow flex flex-col">
-								<h4 class="mt-0 dark:text-white prose">{skill.data.title}</h4>
-								<div class="prose dark:text-gray-300">
+								<h4 class="mt-0 prose dark:text-primary">{skill.data.title}</h4>
+								<div class="prose dark:text-text">
 									<Content />	
 								</div>
 							</div>

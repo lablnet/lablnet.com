@@ -30,7 +30,7 @@ let socialMediaHandles = [
 ];
 ---
 
-<main class="dark:bg-gray-700">
+<main class="bg-background">
 	<section class="container">
 		<div class="block flex items-center gap-x-4">
 			<img
@@ -39,33 +39,27 @@ let socialMediaHandles = [
 				alt="Muhammad Umer Farooq"
 			/>
 			<div class="block mt-16">
-				<h1 class="title dark:text-gray-300 prose">Muhammad Umer Farooq</h1>
-				<div class="mt-2">
-					<CollaboratorComp
-						name="lablent"
-						picture="../assets/images/umer-removebg.png"
-						link="https://github.com/lablnet"
-						contributionsStatus={false}
-						client:load
-					/>
-				</div>
+				<h1 class="title dark:text-primary prose">Muhammad Umer Farooq</h1>
+				<CollaboratorComp
+					name="lablent"
+					picture="../assets/images/umer-removebg.png"
+					link="https://github.com/lablnet"
+					contributionsStatus="true"
+					client:load
+					class="text-secondary"
+				/>
 			</div>
 		</div>
 		<div class="md:ml-12">
-			<p class="prose text-justify dark:text-gray-300">
+			<p class="prose text-justify text dark:text-text">
 				Hello, I am a Professional Software Developer with a passion for working on open-source products.
 			</p>
-
-			<p class="prose text-justify dark:text-gray-300">
-				I have extensive experience in Full Stack development, including web, mobile, and desktop applications.
-				I have also worked with web scraping, web crawling, and web API integrations. I have worked on a wide
-				range of projects and have interest in deep learning, computer vision, deterministic algorithms, kernel
-				development, compilers, and cryptography.
+	
+			<p class="prose text-justify text dark:text-text">
+				I have extensive experience in Full Stack development, including web, mobile, and desktop applications. I have also worked with web scraping, web crawling, and web API integrations. I have worked on a wide range of projects and have interest in deep learning, computer vision, deterministic algorithms, kernel development, compilers, and cryptography.
 			</p>
-			<p class="prose text-justify mb-6 dark:text-gray-300">
-				I am highly motivated to work on open-source projects and contribute to the community. I am always
-				looking for opportunities to collaborate and learn from others.
-			</p>
+			<p class="prose text-justify mb-6 text dark:text-text">
+				I am highly motivated to work on open-source projects and contribute to the community. I am always looking for opportunities to collaborate and learn from others.			</p>
 		</div>
 		<div class="mt-4 mb-24 md:ml-12">
 			<div class="grid grid-cols-3 gap-6 md:inline">
@@ -88,3 +82,4 @@ let socialMediaHandles = [
 		</div>
 	</section>
 </main>
+

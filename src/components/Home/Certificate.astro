@@ -9,9 +9,9 @@ certificates.sort(compareByDate);
 ---
 
 <main>
-	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container" id="certificates">
-		<h3 class="subtitle dark:text-white prose">{ meta.certificate.title }.</h3>
-		<p class="dark:text-gray-400 prose">
+	<section class="py-10 px-5 bg-background dark:bg-background container" id="certificates">
+		<h3 class="subtitle text dark:text-text prose">{ meta.certificate.title }.</h3>
+		<p class="text dark:text-text prose">
 			{ meta.certificate.description }
 		</p>
         <div class="container mx-auto">
@@ -20,7 +20,7 @@ certificates.sort(compareByDate);
                     <div>
                         <button
                             data-id={index}
-                            class="accordion-button flex justify-between items-center w-full py-2 px-4 text-left prose dark:text-gray-400"
+                            class="accordion-button flex justify-between items-center w-full py-2 px-4 text-left prose text dark:text-text"
                         >
                             <span>{certificate.data.title} - {certificate.data.institute}</span>
                             <span class="w-6 h-6">🏆</span>
@@ -28,8 +28,8 @@ certificates.sort(compareByDate);
                         <div data-id={index} class="accordion-content overflow-hidden transition-all duration-300 hidden">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
                                 <div>
-                                    <a href={certificate.data.link} target="_blank" class="prose dark:text-gray-400">View Certificate</a>
-                                    <p class="text-sm italic prose dark:text-gray-400">{df.format(certificate.data.completed)}</p>
+                                    <a href={certificate.data.link} target="_blank" class="prose text dark:text-text">View Certificate</a>
+                                    <p class="text-sm italic prose text dark:text-text">{df.format(certificate.data.completed)}</p>
                                 </div>
                                 <div class="image-container">
                                     <img src={certificate.data.picture} class="object-contain h-48 w-96 rounded sm:-mx-7 mt-5" />
