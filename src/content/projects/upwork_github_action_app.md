@@ -22,7 +22,7 @@ In the initial version, I developed a GitHub Action workflow designed to activat
 <summary>Key Changes in Version 2</summary>
 
 - Significant advancements were made in this iteration:
-- A new GitHub Action workflow, `ai-audit.yml`, was created to operate on every push and pull request, enhancing our project's automation and integration capabilities. <sup>[2](https://github.com/yubrew/ac-outpost/blob/main/.github/workflows/ai-audit.yml)</sup>
+- A new GitHub Action workflow, `ai-comment.yml`, was created to operate on every push and pull request, enhancing our project's automation and integration capabilities. <sup>[2](https://github.com/yubrew/ac-outpost/blob/main/.github/workflows/ai-audit.yml)</sup>
 
 - A key task was to aggregate all Rust files following a specified schema, excluding any that matched defined patterns ('test', 'schema'). This was achieved through a straightforward shell script, which efficiently processed and prepared these files for further analysis.
     - Note: I am sharing these files because they are on a public repo.
@@ -75,7 +75,7 @@ This phase marked a significant shift in the project's direction, with the intro
     - The GitHub App webhook will be triggered by the GitHub event.
     - The GitHub App will send the data to the AWS Lambda.
     - The AWS Lambda will process the data, save to the DynamoDB and commit the required file and secrets to the repository.
-        - `ai-audit.yml` and `rust_file_aggregator.sh` will be committed to the repository.
+        - `ai-comment.yml` and `rust_file_aggregator.sh` will be committed to the repository.
         - The `MOCK API` url will be saved to the repository secrets.
 - The `version 2` Lambda was used as it is just updated the following:
     - The `webhook` Lambda updated to update the comment on the PR with the data from the Mock API.
