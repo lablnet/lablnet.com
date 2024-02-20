@@ -1,7 +1,7 @@
 <template>
   <section class="mb-3 mt-5">
     <h3 class="title" :id="slug">
-      <a class="flex mx-3" :href="`./#${slug}`">
+      <a class="flex mx-3" :href="`#${slug}`">
         <img
           :src="
             theme === 'dark'
