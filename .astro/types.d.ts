@@ -524,6 +524,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"upwork_github_action_app.md": {
+	id: "upwork_github_action_app.md";
+  slug: "github-action-and-github-app";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "upwork_leadcrm.md": {
 	id: "upwork_leadcrm.md";
   slug: "leadcrm";
