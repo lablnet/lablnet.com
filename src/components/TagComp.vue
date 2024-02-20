@@ -66,6 +66,10 @@ export default {
                 'functions': [this.devicon('firebase-plain'), 'bg-yellow-100', 'text-yellow-800'],
                 'aws': [this.devicon('amazonwebservices-original'), 'bg-yellow-100', 'text-yellow-800'],
                 'lambda': [this.devicon('amazonwebservices-original'), 'bg-yellow-100', 'text-yellow-800'],
+                'github': [this.devicon('github-original'), 'bg-gray-100', 'text-gray-800'],
+                'dynamodb': [this.devicon('amazonwebservices-original'), 'bg-yellow-100', 'text-yellow-800'],
+                'github-action': [this.devicon('github-original'), 'bg-gray-100', 'text-gray-800'],
+                'github-app': [this.devicon('github-original'), 'bg-gray-100', 'text-gray-800'],
             }
             let [icon, bg, front] = icons[this.text.toLowerCase()] || [undefined, 'bg-gray-100', 'text-gray-800']
             this.ico = icon
