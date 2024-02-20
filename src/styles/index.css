@@ -115,6 +115,10 @@
     .dark .prose h1, .dark .prose h2, .dark .prose h3, .dark .prose h4, .dark .prose h5, .dark .prose h6 {
         @apply text-gray-300;
     }
+
+    summary {
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 900px) {
