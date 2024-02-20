@@ -29,12 +29,10 @@ The primary purpose of this CRM is to automate the process of receiving, validat
 ## Challenges
 - Ensuring seamless integration with various external CRMs owned by lead buyers, each potentially having different API specifications.
 - Developing a fair and efficient algorithm for lead distribution that can handle varying schedules and ratios among lead buyers.
-
-But I was able to overcome these challenges by:
+- But I was able to overcome these challenges by:
     - Implementing a robust error handling system to identify and fix issues promptly.
     - Using a combination of Firebase Cloud Functions and Cloud Scheduler to automate lead distribution.
     - Using Firebase Cloud Firestore to store and retrieve data efficiently.
-
 
 ### Lessons Learned
 - Learned how to implement 2FA.
