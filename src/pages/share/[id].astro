@@ -30,7 +30,7 @@ console.log('Data', data, id, docSnap.exists);
 // }
 
 // Load projects from the Astro collection based on slugs in the Firestore data
-let projects = await getCollection('projects', (p) => data.projects.includes(p.slug));
+let projects = await getCollection('projects', (p) => data!.projects.includes(p.slug));
 projects.sort(compareByDate);
 console.log('Projects', projects);
 
@@ -55,7 +55,6 @@ console.log('Projects', projects);
 							subtitle={subtitle}
 							codeURL={project.data?.github ?? ''}
 							siteURL={project.data.live}
-							coverPic={project.data.coverPic ?? null}
 							collaborators={project.data.collaborators}
 							client:only="vue"
 						/>
