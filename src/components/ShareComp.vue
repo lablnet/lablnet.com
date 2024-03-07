@@ -1,5 +1,13 @@
 <template>
   <div class="container mx-auto px-4 mt-4 mb-4">
+    <div
+      id="loader"
+      class="fixed inset-0 min-h-screen flex items-center justify-center bg-white bg-opacity-95 z-10"
+      v-if="loading"
+    >
+      <i class="fa fa-spinner fa-spin text-blue-500"> </i>
+      Loading do not close the browser
+    </div>
     <h1 class="text-4xl font-bold mb-4">Share your project</h1>
     <p class="mb-4">
       Share your project with the world! Please select the projects of your
@@ -88,7 +96,12 @@
             Share the selected projects with your client. You can also add a
             message to the client.
           </p>
-          <MdEditor v-model="message" :noUploadImg="true" :readOnly="false" :language="'en-US'" />
+          <MdEditor
+            v-model="message"
+            :noUploadImg="true"
+            :readOnly="false"
+            :language="'en-US'"
+          />
         </div>
         <div class="mt-4 float-end mb-4">
           <ButtonComp
@@ -152,8 +165,8 @@ import ModelComp from "./ModelComp.vue";
 import TextareaComp from "./TextareaComp.vue";
 import { firestore } from "../services/firebase";
 import { setDoc, doc, getDoc } from "firebase/firestore";
-import { MdEditor } from 'md-editor-v3';
-import 'md-editor-v3/lib/style.css';
+import { MdEditor } from "md-editor-v3";
+import "md-editor-v3/lib/style.css";
 
 export default {
   props: {
@@ -166,7 +179,7 @@ export default {
     ButtonComp,
     ModelComp,
     TextareaComp,
-    MdEditor
+    MdEditor,
   },
 
   async setup(props) {
@@ -216,20 +229,20 @@ export default {
     };
 
     const share = async () => {
+      loading.value = true;
+      isModalOpen.value = false;
       // Create object with selected projects, client name and message
       const data = {
         projects: selectedProjects.value,
         message: message.value,
       };
-      loading.value = true;
 
       const id = await generateId();
       console.log("ID", id, data);
-      await setDoc(doc(firestore, "share", id), { ...data });
-      loading.value = false;
-      isModalOpen.value = false;
+      //await setDoc(doc(firestore, "share", id), { ...data });
       shareUrl.value = `https://lablnet.com/share/${id}`;
       shareModel.value = true;
+      loading.value = false;
     };
 
     // watch selectedProjects and update shareUrl
