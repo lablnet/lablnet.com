@@ -39,7 +39,7 @@ console.log('Projects', projects);
 
 <Layout title="Shared Projects">
 	<PostLayout title="Shared Projects" subtitle="">
-        <div class="prose" set:html={marked(data.message)}/>
+        <div class="prose" set:html={marked(data!.message)}/>
         <hr class="my-8" />
 		{
 			projects.map(async (project) => {
@@ -55,7 +55,7 @@ console.log('Projects', projects);
 							subtitle={subtitle}
 							codeURL={project.data?.github ?? ''}
 							siteURL={project.data.live}
-							coverPic={project.data.coverPic}
+							coverPic={project.data.coverPic ?? null}
 							collaborators={project.data.collaborators}
 							client:only="vue"
 						/>
