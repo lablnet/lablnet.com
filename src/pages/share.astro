@@ -3,7 +3,7 @@
 import { getCollection } from 'astro:content';
 import { compareByDate, df } from '../utils';
 import Layout from '../layouts/Layout.astro';
-import ShareComponent from '../components/ShareComponent.vue';
+import ShareComponent from '../components/ShareComp.vue';
 
 const projects = await getCollection('projects', (p) => !p.data.draft);
 projects.sort(compareByDate);

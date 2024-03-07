@@ -51,8 +51,8 @@
 
 <script>
 import { ref, computed } from "vue";
-
 import ButtonComp from "./ButtonComp.vue";
+
 export default {
   props: {
     projects: {
