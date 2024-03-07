@@ -129,6 +129,10 @@
   }
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 img[data-fancybox='default'],
 img[data-fancybox='certificate'] {
   cursor: zoom-in;
