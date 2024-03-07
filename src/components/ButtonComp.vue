@@ -18,7 +18,6 @@
         hover:scale-105
         duration-300
         ease-in-out
-        arrow
         bg-white
         dark:border-white dark:bg-transparent
         dark:text-white
