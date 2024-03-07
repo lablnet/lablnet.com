@@ -50,9 +50,11 @@ export default {
 
     const filteredProjects = computed(() => {
       if (!search.value) return props.projects;
-      return props.projects.filter((project) =>
-        project.title.includes(search.value)
-      );
+      return props.projects.filter((project) => {
+        const title = project.title.toLowerCase();
+        const keywords = search.value.toLowerCase().split(" ");
+        return keywords.some((keyword) => title.includes(keyword));
+      });
     });
 
     return {
