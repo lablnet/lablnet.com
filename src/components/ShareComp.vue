@@ -57,10 +57,9 @@
           >
           </i>
         </div>
-        <ul :class="[
-          'overflow-auto',
-          selectedProjects.length > 2 ? 'h-96' : '',
-        ]">
+        <ul
+          :class="['overflow-auto', selectedProjects.length > 2 ? 'h-96' : '']"
+        >
           <li
             v-for="projectSlug in selectedProjects"
             :key="projectSlug"
@@ -89,11 +88,6 @@
             Share the selected projects with your client. You can also add a
             message to the client.
           </p>
-          <InputComp
-            label="Client Name"
-            placeholder="Enter client name"
-            v-model="clientName"
-          />
           <TextareaComp
             label="Message"
             placeholder="Enter message"
@@ -101,9 +95,31 @@
           />
         </div>
         <div class="mt-4">
+          <ButtonComp text="Share" @click="share" :disable="loading">
+            Share
+          </ButtonComp>
+        </div>
+      </div>
+    </ModelComp>
+
+    <ModelComp v-if="shareModel" @close="shareModel = false">
+      <div class="p-12">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-bold mb-4">The share url is ready</h2>
+          <i
+            class="fa fa-times text-2xl mb-4 cursor-pointer text-red-500"
+            @click="shareModel = false"
+          >
+          </i>
+        </div>
+        <div class="mt-4">
           <label for="shareUrl" class="block text-sm font-medium text-gray-700">
             Share URL
           </label>
+          <p class="text-sm text-gray-500 mb-2">
+            Share the following URL with your client.
+          </p>
+          <p class="text-green-500" v-if="copied"> Link Copied to Clipboard</p>
           <div class="mt-1 relative rounded-md shadow-sm">
             <input
               type="text"
@@ -129,11 +145,12 @@
 </template>
 
 <script>
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import ButtonComp from "./ButtonComp.vue";
 import ModelComp from "./ModelComp.vue";
-import InputComp from "./InputComp.vue";
 import TextareaComp from "./TextareaComp.vue";
+import { firestore } from "../services/firebase";
+import { addDoc, collection, doc, getDoc } from "firebase/firestore";
 
 export default {
   props: {
@@ -145,12 +162,30 @@ export default {
   components: {
     ButtonComp,
     ModelComp,
-    InputComp,
     TextareaComp,
   },
-  setup(props) {
+
+  async setup(props) {
     const search = ref("");
     const selectedProjects = ref([]);
+    const message = ref("");
+    const loading = ref(false);
+    const shareUrl = ref("");
+    const isModalOpen = ref(false);
+    const shareModel = ref(false);
+    const copied = ref(false);
+
+    const generateId = async () => {
+      const id = Math.floor(100000 + Math.random() * 900000);
+      const docRef = doc(firestore, "share", id.toString());
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        return generateId();
+      } else {
+        return id;
+      }
+    };
 
     const filteredProjects = computed(() => {
       if (!search.value) return props.projects;
@@ -159,13 +194,6 @@ export default {
         const keywords = search.value.toLowerCase().split(" ");
         return keywords.some((keyword) => title.includes(keyword));
       });
-    });
-
-    const shareUrl = computed(() => {
-      // Replace 'yourwebsite.com' with your actual website URL
-      return `https://yourwebsite.com/projects?selected=${selectedProjects.value.join(
-        ","
-      )}`;
     });
 
     const removeProject = (project) => {
@@ -181,19 +209,41 @@ export default {
 
     const copyToClipboard = () => {
       navigator.clipboard.writeText(shareUrl.value);
+      copied.value = true;
+    };
+
+    const share = async () => {
+      // Create object with selected projects, client name and message
+      const data = {
+        projects: selectedProjects.value,
+        message: message.value,
+      };
+      loading.value = true;
+
+      const id = await generateId();
+      console.log("ID", id, data);
+      await addDoc(collection(firestore, "share"), { id, ...data });
+      loading.value = false;
+      isModalOpen.value = false;
+      shareUrl.value = `https://lablnet.com/share/${id}`;
+      shareModel.value = true;
     };
 
     return {
       search,
       selectedProjects,
       filteredProjects,
-      isModalOpen: ref(false),
-      clientName: ref(""),
-      message: ref(""),
+      isModalOpen,
+      shareModel,
+      shareUrl,
+      message,
+      loading,
       shareUrl,
       removeProject,
       getProject,
       copyToClipboard,
+      share,
+      copied,
     };
   },
 };
