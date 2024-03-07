@@ -1,12 +1,27 @@
 <template>
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 mt-4 mb-4">
     <h1 class="text-4xl font-bold mb-4">Share your project</h1>
-    <input
-      v-model="search"
-      type="text"
-      placeholder="Search..."
-      class="mb-4 p-2 border rounded"
-    />
+    <p class="mb-4">
+      Share your project with the world! Please select the projects of your
+      choice and click on the share button.
+    </p>
+    <div class="flex justify-between items-center mb-4">
+      <input
+        v-model="search"
+        type="text"
+        placeholder="Search..."
+        class="mb-4 p-2 border rounded"
+      />
+      <ButtonComp
+        text="Share"
+        @click="shareProjects"
+        class="mb-4"
+        v-if="selectedProjects.length > 0"
+      >
+        Share
+      </ButtonComp>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div
         v-for="project in filteredProjects"
@@ -37,12 +52,16 @@
 <script>
 import { ref, computed } from "vue";
 
+import ButtonComp from "./ButtonComp.vue";
 export default {
   props: {
     projects: {
       type: Array,
       required: true,
     },
+  },
+  components: {
+    ButtonComp,
   },
   setup(props) {
     const search = ref("");
