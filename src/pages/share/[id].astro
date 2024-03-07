@@ -1,14 +1,15 @@
 ---
 // @ts-ignore
 import { getCollection } from 'astro:content';
+import PostLayout from '../../components/PostLayout.astro';
+import PostInfo from '../../components/PostInfo.vue';
 
 import Layout from '../../layouts/Layout.astro';
 import { compareByDate, df } from '../../utils';
-import { getFirestore } from "firebase-admin/firestore";
-import { app } from "../../firebase/server";
+import { getFirestore } from 'firebase-admin/firestore';
+import { app } from '../../firebase/server';
 
-
-console.log ("F1", Astro.params);
+console.log('F1', Astro.params);
 
 const { id } = Astro.params;
 
@@ -17,40 +18,51 @@ if (!id) {
 }
 
 const db = getFirestore(app);
-const friendsRef = db.collection("shared");
+const friendsRef = db.collection('share');
 const docSnap = await friendsRef.doc(id).get();
 const data = docSnap.data();
 
-// console.log ("Data", data, id, docSnap.exists);
-if (!docSnap.exists) {
-	return Astro.redirect('/404');
-}
+console.log('Data', data, id, docSnap.exists);
+// if (!docSnap.exists) {
+// 	return Astro.redirect('/404');
+// }
 
 // Load projects from the Astro collection based on slugs in the Firestore data
-let projects = await getCollection('projects', (p) => data.projects.includes(p.slug) && !p.data.draft);
+let projects = await getCollection('projects', (p) => data.projects.includes(p.slug));
 projects.sort(compareByDate);
+console.log('Projects', projects);
 ---
 
 <Layout title="Shared Projects">
-	{
-		projects.length === 0 ? (
-			<div>No projects found.</div>
-		) : (
+	<PostLayout title="Shared Projects" subtitle="">
+        <div class="prose">
+            <p>{data.message}</p>
+        </div>
+		{
 			projects.map(async (project) => {
 				const { Content } = await project.render();
 				let endDate = project.data.endDate ? df.format(project.data.endDate) : 'Present';
-				let subtitle = `${df.format(project.data.startDate)} - ${endDate}`;
+				let subtitle: any = `${df.format(project.data.startDate)} - ${endDate}`;
 				return (
 					<div>
-						<h2>{project.data.title}</h2>
-						<p>{subtitle}</p>
-						<div class="mt-4 dark:text-gray-300">
+						<PostInfo
+							stack={project.data.stacks}
+							title={project.data.title}
+							slug={project.slug}
+							subtitle={subtitle}
+							codeURL={project.data?.github ?? ''}
+							siteURL={project.data.live}
+							coverPic={project.data.coverPic}
+							collaborators={project.data.collaborators}
+							client:only="vue"
+						/>
+						<div class="mt-4 prose dark:text-gray-300">
 							<Content />
 						</div>
 						<hr class="mt-12 mb-4" />
 					</div>
 				);
 			})
-		)
-	}
+		}
+	</PostLayout>
 </Layout>
