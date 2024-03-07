@@ -1,11 +1,14 @@
 ---
 // @ts-ignore
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 import Layout from '../../layouts/Layout.astro';
 import { compareByDate, df } from '../../utils';
-import { firestore } from '../../services/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { getFirestore } from "firebase-admin/firestore";
+import { app } from "../../firebase/server";
+
+
+console.log ("F1", Astro.params);
 
 const { id } = Astro.params;
 
@@ -13,10 +16,12 @@ if (!id) {
 	return Astro.redirect('/404');
 }
 
-const docRef = doc(firestore, 'shared', id);
-const docSnap = await getDoc(docRef);
+const db = getFirestore(app);
+const friendsRef = db.collection("shared");
+const docSnap = await friendsRef.doc(id).get();
 const data = docSnap.data();
 
+// console.log ("Data", data, id, docSnap.exists);
 if (!docSnap.exists) {
 	return Astro.redirect('/404');
 }
