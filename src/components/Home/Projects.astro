@@ -3,6 +3,7 @@
 import { getCollection } from 'astro:content';
 import { compareByDate, df } from '../../utils';
 import { meta } from '../../utils/const';
+import EmptyComponent from '../../components/EmptyComponent.astro';
 
 let projects = await getCollection('projects', (p) => p.data.featured && !p.data.draft);
 projects = projects.sort(compareByDate);
@@ -56,6 +57,14 @@ let step = projects.length + 1;
 					</section>
 				);
 			})
+		}
+		{
+			projects.length === 0 ? (
+				<EmptyComponent
+					title="No projects found"
+					description="I am not working on any projects at the moment. Check back later."
+				/>
+			) : ''
 		}
 	</div>
 </section>
