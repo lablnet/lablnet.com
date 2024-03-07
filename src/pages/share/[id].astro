@@ -1,0 +1,51 @@
+---
+// @ts-ignore
+import { getCollection, getEntry } from 'astro:content';
+
+import Layout from '../../layouts/Layout.astro';
+import { compareByDate, df } from '../../utils';
+import { firestore } from '../../services/firebase';
+import { doc, getDoc } from 'firebase/firestore';
+
+const { id } = Astro.params;
+
+if (!id) {
+	return Astro.redirect('/404');
+}
+
+const docRef = doc(firestore, 'shared', id);
+const docSnap = await getDoc(docRef);
+const data = docSnap.data();
+
+if (!docSnap.exists) {
+	return Astro.redirect('/404');
+}
+
+// Load projects from the Astro collection based on slugs in the Firestore data
+let projects = await getCollection('projects', (p) => data.projects.includes(p.slug) && !p.data.draft);
+projects.sort(compareByDate);
+---
+
+<Layout title="Shared Projects">
+	{
+		projects.length === 0 ? (
+			<div>No projects found.</div>
+		) : (
+			projects.map(async (project) => {
+				const { Content } = await project.render();
+				let endDate = project.data.endDate ? df.format(project.data.endDate) : 'Present';
+				let subtitle = `${df.format(project.data.startDate)} - ${endDate}`;
+				return (
+					<div>
+						<h2>{project.data.title}</h2>
+						<p>{subtitle}</p>
+						<div class="mt-4 dark:text-gray-300">
+							<Content />
+						</div>
+						<hr class="mt-12 mb-4" />
+					</div>
+				);
+			})
+		)
+	}
+</Layout>
