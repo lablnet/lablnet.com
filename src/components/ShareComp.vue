@@ -237,9 +237,9 @@ export default {
         message: message.value,
       };
 
-      const id = await generateId();
+      const id = String(await generateId());
       console.log("ID", id, data);
-      //await setDoc(doc(firestore, "share", id), { ...data });
+      await setDoc(doc(firestore, "share", id), { ...data });
       shareUrl.value = `https://lablnet.com/share/${id}`;
       shareModel.value = true;
       loading.value = false;
