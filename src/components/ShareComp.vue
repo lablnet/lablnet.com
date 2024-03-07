@@ -94,8 +94,13 @@
             v-model="message"
           />
         </div>
-        <div class="mt-4">
-          <ButtonComp text="Share" @click="share" :disable="loading">
+        <div class="mt-4 float-end mb-4">
+          <ButtonComp
+            class="mb-4"
+            text="Share"
+            @click="share"
+            :disable="loading"
+          >
             Share
           </ButtonComp>
         </div>
@@ -119,7 +124,7 @@
           <p class="text-sm text-gray-500 mb-2">
             Share the following URL with your client.
           </p>
-          <p class="text-green-500" v-if="copied"> Link Copied to Clipboard</p>
+          <p class="text-green-500" v-if="copied">Link Copied to Clipboard</p>
           <div class="mt-1 relative rounded-md shadow-sm">
             <input
               type="text"
@@ -197,10 +202,9 @@ export default {
     });
 
     const removeProject = (project) => {
-      const index = selectedProjects.value.indexOf(project);
-      if (index !== -1) {
-        selectedProjects.value.splice(index, 1);
-      }
+      selectedProjects.value = selectedProjects.value.filter(
+        (slug) => slug !== project
+      );
     };
 
     const getProject = (slug) => {
@@ -228,6 +232,15 @@ export default {
       shareUrl.value = `https://lablnet.com/share/${id}`;
       shareModel.value = true;
     };
+
+    // watch selectedProjects and update shareUrl
+    watch(selectedProjects, () => {
+      // if length is 0, close the model.
+      console.log("selectedProjects", selectedProjects.value.length);
+      if (selectedProjects.value.length === 0) {
+        isModalOpen.value = false;
+      }
+    });
 
     return {
       search,
