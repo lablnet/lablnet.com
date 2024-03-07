@@ -11,8 +11,6 @@ import { compareByDate, df } from '../../utils';
 import { getFirestore } from 'firebase-admin/firestore';
 import { app } from '../../firebase/server';
 
-console.log('F1', Astro.params);
-
 const { id } = Astro.params;
 
 if (!id) {
@@ -24,17 +22,13 @@ const friendsRef = db.collection('share');
 const docSnap = await friendsRef.doc(id).get();
 const data = docSnap.data();
 
-console.log('Data', data, id, docSnap.exists);
-// if (!docSnap.exists) {
-// 	return Astro.redirect('/404');
-// }
+if (!docSnap.exists) {
+	return Astro.redirect('/404');
+}
 
 // Load projects from the Astro collection based on slugs in the Firestore data
 let projects = await getCollection('projects', (p) => data!.projects.includes(p.slug));
 projects.sort(compareByDate);
-console.log('Projects', projects);
-
-
 ---
 
 <Layout title="Shared Projects">
