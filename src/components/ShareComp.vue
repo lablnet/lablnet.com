@@ -163,7 +163,7 @@ import { ref, computed, watch } from "vue";
 import ButtonComp from "./ButtonComp.vue";
 import ModelComp from "./ModelComp.vue";
 import TextareaComp from "./TextareaComp.vue";
-import { firestore } from "../services/firebase";
+import { firestore } from "../firebase/client";
 import { setDoc, doc, getDoc } from "firebase/firestore";
 import { MdEditor } from "md-editor-v3";
 import "md-editor-v3/lib/style.css";
