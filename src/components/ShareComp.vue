@@ -151,7 +151,7 @@ import ButtonComp from "./ButtonComp.vue";
 import ModelComp from "./ModelComp.vue";
 import TextareaComp from "./TextareaComp.vue";
 import { firestore } from "../services/firebase";
-import { addDoc, collection, doc, getDoc } from "firebase/firestore";
+import { setDoc, doc, getDoc } from "firebase/firestore";
 import { MdEditor } from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 
@@ -225,7 +225,7 @@ export default {
 
       const id = await generateId();
       console.log("ID", id, data);
-      await addDoc(collection(firestore, "share"), { id, ...data });
+      await setDoc(doc(firestore, "share", id), { ...data });
       loading.value = false;
       isModalOpen.value = false;
       shareUrl.value = `https://lablnet.com/share/${id}`;
