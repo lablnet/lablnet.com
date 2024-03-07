@@ -11,12 +11,9 @@ projects.sort(compareByDate);
 let projectsData = projects.map((project) => {
   return {
     title: project.data.title,
-    description: project.data.description,
     startDate : df.format(project.data.startDate),
     endDate : df.format(project.data.endDate),
-    link: project.data.link,
     slug: project.slug,
-    stacks: project.data.stacks,
   };
 });
 

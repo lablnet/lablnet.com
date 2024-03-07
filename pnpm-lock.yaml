@@ -26,6 +26,9 @@ dependencies:
   firebase-admin:
     specifier: ^12.0.0
     version: 12.0.0
+  marked:
+    specifier: ^12.0.1
+    version: 12.0.1
   md-editor-v3:
     specifier: ^4.12.1
     version: 4.12.1(@codemirror/view@6.25.1)(@lezer/common@1.2.1)(vue@3.4.15)
@@ -4089,6 +4092,12 @@ packages:
   /markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
+  /marked@12.0.1:
+    resolution: {integrity: sha512-Y1/V2yafOcOdWQCX0XpAKXzDakPOpn6U0YLxTJs3cww6VxOzZV1BTOOYWLvH3gX38cq+iLwljHHTnMtlDfg01Q==}
+    engines: {node: '>= 18'}
+    hasBin: true
+    dev: false
+
   /md-editor-v3@4.12.1(@codemirror/view@6.25.1)(@lezer/common@1.2.1)(vue@3.4.15):
     resolution: {integrity: sha512-TbGsqWTnKQkQWnm1oAGm8yH+OD5zHTa49Um6WMcS+Y+M4fLl0gWZbz7NzeyOPtrEU13NlPY6c3IZcWAwdmZdiA==}
     peerDependencies:
@@ -6141,6 +6150,7 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    requiresBuild: true
 
   /yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}

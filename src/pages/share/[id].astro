@@ -1,6 +1,8 @@
 ---
 // @ts-ignore
 import { getCollection } from 'astro:content';
+import {marked} from 'marked';
+
 import PostLayout from '../../components/PostLayout.astro';
 import PostInfo from '../../components/PostInfo.vue';
 
@@ -31,13 +33,14 @@ console.log('Data', data, id, docSnap.exists);
 let projects = await getCollection('projects', (p) => data.projects.includes(p.slug));
 projects.sort(compareByDate);
 console.log('Projects', projects);
+
+
 ---
 
 <Layout title="Shared Projects">
 	<PostLayout title="Shared Projects" subtitle="">
-        <div class="prose">
-            <p>{data.message}</p>
-        </div>
+        <div class="prose" set:html={marked(data.message)}/>
+        <hr class="my-8" />
 		{
 			projects.map(async (project) => {
 				const { Content } = await project.render();
