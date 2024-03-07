@@ -88,11 +88,7 @@
             Share the selected projects with your client. You can also add a
             message to the client.
           </p>
-          <TextareaComp
-            label="Message"
-            placeholder="Enter message"
-            v-model="message"
-          />
+          <MdEditor v-model="message" :noUploadImg="true" :readOnly="false" :language="'en-US'" />
         </div>
         <div class="mt-4 float-end mb-4">
           <ButtonComp
@@ -156,6 +152,8 @@ import ModelComp from "./ModelComp.vue";
 import TextareaComp from "./TextareaComp.vue";
 import { firestore } from "../services/firebase";
 import { addDoc, collection, doc, getDoc } from "firebase/firestore";
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
 
 export default {
   props: {
@@ -168,6 +166,7 @@ export default {
     ButtonComp,
     ModelComp,
     TextareaComp,
+    MdEditor
   },
 
   async setup(props) {
