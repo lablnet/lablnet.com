@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import { compareByDate, df } from '../../utils';
 import { meta } from '../../utils/const';
 
-let projects = await getCollection('projects', (p) => p.data.featured);
+let projects = await getCollection('projects', (p) => p.data.featured && !p.data.draft);
 projects = projects.sort(compareByDate);
 
 let step = projects.length + 1;
