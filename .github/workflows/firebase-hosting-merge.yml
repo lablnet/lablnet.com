@@ -22,3 +22,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LABLNET_86A04 }}'
           channelId: live
           projectId: lablnet-86a04
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
