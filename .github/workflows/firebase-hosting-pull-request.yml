@@ -13,9 +13,8 @@ jobs:
         run: npm install -g pnpm
       - uses: actions/checkout@v3
       - run: pnpm install && npm run build
-
       - uses: actions/checkout@v3
-      - run: npm ci && npm run build
+      - run: pnpm install && pnpm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
