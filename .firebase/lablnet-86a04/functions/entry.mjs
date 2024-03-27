@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_CIhCvo2a.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_8bi93-Q_.mjs';
 import fs$2 from 'node:fs';
 import { e as appendForwardSlash$1, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash$1, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_7DdHun6X.mjs';
 import { R as ROUTE_DATA_SYMBOL, A as AstroError, t as ResponseSentError, v as MiddlewareNoDataOrNextCalled, w as MiddlewareNotAResponse, G as GetStaticPathsRequired, x as InvalidGetStaticPathsReturn, y as InvalidGetStaticPathsEntry, z as GetStaticPathsExpectedParams, B as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, C as PrerenderDynamicEndpointPathCollide, D as LocalsNotAnObject, H as ASTRO_VERSION, J as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, K as renderEndpoint, O as ReservedSlotName, Q as renderSlotToString, T as renderJSX, V as chunkToString, W as CantRenderPage, X as renderPage$1, Y as REROUTE_DIRECTIVE_HEADER, n as getDefaultExportFromCjs } from './chunks/astro_Ohu8eKR9.mjs';
@@ -10016,18 +10016,18 @@ const serverEntrypointModule = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.de
   start
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const _page0 = () => import('./chunks/node_zxic5SUJ.mjs');
-const _page1 = () => import('./chunks/share_zjDlUaA7.mjs');
-const _page2 = () => import('./chunks/_id__3ykEyuj4.mjs');
-const _page3 = () => import('./chunks/index_rJJ2t2_Z.mjs');
-const _page4 = () => import('./chunks/404_LRiT-pVT.mjs');
-const _page5 = () => import('./chunks/index_WuEcQyY9.mjs');
+const _page0 = () => import('./chunks/node_klTCAehb.mjs');
+const _page1 = () => import('./chunks/index_FSG9rPzW.mjs');
+const _page2 = () => import('./chunks/404_u5Mx7FD9.mjs');
+const _page3 = () => import('./chunks/share_wdeCMP7R.mjs');
+const _page4 = () => import('./chunks/_id__zxUBe12b.mjs');
+const _page5 = () => import('./chunks/index__HG48RDz.mjs');
 const pageMap = new Map([
     ["node_modules/.pnpm/astro@4.3.2_typescript@5.3.3/node_modules/astro/dist/assets/endpoint/node.js", _page0],
-    ["src/pages/share.astro", _page1],
-    ["src/pages/share/[id].astro", _page2],
-    ["src/pages/index.astro", _page3],
-    ["src/pages/404.astro", _page4],
+    ["src/pages/index.astro", _page1],
+    ["src/pages/404.astro", _page2],
+    ["src/pages/share.astro", _page3],
+    ["src/pages/share/[id].astro", _page4],
     ["src/pages/[slug]/index.astro", _page5]
 ]);
 
@@ -10038,8 +10038,8 @@ const _manifest = Object.assign(manifest, {
 });
 const _args = {
     "mode": "standalone",
-    "client": "file:///D:/umer/projects/lablnet/lablnet.com/dist/client/",
-    "server": "file:///D:/umer/projects/lablnet/lablnet.com/dist/server/",
+    "client": "file:///Users/lablnet/projects/lablnet/lablnet.com/dist/client/",
+    "server": "file:///Users/lablnet/projects/lablnet/lablnet.com/dist/server/",
     "host": false,
     "port": 4321,
     "assets": "_astro"
