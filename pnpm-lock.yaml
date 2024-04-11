@@ -15,8 +15,8 @@ dependencies:
     specifier: ^4.0.8
     version: 4.0.8(@babel/core@7.24.4)(astro@4.5.18)(vite@5.2.8)(vue@3.4.15)
   '@fortawesome/fontawesome-free':
-    specifier: ^6.5.1
-    version: 6.5.1
+    specifier: ^6.5.2
+    version: 6.5.2
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
@@ -1843,8 +1843,8 @@ packages:
     resolution: {integrity: sha512-EnfRJvrnzkHwN3BPMCayCFT5lCqInzg3RdlRsDjDvB1EJli6Usj26T6lJ67BU2UcYXBS5xcp1Wj4+zRzj2NaZg==}
     dev: false
 
-  /@fortawesome/fontawesome-free@6.5.1:
-    resolution: {integrity: sha512-CNy5vSwN3fsUStPRLX7fUYojyuzoEMSXPl7zSLJ8TgtRfjv24LOnOWKT2zYwaHZCJGkdyRnTmstR0P+Ah503Gw==}
+  /@fortawesome/fontawesome-free@6.5.2:
+    resolution: {integrity: sha512-hRILoInAx8GNT5IMkrtIt9blOdrqHOnPBH+k70aWUAqPZPgopb9G5EQJFpaBx/S8zp2fC+mPW349Bziuk1o28Q==}
     engines: {node: '>=6'}
     requiresBuild: true
     dev: false
