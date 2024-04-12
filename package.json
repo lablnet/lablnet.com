@@ -27,7 +27,7 @@
     "vue": "^3.4.15"
   },
   "devDependencies": {
-    "@astrojs/preact": "^3.1.0",
+    "@astrojs/preact": "^3.2.0",
     "@astrojs/tailwind": "^5.1.0"
   }
 }
