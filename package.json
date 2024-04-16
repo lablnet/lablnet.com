@@ -24,7 +24,7 @@
     "preact": "^10.19.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "vue": "^3.4.15"
+    "vue": "^3.4.22"
   },
   "devDependencies": {
     "@astrojs/preact": "^3.1.0",
