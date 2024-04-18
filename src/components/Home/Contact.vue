@@ -17,7 +17,7 @@
 
         <div class="mt-8 p-5 text-center hidden md:block">
           <img
-            src="../../../assets/images/contact-art.svg"
+            src="/assets/images/contact-art.svg"
             alt="contact"
           />
         </div>
