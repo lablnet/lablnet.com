@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/check':
-    specifier: ^0.4.1
-    version: 0.4.1(typescript@5.4.5)
+    specifier: ^0.5.10
+    version: 0.5.10(typescript@5.4.5)
   '@astrojs/node':
     specifier: ^8.2.5
     version: 8.2.5(astro@4.6.2)
@@ -72,8 +72,8 @@ packages:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  /@astrojs/check@0.4.1(typescript@5.4.5):
-    resolution: {integrity: sha512-XEsuU4TlWkgcsvdeessq5mXLXV1fejtxIioCPv/FfhTzb1bDYe2BtLiSBK+rFTyD9Hl686YOas9AGNMJcpoRsw==}
+  /@astrojs/check@0.5.10(typescript@5.4.5):
+    resolution: {integrity: sha512-vliHXM9cu/viGeKiksUM4mXfO816ohWtawTl2ADPgTsd4nUMjFiyAl7xFZhF34yy4hq4qf7jvK1F2PlR3b5I5w==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
