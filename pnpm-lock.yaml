@@ -33,8 +33,8 @@ dependencies:
     specifier: ^12.0.1
     version: 12.0.1
   md-editor-v3:
-    specifier: ^4.13.2
-    version: 4.13.2(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.23)
+    specifier: ^4.13.3
+    version: 4.13.3(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.23)
   postcss:
     specifier: ^8.4.38
     version: 8.4.38
@@ -2332,8 +2332,8 @@ packages:
     dev: false
     optional: true
 
-  /@types/markdown-it@13.0.7:
-    resolution: {integrity: sha512-U/CBi2YUUcTHBt5tjO2r5QV/x0Po6nsYwQU4Y04fBS6vfoImaiZ6f8bi3CjTCxBPQSO1LMyUqkByzi8AidyxfA==}
+  /@types/markdown-it@14.0.1:
+    resolution: {integrity: sha512-6WfOG3jXR78DW8L5cTYCVVGAsIFZskRHCDo5tbqa+qtKVt4oDRVH7hyIWu1SpDQJlmIoEivNQZ5h+AGAOrgOtQ==}
     dependencies:
       '@types/linkify-it': 3.0.5
       '@types/mdurl': 1.0.5
@@ -4453,14 +4453,14 @@ packages:
     hasBin: true
     dev: false
 
-  /md-editor-v3@4.13.2(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.23):
-    resolution: {integrity: sha512-4y3gNqLaH9TviGW25u1VnFfS/Q4vZpE0uyYIkWAIrT8xznNOO/fhKMJ24X9tqbzEhjjIPijKx/QOgB68+aAvBw==}
+  /md-editor-v3@4.13.3(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.23):
+    resolution: {integrity: sha512-SERoUuDUhE+7kV+ApaJn4ZvbGbOhQsbnip1IN9HmIBXIt7T71pH4O4M1dvXxTHH4Fc7BruA1XxBbrSNvlLeWaA==}
     peerDependencies:
       vue: ^3.2.47
     dependencies:
       '@codemirror/lang-markdown': 6.2.5
       '@codemirror/language-data': 6.5.1(@codemirror/view@6.26.3)
-      '@types/markdown-it': 13.0.7
+      '@types/markdown-it': 14.0.1
       '@vavt/util': 1.5.1
       codemirror: 6.0.1(@lezer/common@1.2.1)
       copy-to-clipboard: 3.3.3
