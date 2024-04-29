@@ -33,8 +33,8 @@ dependencies:
     specifier: ^12.0.2
     version: 12.0.2
   md-editor-v3:
-    specifier: ^4.13.3
-    version: 4.13.3(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.25)
+    specifier: ^4.13.5
+    version: 4.13.5(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.25)
   postcss:
     specifier: ^8.4.38
     version: 8.4.38
@@ -4239,8 +4239,8 @@ packages:
     hasBin: true
     dev: false
 
-  /md-editor-v3@4.13.3(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.25):
-    resolution: {integrity: sha512-SERoUuDUhE+7kV+ApaJn4ZvbGbOhQsbnip1IN9HmIBXIt7T71pH4O4M1dvXxTHH4Fc7BruA1XxBbrSNvlLeWaA==}
+  /md-editor-v3@4.13.5(@codemirror/view@6.26.3)(@lezer/common@1.2.1)(vue@3.4.25):
+    resolution: {integrity: sha512-HHFvuEP8puUK430QfKGoqHDIOrw0MHK26MgWKd/+k6VRadDNy40i7Gw3NmSd+rvEzIvHwu0NRm99KEj4qNb0Gw==}
     peerDependencies:
       vue: ^3.2.47
     dependencies:
