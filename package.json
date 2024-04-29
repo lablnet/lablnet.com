@@ -14,7 +14,7 @@
     "@astrojs/node": "^8.2.5",
     "@astrojs/vue": "^4.1.0",
     "@fortawesome/fontawesome-free": "^6.5.2",
-    "@tailwindcss/typography": "^0.5.12",
+    "@tailwindcss/typography": "^0.5.13",
     "astro": "^4.6.4",
     "firebase": "^10.11.0",
     "firebase-admin": "^12.1.0",
