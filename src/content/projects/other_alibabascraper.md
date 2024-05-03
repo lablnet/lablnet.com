@@ -1,10 +1,10 @@
 ---
-title: Multi-Threaded Alibaba Scrapper
-slug: alibabascrapper
+title: Multi-Threaded Alibaba Scraper
+slug: alibabascraper
 startDate: 2024-02-07
 endDate: 2024-02-15
 stacks: [JavaScript, Playwright]
-github: lablnet/alibaba_scrapper
+github: lablnet/alibaba_scraper
 company: projects
 featured: false
 ---
