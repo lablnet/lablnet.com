@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./others_weather_G9R-v2dq.mjs');
+						return import('./others_weather_CYUs91Lg.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];
