@@ -342,6 +342,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"other_alibabascrapper.md": {
+	id: "other_alibabascrapper.md";
+  slug: "alibabascrapper";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "others_board.md": {
 	id: "others_board.md";
   slug: "board";
