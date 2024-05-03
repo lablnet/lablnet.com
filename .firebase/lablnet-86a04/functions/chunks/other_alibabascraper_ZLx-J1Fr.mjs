@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./other_alibabascrapper_Cgm2Xn9R.mjs');
+						return import('./other_alibabascraper_CGn__XWP.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

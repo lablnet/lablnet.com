@@ -1,11 +1,11 @@
 ---
-title: Pakistan Weather Scrapper
+title: Pakistan Weather Scraper
 slug: weather
 startDate: 2022-07-01
 endDate: 2022-07-15
 stacks: [Python, React, TailwindCSS]
 live: https://weather.lablnet.com/
-github: lablnet/pakweather_scrapper
+github: lablnet/pakweather_scraper
 company: projects
 featured: false
 ---

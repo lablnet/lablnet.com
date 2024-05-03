@@ -342,9 +342,9 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"other_alibabascrapper.md": {
-	id: "other_alibabascrapper.md";
-  slug: "alibabascrapper";
+"other_alibabascraper.md": {
+	id: "other_alibabascraper.md";
+  slug: "alibabascraper";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
