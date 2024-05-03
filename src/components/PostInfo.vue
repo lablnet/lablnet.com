@@ -1,5 +1,13 @@
 <template>
   <section class="mb-3 mt-5">
+    <div v-if="copySuccess" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+      <strong class="font-bold">Success!</strong>
+      <span class="block sm:inline">URL copied to clipboard!</span>
+    </div>
+    <div v-if="copyError" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <strong class="font-bold">Error!</strong>
+      <span class="block sm:inline">Failed to copy URL.</span>
+    </div>
     <h3 class="title" :id="slug">
       <a class="flex mx-3" :href="`#${slug}`">
         <img
@@ -9,8 +17,14 @@
               : '../assets/icons/link.svg'
           "
         />
-        <span class="mx-3 dark:text-gray-300">{{ title }}</span></a
-      >
+        <div class="flex">
+          <span class="mx-3 dark:text-gray-300">{{ title }}</span>
+
+          <button class="rounded text-black text-md" @click="copyToClipboard">
+            <i class="fas fa-share-alt"></i>
+          </button>
+        </div>
+      </a>
     </h3>
     <h3 class="text mt-2 mb-4 opacity-70 dark:text-gray-300">{{ subtitle }}</h3>
 
@@ -159,7 +173,9 @@ export default {
         return {
             contributors: [],
             loading: false,
-            theme: 'light'
+            theme: 'light',
+            copySuccess: false,
+            copyError: false,
         }
     },
     async mounted() {
@@ -194,6 +210,21 @@ export default {
         scrollToHash();
     },
     methods: {
+        copyToClipboard() {
+          let url = `https://lablnet.com/project/${this.slug}`
+            navigator.clipboard.writeText(url).then(() => {
+              this.copySuccess = true;
+              this.copyError = false;
+            }, () => {
+              this.copySuccess = false;
+              this.copyError = true;
+            });
+
+            setTimeout(() => {
+              this.copySuccess = false;
+              this.copyError = false;
+            }, 2000);
+        },
         async getContributors() {
             // check if collaborators is not empty array.
             if (this.collaborators.length > 0) {
