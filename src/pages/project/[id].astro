@@ -1,0 +1,40 @@
+---
+// @ts-ignore
+import { getCollection, getEntry } from 'astro:content';
+
+import PostLayout from '../../components/PostLayout.astro';
+import PostInfo from '../../components/PostInfo.vue';
+import Layout from '../../layouts/Layout.astro';
+import { compareByDate, df } from '../../utils';
+
+export async function getStaticPaths() {
+	let companies = await getCollection('companies', (p) => !p.data.draft);
+	return companies.map((entity: any) => ({
+		params: { id: entity.id },
+	}));
+}
+
+const { id } = Astro.params;
+
+const project: any = await getEntry('projects', id);
+const { Content } = await project.render();
+---
+
+<Layout title={`${project.data.title}`}>
+    <PostLayout title="Project">
+	<PostInfo
+		stack={project.data.stacks}
+		title={project.data.title}
+		slug={project.slug}
+		subtitle={project.data.subtitle}
+		codeURL={project.data?.github ?? ''}
+		siteURL={project.data.live}
+		coverPic={project.data.coverPic}
+		collaborators={project.data.collaborators}
+		client:only="vue"
+	/>
+	<div class="mt-4 prose dark:text-gray-300">
+		<Content />
+	</div>
+	</PostLayout>
+</Layout>
