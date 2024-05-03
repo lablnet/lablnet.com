@@ -1,8 +1,8 @@
 import { A as AstroError, i as UnknownContentCollectionError, c as createComponent, j as renderUniqueStylesheet, k as renderScriptElement, l as createHeadAndContent, r as renderTemplate, f as renderComponent, u as unescapeHTML, m as maybeRenderHead, h as addAttribute, e as renderSlot, d as createAstro } from '../astro_CScWkXlk.mjs';
+import { $ as $$Layout } from './404_BrsXoI2z.mjs';
 import { AsyncResource } from 'async_hooks';
 import { p as prependForwardSlash } from '../astro/assets-service_BQ8riOZ5.mjs';
 import { marked } from 'marked';
-import { $ as $$Layout } from './404_oJcQ33AU.mjs';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getApps, initializeApp, cert } from 'firebase-admin/app';
 
@@ -372,7 +372,7 @@ const collectionToEntryMap = createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"certificates":{"type":"content","entries":{"python":"/src/content/certificates/python.md","cryptography":"/src/content/certificates/cryptography.md","opensource":"/src/content/certificates/opensource.md"}},"companies":{"type":"content","entries":{"alphaz":"/src/content/companies/alphaz.md","direct":"/src/content/companies/direct.md","fiverr":"/src/content/companies/fiverr.md","alphasofthub":"/src/content/companies/alphasofthub.md","mennr":"/src/content/companies/mennr.md","projects":"/src/content/companies/projects.md","resourcesr":"/src/content/companies/resourcesr.md","upwork":"/src/content/companies/upwork.md","riphah":"/src/content/companies/riphah.md"}},"skills":{"type":"content","entries":{"frameworks":"/src/content/skills/frameworks.md","languages":"/src/content/skills/languages.md","tools":"/src/content/skills/tools.md"}},"educations":{"type":"content","entries":{"bachelor":"/src/content/educations/bachelor.md","college":"/src/content/educations/college.md","school":"/src/content/educations/school.md"}},"projects":{"type":"content","entries":{"alphaz":"/src/content/projects/alphaz_app.md","alphaz_com":"/src/content/projects/alphaz_com.md","alphaz_framework":"/src/content/projects/alphaz_framework.md","alphaz_web":"/src/content/projects/alphaz_website.md","alphasofthub_ash":"/src/content/projects/ash_alphasofthub.md","ash_oldsite":"/src/content/projects/ash_oldsite.md","validity_ash":"/src/content/projects/ash_validity.md","webharvest":"/src/content/projects/ash_webharvest.md","covid19_ash":"/src/content/projects/ash_covid19.md","direct_lumberjackgame":"/src/content/projects/direct_ lumberjackgame.md","direct_ainda":"/src/content/projects/direct_ainda.md","direct_spendbtc":"/src/content/projects/direct_spendbtc.md","fiverr_bkash":"/src/content/projects/fiverr_bkash.md","alibabascrapper":"/src/content/projects/other_alibabascrapper.md","freelance_php":"/src/content/projects/freelance_php.md","board":"/src/content/projects/others_board.md","easytools":"/src/content/projects/others_easytools.md","mennr_crunchbase":"/src/content/projects/mennr_crunchbase.md","fontpicker":"/src/content/projects/others_fontpicker.md","prayers_time":"/src/content/projects/others_prayertimes.md","resume":"/src/content/projects/others_resume.md","snack":"/src/content/projects/others_snake.md","upwork_visualization":"/src/content/projects/others_upworkvis.md","weather":"/src/content/projects/others_weather.md","resourcesr":"/src/content/projects/resourcesr_app.md","tictactoe":"/src/content/projects/others_tictactoe.md","resourcesr_cli":"/src/content/projects/resourcesr_cli.md","resourcesr_lite":"/src/content/projects/resourcesr_lite.md","resourcesr_web":"/src/content/projects/resourcesr_web.md","alumni_riu":"/src/content/projects/riu_alumni.md","upwork_pythonconsulting":"/src/content/projects/upwork_ pythonconsulting.md","upwork_alertsystem":"/src/content/projects/upwork_alertsystem.md","upwork_bungalowsoftware":"/src/content/projects/upwork_bungalowsoftware.md","github-action-and-github-app":"/src/content/projects/upwork_github_action_app.md","collaboration-app":"/src/content/projects/upwork_collaboration-app.md","democraticai":"/src/content/projects/upwork_democraticai.md","leadcrm":"/src/content/projects/upwork_leadcrm.md","upwork_munacjny":"/src/content/projects/upwork_munacjny.md","in-out-parking":"/src/content/projects/upwork_parkinglot.md","replay-connect":"/src/content/projects/upwork_replay.md","upwork_weareappointments":"/src/content/projects/upwork_weareappointments.md"}}};
+lookupMap = {"certificates":{"type":"content","entries":{"cryptography":"/src/content/certificates/cryptography.md","opensource":"/src/content/certificates/opensource.md","python":"/src/content/certificates/python.md"}},"companies":{"type":"content","entries":{"alphaz":"/src/content/companies/alphaz.md","alphasofthub":"/src/content/companies/alphasofthub.md","fiverr":"/src/content/companies/fiverr.md","mennr":"/src/content/companies/mennr.md","projects":"/src/content/companies/projects.md","direct":"/src/content/companies/direct.md","resourcesr":"/src/content/companies/resourcesr.md","riphah":"/src/content/companies/riphah.md","upwork":"/src/content/companies/upwork.md"}},"educations":{"type":"content","entries":{"school":"/src/content/educations/school.md","college":"/src/content/educations/college.md","bachelor":"/src/content/educations/bachelor.md"}},"projects":{"type":"content","entries":{"alphaz_framework":"/src/content/projects/alphaz_framework.md","alphaz":"/src/content/projects/alphaz_app.md","alphaz_web":"/src/content/projects/alphaz_website.md","alphasofthub_ash":"/src/content/projects/ash_alphasofthub.md","alphaz_com":"/src/content/projects/alphaz_com.md","covid19_ash":"/src/content/projects/ash_covid19.md","ash_oldsite":"/src/content/projects/ash_oldsite.md","validity_ash":"/src/content/projects/ash_validity.md","direct_lumberjackgame":"/src/content/projects/direct_ lumberjackgame.md","webharvest":"/src/content/projects/ash_webharvest.md","direct_ainda":"/src/content/projects/direct_ainda.md","direct_spendbtc":"/src/content/projects/direct_spendbtc.md","fiverr_bkash":"/src/content/projects/fiverr_bkash.md","freelance_php":"/src/content/projects/freelance_php.md","mennr_crunchbase":"/src/content/projects/mennr_crunchbase.md","alibabascrapper":"/src/content/projects/other_alibabascrapper.md","board":"/src/content/projects/others_board.md","easytools":"/src/content/projects/others_easytools.md","fontpicker":"/src/content/projects/others_fontpicker.md","prayers_time":"/src/content/projects/others_prayertimes.md","resume":"/src/content/projects/others_resume.md","snack":"/src/content/projects/others_snake.md","tictactoe":"/src/content/projects/others_tictactoe.md","upwork_visualization":"/src/content/projects/others_upworkvis.md","weather":"/src/content/projects/others_weather.md","resourcesr":"/src/content/projects/resourcesr_app.md","resourcesr_cli":"/src/content/projects/resourcesr_cli.md","resourcesr_lite":"/src/content/projects/resourcesr_lite.md","resourcesr_web":"/src/content/projects/resourcesr_web.md","alumni_riu":"/src/content/projects/riu_alumni.md","upwork_pythonconsulting":"/src/content/projects/upwork_ pythonconsulting.md","upwork_alertsystem":"/src/content/projects/upwork_alertsystem.md","upwork_bungalowsoftware":"/src/content/projects/upwork_bungalowsoftware.md","collaboration-app":"/src/content/projects/upwork_collaboration-app.md","democraticai":"/src/content/projects/upwork_democraticai.md","github-action-and-github-app":"/src/content/projects/upwork_github_action_app.md","leadcrm":"/src/content/projects/upwork_leadcrm.md","upwork_munacjny":"/src/content/projects/upwork_munacjny.md","in-out-parking":"/src/content/projects/upwork_parkinglot.md","replay-connect":"/src/content/projects/upwork_replay.md","upwork_weareappointments":"/src/content/projects/upwork_weareappointments.md"}},"skills":{"type":"content","entries":{"frameworks":"/src/content/skills/frameworks.md","languages":"/src/content/skills/languages.md","tools":"/src/content/skills/tools.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
@@ -400,13 +400,40 @@ const getEntry = createGetEntry({
 	getRenderEntryImport: createGlobLookup(collectionToRenderEntryMap),
 });
 
-const $$Astro$1 = createAstro();
+const $$Astro$2 = createAstro();
 const $$PostLayout = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$PostLayout;
   const { title, subtitle, coverPic = null } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<div class="container"> <section class="py-10 px-5"> ${coverPic && renderTemplate`<section class="hero container max-w-screen-lg mx-auto pb-10"> <img class="rounded object-cover !m-0"${addAttribute(coverPic, "src")}> </section>`} <section> ${title && renderTemplate`<div class="container"> <h1 class="title dark:text-gray-300">${title}</h1> ${subtitle && renderTemplate`<p class="prose ml-2 text-justify mb-6 dark:text-gray-300">${subtitle}</p>`} </div>`} <hr class="mt-9 mb-4"> ${renderSlot($$result, $$slots["default"])} </section> </section> </div>`;
 }, "/Users/lablnet/projects/lablnet/lablnet.com/src/components/PostLayout.astro", void 0);
+
+const $$Astro$1 = createAstro();
+async function getStaticPaths() {
+  let companies = await getCollection("companies", (p) => !p.data.draft);
+  return companies.map((entity) => ({
+    params: { id: entity.id }
+  }));
+}
+const $$id$1 = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  Astro2.self = $$id$1;
+  const { id } = Astro2.params;
+  const project = await getEntry("projects", id);
+  const { Content } = await project.render();
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": `${project.data.title}` }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "PostLayout", $$PostLayout, { "title": "Project" }, { "default": ($$result3) => renderTemplate` ${renderComponent($$result3, "PostInfo", null, { "stack": project.data.stacks, "title": project.data.title, "slug": project.slug, "subtitle": project.data.subtitle, "codeURL": project.data?.github ?? "", "siteURL": project.data.live, "coverPic": project.data.coverPic, "collaborators": project.data.collaborators, "client:only": "vue", "client:component-hydration": "only", "client:component-path": "/Users/lablnet/projects/lablnet/lablnet.com/src/components/PostInfo.vue", "client:component-export": "default" })} ${maybeRenderHead()}<div class="mt-4 prose dark:text-gray-300"> ${renderComponent($$result3, "Content", Content, {})} </div> ` })} ` })}`;
+}, "/Users/lablnet/projects/lablnet/lablnet.com/src/pages/project/[id].astro", void 0);
+
+const $$file$1 = "/Users/lablnet/projects/lablnet/lablnet.com/src/pages/project/[id].astro";
+const $$url$1 = "/project/[id]";
+
+const _id_$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	default: $$id$1,
+	file: $$file$1,
+	getStaticPaths,
+	url: $$url$1
+}, Symbol.toStringTag, { value: 'Module' }));
 
 const df = new Intl.DateTimeFormat(void 0, {
   month: "short",
@@ -477,4 +504,4 @@ const _id_ = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { $$PostLayout as $, _id_ as _, getEntry as a, compareByDate as c, df as d, getCollection as g };
+export { $$PostLayout as $, _id_$1 as _, getEntry as a, _id_ as b, compareByDate as c, df as d, getCollection as g };
