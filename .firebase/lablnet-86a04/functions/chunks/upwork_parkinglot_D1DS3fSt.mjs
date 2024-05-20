@@ -2,7 +2,7 @@ import { c as createComponent, r as renderTemplate, m as maybeRenderHead, u as u
 
 const html = "<p>A mobile application that runs on Android and IOS devices. This application is designed to manage parking lots. I will share more details about this project in the future.</p>";
 
-				const frontmatter = {"title":"In & Out Parking","slug":"in-out-parking","startDate":"2024-02-23T00:00:00.000Z","stacks":["Flutter","Dart","Firebase"],"collaborators":[{"name":"Muhammad Umer Farooq","picture":"../../assets/images/umer.jpg","link":"https://lablnet.com/"}],"company":"upwork","featured":true};
+				const frontmatter = {"title":"In & Out Parking","slug":"in-out-parking","startDate":"2024-02-23T00:00:00.000Z","endDate":"2024-04-22T00:00:00.000Z","stacks":["Flutter","Dart","Firebase"],"collaborators":[{"name":"Muhammad Umer Farooq","picture":"../../assets/images/umer.jpg","link":"https://lablnet.com/"}],"company":"upwork"};
 				const file = "/Users/lablnet/projects/lablnet/lablnet.com/src/content/projects/upwork_parkinglot.md";
 				const url = undefined;
 				function rawContent() {

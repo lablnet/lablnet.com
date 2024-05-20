@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./upwork_parkinglot_BuCyeAMf.mjs');
+						return import('./upwork_shine-hr_DCRxPfhG.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];
