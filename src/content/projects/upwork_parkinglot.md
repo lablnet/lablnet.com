@@ -2,6 +2,7 @@
 title: In & Out Parking
 slug: in-out-parking
 startDate: 2024-02-23
+endDate: 2024-04-22
 stacks: [Flutter, Dart, Firebase]
 # live: 
 collaborators: [
@@ -12,7 +13,6 @@ collaborators: [
     }
 ]
 company: upwork
-featured: true
 ---
 
 A mobile application that runs on Android and IOS devices. This application is designed to manage parking lots. I will share more details about this project in the future. 
