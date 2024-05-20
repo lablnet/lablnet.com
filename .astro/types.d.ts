@@ -533,7 +533,7 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 "upwork_robotmk-curriculum.md": {
 	id: "upwork_robotmk-curriculum.md";
-  slug: "robotmk-curriculum";
+  slug: "website-authentication-and-automation";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

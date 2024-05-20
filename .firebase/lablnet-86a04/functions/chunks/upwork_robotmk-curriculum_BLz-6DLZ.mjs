@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./upwork_robotmk-curriculum_C3QMI5_f.mjs');
+						return import('./upwork_robotmk-curriculum_BsU2CQ64.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];
