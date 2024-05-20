@@ -67,8 +67,7 @@ function serializeSignals(ctx, props, attrs, map) {
 }
 
 const StaticHtml$1 = ({ value, name, hydrate = true }) => {
-  if (!value)
-    return null;
+  if (!value) return null;
   const tagName = hydrate ? "astro-slot" : "astro-static-slot";
   return h$1(tagName, { name, dangerouslySetInnerHTML: { __html: value } });
 };
@@ -79,10 +78,8 @@ const slotName = (str) => str.trim().replace(/[-_]([a-z])/g, (_, w) => w.toUpper
 let originalConsoleError;
 let consoleFilterRefs = 0;
 async function check$1(Component$1, props, children) {
-  if (typeof Component$1 !== "function")
-    return false;
-  if (Component$1.name === "QwikComponent")
-    return false;
+  if (typeof Component$1 !== "function") return false;
+  if (Component$1.name === "QwikComponent") return false;
   if (Component$1.prototype != null && typeof Component$1.prototype.render === "function") {
     return Component.isPrototypeOf(Component$1);
   }
@@ -147,8 +144,7 @@ function finishUsingConsoleFilter() {
 function filteredConsoleError(msg, ...rest) {
   if (consoleFilterRefs > 0 && typeof msg === "string") {
     const isKnownReactHookError = msg.includes("Warning: Invalid hook call.") && msg.includes("https://reactjs.org/link/invalid-hook-call");
-    if (isKnownReactHookError)
-      return;
+    if (isKnownReactHookError) return;
   }
   originalConsoleError(msg, ...rest);
 }
@@ -157,6 +153,8 @@ var server_default = {
   renderToStaticMarkup: renderToStaticMarkup$1,
   supportsAstroStaticSlot: true
 };
+
+const setup = () => {};
 
 /**
  * Astro passes `children` as a string of HTML, so we need
@@ -179,8 +177,6 @@ const StaticHtml = defineComponent({
 		return () => h$2(tagName, { name, innerHTML: value });
 	},
 });
-
-const setup = () => {};
 
 function check(Component) {
 	return !!Component['ssrRender'] || !!Component['__ssrInlineRender'];
