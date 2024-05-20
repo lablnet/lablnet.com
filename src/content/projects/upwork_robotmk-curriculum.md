@@ -1,6 +1,6 @@
 ---
-title: Robotmk Curriculum
-slug: robotmk-curriculum
+title: Website Authentication and automation
+slug: website-authentication-and-automation
 startDate: 2024-05-08
 endDate: 2024-05-15
 stacks: [JavaScript, Cloudflare Worker, GitHub Actions]
