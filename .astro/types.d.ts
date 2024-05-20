@@ -475,6 +475,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"upwork_curriculum.md": {
+	id: "upwork_curriculum.md";
+  slug: "upwork-curriculum";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "upwork_democraticai.md": {
 	id: "upwork_democraticai.md";
   slug: "democraticai";
