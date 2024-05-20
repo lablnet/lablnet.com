@@ -1,6 +1,6 @@
 ---
-title: Cloudflare Worker and GitHub action
-slug: upwork-curriculum
+title: Robotmk Curriculum
+slug: robotmk-curriculum
 startDate: 2024-05-08
 endDate: 2024-05-15
 stacks: [JavaScript, Cloudflare Worker, GitHub Actions]
