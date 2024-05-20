@@ -461,6 +461,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"upwork_autotrader-scraper.md": {
+	id: "upwork_autotrader-scraper.md";
+  slug: "autotrader-scraper";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "upwork_bungalowsoftware.md": {
 	id: "upwork_bungalowsoftware.md";
   slug: "upwork_bungalowsoftware";
@@ -485,6 +492,13 @@ declare module 'astro:content' {
 "upwork_github_action_app.md": {
 	id: "upwork_github_action_app.md";
   slug: "github-action-and-github-app";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"upwork_google-contact-sync.md": {
+	id: "upwork_google-contact-sync.md";
+  slug: "google-contact-sync";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
