@@ -27,8 +27,8 @@ dependencies:
     specifier: ^10.12.0
     version: 10.12.0
   firebase-admin:
-    specifier: ^12.1.0
-    version: 12.1.0
+    specifier: ^12.1.1
+    version: 12.1.1
   marked:
     specifier: ^12.0.2
     version: 12.0.2
@@ -3904,8 +3904,8 @@ packages:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
 
-  /firebase-admin@12.1.0:
-    resolution: {integrity: sha512-bU7uPKMmIXAihWxntpY/Ma9zucn5y3ec+HQPqFQ/zcEfP9Avk9E/6D8u+yT/VwKHNZyg7yDVWOoJi73TIdR4Ww==}
+  /firebase-admin@12.1.1:
+    resolution: {integrity: sha512-Nuoxk//gaYrspS7TvwBINdGvFhh2QeiaWpRW6+PJ+tWyn2/CugBc7jKa1NaBg0AvhGSOXFOCIsXhzCzHA47Rew==}
     engines: {node: '>=14'}
     dependencies:
       '@fastify/busboy': 2.1.1
