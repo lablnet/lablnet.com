@@ -12,8 +12,8 @@ dependencies:
     specifier: ^8.2.5
     version: 8.2.5(astro@4.8.6)
   '@astrojs/vue':
-    specifier: ^4.2.0
-    version: 4.2.0(astro@4.8.6)(vite@5.2.11)(vue@3.4.27)
+    specifier: ^4.3.0
+    version: 4.3.0(astro@4.8.6)(vite@5.2.11)(vue@3.4.27)
   '@fortawesome/fontawesome-free':
     specifier: ^6.5.2
     version: 6.5.2
@@ -222,8 +222,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/vue@4.2.0(astro@4.8.6)(vite@5.2.11)(vue@3.4.27):
-    resolution: {integrity: sha512-cjgPCeZtD2hcqC6vlL1GBdfEQdXcw5nd68IF5NFSiZNdcGpkug1TRgn7QeO2sfjUxI683igy7EwDYvRBXqzZ+A==}
+  /@astrojs/vue@4.3.0(astro@4.8.6)(vite@5.2.11)(vue@3.4.27):
+    resolution: {integrity: sha512-kgemamWBGxSILInyINmK6jZlnUShWBKq9cekgBuiKK7NXUbEYWJQ4B9pE4gNlY0masybr8TYfhth6GaWBpenIw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
       astro: ^4.0.0
