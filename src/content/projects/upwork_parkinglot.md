@@ -22,6 +22,7 @@ A mobile application that runs on Android and IOS devices. This application is d
 1. Admin can add parking slots.
 2. Admin can add addons.
 3. Admin can add terminal locations.
+
 #### Employee
 Admin also have these features.
 1. Employee can see the parking history.
