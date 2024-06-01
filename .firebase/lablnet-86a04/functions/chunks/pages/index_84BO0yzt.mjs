@@ -1,8 +1,16 @@
 import { c as createComponent, r as renderTemplate, e as renderComponent, h as createAstro, m as maybeRenderHead, g as addAttribute, F as Fragment } from '../astro_D8mEBU6v.mjs';
-import { g as getCollection, a as getEntry, c as compareByDate, $ as $$PostLayout, d as df } from './_id__C3X85nRa.mjs';
-import { $ as $$Layout } from './404_D787L4vU.mjs';
+import { g as getCollection, a as getEntry, c as compareByDate, $ as $$PostLayout, d as df } from './_id__C1AgXMm1.mjs';
+import { $ as $$Layout } from './404_DIOR0lLp.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderAttr, ssrInterpolate } from 'vue/server-renderer';
+
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
 
 const $$Astro$3 = createAstro();
 async function getStaticPaths() {
@@ -31,20 +39,12 @@ const $$file$1 = "/Users/lablnet/projects/lablnet/lablnet.com/src/pages/[slug]/i
 const $$url$1 = "/[slug]";
 
 const index$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	default: $$Index$1,
-	file: $$file$1,
-	getStaticPaths,
-	url: $$url$1
+  __proto__: null,
+  default: $$Index$1,
+  file: $$file$1,
+  getStaticPaths,
+  url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
-
-const _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
 
 const _sfc_main = {
     name: "CollaboratorComp",
@@ -381,10 +381,10 @@ const $$file = "/Users/lablnet/projects/lablnet/lablnet.com/src/pages/index.astr
 const $$url = "";
 
 const index = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	default: $$Index,
-	file: $$file,
-	url: $$url
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { index as a, index$1 as i };
+export { _export_sfc as _, index as a, index$1 as i };

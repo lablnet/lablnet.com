@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, e as renderComponent } from '../astro_D8mEBU6v.mjs';
-import { g as getCollection, c as compareByDate, d as df } from './_id__C3X85nRa.mjs';
-import { $ as $$Layout } from './404_D787L4vU.mjs';
+import { g as getCollection, c as compareByDate, d as df } from './_id__C1AgXMm1.mjs';
+import { $ as $$Layout } from './404_DIOR0lLp.mjs';
 
 const $$Share = createComponent(async ($$result, $$props, $$slots) => {
   const projects = await getCollection("projects", (p) => !p.data.draft);
