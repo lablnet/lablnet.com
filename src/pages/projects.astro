@@ -30,6 +30,9 @@ projects.sort(compareByDate);
 							class="project-item"
 							data-title={project.data.title.toLowerCase()}
 							data-id={project.id.toLowerCase()}
+                            data-stack={project.data.stacks}
+                            data-collaborators={project.data.collaborators}
+							data-subtitle={subtitle}
 						>
 							<PostInfo
 								stack={project.data.stacks}
@@ -62,7 +65,8 @@ projects.sort(compareByDate);
 					for (const projectItem of projectItems) {
 						const title = projectItem.getAttribute('data-title');
 						const id = projectItem.getAttribute('data-id');
-						if (title.includes(query) || id.includes(query)) {
+						const stack = projectItem.getAttribute('data-stack');
+						if (title.includes(query) || id.includes(query) || stack.includes(query)) {
 							projectItem.style.display = 'block';
 						} else {
 							projectItem.style.display = 'none';
