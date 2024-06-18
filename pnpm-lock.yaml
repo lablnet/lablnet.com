@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.5.10
     version: 0.5.10(typescript@5.4.5)
   '@astrojs/node':
-    specifier: ^8.2.5
-    version: 8.2.5(astro@4.9.2)
+    specifier: ^8.3.1
+    version: 8.3.1(astro@4.9.2)
   '@astrojs/vue':
     specifier: ^4.3.0
     version: 4.3.0(astro@4.9.2)(vite@5.2.12)(vue@3.4.27)
@@ -155,8 +155,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.5(astro@4.9.2):
-    resolution: {integrity: sha512-IdVD4dBNyg+ScmCATZ0FM7vNLAHq0TSdiJ3LpR4jcWIUhpN1ps5Jg+9CfzMaLmCCe/SJUZejK5EnzqUJdnGYyg==}
+  /@astrojs/node@8.3.1(astro@4.9.2):
+    resolution: {integrity: sha512-JwJzE1zyNcb2Tnk1PJIiIV2vGadR/h0C7h3WeN50H7S/DbNpkGrfwKrOxxpZwhkujnudddToA9U4yv+IPlCf0g==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
