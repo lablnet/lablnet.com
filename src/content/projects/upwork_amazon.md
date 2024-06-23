@@ -18,7 +18,7 @@ featured: false
 
 ## Project Overview
 
-This project involves scraping Amazon products using Playwright and storing the data in Google Sheets.
+This project involves scraping Amazon products using Playwright and storing the data in Google Sheets and sending Specific products to CDON API.
 
 ## Flow
 
@@ -27,6 +27,7 @@ This project involves scraping Amazon products using Playwright and storing the 
 3. Save images to Shopify via GraphQL API.
 4. Save product details to Google Sheet.
 5. Repeat the process for all products in the Google Sheet.
+6. If the column Platform has CDON value, send the product to CDON API.
 
 ## Challenges
 
