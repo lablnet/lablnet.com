@@ -461,6 +461,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"upwork_amazon.md": {
+	id: "upwork_amazon.md";
+  slug: "upwork_amazon";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "upwork_autotrader-scraper.md": {
 	id: "upwork_autotrader-scraper.md";
   slug: "autotrader-scraper";

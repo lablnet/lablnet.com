@@ -3,7 +3,7 @@ title: Amazon Product scraping
 slug: upwork_amazon
 startDate: 2024-05-25
 endDate: 2024-06-01
-stacks: [Node, Playwright]
+stacks: [NodeJs, Playwright]
 company: upwork
 live: https://www.upwork.com/jobs/~01c74972012086824b
 collaborators: [
