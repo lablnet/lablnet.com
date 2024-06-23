@@ -11,6 +11,11 @@ collaborators: [
         name: Muhammad Umer Farooq,
         picture: ../../assets/images/umer.jpg,
         link: https://lablnet.com/
+    },
+    {
+        name: Muhammad Usman Naeem,
+        picture: ../../assets/images/usman.jpg,
+        link: https://musmannaeem.com/
     }
 ]
 featured: false
@@ -45,3 +50,11 @@ This project involves scraping Amazon products using Playwright and storing the 
 
 * Learned about GraphQL API.
 * Learned about Google Gemini API.
+
+## Contribution from Usman
+
+Usman made a significant contribution to the project by:
+
+* **Image Quality Improvement**: Helping in obtaining high-quality images from the Amazon product page.
+
+This contribution was crucial in enhancing the project's overall quality and accuracy.

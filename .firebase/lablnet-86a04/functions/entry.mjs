@@ -1,7 +1,7 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_CAN8tiPX.mjs';
-import { e as appendForwardSlash$1, j as joinPaths, t as trimSlashes, f as fileExtension, s as slash, p as prependForwardSlash$1, g as removeTrailingForwardSlash, h as collapseDuplicateSlashes } from './chunks/astro/assets-service_BIj-IH1G.mjs';
-import { R as ROUTE_TYPE_HEADER, t as REROUTE_DIRECTIVE_HEADER, A as AstroError, v as ResponseSentError, w as MiddlewareNoDataOrNextCalled, x as MiddlewareNotAResponse, G as GetStaticPathsRequired, y as InvalidGetStaticPathsReturn, z as InvalidGetStaticPathsEntry, B as GetStaticPathsExpectedParams, C as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, H as PrerenderDynamicEndpointPathCollide, J as ReservedSlotName, K as renderSlotToString, O as renderJSX, Q as chunkToString, S as isRenderInstruction, T as LocalsNotAnObject, V as clientLocalsSymbol, W as clientAddressSymbol$1, X as PrerenderClientAddressNotAvailable, Y as ClientAddressNotAvailable, Z as StaticClientAddressNotAvailable, _ as renderPage, $ as renderEndpoint, a0 as ASTRO_VERSION, a1 as responseSentSymbol$1, a2 as AstroResponseHeadersReassigned, a3 as REROUTABLE_STATUS_CODES, a4 as getDefaultExportFromCjs } from './chunks/astro_D8mEBU6v.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_DaJZ6mit.mjs';
+import { e as appendForwardSlash$1, j as joinPaths, t as trimSlashes, f as fileExtension, s as slash, p as prependForwardSlash$1, g as removeTrailingForwardSlash, h as collapseDuplicateSlashes } from './chunks/astro/assets-service_DhWS_J8Y.mjs';
+import { R as ROUTE_TYPE_HEADER, t as REROUTE_DIRECTIVE_HEADER, A as AstroError, v as ResponseSentError, w as MiddlewareNoDataOrNextCalled, x as MiddlewareNotAResponse, G as GetStaticPathsRequired, y as InvalidGetStaticPathsReturn, z as InvalidGetStaticPathsEntry, B as GetStaticPathsExpectedParams, C as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, H as PrerenderDynamicEndpointPathCollide, J as ReservedSlotName, K as renderSlotToString, O as renderJSX, Q as chunkToString, S as isRenderInstruction, T as LocalsNotAnObject, V as clientLocalsSymbol, W as clientAddressSymbol$1, X as PrerenderClientAddressNotAvailable, Y as ClientAddressNotAvailable, Z as StaticClientAddressNotAvailable, _ as renderPage, $ as renderEndpoint, a0 as ASTRO_VERSION, a1 as AstroResponseHeadersReassigned, a2 as responseSentSymbol$1, a3 as REROUTABLE_STATUS_CODES, a4 as getDefaultExportFromCjs } from './chunks/astro_BLbMhyYy.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import https$1 from 'https';
 import fs$2 from 'node:fs';
@@ -1441,7 +1441,7 @@ class Slots {
 }
 
 class RenderContext {
-  constructor(pipeline, locals, middleware, pathname, request, routeData, status, cookies = new AstroCookies(request), params = getParams(routeData, pathname), url = new URL(request.url)) {
+  constructor(pipeline, locals, middleware, pathname, request, routeData, status, cookies = new AstroCookies(request), params = getParams(routeData, pathname), url = new URL(request.url), props = {}) {
     this.pipeline = pipeline;
     this.locals = locals;
     this.middleware = middleware;
@@ -1452,6 +1452,7 @@ class RenderContext {
     this.cookies = cookies;
     this.params = params;
     this.url = url;
+    this.props = props;
   }
   /**
    * A flag that tells the render content if the rewriting was triggered
@@ -1491,10 +1492,10 @@ class RenderContext {
    * - endpoint
    * - fallback
    */
-  async render(componentInstance) {
+  async render(componentInstance, slots = {}) {
     const { cookies, middleware, pathname, pipeline } = this;
     const { logger, routeCache, serverLike, streaming } = pipeline;
-    const props = await getProps({
+    const props = Object.keys(this.props).length > 0 ? this.props : await getProps({
       mod: componentInstance,
       routeData: this.routeData,
       routeCache,
@@ -1546,7 +1547,7 @@ class RenderContext {
               result,
               componentInstance?.default,
               props,
-              {},
+              slots,
               streaming,
               this.routeData
             );
@@ -1669,6 +1670,7 @@ class RenderContext {
         throw new AstroError(AstroResponseHeadersReassigned);
       }
     };
+    const actionResult = hasActionsInternal(this.locals) ? this.locals._actionsInternal?.actionResult : void 0;
     const result = {
       cancelled: false,
       clientDirectives,
@@ -1684,8 +1686,10 @@ class RenderContext {
       renderers,
       resolve,
       response,
+      request: this.request,
       scripts,
       styles,
+      actionResult,
       _metadata: {
         hasHydrationScript: false,
         rendererSpecificHydrationScripts: /* @__PURE__ */ new Set(),
@@ -2483,7 +2487,10 @@ class NodeApp extends App {
       Object.assign(options, makeRequestBody(req));
     }
     const request = new Request(url, options);
-    if (req.socket?.remoteAddress) {
+    const clientIp = req.headers["x-forwarded-for"];
+    if (clientIp) {
+      Reflect.set(request, clientAddressSymbol, clientIp);
+    } else if (req.socket?.remoteAddress) {
       Reflect.set(request, clientAddressSymbol, req.socket.remoteAddress);
     }
     return request;
@@ -10162,16 +10169,16 @@ const serverEntrypointModule = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.de
   start
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const _page0 = () => import('./chunks/node_DRT58YNk.mjs');
-const _page1 = () => import('./chunks/404_6B2WT5zQ.mjs');
-const _page2 = () => import('./chunks/_id__1E8tHgJf.mjs');
-const _page3 = () => import('./chunks/projects_BsZ9UssQ.mjs');
-const _page4 = () => import('./chunks/_id__C0u50qmU.mjs');
-const _page5 = () => import('./chunks/share_DRKCYlCk.mjs');
-const _page6 = () => import('./chunks/index_Bc532yM3.mjs');
-const _page7 = () => import('./chunks/index_CAERDxgN.mjs');
+const _page0 = () => import('./chunks/node_DhLfGvun.mjs');
+const _page1 = () => import('./chunks/404_DqC_KJb2.mjs');
+const _page2 = () => import('./chunks/_id__CKkuTK-c.mjs');
+const _page3 = () => import('./chunks/projects_-Vwx-UY3.mjs');
+const _page4 = () => import('./chunks/_id__Co85PAg0.mjs');
+const _page5 = () => import('./chunks/share_DjE1Y8cD.mjs');
+const _page6 = () => import('./chunks/index_CT5ZmRXO.mjs');
+const _page7 = () => import('./chunks/index_DLuyC-cH.mjs');
 const pageMap = new Map([
-    ["node_modules/.pnpm/astro@4.8.6_typescript@5.4.5/node_modules/astro/dist/assets/endpoint/node.js", _page0],
+    ["node_modules/.pnpm/astro@4.9.2_typescript@5.4.5/node_modules/astro/dist/assets/endpoint/node.js", _page0],
     ["src/pages/404.astro", _page1],
     ["src/pages/project/[id].astro", _page2],
     ["src/pages/projects.astro", _page3],
