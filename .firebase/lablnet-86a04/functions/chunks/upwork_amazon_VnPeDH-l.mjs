@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./upwork_amazon_85qU0cQr.mjs');
+						return import('./upwork_amazon_D7MASuUc.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];
