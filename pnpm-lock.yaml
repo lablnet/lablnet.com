@@ -36,8 +36,8 @@ importers:
         specifier: ^12.0.2
         version: 12.0.2
       md-editor-v3:
-        specifier: ^4.18.1
-        version: 4.18.1(@codemirror/view@6.32.0)(@lezer/common@1.2.1)(vue@3.4.38(typescript@5.5.4))
+        specifier: ^4.19.0
+        version: 4.19.0(@codemirror/view@6.32.0)(@lezer/common@1.2.1)(vue@3.4.38(typescript@5.5.4))
       postcss:
         specifier: ^8.4.41
         version: 8.4.41
@@ -1256,8 +1256,8 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@vavt/util@1.7.0':
-    resolution: {integrity: sha512-EAwplP/2Lm79KCFj5umtU/HKgFUi8Ec6a1clK2Za4MErkAkY8+mdOSnAFJdltceWzmnauZrEc+By+u0ZvX6u6g==}
+  '@vavt/util@2.0.0':
+    resolution: {integrity: sha512-zf1sY9Gy4jj5SE7FuSTXu7PrUdnKJf0zKvhNLAHWiGg1t8IkMfYwRN5567HcUgZSaSuJ8FR3dr+w6E2XzxoPiQ==}
 
   '@vitejs/plugin-vue-jsx@4.0.1':
     resolution: {integrity: sha512-7mg9HFGnFHMEwCdB6AY83cVK4A6sCqnrjFYF4WIlebYAQVVJ/sC/CiTruVdrRlhrFoeZ8rlMxY9wYpPTIRhhAg==}
@@ -2332,8 +2332,8 @@ packages:
     engines: {node: '>= 18'}
     hasBin: true
 
-  md-editor-v3@4.18.1:
-    resolution: {integrity: sha512-q5eZOBBJv5+3yt2wLSJBeQ3O2BbWzO3CDxwiIgmGnY/70MRyy8tBl1hLTHscT6rlVrZB5/47FIeAtb7LSsr2JQ==}
+  md-editor-v3@4.19.0:
+    resolution: {integrity: sha512-6ZHA0qmvC8VcxuuRtE55rlfuJbRCG/j2fmyfHZ1YcNSngwFoWJ4ea0VulcV79K2aCr4OliM/gSJrDQQAYfP1QA==}
     peerDependencies:
       vue: ^3.2.47
 
@@ -5081,7 +5081,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vavt/util@1.7.0': {}
+  '@vavt/util@2.0.0': {}
 
   '@vitejs/plugin-vue-jsx@4.0.1(vite@5.4.1(@types/node@22.3.0))(vue@3.4.38(typescript@5.5.4))':
     dependencies:
@@ -6429,12 +6429,12 @@ snapshots:
 
   marked@12.0.2: {}
 
-  md-editor-v3@4.18.1(@codemirror/view@6.32.0)(@lezer/common@1.2.1)(vue@3.4.38(typescript@5.5.4)):
+  md-editor-v3@4.19.0(@codemirror/view@6.32.0)(@lezer/common@1.2.1)(vue@3.4.38(typescript@5.5.4)):
     dependencies:
       '@codemirror/lang-markdown': 6.2.5
       '@codemirror/language-data': 6.5.1(@codemirror/view@6.32.0)
       '@types/markdown-it': 14.1.2
-      '@vavt/util': 1.7.0
+      '@vavt/util': 2.0.0
       codemirror: 6.0.1(@lezer/common@1.2.1)
       copy-to-clipboard: 3.3.3
       lru-cache: 10.4.3
