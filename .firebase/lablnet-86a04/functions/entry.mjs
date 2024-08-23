@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_BMIl8iQ7.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_BclFynqG.mjs';
 import { e as appendForwardSlash$1, j as joinPaths, t as trimSlashes, f as fileExtension, s as slash, p as prependForwardSlash$1, g as removeTrailingForwardSlash, h as collapseDuplicateSlashes } from './chunks/astro/assets-service_DhWS_J8Y.mjs';
 import { R as ROUTE_TYPE_HEADER, t as REROUTE_DIRECTIVE_HEADER, A as AstroError, v as ResponseSentError, w as MiddlewareNoDataOrNextCalled, x as MiddlewareNotAResponse, G as GetStaticPathsRequired, y as InvalidGetStaticPathsReturn, z as InvalidGetStaticPathsEntry, B as GetStaticPathsExpectedParams, C as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, H as PrerenderDynamicEndpointPathCollide, J as ReservedSlotName, K as renderSlotToString, O as renderJSX, Q as chunkToString, S as isRenderInstruction, T as LocalsNotAnObject, V as clientLocalsSymbol, W as clientAddressSymbol$1, X as PrerenderClientAddressNotAvailable, Y as ClientAddressNotAvailable, Z as StaticClientAddressNotAvailable, _ as renderPage, $ as renderEndpoint, a0 as ASTRO_VERSION, a1 as AstroResponseHeadersReassigned, a2 as responseSentSymbol$1, a3 as REROUTABLE_STATUS_CODES, a4 as getDefaultExportFromCjs } from './chunks/astro_BLbMhyYy.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
@@ -10171,12 +10171,12 @@ const serverEntrypointModule = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.de
 
 const _page0 = () => import('./chunks/node_DhLfGvun.mjs');
 const _page1 = () => import('./chunks/404_DqC_KJb2.mjs');
-const _page2 = () => import('./chunks/_id__Glk-gSjD.mjs');
-const _page3 = () => import('./chunks/projects_Dh6F_KF1.mjs');
-const _page4 = () => import('./chunks/_id__DOrFcwsS.mjs');
-const _page5 = () => import('./chunks/share_NcALuBID.mjs');
-const _page6 = () => import('./chunks/index_Cgt7ha_h.mjs');
-const _page7 = () => import('./chunks/index_vF9Ttxao.mjs');
+const _page2 = () => import('./chunks/_id__9kuT9un9.mjs');
+const _page3 = () => import('./chunks/projects_CkkDA3dK.mjs');
+const _page4 = () => import('./chunks/_id__DLUah9zO.mjs');
+const _page5 = () => import('./chunks/share_pKRBg7rA.mjs');
+const _page6 = () => import('./chunks/index_V6zY0TvL.mjs');
+const _page7 = () => import('./chunks/index_D9BAtvgy.mjs');
 const pageMap = new Map([
     ["node_modules/.pnpm/astro@4.9.2_typescript@5.4.5/node_modules/astro/dist/assets/endpoint/node.js", _page0],
     ["src/pages/404.astro", _page1],
