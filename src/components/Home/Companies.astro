@@ -51,10 +51,15 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 								</div>
 								<div class="font-medium text-emphasis dark:text-gray-300 prose">
 									<a class="accent dark:text-gray-300 prose arrow" href={`/${company.slug}`}>
-										<span>{company.data.title}</span>
-									</a> 
-									{' '}
-									· {' '}
+										{company.data.name === 'Upwork' ? (
+											<img
+												src="../assets/icons/topratedplus.svg"
+												alt="Upwork"
+												class="w-6 h-6 inline"
+											/>
+										) : null}{company.data.title}
+									</a>{' '}
+									·{' '}
 									<a
 										class="relative dark:text-gray-300 prose arrow"
 										href={company.data.link}
