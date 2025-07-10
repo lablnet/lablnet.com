@@ -11,7 +11,7 @@ jobs:
       - name: Instll Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18.x'
+          node-version: '20.0.0'
       - name: Install pnpm
         run: npm install -g pnpm
       - uses: actions/checkout@v3
