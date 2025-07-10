@@ -2,8 +2,8 @@
 title: Shine.hr
 slug: shine-hr
 startDate: 2024-05-12
+endDate: 2024-07-12
 stacks: [Flutter, Dart, Firebase]
-# live: 
 collaborators: [
     {
         name: Muhammad Umer Farooq,
@@ -12,7 +12,7 @@ collaborators: [
     }
 ]
 company: upwork
-featured: true
+featured: false
 ---
 
-A mobile application that runs on Android and IOS devices. This application is designed to for cleaner and customers to connect. I will share more details about this project in the future.
+A mobile application that runs on Android and IOS devices. This application is designed to for cleaner and customers to connect. It act as freelancing for cleaner and customers
