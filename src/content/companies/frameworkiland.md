@@ -1,5 +1,6 @@
 ---
 startDate: 2024-06-16
+endDate: 2025-06-30
 title: Full Stack Developer II
 name: FrameworkIsland
 link: https://frameworkisland.com/
