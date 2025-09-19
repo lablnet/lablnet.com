@@ -35,33 +35,33 @@ module.exports = {
                     'surface-light': 'rgba(255, 255, 255, 0.25)',
                     'surface-dark': 'rgba(0, 0, 0, 0.4)'
                 },
-                // MUF logo inspired colors (Pink to Cyan gradient)
+                // MUF brand colors
                 'muf': {
-                    '50': '#fef7ff',
-                    '100': '#fdeeff',
-                    '200': '#fbddff',
-                    '300': '#f8bbff',
-                    '400': '#f288ff', // Pink side of gradient
-                    '500': '#e854ff', // Main pink
-                    '600': '#d530f3', // Deep pink
-                    '700': '#b821d7', // Purple transition
-                    '800': '#9620af', // Blue-purple
-                    '900': '#7b1d8a', // Deep blue-purple
-                    '950': '#520968', // Darkest
+                    '50': '#fef7fb',
+                    '100': '#fdeef5',
+                    '200': '#fbd5e6',
+                    '300': '#f8b5d3',
+                    '400': '#f493c0',
+                    '500': '#f068a7', // Main brand pink #f068a7
+                    '600': '#e0589a', // Deeper pink
+                    '700': '#c8477f', // Dark pink
+                    '800': '#a03865', // Deep rose
+                    '900': '#7d2a4c', // Darkest pink
+                    '950': '#5c1f38', // Very dark
                 },
-                // Cyan side of MUF gradient
-                'muf-cyan': {
-                    '50': '#f0fdff',
-                    '100': '#ccf7fe',
-                    '200': '#99eefd',
-                    '300': '#5dd9fa',
-                    '400': '#22bef5', // Main cyan from logo
-                    '500': '#0891dc', // Deeper cyan
-                    '600': '#0470ba', // Blue-cyan
-                    '700': '#0a5895', // Deep blue
-                    '800': '#0f4a7b', // Navy blue
-                    '900': '#134066', // Dark navy
-                    '950': '#0c2847', // Darkest
+                // MUF blue colors
+                'muf-blue': {
+                    '50': '#f0f9ff',
+                    '100': '#e0f2fe',
+                    '200': '#bae6fd',
+                    '300': '#93addb', // Light blue shade #93addb
+                    '400': '#60a5fa',
+                    '500': '#24b6ff', // Main brand blue #24b6ff
+                    '600': '#0ea5e9', // Deeper blue
+                    '700': '#0284c7', // Dark blue
+                    '800': '#0369a1', // Navy blue
+                    '900': '#0c4a6e', // Deep navy
+                    '950': '#082f49', // Darkest
                 },
             },
             backdropBlur: {

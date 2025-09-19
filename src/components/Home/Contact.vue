@@ -2,7 +2,7 @@
   <section class="py-20 container" id="contact">
     <div class="glass-card p-8 md:p-12 mb-12 animate-fade-in">
       <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-700 to-muf-cyan-500 bg-clip-text text-transparent">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-blue-300 to-muf-blue-500 bg-clip-text text-transparent">
           Let's Work Together
         </h2>
         <p class="text-xl text-gray-700 dark:text-gray-300">
@@ -132,8 +132,8 @@
                   :disabled="disabled"
                   type="button"
                   class="w-full glass-button px-8 py-4 text-white font-semibold rounded-xl 
-                         bg-gradient-to-r from-muf-400 via-muf-600 to-muf-cyan-400
-                         hover:from-muf-500 hover:via-muf-700 hover:to-muf-cyan-500
+                         bg-gradient-to-r from-muf-500 via-muf-blue-300 to-muf-blue-500
+                         hover:from-muf-600 hover:via-muf-blue-400 hover:to-muf-blue-600
                          disabled:opacity-50 disabled:cursor-not-allowed
                          transition-all duration-300 transform hover:scale-105
                          focus:outline-none focus:ring-4 focus:ring-blue-500/30
