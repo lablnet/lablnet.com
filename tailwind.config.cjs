@@ -74,6 +74,11 @@ module.exports = {
                 'glow': 'glow 2s ease-in-out infinite alternate',
                 'slide-up': 'slideUp 0.6s ease-out',
                 'fade-in': 'fadeIn 0.8s ease-out',
+                'liquid-float': 'liquidFloat 8s ease-in-out infinite',
+                'liquid-pulse': 'liquidPulse 3s ease-in-out infinite',
+                'liquid-shimmer': 'liquidShimmer 2s ease-in-out infinite',
+                'liquid-wave': 'liquidWave 4s ease-in-out infinite',
+                'morphing': 'morphing 6s ease-in-out infinite',
             },
             keyframes: {
                 float: {
@@ -91,6 +96,62 @@ module.exports = {
                 fadeIn: {
                     '0%': { opacity: '0' },
                     '100%': { opacity: '1' }
+                },
+                liquidFloat: {
+                    '0%, 100%': {
+                        transform: 'translateY(0px) rotate(0deg) scale(1)',
+                        borderRadius: '20px'
+                    },
+                    '25%': {
+                        transform: 'translateY(-15px) rotate(1deg) scale(1.02)',
+                        borderRadius: '25px 20px 25px 20px'
+                    },
+                    '50%': {
+                        transform: 'translateY(-8px) rotate(0deg) scale(1.01)',
+                        borderRadius: '20px 25px 20px 25px'
+                    },
+                    '75%': {
+                        transform: 'translateY(-12px) rotate(-1deg) scale(1.015)',
+                        borderRadius: '25px 20px 25px 20px'
+                    }
+                },
+                liquidPulse: {
+                    '0%, 100%': {
+                        transform: 'scale(1)',
+                        filter: 'brightness(1) saturate(1)'
+                    },
+                    '50%': {
+                        transform: 'scale(1.02)',
+                        filter: 'brightness(1.1) saturate(1.2)'
+                    }
+                },
+                liquidShimmer: {
+                    '0%': { backgroundPosition: '-200% center' },
+                    '100%': { backgroundPosition: '200% center' }
+                },
+                liquidWave: {
+                    '0%, 100%': {
+                        clipPath: 'ellipse(100% 100% at 50% 50%)',
+                        transform: 'rotate(0deg)'
+                    },
+                    '25%': {
+                        clipPath: 'ellipse(105% 95% at 48% 52%)',
+                        transform: 'rotate(0.5deg)'
+                    },
+                    '50%': {
+                        clipPath: 'ellipse(95% 105% at 52% 48%)',
+                        transform: 'rotate(0deg)'
+                    },
+                    '75%': {
+                        clipPath: 'ellipse(105% 95% at 48% 52%)',
+                        transform: 'rotate(-0.5deg)'
+                    }
+                },
+                morphing: {
+                    '0%, 100%': { borderRadius: '20px' },
+                    '25%': { borderRadius: '30px 20px 30px 20px' },
+                    '50%': { borderRadius: '20px 30px 20px 30px' },
+                    '75%': { borderRadius: '25px 25px 25px 25px' }
                 }
             },
         },
