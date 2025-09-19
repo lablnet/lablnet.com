@@ -187,8 +187,7 @@ export default {
     document.head.appendChild(recaptchaScript);
   },
   methods: {
-    doSubmi(e)
-    {
+    doSubmi(e) {
       e.preventDefault();
       e.stopPropagation();
     
@@ -199,50 +198,34 @@ export default {
       self.error = null;
       self.loading = true;
     
+      // Use reCAPTCHA but with mailto fallback since Firebase functions are removed
       // eslint-disable-next-line no-undef
       grecaptcha.ready(function() {
         // eslint-disable-next-line no-undef
         grecaptcha.execute(recaptchaToken, {action: 'submit'}).then(function(token) {
-            fetch(urls.contact, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({
-                name: self.name,
-                email: self.email,
-                message: self.message,
-                subject: self.subject,
-                captcha: token
-              })
-            })
-              .then(res => res.json())
-              .then(res => {
-                if (res.statusCode !== 200) {
-                  self.errors = res.body.errors;
-                  if (res.body?.errors?.captcha) {
-                    self.error = res.body.errors.captcha;
-                  }
-                } else {
-                  self.loading = false;
-                  self.error = null;
-                  self.name = null;
-                  self.email = null;
-                  self.message = null;
-                  self.subject = null;
-                  self.success = true;
-                }
-                self.loading = false;
-              })
-              .catch(err => {
-                self.loading = false;
-                self.error = "Unexpected error occured, please try again.";
-              });
+          // Since Firebase functions are removed, we'll use mailto after reCAPTCHA validation
+          const subject = encodeURIComponent(self.subject);
+          const body = encodeURIComponent(
+            `Name: ${self.name}\nEmail: ${self.email}\n\nMessage:\n${self.message}\n\nreCAPTCHA Token: ${token}`
+          );
+          const mailtoLink = `mailto:umer@lablnet.com?subject=${subject}&body=${body}`;
+          
+          // Open default email client
+          window.location.href = mailtoLink;
+          
+          // Show success message
+          self.loading = false;
+          self.error = null;
+          self.name = null;
+          self.email = null;
+          self.message = null;
+          self.subject = null;
+          self.success = true;
         }).catch(function(error) {
-            self.loading = false;
-            self.error = "Google reCaptcha error, please try again.";
+          self.loading = false;
+          self.error = "Google reCaptcha verification failed, please try again.";
         });
-      })
+      });
     }
   },
   computed: {
