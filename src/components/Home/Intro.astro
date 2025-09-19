@@ -31,10 +31,10 @@ let socialMediaHandles = [
 ---
 
 <main class="min-h-screen">
-	<section class="container pt-8 pb-20">
+	<section class="container pt-4 md:pt-8 pb-12 md:pb-20">
 		<!-- Hero Glass Card with Apple Liquid Design 2025 -->
-		<div class="glass-card liquid-interactive liquid-depth-2 p-8 md:p-12 mb-12 animate-fade-in">
-			<div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+		<div class="glass-card liquid-interactive liquid-depth-2 p-4 sm:p-6 md:p-8 lg:p-12 mb-6 md:mb-12 animate-fade-in">
+			<div class="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12">
 				<!-- Profile Image with Glass Effect -->
 				<div class="relative group">
 					<div class="absolute -inset-1 bg-gradient-to-r from-muf-500 via-muf-blue-300 to-muf-blue-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-glow"></div>
@@ -47,15 +47,15 @@ let socialMediaHandles = [
 
 				<!-- Hero Content -->
 				<div class="flex-1 text-center lg:text-left">
-					<h1 class="text-4xl md:text-6xl font-bold mb-4 liquid-heading liquid-text animate-slide-up">
+					<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-3 md:mb-4 liquid-heading liquid-text animate-slide-up">
 						Muhammad Umer Farooq
 					</h1>
 					
-					<p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-6 animate-slide-up" style="animation-delay: 0.2s;">
+					<p class="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4 md:mb-6 animate-slide-up" style="animation-delay: 0.2s;">
 						Professional Software Developer
 					</p>
 
-					<div class="mb-8 animate-slide-up" style="animation-delay: 0.4s;">
+					<div class="mb-4 md:mb-8 animate-slide-up" style="animation-delay: 0.4s;">
 						<CollaboratorComp
 							name="lablent"
 							picture="../assets/images/umer-removebg.png"
@@ -69,11 +69,11 @@ let socialMediaHandles = [
 		</div>
 
 		<!-- About Cards Grid with Enhanced Liquid Design -->
-		<div class="grid md:grid-cols-2 gap-8 mb-12">
+		<div class="grid md:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-12">
 			<!-- About Card -->
-			<div class="glass-card liquid-interactive liquid-depth-1 p-8 animate-slide-up" style="animation-delay: 0.6s;">
-				<h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200 flex items-center liquid-text">
-					<i class="fa-solid fa-user-astronaut text-muf-500 mr-3 animate-liquid-pulse"></i>
+			<div class="glass-card liquid-interactive liquid-depth-1 p-4 sm:p-6 md:p-8 animate-slide-up" style="animation-delay: 0.6s;">
+				<h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gray-800 dark:text-gray-200 flex items-center liquid-text">
+					<i class="fa-solid fa-user-astronaut text-muf-500 mr-2 md:mr-3 animate-liquid-pulse"></i>
 					About Me
 				</h3>
 				<p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 liquid-text">
@@ -86,9 +86,9 @@ let socialMediaHandles = [
 			</div>
 
 			<!-- Interests Card -->
-			<div class="glass-card liquid-interactive liquid-depth-1 p-8 animate-slide-up" style="animation-delay: 0.8s;">
-				<h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200 flex items-center liquid-text">
-					<i class="fa-solid fa-brain text-muf-blue-500 mr-3 animate-liquid-pulse" style="animation-delay: 0.5s;"></i>
+			<div class="glass-card liquid-interactive liquid-depth-1 p-4 sm:p-6 md:p-8 animate-slide-up" style="animation-delay: 0.8s;">
+				<h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gray-800 dark:text-gray-200 flex items-center liquid-text">
+					<i class="fa-solid fa-brain text-muf-blue-500 mr-2 md:mr-3 animate-liquid-pulse" style="animation-delay: 0.5s;"></i>
 					Interests
 				</h3>
 				<p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 liquid-text">
@@ -103,12 +103,12 @@ let socialMediaHandles = [
 		</div>
 
 		<!-- Social Media Glass Card -->
-		<div class="glass-card liquid-interactive liquid-depth-3 p-8 animate-slide-up" style="animation-delay: 1s;">
-			<h3 class="text-2xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200 flex items-center justify-center liquid-text">
-				<i class="fa-solid fa-link text-muf-500 mr-3 animate-liquid-pulse" style="animation-delay: 1s;"></i>
+		<div class="glass-card liquid-interactive liquid-depth-3 p-4 sm:p-6 md:p-8 animate-slide-up" style="animation-delay: 1s;">
+			<h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-center text-gray-800 dark:text-gray-200 flex items-center justify-center liquid-text">
+				<i class="fa-solid fa-link text-muf-500 mr-2 md:mr-3 animate-liquid-pulse" style="animation-delay: 1s;"></i>
 				Let's Connect
 			</h3>
-			<div class="grid grid-cols-2 md:grid-cols-5 gap-6 justify-items-center">
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 justify-items-center">
 				{
 					socialMediaHandles.map((socialMediaHandle, index) => {
 						return (

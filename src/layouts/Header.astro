@@ -4,12 +4,12 @@
 
 <div class="w-full">
 	<!-- Floating Glass Header -->
-	<header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl animate-fade-in">
-		<div class="glass-nav mx-4 px-6 py-4 flex flex-wrap justify-between items-center">
+	<header class="fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl animate-fade-in">
+		<div class="glass-nav mx-2 md:mx-4 px-3 md:px-6 py-3 md:py-4 flex flex-wrap justify-between items-center">
 			<!-- Logo -->
 			<a href="/" class="flex items-center group">
 				<img 
-					class="w-20 h-12 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
+					class="w-16 h-10 md:w-20 md:h-12 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
 					src="../assets/images/muf.png" 
 					alt="Muhammad Umer Farooq" 
 					title="Muhammad Umer Farooq" 
@@ -27,20 +27,20 @@
 			</button>
 
 			<!-- Desktop Navigation -->
-			<nav class="hidden md:flex space-x-8">
-				<a href="/#work" class="nav-link text-gray-700 dark:text-gray-300 hover:text-muf-600 dark:hover:text-muf-400 font-medium transition-all duration-300 flex items-center space-x-2">
+			<nav class="hidden md:flex space-x-4 lg:space-x-8">
+				<a href="/#work" class="nav-link text-gray-700 dark:text-gray-300 hover:text-muf-600 dark:hover:text-muf-400 font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
 					<i class="fa-solid fa-bars-progress text-sm"></i>
 					<span>Work</span>
 				</a>
-				<a href="/#education" class="nav-link text-gray-700 dark:text-gray-300 hover:text-muf-600 dark:hover:text-muf-400 font-medium transition-all duration-300 flex items-center space-x-2">
+				<a href="/#education" class="nav-link text-gray-700 dark:text-gray-300 hover:text-muf-600 dark:hover:text-muf-400 font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
 					<i class="fa-solid fa-graduation-cap text-sm"></i>
 					<span>Education</span>
 				</a>
-				<a href="../assets/cv/CV.pdf" target="_blank" class="nav-link text-gray-700 dark:text-gray-300 hover:text-muf-600 dark:hover:text-muf-400 font-medium transition-all duration-300 flex items-center space-x-2">
+				<a href="../assets/cv/CV.pdf" target="_blank" class="nav-link text-gray-700 dark:text-gray-300 hover:text-muf-600 dark:hover:text-muf-400 font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
 					<i class="fa-solid fa-file text-sm"></i>
 					<span>CV</span>
 				</a>
-				<a href="/#contact" class="glass-button px-4 py-2 text-muf-blue-600 dark:text-muf-blue-400 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 flex items-center space-x-2">
+				<a href="/#contact" class="glass-button px-3 lg:px-4 py-2 text-muf-blue-600 dark:text-muf-blue-400 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
 					<i class="fa-solid fa-address-book text-sm"></i>
 					<span>Contact</span>
 				</a>
@@ -50,7 +50,7 @@
 		<!-- Mobile Navigation Menu -->
 		<nav
 			id="nav"
-			class="md:hidden hidden mt-4 mx-4 glass-card p-6 animate-slide-up"
+			class="md:hidden hidden mt-2 md:mt-4 mx-2 md:mx-4 glass-card p-4 md:p-6 animate-slide-up"
 		>
 			<div class="flex flex-col space-y-4">
 				<a href="/#work" class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20">
@@ -74,7 +74,7 @@
 	</header>
 
 	<!-- Spacer to account for fixed header -->
-	<div class="h-24"></div>
+	<div class="h-16 md:h-24"></div>
 </div>
 
 <style>

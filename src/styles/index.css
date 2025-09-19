@@ -8,7 +8,12 @@
     }
     @media only screen and (max-width: 986px) {
         .container {
-            @apply px-6 max-w-xl;
+            @apply px-4 max-w-full;
+        }
+    }
+    @media only screen and (max-width: 640px) {
+        .container {
+            @apply px-3;
         }
     }
     /* Apple Liquid Glass 2025 utilities - Enhanced translucency with dynamic reflections */
@@ -267,6 +272,75 @@
         border: 2px solid rgba(255, 255, 255, 0.3) !important;
         color: rgba(255, 255, 255, 0.95) !important;
     }
+    /* Mobile-specific optimizations */
+    @media only screen and (max-width: 768px) {
+        /* Optimized glass effects for mobile performance */
+        .glass-card {
+            backdrop-filter: blur(16px) saturate(150%) !important;
+            -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
+            border-radius: 20px !important;
+            padding: 1rem !important;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+            border-radius: 24px !important;
+        }
+        /* Reduce complex animations on mobile */
+        .liquid-bg-element {
+            animation: none !important;
+            opacity: 0.3 !important;
+        }
+        /* Simplified hover effects for touch devices */
+        .glass-card:hover {
+            transform: translateY(-4px) scale(1.01) !important;
+        }
+        /* Better spacing for mobile */
+        .glass-card {
+            margin-bottom: 1.5rem !important;
+        }
+        /* Mobile typography adjustments */
+        .liquid-heading {
+            font-size: 2rem !important;
+            line-height: 1.2 !important;
+            margin-bottom: 1rem !important;
+        }
+        /* Improved mobile text readability */
+        .liquid-text {
+            text-shadow: none !important;
+            line-height: 1.6 !important;
+        }
+        /* Mobile-optimized navigation pills */
+        .glass-pill {
+            padding: 0.5rem 1rem !important;
+            font-size: 0.875rem !important;
+            margin: 0.25rem !important;
+        }
+        /* Ensure touch targets are large enough */
+        .liquid-interactive {
+            min-height: 44px !important;
+        }
+    }
+    /* Extra small mobile devices */
+    @media only screen and (max-width: 480px) {
+        .glass-card {
+            padding: 0.75rem !important;
+            margin-bottom: 1rem !important;
+            border-radius: 16px !important;
+        }
+        .liquid-heading {
+            font-size: 1.75rem !important;
+        }
+        .glass-pill {
+            padding: 0.375rem 0.75rem !important;
+            font-size: 0.8rem !important;
+        }
+        /* Reduce spacing between elements */
+        .container {
+            padding-left: 0.75rem !important;
+            padding-right: 0.75rem !important;
+        }
+    }
     section .title {
         @apply text-lg md:text-4xl lg:text-5xl font-bold mb-0;
     }
@@ -338,11 +412,22 @@
         background-repeat: no-repeat;
     }
     .backtotop {
-        @apply cursor-pointer text-sm p-2 fixed;
-        bottom: 80px;
-        right: 20px;
+        @apply cursor-pointer text-sm p-2 md:p-3 fixed;
+        bottom: 20px;
+        right: 16px;
         z-index: 99;
         outline: none;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media only screen and (min-width: 768px) {
+        .backtotop {
+            bottom: 80px;
+            right: 20px;
+        }
     }
     .light-text-color {
         @apply text-gray-800;
@@ -360,11 +445,8 @@
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .backtotop {
-        bottom: 20px;
-    }
-}
+
+/* Removed - handled above with the main .backtotop styles */
 
 .cursor-pointer {
     cursor: pointer;
