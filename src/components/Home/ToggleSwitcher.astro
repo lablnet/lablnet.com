@@ -12,74 +12,166 @@ let { sections } = Astro.props;
 
 ---
 
-<div class="flex justify-center gap-6 mt-6 mb-4">
+<!-- Glass Navigation Pills Container -->
+<div class="container">
+	<div class="glass-card p-2 mb-8 animate-fade-in max-w-4xl mx-auto">
+		<div class="flex flex-wrap justify-center gap-2">
+			{
+				sections.map((section: any, index: any) => (
+					<button
+						class={`${section.key}-toggle toggle glass-pill ${
+							index === 0 ? 'active' : ''
+						} px-6 py-3 rounded-full font-semibold text-gray-700 dark:text-gray-300 
+						   hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 
+						   flex items-center space-x-2 group relative overflow-hidden`}
+						data-key={section.key}
+						data-id={section.id}
+					>
+						<i class={`fa-solid ${section.icon} text-sm transition-transform duration-300 group-hover:scale-110`} />
+						<span class="transition-all duration-300">{section.title}</span>
+						<div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+					</button>
+				))
+			}
+		</div>
+	</div>
+</div>
+
+<!-- Content Sections -->
+<div class="container">
 	{
-		sections.map((section: any, index: any) => (
-			<a
-				href="javascript:void(0)"
-				class={`${section.key}-toggle toggle ${
-					index === 0 ? 'active' : ''
-				} float-right prose dark:text-gray-300 font-bold hover:text-blue-500`}
-				data-key={section.key}
-				data-id={section.id}
-			>
-				{' '}
-				<i class={`fa-solid ${section.icon}`} />
-				{section.title}
-			</a>
-		))
+		sections.map((section: any, index: any) => {
+			return (
+				<div
+					id={section.key}
+					class={`${index !== 0 ? 'hidden' : ''} toggle-elems glass-card p-8 mb-8 animate-slide-up transition-all duration-500`}
+					data-key={section.key}
+					data-id={section.id}
+				>
+					{section.component === 'Skills' && <Skills />}
+					{section.component === 'Companies' && <Companies />}
+					{section.component === 'RecentProjects' && <Companies type="projects" title={meta.topProjects.title} description={meta.topProjects.description} />}
+					{section.component === 'Projects' && <Projects />}
+					{section.component === 'Education' && <Education />}
+					{section.component === 'Certificate' && <Certificate />}
+				</div>
+			);
+		})
 	}
 </div>
-<hr class="short" />
-
-{
-	sections.map((section: any, index: any) => {
-
-		return (
-			<div
-				id={section.key}
-				class={`${index !== 0 ? 'hidden' : ''} toggle-elems`}
-				data-key={section.key}
-				data-id={section.id}
-			>
-				{section.component === 'Skills' && <Skills />}
-				{section.component === 'Companies' && <Companies />}
-				{section.component === 'RecentProjects' && <Companies type="projects" title={meta.topProjects.title} description={meta.topProjects.description} />}
-				{section.component === 'Projects' && <Projects />}
-				{section.component === 'Education' && <Education />}
-				{section.component === 'Certificate' && <Certificate />}
-			</div>
-		);
-	})
-}
 
 <script lang="js" is:inline>
-	document.querySelectorAll('.toggle').forEach((toggle) => {
-		toggle.addEventListener('click', function () {
-			const key = this.getAttribute('data-key');
-			const id = this.getAttribute('data-id');
-			const elem = document.getElementById(key);
-			const sections = document.querySelectorAll('.toggle-elems');
-			const toggles = document.querySelectorAll('.toggle');
-			// remove active class from all.
-			toggles.forEach((tgl) => {
-				let dataID = tgl.getAttribute('data-id');
-				if (id === dataID) {
-					tgl.classList.remove('active');
+	document.addEventListener('DOMContentLoaded', function() {
+		document.querySelectorAll('.toggle').forEach((toggle) => {
+			toggle.addEventListener('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				
+				const key = this.getAttribute('data-key');
+				const id = this.getAttribute('data-id');
+				const elem = document.getElementById(key);
+				
+				if (!elem) {
+					console.error('Element not found:', key);
+					return;
 				}
-			});
+				
+				const sections = document.querySelectorAll('.toggle-elems');
+				const toggles = document.querySelectorAll('.toggle');
+				
+				// Remove active class from all buttons in the same group
+				toggles.forEach((tgl) => {
+					let dataID = tgl.getAttribute('data-id');
+					if (id === dataID) {
+						tgl.classList.remove('active');
+						// Remove active glass styling
+						tgl.style.background = '';
+						tgl.style.color = '';
+						tgl.style.boxShadow = '';
+						tgl.style.borderColor = '';
+					}
+				});
 
-			toggle.classList.add('active');
-			// hide all.
-			sections.forEach((section) => {
-				const dataID = section.getAttribute('data-id');
-				console.log('keys', id, dataID, dataID === id);
-				if (id == dataID) {
-					section.classList.add('hidden');
-				}
+				// Add active class and styling to clicked button
+				toggle.classList.add('active');
+				toggle.style.background = 'linear-gradient(135deg, rgba(232, 84, 255, 0.3), rgba(34, 190, 245, 0.3))';
+				toggle.style.color = '#e854ff';
+				toggle.style.boxShadow = '0 8px 25px rgba(232, 84, 255, 0.4)';
+				toggle.style.borderColor = 'rgba(232, 84, 255, 0.5)';
+				
+				// Hide all sections in the same group with smooth transition
+				sections.forEach((section) => {
+					const dataID = section.getAttribute('data-id');
+					if (id == dataID && !section.classList.contains('hidden')) {
+						section.style.opacity = '0';
+						section.style.transform = 'translateY(20px)';
+						setTimeout(() => {
+							section.classList.add('hidden');
+						}, 300);
+					}
+				});
+				
+				// Show selected section with smooth transition
+				setTimeout(() => {
+					if (elem.classList.contains('hidden')) {
+						elem.classList.remove('hidden');
+						elem.style.opacity = '0';
+						elem.style.transform = 'translateY(20px)';
+						
+						// Force reflow
+						elem.offsetHeight;
+						
+						setTimeout(() => {
+							elem.style.opacity = '1';
+							elem.style.transform = 'translateY(0)';
+						}, 50);
+					}
+				}, 250);
 			});
-			// toggle class of elem hidden.
-			elem.classList.toggle('hidden');
 		});
 	});
 </script>
+
+<style>
+.glass-pill {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-pill:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.glass-pill.active {
+	background: linear-gradient(135deg, rgba(232, 84, 255, 0.3), rgba(34, 190, 245, 0.3));
+	color: #e854ff;
+	box-shadow: 0 8px 25px rgba(232, 84, 255, 0.4);
+	border-color: rgba(232, 84, 255, 0.5);
+}
+
+.dark .glass-pill {
+	background: rgba(255, 255, 255, 0.03);
+	border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-pill:hover {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-pill.active {
+	background: linear-gradient(135deg, rgba(232, 84, 255, 0.2), rgba(34, 190, 245, 0.2));
+	color: #f288ff;
+	box-shadow: 0 8px 25px rgba(232, 84, 255, 0.3);
+}
+
+.toggle-elems {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+</style>

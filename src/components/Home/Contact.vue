@@ -1,111 +1,178 @@
 <template>
-  <section class="py-10 px-5 container" id="contact">
-    <section class="grid grid-cols-1 md:grid-cols-2">
-      <div class="col-span-1">
-        <h3 class="subtitle dark:text-gray-300">Do you need my help?</h3>
-        <div class="dark:text-white text-gray-700 mt-8 dark:text-gray-300">
-          Hate forms? Send me an
-          <a
-            href="mailto:umer@lablnet.com"
-            class="underline font-bold"
-            target="_blank"
-            rel="noopener noreferrer"
-            >email</a
-          >
-          instead.
-        </div>
-
-        <div class="mt-8 p-5 text-center hidden md:block">
-          <img
-            src="/assets/images/contact-art.svg"
-            alt="contact"
-          />
-        </div>
+  <section class="py-20 container" id="contact">
+    <div class="glass-card p-8 md:p-12 mb-12 animate-fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-700 to-muf-cyan-500 bg-clip-text text-transparent">
+          Let's Work Together
+        </h2>
+        <p class="text-xl text-gray-700 dark:text-gray-300">
+          Ready to bring your ideas to life? Let's discuss your project!
+        </p>
       </div>
-      <form role="form" class="col-span-1">
-        <div class="mt-10">
-          <InputComp
-            placeholder="Name"
-            :required="true"
-            :error="errors.name"
-            label="Name"
-            v-model="name"
-          />
-        </div>
-        <div class="mt-8">
-          <InputComp
-            placeholder="Subject"
-            :required="true"
-            :error="errors.subject"
-            label="Subject"
-            type="text"
-            v-model="subject"
-          />
-        </div>
-        <div class="mt-8">
-          <InputComp
-            placeholder="Email"
-            :required="true"
-            :error="errors.email"
-            label="Email"
-            type="email"
-            v-model="email"
-          />
-        </div>
-        <div class="mt-8">
-          <TextareaComp
-            placeholder="Message"
-            :required="true"
-            :error="errors.message"
-            label="Message"
-            v-model="message"
-          />
-        </div>
-        <div class="mt-8">
-          <span class="mt-3 mb-3"><LoaderComp :loading="loading" /></span>
-          <span class="mt-3 mb-3 text-red-500" v-if="error">{{ error }}</span>
-          <span class="mt-3 mb-3 text-green-500" v-if="success">
-            Your message has been sent successfully.
-          </span>
 
-          <!-- It is totally legal to hide the reCAPTCHA badge. -->
-          <!-- As long as we include below lines. -->
-          <!-- source: https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-badge.-what-is-allowed -->
-          <p class="text-justify dark:text-gray-300">
-            This site is protected by
-            <a
-              class="text-blue-400"
-              href="https://www.google.com/recaptcha/about/"
-              target="_blank"
-            >
-              reCAPTCHA</a
-            >
-            and the Google
-            <a
-              class="text-blue-400"
-              href="https://policies.google.com/privacy"
-              target="_blank"
-              >Privacy Policy</a
-            >
-            and
-            <a
-              class="text-blue-400"
-              href="https://policies.google.com/terms"
-              target="_blank"
-              >Terms of Service</a
-            >
-            apply.
-          </p>
-          <ButtonComp
-            v-if="!loading"
-            text="Send Message"
-            @click="doSubmi"
-            :disable="disabled"
-            b_type="button"
-          />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Left Side - Contact Info -->
+        <div class="space-y-8">
+          <div class="glass-card p-6 animate-slide-up">
+            <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200 flex items-center">
+              <i class="fa-solid fa-envelope text-blue-500 mr-3"></i>
+              Get In Touch
+            </h3>
+            <div class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p class="mb-4">
+                Hate forms? No problem! Send me a direct
+                <a
+                  href="mailto:umer@lablnet.com"
+                  class="text-blue-500 hover:text-blue-600 font-semibold underline transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >email</a> instead.
+              </p>
+              <p>
+                I'm always excited to discuss new opportunities, collaborate on interesting projects, 
+                or simply chat about technology and innovation.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 animate-slide-up hidden lg:block" style="animation-delay: 0.2s;">
+            <div class="relative">
+              <img
+                src="/assets/images/contact-art.svg"
+                alt="Contact illustration"
+                class="w-full h-auto opacity-80"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-purple-500/10 to-transparent rounded-lg"></div>
+            </div>
+          </div>
         </div>
-      </form>
-    </section>
+
+        <!-- Right Side - Contact Form -->
+        <form role="form" class="space-y-6 animate-slide-up" style="animation-delay: 0.4s;">
+          <div class="glass-card p-6">
+            <div class="space-y-6">
+              <div class="form-group">
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  <i class="fa-solid fa-user mr-2 text-blue-500"></i>Name
+                </label>
+                <InputComp
+                  placeholder="Your full name"
+                  :required="true"
+                  :error="errors.name"
+                  v-model="name"
+                  class="glass-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  <i class="fa-solid fa-envelope mr-2 text-blue-500"></i>Email
+                </label>
+                <InputComp
+                  placeholder="your.email@example.com"
+                  :required="true"
+                  :error="errors.email"
+                  type="email"
+                  v-model="email"
+                  class="glass-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  <i class="fa-solid fa-tag mr-2 text-blue-500"></i>Subject
+                </label>
+                <InputComp
+                  placeholder="What's this about?"
+                  :required="true"
+                  :error="errors.subject"
+                  type="text"
+                  v-model="subject"
+                  class="glass-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  <i class="fa-solid fa-message mr-2 text-blue-500"></i>Message
+                </label>
+                <TextareaComp
+                  placeholder="Tell me about your project or inquiry..."
+                  :required="true"
+                  :error="errors.message"
+                  v-model="message"
+                  class="glass-input min-h-[120px]"
+                />
+              </div>
+
+              <!-- Status Messages -->
+              <div class="space-y-3">
+                <LoaderComp :loading="loading" v-if="loading" />
+                
+                <div v-if="error" class="glass-card p-4 border-red-300 bg-red-50/50 dark:bg-red-900/20">
+                  <p class="text-red-600 dark:text-red-400 flex items-center">
+                    <i class="fa-solid fa-exclamation-triangle mr-2"></i>
+                    {{ error }}
+                  </p>
+                </div>
+                
+                <div v-if="success" class="glass-card p-4 border-green-300 bg-green-50/50 dark:bg-green-900/20">
+                  <p class="text-green-600 dark:text-green-400 flex items-center">
+                    <i class="fa-solid fa-check-circle mr-2"></i>
+                    Your message has been sent successfully!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-4">
+                <button
+                  v-if="!loading"
+                  @click="doSubmi"
+                  :disabled="disabled"
+                  type="button"
+                  class="w-full glass-button px-8 py-4 text-white font-semibold rounded-xl 
+                         bg-gradient-to-r from-muf-400 via-muf-600 to-muf-cyan-400
+                         hover:from-muf-500 hover:via-muf-700 hover:to-muf-cyan-500
+                         disabled:opacity-50 disabled:cursor-not-allowed
+                         transition-all duration-300 transform hover:scale-105
+                         focus:outline-none focus:ring-4 focus:ring-blue-500/30
+                         flex items-center justify-center space-x-2"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </button>
+              </div>
+
+              <!-- reCAPTCHA Notice -->
+              <div class="text-center">
+                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  This site is protected by
+                  <a
+                    class="text-blue-500 hover:text-blue-600 transition-colors duration-300"
+                    href="https://www.google.com/recaptcha/about/"
+                    target="_blank"
+                  >reCAPTCHA</a>
+                  and the Google
+                  <a
+                    class="text-blue-500 hover:text-blue-600 transition-colors duration-300"
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                  >Privacy Policy</a>
+                  and
+                  <a
+                    class="text-blue-500 hover:text-blue-600 transition-colors duration-300"
+                    href="https://policies.google.com/terms"
+                    target="_blank"
+                  >Terms of Service</a>
+                  apply.
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
 </template>
 

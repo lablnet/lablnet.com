@@ -1,145 +1,237 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer utilities {
-  .container {
-    @apply w-full mx-auto px-6 max-w-5xl;
-  }
-
-  @media only screen and (max-width: 986px) {
     .container {
-      @apply px-6 max-w-xl;
+        @apply w-full mx-auto px-6 max-w-5xl;
     }
-  }
-
-  section .title {
-    @apply text-lg md:text-4xl lg:text-5xl font-bold mb-0;
-  }
-
-  section .subtitle,
-  h1 {
-    @apply text-3xl md:text-4xl;
-  }
-
-  section p {
-    @apply mt-5;
-  }
-
-  h4 {
-    @apply font-semibold;
-  }
-
-  .active {
-    @apply text-blue-500;
-  }
-  hr.short {
-    /* But center */
-    @apply w-32 border-t-2 border-gray-300 my-4 mx-auto;
-  }
-  .project-headings {
-    @apply font-semibold text-xl mb-2;
-    line-height: 1.6;
-  }
-
-  a.arrow {
-    @apply font-semibold hover:underline transform transition hover:scale-105 duration-300 ease-in-out;
-  }
-
-  a.arrow:before {
-    content: ' ';
-  }
-
-  a.arrow:hover:before,
-  a.hover:hover:after {
-    width: calc(100% + 4px);
-  }
-
-  /* For Light theme */
-  .light a.arrow:after {
-    content: url('../assets/icons/arrow-above.svg') !important;
-  }
-
-  .light a.arrow:hover:after,
-  .light a.arrow:focus:after {
-    content: url('../assets/icons/arrow-right.svg') !important;
-  }
-
-  /* For dark theme */
-  .dark a.arrow:after {
-    content: url('../assets/icons/white/arrow-above.svg') !important;
-  }
-
-  .dark a.arrow:hover:after,
-  .dark a.arrow:focus:after {
-    content: url('../assets/icons/white/arrow-right.svg') !important;
-  }
-
-  .light .github {
-    background-image: url('../assets/icons/github.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .dark .github {
-    background-image: url('../assets/icons/white/github.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .light .linkedin {
-    background-image: url('../assets/icons/linkedin.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .dark .linkedin {
-    background-image: url('../assets/icons/white/linkedin.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .backtotop {
-    @apply cursor-pointer text-sm p-2 fixed;
-    bottom: 80px;
-    right: 20px;
-    z-index: 99;
-    outline: none;
-  }
-
-  .light-text-color {
-    @apply text-gray-800;
-  }
-
-  .dark .prose h1,
-  .dark .prose h2,
-  .dark .prose h3,
-  .dark .prose h4,
-  .dark .prose h5,
-  .dark .prose h6 {
-    @apply text-gray-300;
-  }
-
-  summary {
-    cursor: pointer;
-  }
+    @media only screen and (max-width: 986px) {
+        .container {
+            @apply px-6 max-w-xl;
+        }
+    }
+    /* True Glassmorphism utilities - Based on MUF logo colors */
+    .glass {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    .glass-dark {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .glass-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 20px 40px rgba(31, 38, 135, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .glass-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    }
+    .glass-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 30px 60px rgba(31, 38, 135, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.15);
+    }
+    .glass-nav {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+        backdrop-filter: blur(30px) saturate(200%);
+        -webkit-backdrop-filter: blur(30px) saturate(200%);
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 12px 35px rgba(31, 38, 135, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    .glass-input {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+    .glass-input:focus {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: rgba(59, 130, 246, 0.5);
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+    }
+    .glass-button {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-button:hover {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    /* Dark theme variants - Enhanced glass effect */
+    .dark .glass {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .dark .glass-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    }
+    .dark .glass-card:hover {
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+    }
+    .dark .glass-nav {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+    .dark .glass-input {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    .dark .glass-input:focus {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    .dark .glass-button {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    }
+    .dark .glass-button:hover {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    }
+    section .title {
+        @apply text-lg md:text-4xl lg:text-5xl font-bold mb-0;
+    }
+    section .subtitle,
+    h1 {
+        @apply text-3xl md:text-4xl;
+    }
+    section p {
+        @apply mt-5;
+    }
+    h4 {
+        @apply font-semibold;
+    }
+    .active {
+        @apply text-blue-500;
+    }
+    hr.short {
+        /* But center */
+        @apply w-32 border-t-2 border-gray-300 my-4 mx-auto;
+    }
+    .project-headings {
+        @apply font-semibold text-xl mb-2;
+        line-height: 1.6;
+    }
+    a.arrow {
+        @apply font-semibold hover:underline transform transition hover:scale-105 duration-300 ease-in-out;
+    }
+    a.arrow:before {
+        content: ' ';
+    }
+    a.arrow:hover:before,
+    a.hover:hover:after {
+        width: calc(100% + 4px);
+    }
+    /* For Light theme */
+    .light a.arrow:after {
+        content: url('../assets/icons/arrow-above.svg') !important;
+    }
+    .light a.arrow:hover:after,
+    .light a.arrow:focus:after {
+        content: url('../assets/icons/arrow-right.svg') !important;
+    }
+    /* For dark theme */
+    .dark a.arrow:after {
+        content: url('../assets/icons/white/arrow-above.svg') !important;
+    }
+    .dark a.arrow:hover:after,
+    .dark a.arrow:focus:after {
+        content: url('../assets/icons/white/arrow-right.svg') !important;
+    }
+    .light .github {
+        background-image: url('../assets/icons/github.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .dark .github {
+        background-image: url('../assets/icons/white/github.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .light .linkedin {
+        background-image: url('../assets/icons/linkedin.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .dark .linkedin {
+        background-image: url('../assets/icons/white/linkedin.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .backtotop {
+        @apply cursor-pointer text-sm p-2 fixed;
+        bottom: 80px;
+        right: 20px;
+        z-index: 99;
+        outline: none;
+    }
+    .light-text-color {
+        @apply text-gray-800;
+    }
+    .dark .prose h1,
+    .dark .prose h2,
+    .dark .prose h3,
+    .dark .prose h4,
+    .dark .prose h5,
+    .dark .prose h6 {
+        @apply text-gray-300;
+    }
+    summary {
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 900px) {
-  .backtotop {
-    bottom: 20px;
-  }
+    .backtotop {
+        bottom: 20px;
+    }
 }
 
 .cursor-pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 img[data-fancybox='default'],
 img[data-fancybox='certificate'] {
-  cursor: zoom-in;
+    cursor: zoom-in;
 }
 
+
 /* Hide Google reCaptcha badge */
+
+
 /* https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-badge.-what-is-allowed */
+
 .grecaptcha-badge {
-  visibility: hidden;
+    visibility: hidden;
 }
