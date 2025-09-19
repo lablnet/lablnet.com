@@ -22,60 +22,67 @@ let _klass = `mt-12 py-10 px-5 container `;
 _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-900`;
 ---
 
-<section class={_klass} id={type}>
-	<h2 class="text-emphasis font-recoleta text-2xl dark:text-white">{title}</h2>
+<section class="py-2" id={type}>
+	<div class="mb-8">
+		<h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-700 to-muf-cyan-500 bg-clip-text text-transparent flex items-center">
+			<i class={`fa-solid ${type === 'companies' ? 'fa-briefcase' : 'fa-diagram-project'} text-muf-500 mr-3`}></i>
+			{title}
+		</h2>
+		<p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">{description}</p>
+	</div>
 
-	<p class="dark:text-gray-300 prose mt-4">{description}</p>
-
-	<div class="mt-8 space-y-12">
+	<div class="space-y-6">
 		{
-			companies.map(async (company: any) => {
+			companies.map(async (company: any, index: any) => {
 				const { Content } = await company.render();
 				step--;
 				return (
-					<section>
-						<div class="flex group relative">
-							<div class="px-px shrink-0">
+					<div class="glass-card p-6 hover:scale-102 transition-all duration-300 animate-slide-up" style={`animation-delay: ${index * 0.1}s;`}>
+						<div class="flex items-start gap-6">
+							<div class="flex-shrink-0">
 								<img
-									class="rounded w-12 h-12 mt-2.5"
-									width="100"
-									height="100"
+									class="rounded-xl w-16 h-16 object-cover shadow-lg border-2 border-white/20"
+									width="64"
+									height="64"
 									src={company.data.icon}
 									alt={company.data.title}
 								/>
 							</div>
-							<div class="ml-8">
-								<div class="font-medium text-muted text-sm dark:text-gray-300 prose">
-									{df.format(company.data.startDate)} -{' '}
-									{company.data.endDate ? df.format(company.data.endDate) : 'Now'}
+							<div class="flex-grow">
+								<div class="flex flex-wrap items-center gap-3 mb-3">
+									<div class="glass px-3 py-1 rounded-full text-sm font-medium text-muf-600 dark:text-muf-400">
+										<i class="fa-solid fa-calendar mr-2"></i>
+										{df.format(company.data.startDate)} - {company.data.endDate ? df.format(company.data.endDate) : 'Present'}
+									</div>
 								</div>
-								<div class="font-medium text-emphasis dark:text-gray-300 prose">
-									<a class="accent dark:text-gray-300 prose arrow" href={`/${company.slug}`}>
+								
+								<h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">
+									<a class="hover:text-muf-600 dark:hover:text-muf-400 transition-colors duration-300 arrow" href={`/${company.slug}`}>
 										{company.data.name === 'Upwork' ? (
 											<img
 												src="../assets/icons/topratedplus.svg"
 												alt="Upwork"
-												class="w-6 h-6 inline"
+												class="w-6 h-6 inline mr-2"
 											/>
-										) : null}{company.data.title}
-									</a>{' '}
-									·{' '}
+										) : null}
+										{company.data.title}
+									</a>
+									<span class="mx-2 text-gray-400">@</span>
 									<a
-										class="relative dark:text-gray-300 prose arrow"
+										class="text-muf-600 dark:text-muf-400 hover:text-muf-700 dark:hover:text-muf-300 transition-colors duration-300 arrow"
 										href={company.data.link}
 										target="_blank"
 									>
 										{company.data.name}
 									</a>
-								</div>
-								<div class="mt-2 dark:text-gray-300 prose">
+								</h3>
+								
+								<div class="prose dark:text-gray-300 text-gray-700 leading-relaxed">
 									<Content />
 								</div>
 							</div>
 						</div>
-						{step !== 1 && type === 'companies' ? <hr class="mt-8" /> : ''}
-						{step !== 1 && type === 'projects' ? <hr class="mt-8 border-t border-gray-400" /> : ''}
-					</section>
+					</div>
 				);
 			})
 		}
@@ -97,3 +104,4 @@ _klass += type === 'companies' ? `dark:bg-gray-700` : `bg-gray-200 dark:bg-gray-
 		)
 	}
 </section>
+
