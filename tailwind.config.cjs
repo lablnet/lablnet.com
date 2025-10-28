@@ -63,6 +63,20 @@ module.exports = {
                     '900': '#0c4a6e', // Deep navy
                     '950': '#082f49', // Darkest
                 },
+                // MUF cyan colors (for backward compatibility)
+                'muf-cyan': {
+                    '50': '#f0f9ff',
+                    '100': '#e0f2fe',
+                    '200': '#bae6fd',
+                    '300': '#93addb',
+                    '400': '#60a5fa',
+                    '500': '#24b6ff',
+                    '600': '#0ea5e9',
+                    '700': '#0284c7',
+                    '800': '#0369a1',
+                    '900': '#0c4a6e',
+                    '950': '#082f49',
+                },
             },
             backdropBlur: {
                 'xs': '2px',

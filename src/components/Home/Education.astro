@@ -13,8 +13,8 @@ let length = educations.length + 1;
 <main>
 	<section class="py-2" id="education">
 		<div class="mb-8">
-			<h3 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-700 to-muf-cyan-500 bg-clip-text text-transparent flex items-center">
-				<i class="fa-solid fa-graduation-cap text-muf-500 mr-3"></i>
+			<h3 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-blue-500 to-muf-blue-600 bg-clip-text text-transparent flex items-center">
+				<i class="fa-solid fa-graduation-cap bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-3"></i>
 				{ meta.education.title }
 			</h3>
 			<p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
@@ -30,7 +30,7 @@ let length = educations.length + 1;
 						<div class="glass-card p-6 hover:scale-102 transition-all duration-300 animate-slide-up" style={`animation-delay: ${index * 0.1}s;`}>
 							<div class="flex items-start gap-6">
 								<div class="flex-shrink-0">
-									<div class="w-12 h-12 rounded-full bg-gradient-to-r from-muf-400 to-muf-cyan-400 flex items-center justify-center text-white font-bold shadow-lg">
+									<div class="w-12 h-12 rounded-full bg-gradient-to-r from-muf-500 to-muf-blue-500 flex items-center justify-center text-white font-bold shadow-lg">
 										{length}
 									</div>
 								</div>
@@ -41,19 +41,19 @@ let length = educations.length + 1;
 									</h2>
 									
 									<div class="flex flex-wrap items-center gap-3 mb-3">
-										<div class="glass px-3 py-1 rounded-full text-sm font-medium text-muf-600 dark:text-muf-400">
-											<i class="fa-solid fa-calendar mr-2"></i>
-											{df.format(education.data.startDate)} - {education.data.endDate ? df.format(education.data.endDate) : 'Present'}
-										</div>
+									<div class="glass px-3 py-1 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-muf-500 hover:to-muf-blue-500 hover:bg-clip-text hover:text-transparent transition-all duration-300">
+										<i class="fa-solid fa-calendar mr-2"></i>
+										{df.format(education.data.startDate)} - {education.data.endDate ? df.format(education.data.endDate) : 'Present'}
+									</div>
 										
-										<div class="glass px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-muf-100 to-muf-cyan-100 dark:from-muf-900/30 dark:to-muf-cyan-900/30 text-muf-700 dark:text-muf-300">
-											<i class="fa-solid fa-award mr-2"></i>
-											{education.data.grade}
-										</div>
+									<div class="glass px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-muf-100 to-muf-blue-100 dark:from-muf-900/30 dark:to-muf-blue-900/30 text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-muf-500 hover:to-muf-blue-500 hover:bg-clip-text hover:text-transparent transition-all duration-300">
+										<i class="fa-solid fa-award mr-2"></i>
+										{education.data.grade}
+									</div>
 									</div>
 									
 									<p class="text-gray-700 dark:text-gray-300 leading-relaxed flex items-center">
-										<i class="fa-solid fa-building-columns text-muf-500 mr-2"></i>
+										<i class="fa-solid fa-building-columns bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-2"></i>
 										{education.data.institution}
 									</p>
 								</div>

@@ -92,6 +92,7 @@
     .glass-card:hover {
         transform: translateY(-8px) scale(1.015) rotateX(2deg);
         box-shadow: 0 32px 64px rgba(31, 38, 135, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(255, 255, 255, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.12);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
     }
     .glass-card:hover::after {
         width: 300px;
@@ -165,6 +166,7 @@
     }
     .dark .glass-card:hover {
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
     }
     .dark .glass-nav {
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
@@ -366,7 +368,7 @@
         line-height: 1.6;
     }
     a.arrow {
-        @apply font-semibold hover:underline transform transition hover:scale-105 duration-300 ease-in-out;
+        @apply font-semibold underline transform transition hover:scale-105 duration-300 ease-in-out;
     }
     a.arrow:before {
         content: ' ';

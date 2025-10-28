@@ -13,8 +13,8 @@ let step = projects.length + 1;
 
 <section class="py-2" id="recent">
 	<div class="mb-8">
-		<h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-700 to-muf-cyan-500 bg-clip-text text-transparent flex items-center">
-			<i class="fa-solid fa-rocket text-muf-500 mr-3"></i>
+		<h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-blue-500 to-muf-blue-600 bg-clip-text text-transparent flex items-center">
+			<i class="fa-solid fa-rocket bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-3"></i>
 			{meta.projects.title}
 		</h2>
 		<p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
@@ -38,18 +38,18 @@ let step = projects.length + 1;
 					<div class="glass-card p-6 hover:scale-102 transition-all duration-300 animate-slide-up" style={`animation-delay: ${index * 0.1}s;`}>
 						<div class="flex flex-col md:flex-row md:items-start gap-4">
 							<div class="flex-shrink-0">
-								<div class="glass px-3 py-1 rounded-full text-sm font-medium text-muf-600 dark:text-muf-400 bg-gradient-to-r from-muf-100 to-muf-cyan-100 dark:from-muf-900/30 dark:to-muf-cyan-900/30">
-									{project.data.endDate ? df.format(project.data.endDate) : 'Ongoing'}
-								</div>
+						<div class="glass px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-muf-100 to-muf-blue-100 dark:from-muf-900/30 dark:to-muf-blue-900/30 text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-muf-500 hover:to-muf-blue-500 hover:bg-clip-text hover:text-transparent transition-all duration-300">
+							{df.format(project.data.startDate)} - {project.data.endDate ? df.format(project.data.endDate) : 'Ongoing'}
+						</div>
 							</div>
 							<div class="flex-grow">
 								<h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 flex items-center">
-									<div class="w-2 h-2 rounded-full bg-gradient-to-r from-muf-400 to-muf-cyan-400 mr-3"></div>
+									<div class="w-2 h-2 rounded-full bg-gradient-to-r from-muf-500 to-muf-blue-500 mr-3"></div>
 									<span>{project.data.title}</span>
 									{company ? (
 										<>
 											<span class="mx-2 text-gray-400">@</span>
-											<a class="text-muf-600 dark:text-muf-400 hover:text-muf-700 dark:hover:text-muf-300 transition-colors duration-300 arrow" href={`/${company.slug}`}>
+											<a class="bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none transition-all duration-300 arrow" href={`/${company.slug}`}>
 												{company.data.name}
 											</a>
 										</>

@@ -15,7 +15,7 @@
         <div class="space-y-6 md:space-y-8">
           <div class="glass-card liquid-interactive p-4 md:p-6 animate-slide-up">
             <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200 flex items-center liquid-text">
-              <i class="fa-solid fa-envelope text-muf-500 mr-3 animate-liquid-pulse"></i>
+              <i class="fa-solid fa-envelope bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-3 animate-liquid-pulse"></i>
               Get In Touch
             </h3>
             <div class="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -23,7 +23,7 @@
                 Hate forms? No problem! Send me a direct
                 <a
                   href="mailto:umer@lablnet.com"
-                  class="text-muf-500 hover:text-muf-600 font-semibold underline transition-colors duration-300"
+                  class="bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none font-semibold underline transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >email</a> instead.
@@ -53,7 +53,7 @@
             <div class="space-y-6">
               <div class="form-group">
                 <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  <i class="fa-solid fa-user mr-2 text-muf-500"></i>Name
+                  <i class="fa-solid fa-user mr-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent"></i>Name
                 </label>
                 <InputComp
                   placeholder="Your full name"
@@ -66,7 +66,7 @@
 
               <div class="form-group">
                 <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  <i class="fa-solid fa-envelope mr-2 text-muf-500"></i>Email
+                  <i class="fa-solid fa-envelope mr-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent"></i>Email
                 </label>
                 <InputComp
                   placeholder="your.email@example.com"
@@ -80,7 +80,7 @@
 
               <div class="form-group">
                 <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  <i class="fa-solid fa-tag mr-2 text-muf-blue-500"></i>Subject
+                  <i class="fa-solid fa-tag mr-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent"></i>Subject
                 </label>
                 <InputComp
                   placeholder="What's this about?"
@@ -94,7 +94,7 @@
 
               <div class="form-group">
                 <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  <i class="fa-solid fa-message mr-2 text-muf-blue-500"></i>Message
+                  <i class="fa-solid fa-message mr-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent"></i>Message
                 </label>
                 <TextareaComp
                   placeholder="Tell me about your project or inquiry..."
@@ -152,19 +152,19 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                   This site is protected by
                   <a
-                    class="text-muf-500 hover:text-muf-600 transition-colors duration-300"
+                    class="bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none transition-all duration-300"
                     href="https://www.google.com/recaptcha/about/"
                     target="_blank"
                   >reCAPTCHA</a>
                   and the Google
                   <a
-                    class="text-muf-500 hover:text-muf-600 transition-colors duration-300"
+                    class="bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none transition-all duration-300"
                     href="https://policies.google.com/privacy"
                     target="_blank"
                   >Privacy Policy</a>
                   and
                   <a
-                    class="text-muf-500 hover:text-muf-600 transition-colors duration-300"
+                    class="bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none transition-all duration-300"
                     href="https://policies.google.com/terms"
                     target="_blank"
                   >Terms of Service</a>
