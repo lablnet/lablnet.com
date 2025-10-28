@@ -1,5 +1,6 @@
 ---
 startDate: 2019-02-20
+endDate: 2019-06-01
 title: Developer
 name: AlphaZ
 link: https://github.com/alphazframework

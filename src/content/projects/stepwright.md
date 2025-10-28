@@ -10,7 +10,7 @@ company: stepwright
 live: https://pypi.org/project/stepwright/
 github: lablnet/stepwright
 image: ../assets/images/transparent/u.png
-featured: true
+featured: false
 draft: false
 ---
 

@@ -1,5 +1,6 @@
 ---
-startDate: 2019-02-20
+startDate: 2021-08-20
+endDate: 2021-08-31
 title: ResourcesR
 name: ResourcesR
 link: https://github.com/resourcesr
