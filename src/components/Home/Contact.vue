@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-1 gap-8 md:gap-12">
         <!-- Left Side - Contact Info -->
         <div class="space-y-6 md:space-y-8">
           <div class="glass-card liquid-interactive p-4 md:p-6 animate-slide-up">
@@ -48,6 +48,7 @@
         </div>
 
         <!-- Right Side - Contact Form -->
+        <!--
         <form role="form" class="space-y-4 md:space-y-6 animate-slide-up" style="animation-delay: 0.4s;">
           <div class="glass-card liquid-interactive p-4 md:p-6">
             <div class="space-y-6">
@@ -105,7 +106,6 @@
                 />
               </div>
 
-              <!-- Status Messages -->
               <div class="space-y-3">
                 <LoaderComp :loading="loading" v-if="loading" />
                 
@@ -124,8 +124,7 @@
                 </div>
               </div>
 
-              <!-- Submit Button -->
-              <div class="pt-4">
+               <div class="pt-4">
                 <button
                   v-if="!loading"
                   @click="doSubmi"
@@ -147,7 +146,6 @@
                 </button>
               </div>
 
-              <!-- reCAPTCHA Notice -->
               <div class="text-center">
                 <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                   This site is protected by
@@ -173,7 +171,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </form> -->
       </div>
     </div>
   </section>
