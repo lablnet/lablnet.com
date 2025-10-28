@@ -9,48 +9,96 @@ certificates.sort(compareByDate);
 ---
 
 <main>
-	<section class="py-10 px-5 bg-gray-200 dark:bg-gray-900 container" id="certificates">
-		<h3 class="subtitle dark:text-white prose">{ meta.certificate.title }.</h3>
-		<p class="dark:text-gray-400 prose">
-			{ meta.certificate.description }
-		</p>
-        <div class="container mx-auto">
-            <div class="flex flex-col divide-y divide-gray-300">
-                {certificates.map((certificate:any, index: number) => (
-                    <div>
-                        <button
-                            data-id={index}
-                            class="accordion-button flex justify-between items-center w-full py-2 px-4 text-left prose dark:text-gray-400"
-                        >
-                            <span><b>{df.format(certificate.data.completed)}</b> {certificate.data.title} - {certificate.data.institute}</span>
-                            <span class="w-6 h-6">🏆</span>
-                        </button>
-                        <div data-id={index} class="accordion-content overflow-hidden transition-all duration-300 hidden">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
-                                <div>
-                                    <a href={certificate.data.link} target="_blank" class="prose dark:text-gray-400">View Certificate</a>
-                                    <p class="text-sm italic prose dark:text-gray-400">{df.format(certificate.data.completed)}</p>
+	<section class="py-2" id="certificates">
+		<div class="mb-8">
+			<h3 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-blue-500 to-muf-blue-600 bg-clip-text text-transparent flex items-center">
+				<i class="fa-solid fa-certificate bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-3"></i>
+				{ meta.certificate.title }
+			</h3>
+			<p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+				{ meta.certificate.description }
+			</p>
+		</div>
+		
+        <div class="space-y-4">
+            {certificates.map((certificate:any, index: number) => (
+                <div class="glass-card overflow-hidden animate-slide-up" style={`animation-delay: ${index * 0.1}s;`}>
+                    <button
+                        data-id={index}
+                        class="accordion-button flex justify-between items-center w-full p-6 text-left hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-300 group"
+                    >
+                        <div class="flex items-center gap-4">
+							<div class="w-3 h-3 rounded-full bg-gradient-to-r from-muf-500 to-muf-blue-500"></div>
+                            <div>
+								<h4 class="font-bold text-gray-800 dark:text-gray-200 text-lg group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-all duration-300">
+                                    {certificate.data.title}
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">
+									<i class="fa-solid fa-building mr-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent"></i>
+                                    {certificate.data.institute} • {df.format(certificate.data.completed)}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+							<i class="fa-solid fa-trophy bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent text-xl"></i>
+							<i class="fa-solid fa-chevron-down text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-all duration-300 transform group-data-[expanded]:rotate-180"></i>
+                        </div>
+                    </button>
+                    
+                    <div data-id={index} class="accordion-content overflow-hidden transition-all duration-500 max-h-0">
+                        <div class="p-6 pt-0 border-t border-white/10">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3">
+									<i class="fa-solid fa-calendar bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">
+                                            Completed: {df.format(certificate.data.completed)}
+                                        </span>
+                                    </div>
+                                    <a 
+                                        href={certificate.data.link} 
+                                        target="_blank" 
+							class="glass-button inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none font-semibold transition-all duration-300 hover:scale-105"
+                                    >
+                                        <i class="fa-solid fa-external-link"></i>
+                                        View Certificate
+                                    </a>
                                 </div>
-                                <div class="image-container">
-                                    <img src={certificate.data.picture} class="object-contain h-48 w-96 rounded sm:-mx-7 mt-5" />
+                                <div class="glass-card p-4">
+                                    <img 
+                                        src={certificate.data.picture} 
+                                        alt={certificate.data.title}
+                                        class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300" 
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
-                ))}
-            </div>
+                </div>
+            ))}
         </div>
     </section>
 </main>
 
 <script lang="js">
-let buttons = document.querySelectorAll('.accordion-button');
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function () {
-        let content = document.querySelectorAll('.accordion-content');
-        let id = this.getAttribute('data-id');
-        content[id].classList.toggle('hidden');
-    });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    let buttons = document.querySelectorAll('.accordion-button');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            let content = document.querySelectorAll('.accordion-content');
+            let id = this.getAttribute('data-id');
+            let targetContent = content[id];
+            let chevron = this.querySelector('.fa-chevron-down');
+            
+            if (targetContent.style.maxHeight && targetContent.style.maxHeight !== '0px') {
+                targetContent.style.maxHeight = '0px';
+                chevron.style.transform = 'rotate(0deg)';
+            } else {
+                targetContent.style.maxHeight = targetContent.scrollHeight + 'px';
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        });
+    }
+});
 </script>
 

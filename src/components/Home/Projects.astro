@@ -11,14 +11,20 @@ projects = projects.sort(compareByDate);
 let step = projects.length + 1;
 ---
 
-<section class="mt-12 py-10 px-5 bg-white container" id="recent">
-	<h2 class="text-emphasis font-recoleta text-2xl dark:text-gray-300">{meta.projects.title}</h2>
-	<p class="dark:text-gray-300 prose mt-4">
-		{meta.projects.description}
-	</p>
-	<div class="mt-8 space-y-12">
+<section class="py-2" id="recent">
+	<div class="mb-8">
+		<h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-blue-500 to-muf-blue-600 bg-clip-text text-transparent flex items-center">
+			<i class="fa-solid fa-rocket bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-3"></i>
+			{meta.projects.title}
+		</h2>
+		<p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+			{meta.projects.description}
+		</p>
+	</div>
+	
+	<div class="space-y-6">
 		{
-			projects.map(async (project: any) => {
+			projects.map(async (project: any, index) => {
 				const { Content } = await project.render();
 				let company: any = project.data.company
 					? await getCollection('companies', (p) => p.slug === project.data.company)
@@ -29,32 +35,34 @@ let step = projects.length + 1;
 				}
 				step--;
 				return (
-					<section>
-						<div class="flex">
-							<div class="text-muted font-medium text-sm w-20 pt-0.5 shrink-0 dark:text-gray-300">
-								{project.data.endDate ? df.format(project.data.endDate) : 'Ongoing'}
+					<div class="glass-card p-6 hover:scale-102 transition-all duration-300 animate-slide-up" style={`animation-delay: ${index * 0.1}s;`}>
+						<div class="flex flex-col md:flex-row md:items-start gap-4">
+							<div class="flex-shrink-0">
+						<div class="glass px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-muf-100 to-muf-blue-100 dark:from-muf-900/30 dark:to-muf-blue-900/30 text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-muf-500 hover:to-muf-blue-500 hover:bg-clip-text hover:text-transparent transition-all duration-300">
+							{df.format(project.data.startDate)} - {project.data.endDate ? df.format(project.data.endDate) : 'Ongoing'}
+						</div>
 							</div>
-							<div class="ml-0.5">
-								<h3 class="text-emphasis font-medium dark:text-gray-300">
+							<div class="flex-grow">
+								<h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 flex items-center">
+									<div class="w-2 h-2 rounded-full bg-gradient-to-r from-muf-500 to-muf-blue-500 mr-3"></div>
 									<span>{project.data.title}</span>
 									{company ? (
 										<>
-											{' '}
-											<a class="dark:text-gray-300 arrow" href={`/${company.slug}`}>
-												@ {company.data.name}
+											<span class="mx-2 text-gray-400">@</span>
+											<a class="bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none transition-all duration-300 arrow" href={`/${company.slug}`}>
+												{company.data.name}
 											</a>
 										</>
 									) : (
 										''
 									)}
 								</h3>
-								<div class="prose mt-2 dark:text-gray-300">
+								<div class="prose dark:text-gray-300 text-gray-700 leading-relaxed">
 									<Content />
 								</div>
 							</div>
 						</div>
-						{step !== 1 ? <hr class="mt-8" /> : ''}
-					</section>
+					</div>
 				);
 			})
 		}
