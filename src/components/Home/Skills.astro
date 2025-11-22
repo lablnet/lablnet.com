@@ -1,8 +1,8 @@
 ---
 // @ts-ignore
-import { getCollection } from 'astro:content';
-const skills = await getCollection('skills');
-import { meta } from '../../utils/const';
+import { getCollection } from "astro:content";
+const skills = await getCollection("skills");
+import { meta } from "../../utils/const";
 
 // sort by step.
 skills.sort((a: any, b: any) => {
@@ -13,29 +13,38 @@ skills.sort((a: any, b: any) => {
 <main class="mt-2 mb-2">
 	<section class="py-2" id="skills">
 		<div class="mb-8">
-			<h3 class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-blue-500 to-muf-blue-600 bg-clip-text text-transparent flex items-center">
-				<i class="fa-solid fa-chalkboard bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-3"></i>
-				{ meta.skills.title }
+			<h3
+				class="text-3xl font-bold mb-4 bg-gradient-to-r from-muf-500 via-muf-blue-500 to-muf-blue-600 bg-clip-text text-transparent flex items-center"
+			>
+				<i
+					class="fa-solid fa-chalkboard bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent mr-3"
+				></i>
+				{meta.skills.title}
 			</h3>
 			<p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-				{ meta.skills.description }
+				{meta.skills.description}
 			</p>
 		</div>
-		
+
 		<div class="grid md:grid-cols-3 gap-6 py-5">
 			{
 				skills.map(async (skill, index) => {
 					const { Content } = await skill.render();
 
 					return (
-						<div class="glass-card p-6 hover:scale-105 transition-all duration-300 animate-slide-up" style={`animation-delay: ${index * 0.1}s;`}>
-							<div class="flex flex-col h-full">
-								<h4 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200 flex items-center">
-									<div class="w-3 h-3 rounded-full bg-gradient-to-r from-muf-500 to-muf-blue-500 mr-3"></div>
-									{skill.data.title}
-								</h4>
-								<div class="prose dark:text-gray-300 text-gray-700 leading-relaxed flex-grow">
-									<Content />	
+						<div class="glass-panel">
+							<div
+								class="glass-card h-full p-6 hover:scale-105 transition-all duration-300 animate-slide-up"
+								style={`animation-delay: ${index * 0.1}s;`}
+							>
+								<div class="flex flex-col h-full">
+									<h4 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200 flex items-center">
+										<div class="w-3 h-3 rounded-full bg-gradient-to-r from-muf-500 to-muf-blue-500 mr-3" />
+										{skill.data.title}
+									</h4>
+									<div class="prose dark:text-gray-300 text-gray-700 leading-relaxed flex-grow">
+										<Content />
+									</div>
 								</div>
 							</div>
 						</div>

@@ -40,7 +40,8 @@ const recommendations = [
 
     <div class="grid md:grid-cols-1 gap-6 w-full">
       {recommendations.map((rec) => (
-        <div class="relative overflow-hidden group rounded-2xl border border-white/5 bg-[#2a0a2b]/80 backdrop-blur-sm p-6 md:p-8 transition-all hover:bg-[#2a0a2b] hover:border-muf-500/30 hover:shadow-lg hover:shadow-muf-500/10">
+        <div class="glass-panel">
+        <div class="glass-card p-8 hover:bg-white/5 transition-colors duration-300">
           <!-- Decorative Quote Icon -->
           <div class="absolute top-4 right-6 text-6xl text-white/5 font-serif select-none group-hover:text-white/10 transition-colors">
             "
@@ -80,6 +81,7 @@ const recommendations = [
               </p>
             </div>
           </div>
+        </div>
         </div>
       ))}
     </div>
