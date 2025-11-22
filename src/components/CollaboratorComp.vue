@@ -4,7 +4,7 @@
     target="_blank"
     rel="noopener noreferrer"
     class="
-      glass-panel
+      glass-card
       inline-flex
       relative
       px-4
