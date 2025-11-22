@@ -4,27 +4,27 @@ import CollaboratorComp from "../../components/CollaboratorComp.vue";
 let socialMediaHandles = [
 	{
 		name: "lablnet",
-		picture: "../assets/icons/upwork.svg",
+		icon: "fa-brands fa-upwork",
 		link: "https://www.upwork.com/freelancers/~010c32fc720f5f9624",
 	},
 	{
 		name: "lablnet",
-		picture: "../assets/icons/white/linkedin.svg",
+		icon: "fa-brands fa-linkedin",
 		link: "https://linkedin.com/in/lablnet",
 	},
 	{
 		name: "lablnet",
-		picture: "../assets/icons/white/github.svg",
+		icon: "fa-brands fa-github",
 		link: "https://github.com/lablnet",
 	},
 	{
 		name: "lablnet",
-		picture: "../assets/icons/white/twitter.svg",
+		icon: "fa-brands fa-twitter",
 		link: "https://twitter.com/lablnet",
 	},
 	{
 		name: "umerlablnet01",
-		picture: "../assets/icons/fiverr.svg",
+		icon: "fa-solid fa-briefcase",
 		link: "https://fiverr.com/umerlablnet01",
 	},
 ];
@@ -82,7 +82,7 @@ let socialMediaHandles = [
 						socialMediaHandles.map((handle) => (
 							<CollaboratorComp
 								name={handle.name}
-								picture={handle.picture}
+								icon={handle.icon}
 								link={handle.link}
 								contributionsStatus={false}
 								client:load

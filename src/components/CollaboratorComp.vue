@@ -22,7 +22,11 @@
       hover:scale-105
     "
   >
+    <div v-if="icon" class="w-6 h-6 flex items-center justify-center">
+      <i :class="[icon, 'text-xl']"></i>
+    </div>
     <img
+      v-else
       class="
         h-6
         w-6
@@ -60,6 +64,10 @@ export default {
         picture: {
             type: String,
             default: '../assets/images/avatar.png',
+        },
+        icon: {
+            type: String,
+            default: null,
         },
         link: {
             type: String,

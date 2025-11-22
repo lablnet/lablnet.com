@@ -1,10 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import Intro from '../components/Home/Intro.astro';
-import Contact from '../components/Home/Contact.vue';
-import ToggleSwitcher from '../components/Home/ToggleSwitcher.astro';
-import { data } from '../utils/const';
+import Intro from "../components/Home/Intro.astro";
+import Contact from "../components/Home/Contact.vue";
+import ToggleSwitcher from "../components/Home/ToggleSwitcher.astro";
+import Recommendations from "../components/Home/Recommendations.astro";
+import { data } from "../utils/const";
 ---
 
 <Layout title="Muhammad Umer Farooq">
@@ -17,6 +18,9 @@ import { data } from '../utils/const';
 			return <ToggleSwitcher sections={sections} />;
 		})
 	}
+
+	<!-- Recommendations -->
+	<Recommendations />
 
 	<!-- Contact -->
 	<Contact client:only="vue" />
