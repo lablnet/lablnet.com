@@ -8,19 +8,17 @@
       <strong class="font-bold">Error!</strong>
       <span class="block sm:inline">Failed to copy URL.</span>
     </div>
-    <h3 class="title" :id="slug">
-      <a class="flex mx-3" :href="`#${slug}`">
-        <img
-          :src="
-            theme === 'dark'
-              ? '../assets/icons/white/link.svg'
-              : '../assets/icons/link.svg'
-          "
-        />
-        <div class="flex">
-          <span class="mx-3 dark:text-gray-300">{{ title }}</span>
+    <h3 class="title group flex items-center" :id="slug">
+      <a class="flex items-center" :href="`#${slug}`">
+        <i class="fas fa-link text-xl text-gray-400 group-hover:text-muf-500 transition-colors duration-300"></i>
+        <div class="flex items-center">
+          <span class="mx-3 text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-400 bg-clip-text text-transparent group-hover:from-muf-500 group-hover:to-muf-blue-500 transition-all duration-300">{{ title }}</span>
 
-          <button class="rounded text-black text-md" @click="copyToClipboard">
+          <button 
+            class="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300" 
+            @click.prevent="copyToClipboard"
+            title="Copy link"
+          >
             <i class="fas fa-share-alt"></i>
           </button>
         </div>

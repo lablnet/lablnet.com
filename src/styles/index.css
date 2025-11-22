@@ -112,3 +112,49 @@ body {
 ::-webkit-scrollbar-thumb {
   @apply bg-ternary-dark rounded-full hover:bg-purple-600;
 }
+
+/* Prose Overrides for Dark Mode */
+.prose {
+  @apply max-w-none text-slate-300;
+}
+
+.prose h1, 
+.prose h2, 
+.prose h3, 
+.prose h4, 
+.prose h5, 
+.prose h6 {
+  @apply text-slate-100 font-bold mt-8 mb-4;
+}
+
+.prose h1 { @apply text-3xl; }
+.prose h2 { @apply text-2xl; }
+.prose h3 { @apply text-xl; }
+
+.prose strong {
+  @apply text-white font-semibold;
+}
+
+.prose a {
+  @apply text-muf-500 hover:text-muf-400 transition-colors duration-300 no-underline border-b border-muf-500/30 hover:border-muf-500;
+}
+
+.prose code {
+  @apply text-muf-300 bg-white/5 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-slate-900/50 border border-white/10 rounded-xl p-4 overflow-x-auto;
+}
+
+.prose ul {
+  @apply list-disc list-outside ml-6 my-4 space-y-2;
+}
+
+.prose ol {
+  @apply list-decimal list-outside ml-6 my-4 space-y-2;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-muf-500 pl-4 italic text-slate-400 my-6;
+}
