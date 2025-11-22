@@ -1,32 +1,37 @@
 <!-- Modern Glass Footer -->
-<footer class="py-16">
-    <div class="container">
-        <div class="glass-card p-8 mb-8">
-            <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-                <!-- Logo and Brand -->
-                <a href="/" class="flex items-center group">
-                    <img
-                        class="w-24 h-16 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
-                        src="../assets/images/muf.png"
-                        alt="Muhammad Umer Farooq"
-                    />
-                </a>
+<footer
+    class="py-6 relative z-50 border-t border-[var(--glass-border)]"
+    style="background: var(--glass-bg); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); box-shadow: var(--glass-shadow);"
+>
+    <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4"
+    >
+        <!-- Logo and Brand -->
+        <a href="/" class="flex items-center group">
+            <img
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+                src="../assets/images/muf.png"
+                alt="Muhammad Umer Farooq"
+            />
+        </a>
 
-                <!-- Made with love -->
-                <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
-                    <span>Crafted with</span>
-                    <img class="h-6 w-6 animate-pulse" src="../assets/icons/heart.gif" alt="love" />
-                    <span>by</span>
-                    <a
-                        class="font-semibold bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:bg-none transition-all duration-300"
-                        href="https://github.com/lablnet"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Muhammad Umer Farooq
-                    </a>
-                </div>
-            </div>
+        <!-- Made with love -->
+        <div class="flex items-center space-x-2 text-sm text-slate-300">
+            <span>Made with</span>
+            <img
+                class="h-5 w-5 animate-pulse"
+                src="../assets/icons/heart.gif"
+                alt="love"
+            />
+            <span>by</span>
+            <a
+                class="font-semibold bg-gradient-to-r from-muf-500 to-muf-blue-500 bg-clip-text text-transparent hover:text-white transition-colors duration-300"
+                href="https://github.com/lablnet"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Muhammad Umer Farooq
+            </a>
         </div>
     </div>
 </footer>

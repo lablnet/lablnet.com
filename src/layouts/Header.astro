@@ -3,44 +3,70 @@
 ---
 
 <div class="w-full">
-	<!-- Floating Glass Header -->
-	<header class="fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl animate-fade-in">
-		<div class="glass-nav mx-2 md:mx-4 px-3 md:px-6 py-3 md:py-4 flex flex-wrap justify-between items-center">
+	<!-- Full Width Fixed Header -->
+	<header
+		class="fixed top-0 left-0 w-full z-50 animate-fade-in border-b border-[var(--glass-border)]"
+		style="background: var(--glass-bg); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); box-shadow: var(--glass-shadow);"
+	>
+		<div
+			class="container mx-auto px-4 py-3 md:py-4 flex flex-wrap justify-between items-center"
+		>
 			<!-- Logo -->
 			<a href="/" class="flex items-center group">
-				<img 
-					class="w-16 h-10 md:w-20 md:h-12 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
-					src="../assets/images/muf.png" 
-					alt="Muhammad Umer Farooq" 
-					title="Muhammad Umer Farooq" 
+				<img
+					class="w-10 h-10 md:w-12 md:h-12 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+					src="../assets/images/muf.png"
+					alt="Muhammad Umer Farooq"
+					title="Muhammad Umer Farooq"
 				/>
 			</a>
 
 			<!-- Mobile Menu Button -->
-			<button 
-				id="menu-button" 
+			<button
+				id="menu-button"
 				class="md:hidden glass-button p-2 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-muf-500 hover:to-muf-blue-500 hover:bg-clip-text hover:text-transparent transition-all duration-300"
 			>
-				<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+				<svg
+					class="w-6 h-6"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+						clip-rule="evenodd"></path>
 				</svg>
 			</button>
 
 			<!-- Desktop Navigation -->
 			<nav class="hidden md:flex space-x-4 lg:space-x-8">
-				<a href="/#work" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
+				<a
+					href="/#work"
+					class="nav-link text-slate-300 hover:text-white font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base"
+				>
 					<i class="fa-solid fa-bars-progress text-sm"></i>
 					<span>Work</span>
 				</a>
-				<a href="/#education" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
+				<a
+					href="/#education"
+					class="nav-link text-slate-300 hover:text-white font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base"
+				>
 					<i class="fa-solid fa-graduation-cap text-sm"></i>
 					<span>Education</span>
 				</a>
-				<a href="https://cv.lablnet.com/" target="_blank" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
+				<a
+					href="https://cv.lablnet.com/"
+					target="_blank"
+					class="nav-link text-slate-300 hover:text-white font-medium transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base"
+				>
 					<i class="fa-solid fa-file text-sm"></i>
 					<span>CV</span>
 				</a>
-				<a href="/#contact" class="glass-button px-3 lg:px-4 py-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:from-muf-600 hover:to-muf-blue-600 transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base">
+				<a
+					href="/#contact"
+					class="glass-button px-3 lg:px-4 py-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:from-muf-600 hover:to-muf-blue-600 transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base"
+				>
 					<i class="fa-solid fa-address-book text-sm"></i>
 					<span>Contact</span>
 				</a>
@@ -50,22 +76,36 @@
 		<!-- Mobile Navigation Menu -->
 		<nav
 			id="nav"
-			class="md:hidden hidden mt-2 md:mt-4 mx-2 md:mx-4 glass-card p-4 md:p-6 animate-slide-up"
+			class="md:hidden hidden w-full border-t border-[var(--glass-border)] animate-slide-up"
+			style="background: var(--glass-bg); backdrop-filter: blur(var(--glass-blur));"
 		>
-			<div class="flex flex-col space-y-4">
-				<a href="/#work" class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20">
+			<div class="flex flex-col p-4 space-y-2">
+				<a
+					href="/#work"
+					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10"
+				>
 					<i class="fa-solid fa-bars-progress"></i>
 					<span>Work Experience</span>
 				</a>
-				<a href="/#education" class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20">
+				<a
+					href="/#education"
+					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10"
+				>
 					<i class="fa-solid fa-graduation-cap"></i>
 					<span>Education</span>
 				</a>
-				<a href="../assets/cv/CV.pdf" target="_blank" class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20">
+				<a
+					href="../assets/cv/CV.pdf"
+					target="_blank"
+					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10"
+				>
 					<i class="fa-solid fa-file"></i>
 					<span>CV</span>
 				</a>
-				<a href="/#contact" class="menu-item glass-button px-4 py-3 bg-gradient-to-r from-muf-500 to-muf-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:from-muf-600 hover:to-muf-blue-600 transition-all duration-300 flex items-center space-x-3 justify-center">
+				<a
+					href="/#contact"
+					class="menu-item glass-button px-4 py-3 bg-gradient-to-r from-muf-500 to-muf-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:from-muf-600 hover:to-muf-blue-600 transition-all duration-300 flex items-center space-x-3 justify-center"
+				>
 					<i class="fa-solid fa-address-book"></i>
 					<span>Contact</span>
 				</a>
@@ -74,28 +114,48 @@
 	</header>
 
 	<!-- Spacer to account for fixed header -->
-	<div class="h-16 md:h-24"></div>
+	<div class="h-16 md:h-20"></div>
 </div>
 
 <style>
-.nav-link {
-	position: relative;
-}
+	.nav-link {
+		position: relative;
+	}
 
-.nav-link::after {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 2px;
-	bottom: -4px;
-	left: 50%;
-	background: linear-gradient(90deg, #f068a7, #24b6ff);
-	transition: all 0.3s ease;
-	transform: translateX(-50%);
-	border-radius: 1px;
-}
+	.nav-link::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 2px;
+		bottom: -4px;
+		left: 50%;
+		background: linear-gradient(90deg, #f068a7, #24b6ff);
+		transition: all 0.3s ease;
+		transform: translateX(-50%);
+		border-radius: 1px;
+	}
 
-.nav-link:hover::after {
-	width: 100%;
-}
+	.nav-link:hover::after {
+		width: 100%;
+	}
 </style>
+
+<script>
+	// Mobile menu toggle functionality
+	const menuButton = document.getElementById('menu-button');
+	const mobileNav = document.getElementById('nav');
+	const menuItems = document.querySelectorAll('.menu-item');
+
+	if (menuButton && mobileNav) {
+		menuButton.addEventListener('click', () => {
+			mobileNav.classList.toggle('hidden');
+		});
+
+		// Close menu when clicking on menu items
+		menuItems.forEach((item) => {
+			item.addEventListener('click', () => {
+				mobileNav.classList.add('hidden');
+			});
+		});
+	}
+</script>
