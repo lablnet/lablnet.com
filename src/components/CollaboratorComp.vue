@@ -1,11 +1,13 @@
 <template>
+  <div class="glass-panel w-full">
   <a
     :href="link"
     target="_blank"
     rel="noopener noreferrer"
     class="
       glass-card
-      inline-flex
+      flex
+      w-full
       relative
       px-4
       py-2
@@ -51,6 +53,7 @@
       >{{ contributions }}
     </span>
   </a>
+  </div>
 </template>
 
 <script lang="js">
