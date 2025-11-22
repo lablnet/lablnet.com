@@ -3,17 +3,18 @@
 ---
 
 <div class="w-full">
-	<!-- Floating Glass Header -->
+	<!-- Full Width Fixed Header -->
 	<header
-		class="fixed top-2 md:top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl animate-fade-in"
+		class="fixed top-0 left-0 w-full z-50 animate-fade-in border-b border-[var(--glass-border)]"
+		style="background: var(--glass-bg); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); box-shadow: var(--glass-shadow);"
 	>
 		<div
-			class="glass-nav mx-2 md:mx-4 px-3 md:px-6 py-3 md:py-4 flex flex-wrap justify-between items-center"
+			class="container mx-auto px-4 py-3 md:py-4 flex flex-wrap justify-between items-center"
 		>
 			<!-- Logo -->
 			<a href="/" class="flex items-center group">
 				<img
-					class="w-16 h-10 md:w-20 md:h-12 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+					class="w-10 h-10 md:w-12 md:h-12 rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
 					src="../assets/images/muf.png"
 					alt="Muhammad Umer Farooq"
 					title="Muhammad Umer Farooq"
@@ -75,19 +76,20 @@
 		<!-- Mobile Navigation Menu -->
 		<nav
 			id="nav"
-			class="md:hidden hidden mt-2 md:mt-4 mx-2 md:mx-4 glass-card p-4 md:p-6 animate-slide-up"
+			class="md:hidden hidden w-full border-t border-[var(--glass-border)] animate-slide-up"
+			style="background: var(--glass-bg); backdrop-filter: blur(var(--glass-blur));"
 		>
-			<div class="flex flex-col space-y-4">
+			<div class="flex flex-col p-4 space-y-2">
 				<a
 					href="/#work"
-					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20"
+					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10"
 				>
 					<i class="fa-solid fa-bars-progress"></i>
 					<span>Work Experience</span>
 				</a>
 				<a
 					href="/#education"
-					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20"
+					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10"
 				>
 					<i class="fa-solid fa-graduation-cap"></i>
 					<span>Education</span>
@@ -95,7 +97,7 @@
 				<a
 					href="../assets/cv/CV.pdf"
 					target="_blank"
-					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20"
+					class="menu-item nav-link text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-all duration-300 flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10"
 				>
 					<i class="fa-solid fa-file"></i>
 					<span>CV</span>
@@ -112,7 +114,7 @@
 	</header>
 
 	<!-- Spacer to account for fixed header -->
-	<div class="h-16 md:h-24"></div>
+	<div class="h-16 md:h-20"></div>
 </div>
 
 <style>
