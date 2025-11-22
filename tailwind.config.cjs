@@ -22,18 +22,18 @@ module.exports = {
                 'secondary-light': '#FFFFFF',
                 'ternary-light': '#f6f7f8',
 
-                'primary-dark': '#383838',
-                'secondary-dark': '#121212',
-                'ternary-dark': '#383838',
+                'primary-dark': '#370d38',
+                'secondary-dark': '#2a0a2b', // Slightly darker purple
+                'ternary-dark': '#4a124c',   // Slightly lighter purple
 
                 // Glassmorphism colors based on MUF logo
                 'glass': {
-                    'light': 'rgba(255, 255, 255, 0.1)',
-                    'light-border': 'rgba(255, 255, 255, 0.125)',
-                    'dark': 'rgba(255, 255, 255, 0.04)',
-                    'dark-border': 'rgba(255, 255, 255, 0.08)',
-                    'surface-light': 'rgba(255, 255, 255, 0.25)',
-                    'surface-dark': 'rgba(0, 0, 0, 0.4)'
+                    'light': 'rgba(55, 13, 56, 0.3)',      // Dark purple tint
+                    'light-border': 'rgba(240, 104, 167, 0.2)', // Pinkish border
+                    'dark': 'rgba(55, 13, 56, 0.6)',        // Darker purple
+                    'dark-border': 'rgba(240, 104, 167, 0.1)', // Subtle pink border
+                    'surface-light': 'rgba(55, 13, 56, 0.4)',
+                    'surface-dark': 'rgba(20, 5, 20, 0.6)'
                 },
                 // MUF brand colors
                 'muf': {
