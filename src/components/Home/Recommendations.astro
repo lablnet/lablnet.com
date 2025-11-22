@@ -2,27 +2,39 @@
 const recommendations = [
   {
     name: "LUCA VENEZIANO",
+    position: "CEO, Mennr",
     date: "December 2022",
-    contact: "+1 (860) 329-2988",
+    // contact: "+1 (860) 329-2988",
     email: "luca@mennr.com",
     text: "Muhammad has demonstrated a dedication to excellence in his work, consistently going above and beyond to ensure that our products are of the highest quality. He is highly organized and task oriented, and he is always eager to take on new challenges. Muhammad is an excellent problem solver, with the ability to quickly and accurately diagnose and resolve technical issues.",
-    icon: "fa-solid fa-user-check"
+    icon: "/assets/images/recommendations/luca.jpeg"
   },
   {
     name: "SAUD KHAN",
+    position: "Professor and Director Digital Learning , Riphah International University",
     date: "November 2022",
-    contact: "+92 300 5034360",
+    // contact: "+92 300 5034360",
     email: "muhammad.saud@riphah.edu.pk",
     text: "I have been supervising Umer for over six months on a large scale/complex web application project, during this time he has proven himself to be hardworking, tasks oriented and adaptable to stressful conditions. Umer's approach to software development is very mature and he has the special ability to convert complex tasks into the simpler ones. I found him devoted to his work and always keen to continue his intellectual growth. I have no doubt he can prove himself as a valuable asset for any team.",
-    icon: "fa-solid fa-user-check"
+    icon: "/assets/images/recommendations/saud.jpeg"
   },
   {
     name: "MANUEL LEMOS",
+    position: "CEO, iContem",
     date: "November 2022",
-    contact: "+55 14 99806-8719",
+    // contact: "+55 14 99806-8719",
     email: "mlemos@icontem.com",
     text: "Umer has been a very loyal and competent software developer that is always learning to become better in this profession.",
-    icon: "fa-solid fa-user-check"
+    icon: "/assets/images/recommendations/manuel.jpeg"
+  },
+  {
+    name: "SUMAN SIGDEL",
+    position: "Software Engineer, Nextdoor",
+    date: "December 2019",
+    // contact: "+55 14 99806-8719",
+    email: "sumansid1113@gmail.com",
+    text: "Working together with Muhammad, I figured that he is an extremely talented developer. His knowledge of Full stack web development is truly industry level.",
+    icon: "/assets/images/recommendations/suman.jpeg"
   }
 ];
 ---
@@ -48,11 +60,13 @@ const recommendations = [
           </div>
 
           <div class="flex flex-col md:flex-row gap-6 relative z-10">
-            <!-- Avatar/Icon -->
+            <!-- Avatar/Image -->
             <div class="flex-shrink-0">
-              <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-muf-500/20 to-muf-blue-500/20 flex items-center justify-center text-muf-500 border border-white/10">
-                <i class={`${rec.icon} text-xl md:text-2xl`}></i>
-              </div>
+              <img
+                src={rec.icon}
+                alt={rec.name}
+                class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-white/20 shadow-lg"
+              />
             </div>
 
             <!-- Content -->
@@ -65,11 +79,15 @@ const recommendations = [
                 <span class="text-sm text-slate-500 font-medium">{rec.date}</span>
               </div>
 
+              <p class="text-sm text-slate-400 mb-3 flex items-center gap-2">
+                <span>{rec.position}</span>
+              </p>
+
               <div class="flex flex-col gap-1 text-sm text-slate-400 mb-4">
-                <div class="flex items-center gap-2">
+                {/* <div class="flex items-center gap-2">
                   <span class="font-semibold text-slate-300">Contact:</span>
                   <span class="hover:text-muf-blue-400 transition-colors">{rec.contact}</span>
-                </div>
+                </div> */}
                 <div class="flex items-center gap-2">
                   <span class="font-semibold text-slate-300">Email:</span>
                   <a href={`mailto:${rec.email}`} class="hover:text-muf-500 hover:underline transition-colors">{rec.email}</a>
