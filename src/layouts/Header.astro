@@ -139,3 +139,23 @@
 		width: 100%;
 	}
 </style>
+
+<script>
+	// Mobile menu toggle functionality
+	const menuButton = document.getElementById('menu-button');
+	const mobileNav = document.getElementById('nav');
+	const menuItems = document.querySelectorAll('.menu-item');
+
+	if (menuButton && mobileNav) {
+		menuButton.addEventListener('click', () => {
+			mobileNav.classList.toggle('hidden');
+		});
+
+		// Close menu when clicking on menu items
+		menuItems.forEach((item) => {
+			item.addEventListener('click', () => {
+				mobileNav.classList.add('hidden');
+			});
+		});
+	}
+</script>
