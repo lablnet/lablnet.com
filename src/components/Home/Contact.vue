@@ -62,7 +62,7 @@
                 <p class="text-slate-400 mb-8">Have a project in mind? Let's discuss the details.</p>
                 <a 
                     href="mailto:umer@lablnet.com"
-                    class="glass-btn bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
+                    class="glass-button px-3 lg:px-4 py-2 bg-gradient-to-r from-muf-500 to-muf-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:from-muf-600 hover:to-muf-blue-600 transition-all duration-300 flex items-center space-x-1 lg:space-x-2 text-sm lg:text-base"
                 >
                     Say Hello
                 </a>
